@@ -18,7 +18,7 @@ $(document).ready(function(){
         $(".newsletter").show();
       }
       else{
-        $(".box").not(".newsletter, .contact, .trial").hide();
+        $(".box").not(".newsletter").hide();
         $(".box").not(".contact").hide();
         $(".box").not(".trial").hide();
         $(".demo").show();
