@@ -242,11 +242,12 @@ p {
 }
 
 .btn-form {
-  height: 30px;
+  height: 40px;
   width: 200px;
   float: right;
   font-size: 13px;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .form-container {
@@ -273,6 +274,11 @@ p {
 #message::-moz-placeholder::before  { font-family: fontAwesome; content:'\f040'; color: #B1B1B1; } /* firefox 19+ */
 #message:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f040'; color: #B1B1B1; } /* ie */
 #message input:-moz-placeholder::before  { font-family: fontAwesome; content:'\f040'; color: #B1B1B1; }
+
+#subject::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f0eb'; color: #B1B1B1; }
+#subject::-moz-placeholder::before  { font-family: fontAwesome; content:'\f0eb'; color: #B1B1B1; } /* firefox 19+ */
+#subject:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f0eb'; color: #B1B1B1; } /* ie */
+#subject input:-moz-placeholder::before  { font-family: fontAwesome; content:'\f0eb'; color: #B1B1B1; }
 /*price list*/
 
 /*client images*/

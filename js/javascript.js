@@ -18,7 +18,10 @@ $(document).ready(function(){
         $(".newsletter").show();
       }
       else{
-        $(".box").show();
+        $(".box").not(".newsletter, .contact, .trial").hide();
+        $(".box").not(".contact").hide();
+        $(".box").not(".trial").hide();
+        $(".demo").show();
       }
     });
   }).change();
