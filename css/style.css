@@ -82,6 +82,11 @@ p {
   width: 100%;
 }
 
+.active h5 {
+  color: #8AA815;
+  font-weight: 600;
+}
+
 /*introduction section*/
 .introduction {
   margin-top: 45px;
