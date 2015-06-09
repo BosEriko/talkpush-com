@@ -27,4 +27,19 @@ $(document).ready(function(){
       }
     });
   })
+
+  $(".intro-button").click(function() {
+    $('#myModal').modal('show');
+  });
+
+
+// scroll up then open modal
+  // $(".intro-button").click(function() {
+  //   $('html, body').animate({
+  //       scrollTop: $(".header-top").offset().top
+  //   }, 1000  );
+  //   $('#myModal').modal('show');
+  // });
 });
+
+
