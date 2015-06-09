@@ -260,6 +260,10 @@ p {
   padding-bottom: 50px;
 }
 
+.box-hide {
+  display: none;
+}
+
 /*placeholder icons*/
 #fullName::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f007'; color: #B1B1B1; }
 #fullName::-moz-placeholder::before  { font-family: fontAwesome; content:'\f007'; color: #B1B1B1; } /* firefox 19+ */
@@ -387,4 +391,10 @@ p {
 
 .social-link {
   padding-left: 10px;
+}
+
+
+/*privacy page*/
+.privacy-content p {
+  color: black;
 }
