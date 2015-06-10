@@ -116,13 +116,10 @@ p {
   text-align: center;
 }
 
-.col-md-3 .spec-left {
-  text-align: right;
+.spec {
+  text-align: center;
 }
 
-.col-md-3 .spec-right {
-  text-align: left;
-}
 
 .screen {
   margin-bottom: -7px;
@@ -137,11 +134,13 @@ p {
   float: right;
   padding-right: 20px;
   text-align: right;
+  float: right;
 }
 
 .btn-right {
   padding-left: 20px;
   text-align: left;
+  float: left;
 }
 
 .btn-right-icon {
@@ -399,21 +398,30 @@ p {
 }
 
 /*about us*/
-.introduction-about {
+.intro-video {
+  float: right;
+}
+
+.intro-header-about {
   text-align: center;
-  max-width: 500px;
+}
+
+.introduction-about {
   margin: auto;
+  margin-top: 20px;
+  text-align: left;
 }
 
 .about-us {
   color: #575756;
-  margin-top: 30px;
   font-size: 15px;
   line-height: 22px;
+  margin-top: 30px;
+  max-width: 390px;
 }
 
 .know-more-about {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .know-more-about h2 {
@@ -423,9 +431,9 @@ p {
 
 .clients h2 {
   color: #575756;
+  font-weight: 600;
   margin-top: -5px;
   padding-bottom: 20px;
-  font-weight: 600;
 }
 
 .swire {
