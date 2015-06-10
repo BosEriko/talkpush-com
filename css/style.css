@@ -385,7 +385,6 @@ p {
 }
 
 .social {
-  margin-top: -20px;
   text-align: right;
 }
 
@@ -397,4 +396,38 @@ p {
 /*privacy page*/
 .privacy-content p {
   color: black;
+}
+
+/*about us*/
+.introduction-about {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.about-us {
+  color: #575756;
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.know-more-about {
+  margin-top: 20px;
+}
+
+.know-more-about h2 {
+  color: white;
+  padding-bottom: 15px;
+}
+
+.clients h2 {
+  color: #575756;
+  margin-top: -5px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+.swire {
+  margin-top:14px;
 }
