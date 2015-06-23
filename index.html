@@ -29,8 +29,17 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/about.html"><h5>about us</h5></a></li>
-            <li><a href="http://blog.talkpush.com"><h5>blog</h5></a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#user-cases">User Cases</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Company<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="http://blog.talkpush.com">Blog</a></li>
+                <!-- <li><a href="#">Jobs</a></li> -->
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
@@ -40,8 +49,7 @@
 
   <div class="container">
     <div class="introduction">
-      <h1 class="intro-header">What would your company look like in 10 years if you <br><span id="tagline">Let the Talent Talk?</span></h1>
-
+      <h1 class="intro-header">Find out how to recruit faster and better with Talkpush</h1>
       <!-- intro video start -->
       <a href="http://www.youtube.com/v/2cxqZiWyW3g&hl=en_US&fs=1&autoplay=1" data-toggle="modal" data-target="#myModal"><i class="fi-play-circle play"></i></a>
       <!-- modal start -->
@@ -55,13 +63,13 @@
         </div>
       </div>
       <!-- intro video finished -->
-      <h5 class="action">See it in action</h5>
+      <a href="http://www.youtube.com/v/2cxqZiWyW3g&hl=en_US&fs=1&autoplay=1" data-toggle="modal" data-target="#myModal"><h5 class="action">FIND OUT HOW HERE</h5></a>
     </div>
   </div>
 
   <div class="spec-wrap wrap">
     <div class="container">
-      <div class="row spec-header">
+      <div class="row spec-header" id="features">
         <h2>Less work. Better results.</h2>
         <h3>Here are some of our key features</h3>
       </div>
@@ -89,7 +97,7 @@
 
   <div class="wrap know-more-wrap">
     <div class="container">
-      <div class="know-more">
+      <div class="know-more" id="benefits">
         <div class="row">
           <div class="col-md-12">
             <h2>Want to know more?</h2>
@@ -97,18 +105,18 @@
         </div>
         <div class="row">
           <div class="col-md-3 col-md-offset-3 col-sm-8 col-xs-offset-2 col-xs-8 know-more-btn">
-            <button type="button" class="btn" onclick="window.location.href='/about.html'">About the Company <span><i class="btn-left-icon fi-torsos-all"></i></span></button>
+            <button type="button" class="btn" onclick="window.location.href='/about.html'"><span><i class="btn-icon fi-torsos-all"></i></span> About the Company </button>
           </div>
           <div class="col-md-3 col-sm-8 col-xs-8 know-more-btn">
-            <button type="button" class="btn intro-button"><span><i class="btn-right-icon fi-monitor"></i></span> Watch Our Introduction</button>
+            <button type="button" class="btn intro-button"><span><i class="btn-icon fi-monitor"></i></span> Watch Our Introduction</button>
           </div>
         </div>
         <div class="row">
           <div class="col-md-3 col-md-offset-3 col-sm-8 col-xs-offset-2 col-xs-8 know-more-btn">
-            <button class="btn" onclick="location.href='#price'">View the Price list <span><i class="btn-left-icon fi-list-thumbnails"></i></span></button>
+            <button class="btn" onclick="location.href='#price'"><span><i class="btn-icon fi-list-thumbnails"></i></span> View the Price list </button>
           </div>
           <div class="col-md-3 col-sm-8 col-xs-8 know-more-btn">
-            <button type="button" class="btn" onclick="window.location.href=''"><span><i class="btn-right-icon fi-star"></i></span> Try Our Free Trial</button>
+            <button type="button" class="btn" onclick="window.location.href=''"><span><i class="btn-icon fi-star"></i></span> Try Our Free Trial</button>
           </div>
         </div>
       </div>
@@ -305,7 +313,7 @@
     </div>
   </div>
 
-  <div class="container clients">
+  <div class="container clients" id="user-cases">
     <div class="row">
       <div class="col-md-3 col-sm-3"><img class="client-logos" src="images/lazada.png" alt=""></div>
       <div class="col-md-3 col-sm-3"><img class="client-logos" src="images/sheraton.png" alt=""></div>
@@ -332,6 +340,10 @@
       </div>
     </div>
   </div>
+
+  <a href="#" class="back-to-top" style="display: inline;">
+    <i class="fa fa-arrow-circle-up"></i>
+  </a>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src='js/bootstrap.js'></script>

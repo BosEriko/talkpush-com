@@ -74,7 +74,16 @@ p {
 }
 
 .nav a {
+  color: #b1b1b1;
   margin-top: 55px;
+}
+
+.navbar .caret {
+  margin-left: 10px;
+}
+
+.navbar .dropdown-menu > li > a {
+  margin-top: 0;
 }
 
 .wrap {
@@ -143,12 +152,8 @@ p {
   float: left;
 }
 
-.btn-right-icon {
+.btn-icon {
   padding-right: 10px;
-}
-
-.btn-left-icon {
-  padding-left: 10px;
 }
 
 .know-more-wrap {
@@ -391,10 +396,34 @@ p {
   padding-left: 10px;
 }
 
+.back-to-top {
+background: none;
+margin: 0;
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 70px;
+height: 70px;
+z-index: 100;
+display: none;
+text-decoration: none;
+color: #8AA815;
+background-color: none;
+}
+
+.back-to-top i {
+  font-size: 60px;
+}
 
 /*privacy page*/
 .privacy-content p {
   color: black;
+  overflow-x: none;
+}
+
+.privacy-row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 /*about us*/
@@ -434,6 +463,12 @@ p {
   font-weight: 600;
   margin-top: -5px;
   padding-bottom: 20px;
+}
+
+.blueprint {
+  margin-top: 6px;
+  max-height: 50px;
+  max-width: 150px;
 }
 
 .swire {
