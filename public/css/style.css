@@ -4,6 +4,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -59,7 +60,8 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   height: 58px;
-  width: 278px;
+  width: 100%;
+  padding: 5px;
 }
 
 /*green line at top*/
@@ -223,7 +225,7 @@ p {
 
 .form-wrap {
   background-color: #FFF;
-  height: 500px;
+  min-height: 500px;
 }
 
 .form-group {
@@ -265,7 +267,7 @@ p {
 }
 
 .dropdown-menu {
-  padding:
+
 }
 
 .open > .dropdown-menu {
@@ -433,18 +435,19 @@ p {
 }
 
 .back-to-top {
-background: none;
-margin: 0;
-position: fixed;
-bottom: 20px;
-right: 20px;
-width: 70px;
-height: 70px;
-z-index: 100;
-display: none;
-text-decoration: none;
-color: #8AA815;
-background-color: none;
+    cursor: pointer;
+    background: none;
+    margin: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+    color: #8AA815;
+    background-color: none;
 }
 
 .back-to-top i {
@@ -465,6 +468,9 @@ background-color: none;
 /*about us*/
 .intro-video {
   float: right;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .intro-header-about {
@@ -482,7 +488,7 @@ background-color: none;
   font-size: 15px;
   line-height: 22px;
   margin-top: 30px;
-  max-width: 390px;
+  min-width: 390px;
 }
 
 .know-more-about {
@@ -509,4 +515,21 @@ background-color: none;
 
 .swire {
   margin-top:14px;
+}
+.sub-corp-color-bg {
+    background-color: #b1b1b1
+}
+
+.mobile-menu-icon {
+    margin-top: 60px;
+}
+
+.btnFeatures ,.btnBenefits, .btnUserCases{
+    cursor: pointer;
+}
+
+
+
+.collapse>.nav .active {
+    background-color: #fafafa;
 }

@@ -1,9 +1,17 @@
 
-@media only screen and (max-width : 1200px; min-width: 993px), only screen and (max-device-width: 1200px) {
-
+@media only screen and (min-width: 993px), only screen and (min-device-width: 993px) {
+    .inline-video {
+      display: none !important;
+    }
+    .inline-video>iframe{
+        min-height: 250px;
+    }
 }
 
-@media only screen and (max-width : 992px; min-width: 769px), only screen and (max-device-width: 992px) {
+@media only screen and (max-width : 992px) and (min-width: 769px), only screen and (max-device-width: 992px) and (min-device-width:769px){
+    .inline-video {
+      display: none !important;
+    }
 }
 
 @media only screen and (max-width : 768px), only screen and (max-device-width: 768px) {
@@ -20,4 +28,37 @@
     line-height: 28px;
     margin-top: 70px;
   }
+}
+/*Eato-responsive-css*/
+
+@media only screen and (max-width:768px),only screen and (max-device-width:768px){
+    .dropdown-menu > li > a {
+        padding-top: 3px;
+    }
+    .nav a {
+        margin-top: 3px;
+    }
+    #navbar{
+        margin-top: 10px;
+    }
+    .navbar-header>.logo{
+        width:200px;margin-left:auto;margin-right:auto;
+    }
+    .dropdown-menu > li > a {
+      border-bottom: 0px solid #8aa815;
+    }
+    .interested-dropdown-menu {
+      margin-left: 0px;
+    }
+    .inline-video {
+      display:block !important;
+        margin-bottom: 30px;
+    }
+    .introVideo,.txtFOHH{
+      display: none !important;
+    }    
+    .intro-video {
+      float:none;
+    }
+    
 }

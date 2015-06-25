@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').focus()
-  })
+    $('#myInput').focus();
+  });
 
   $(".contact").hide();
   $(".trial").hide();
@@ -26,36 +26,30 @@ $(document).ready(function(){
         $(".demo").delay(500).fadeIn(500);
       }
     });
-  })
+  });
 
   $(".intro-button").click(function() {
     $('#myModal').modal('show');
   });
+  $('.btnBenefits').click(function(){scrollTo('.keyBenefits')});
+  $('.back-to-top').click(function(){scrollTo("body");});
+  $('.btnFeatures').click(function(){scrollTo('.keyFeatures');});
+  $('.btnUserCases').click(function(){scrollTo('#user-cases');});
+  $('.btnViewPL').click(function(){scrollTo('#price');});
+    
+  function scrollTo(sectionClass){
+   $('html,body').animate({
+    scrollTop:$(sectionClass).offset().top},'slow');
+  }
+  $(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() >= $(document).height() - $(".footer").height() ){
+       $(".back-to-top").css("bottom",$(".footer").height()+$(".back-to-top").height());
+//      console.log("hi") ;
+   }else{
+       $(".back-to-top").css("bottom","20px");
+   }
+});
 
-  var offset = 250;
-  var duration = 300;
-  jQuery(window).scroll(function() {
-      if (jQuery(this).scrollTop() > offset) {
-          jQuery('.back-to-top').fadeIn(duration);
-      } else {
-          jQuery('.back-to-top').fadeOut(duration);
-      }
-  });
-
-  jQuery('.back-to-top').click(function(event) {
-      event.preventDefault();
-      jQuery('html, body').animate({scrollTop: 0}, duration);
-      return false;
-  })
-
-
-// scroll up then open modal
-  // $(".intro-button").click(function() {
-  //   $('html, body').animate({
-  //       scrollTop: $(".header-top").offset().top
-  //   }, 1000  );
-  //   $('#myModal').modal('show');
-  // });
 });
 
 
