@@ -36,19 +36,46 @@ $(document).ready(function(){
   $('.btnFeatures').click(function(){scrollTo('.keyFeatures');});
   $('.btnUserCases').click(function(){scrollTo('#user-cases');});
   $('.btnViewPL').click(function(){scrollTo('#price');});
-    
+
   function scrollTo(sectionClass){
-   $('html,body').animate({
-    scrollTop:$(sectionClass).offset().top},'slow');
+    $('html,body').animate({
+     scrollTop:$(sectionClass).offset().top},'slow');
   }
   $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() >= $(document).height() - $(".footer").height() ){
-       $(".back-to-top").css("bottom",$(".footer").height()+$(".back-to-top").height());
-//      console.log("hi") ;
-   }else{
-       $(".back-to-top").css("bottom","20px");
-   }
-});
+    if($(window).scrollTop() + $(window).height() >= $(document).height() - $(".footer").height() ){
+      $(".back-to-top").css("bottom",$(".footer").height()+$(".back-to-top").height());
+    }else{
+      $(".back-to-top").css("bottom","20px");
+    }
+  });
+
+  // for multiple forms need to go up the dom to look for the form class i.e. contact and then use correct var data?
+  $('form').on('submit', function(event) {
+    // console.log($('form'));
+    event.preventDefault();
+    var form = $(this);
+    console.log(form);
+
+    var data = {
+      fullName: $("#fullName").val(),
+      email: $("#email").val(),
+      company: $("#company").val(),
+      message: $("#message").val()
+    }
+
+    $.ajax({
+      url: form.attr('action'),
+      dataType: 'json',
+      contentType: 'application/json',
+      type: 'POST',
+      data : JSON.stringify(data),
+      accepts: "application/json",
+      error: function(req, err){
+        console.log('error message: ' + err); },
+      success: function(json) {
+      }
+    })
+  });
 
 });
 
