@@ -2,6 +2,9 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'json'
 require 'pony'
+require 'dotenv'
+
+Dotenv.load
 
 $stdout.sync = true
 
