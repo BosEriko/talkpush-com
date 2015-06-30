@@ -14,8 +14,25 @@ end
 
 post '/demo', :provides => :json do
   params = JSON.parse(request.body.read)
-  puts params
-  {}
+  Pony.mail({
+    :to => ENV["TO_ADDRESS"],
+    :via => :smtp,
+    :from => ENV["EMAIL_ADDRESS"],
+    :subject => "Demo",
+    # :headers => { 'Content-Type' => 'text/html' }, #for adding html emails into the body field
+    :body => params["fullName"] + "\n" + params["company"] + "\n" + params["email"] + "\n\n" + params["message"],
+    :via_options => {
+      :address        => 'smtp.gmail.com',
+      :port           => '25',
+      :user_name      => ENV["EMAIL_ADDRESS"],
+      :password       => ENV["EMAIL_PASSWORD"],
+      :authentication => :plain,
+      :domain         => "talkpush.com"
+    }
+  })
+
+  # puts params
+  # {}
 end
 
 post '/contact', :provides => :json do
