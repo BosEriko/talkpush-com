@@ -103,7 +103,7 @@ p {
 .introduction {
   margin-top: 45px;
   margin: auto;
-  max-width: 430px;
+  max-width: 480px;
   text-align: center;
 }
 
@@ -532,4 +532,14 @@ p {
 
 .collapse>.nav .active {
     background-color: #fafafa;
+}
+
+.navbar-right {
+    font-size: 14px;
+    font-weight:normal;
+}
+
+.intro-header {
+    font-size: 31px;
+    font-weight: bold;
 }
