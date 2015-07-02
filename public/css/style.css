@@ -22,6 +22,10 @@ h2 {
   text-transform: uppercase;
 }
 
+.interested-in h2 {
+  text-align: center !important;
+}
+
 h3 {
   color: #FFF;
   font-size: 18px;
@@ -131,6 +135,9 @@ p {
 .spec {
   text-align: center;
   margin-top: 40px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .spec p {
@@ -214,8 +221,8 @@ p {
 /*form section*/
 
 .interested-in {
-  margin-left: 40px;
-  float: left;
+/*  margin-left: 40px;*/
+/*  float: left;*/
 }
 
 .interested-dropdown-menu {
@@ -337,6 +344,9 @@ p {
 .price {
   text-align: center;
   padding-bottom: 50px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .price-header {
@@ -366,11 +376,11 @@ p {
 .price-footer {
   background-color: white;
   color: rgb(50,58,69);
-  text-align: left;
+  text-align: center;
   margin-left: -5px;
   margin-right: -5px;
   margin-top: -12px;
-  min-height: 80px;
+  min-height: 40px;
 }
 .price-footer ul {
   list-style-type: none;
@@ -407,6 +417,7 @@ p {
   padding-top: 25px;
   padding-bottom: 40px;
   margin-bottom: -5px;
+    color: white;
 }
 .footer h3 {
   text-transform: none;
@@ -432,6 +443,8 @@ p {
 
 .social-link {
   padding-left: 10px;
+    
+
 }
 
 .back-to-top {
@@ -553,4 +566,53 @@ p {
     width: 100% !important;
     margin: 0px !important;
     height: 34px;
+}
+
+.tcandpp {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: white;
+}
+.footer a:hover {
+    color: white;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.phoneNo {
+    width: 120px;
+    display: block;
+    float: left;
+    font-style: normal;
+    
+}
+
+.phoneNo-country {
+    float: left;
+}
+
+.social-row {
+    margin-top: -25px;
+}
+
+.ere-logo {
+    margin-top: -25px;
+}
+
+.tia-logo {
+    margin-top: -5px;
+}
+
+.media-logo {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.benefits-box {
+    max-width: 400px;
 }

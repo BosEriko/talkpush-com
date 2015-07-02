@@ -20,6 +20,16 @@
     line-height: 28px;
     margin-top: 70px;
   }
+    .footer-right {
+        text-align: left;
+    }
+    .tcandpp {
+        margin-left: 0px;
+    }
+    .social-link {
+      padding-left: 0px;
+        padding-right: 10px;
+    }
 }
 
 @media only screen and (max-width : 768px), only screen and (max-device-width: 768px) {
@@ -59,6 +69,16 @@
     }    
     .intro-video {
       float:none;
+    }
+    .ere-logo {
+        margin-top: 0px;
+    }
+    .tia-logo {
+        margin-top: 0px;
+    }
+    .benefits-box{
+        
+        margin: 0px auto 0px auto;
     }
     
 }
