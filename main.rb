@@ -18,7 +18,7 @@ post '/contact-form', :provides => :json do
     :to => ENV["TO_ADDRESS"],
     :via => :smtp,
     :from => ENV["EMAIL_ADDRESS"],
-    :subject => 'Talkpush.com contact form',
+    :subject => 'A message from ' + params["fullName"] + ' at ' + params["company"],
     # :headers => { 'Content-Type' => 'text/html' }, #for adding html emails into the body field
     :body => params["fullName"] + "\n" + params["company"] + "\n" + params["email"] + "\n\n" + params["message"],
     :via_options => {
