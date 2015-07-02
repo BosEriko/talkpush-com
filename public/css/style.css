@@ -543,3 +543,14 @@ p {
     font-size: 31px;
     font-weight: bold;
 }
+
+.newsletter-headline {
+    text-align: center;
+}
+
+.btn-nl {
+    float: none !important;
+    width: 100% !important;
+    margin: 0px !important;
+    height: 34px;
+}
