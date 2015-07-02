@@ -49,9 +49,7 @@ $(document).ready(function(){
     }
   });
 
-  // for multiple forms need to go up the dom to look for the form class i.e. contact and then use correct var data?
   $('form').on('submit', function(event) {
-    // console.log($('form'));
     event.preventDefault();
     var form = $(this);
     console.log(form);
