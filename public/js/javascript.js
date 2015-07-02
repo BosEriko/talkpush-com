@@ -73,8 +73,9 @@ $(document).ready(function(){
       success: function(json) {
       }
     })
+    alert('Thank you, Your message has been successfully sent. We will contact you soon!')
+    this.reset()
   });
-
 });
 
 
