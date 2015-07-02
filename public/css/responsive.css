@@ -6,11 +6,29 @@
     .inline-video>iframe{
         min-height: 250px;
     }
+    .spec-right-xs{
+        display: none;
+    }
+    .spec-right{
+        display: block;
+    }
+    .ts-box-media-logo {
+        display: none;
+    }
 }
 
 @media only screen and (max-width : 992px) and (min-width: 769px), only screen and (max-device-width: 992px) and (min-device-width:769px){
     .inline-video {
       display: none !important;
+    }
+    .spec-right-xs{
+        display: block;
+    }
+    .spec-right{
+        display: none;
+    }
+    .ts-box-media-logo {
+        display: block;
     }
 }
 
@@ -80,5 +98,13 @@
         
         margin: 0px auto 0px auto;
     }
-    
+    .spec-right-xs{
+        display: block;
+    }
+    .spec-right{
+        display: none;
+    }
+    .ts-box-media-logo {
+        display: block;
+    }
 }

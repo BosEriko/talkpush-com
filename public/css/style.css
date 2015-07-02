@@ -133,8 +133,8 @@ p {
 }
 
 .spec {
-  text-align: center;
-  margin-top: 40px;
+    text-align: center;
+    margin-top: 40px;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -366,7 +366,7 @@ p {
   margin-left: -5px;
   margin-right: -5px;
   margin-top: -12px;
-  min-height: 130px;
+  min-height: 180px;
 }
 .price-body p {
   font-size: 12px;
@@ -486,9 +486,7 @@ p {
     margin-right: auto;
 }
 
-.intro-header-about {
-  text-align: center;
-}
+
 
 .introduction-about {
   margin: auto;
@@ -615,4 +613,14 @@ p {
 
 .benefits-box {
     max-width: 400px;
+}
+
+
+
+.our-history {
+   color: #575756;
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 30px;
+  min-width: 390px; 
 }
