@@ -69,13 +69,13 @@ $(document).ready(function(){
       data : JSON.stringify(data),
       accepts: "application/json",
       error: function(req, err){
-        console.log('error message: ' + err); },
+        console.log('error message: ' + err);
+        alert('Sorry, something went wrong. Please try sending your message again')
+      },
       success: function(json) {
+        alert('Thank you, Your message has been successfully sent. We will contact you soon!')
       }
     })
-    alert('Thank you, Your message has been successfully sent. We will contact you soon!')
     this.reset()
   });
 });
-
-
