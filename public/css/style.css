@@ -170,7 +170,7 @@ p {
 }
 
 #benefits p {
-  color: #FFF;
+  color: #575756;
 }
 
 #benefits .glyphicon {
@@ -202,7 +202,7 @@ p {
 }
 
 .know-more-wrap {
-  background-color: #FAFAFA;
+/*  background-color: #FAFAFA;*/
 }
 
 .know-more {
@@ -210,7 +210,8 @@ p {
 }
 
 .know-more h2 {
-  color: rgb(50,58,69);
+/*  color: rgb(50,58,69);*/
+    color: white;
   font-weight: 600;
 }
 
@@ -627,4 +628,8 @@ p {
 
 .btnSD {
     cursor: pointer;
+}
+
+.keyBenefits {
+    background-color: #fafafa;
 }
