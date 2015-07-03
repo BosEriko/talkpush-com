@@ -624,3 +624,7 @@ p {
   margin-top: 30px;
   min-width: 390px; 
 }
+
+.btnSD {
+    cursor: pointer;
+}

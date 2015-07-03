@@ -36,6 +36,22 @@ $(document).ready(function(){
   $('.btnFeatures').click(function(){scrollTo('.keyFeatures');});
   $('.btnUserCases').click(function(){scrollTo('#user-cases');});
   $('.btnViewPL').click(function(){scrollTo('#price');});
+  $('.btnStartup').click(function(){
+      scrollTo('.form-container');
+      $('#message').val('I want to schedule a demo of startup plan.');
+  });
+  $('.btnSmallBiz').click(function(){
+      scrollTo('.form-container');
+      $('#message').val('I want to schedule a demo of small business plan.');
+  });
+  $('.btnEnterprise').click(function(){
+      scrollTo('.form-container');
+      $('#message').val('I want to schedule a demo of enterprise plan.');
+  });
+  $('.btnCustom').click(function(){
+      scrollTo('.form-container');
+      $('#message').val('I want to schedule a demo of custom plan.');
+  });
 
   function scrollTo(sectionClass){
     $('html,body').animate({
