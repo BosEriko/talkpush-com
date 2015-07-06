@@ -76,7 +76,7 @@ $('.apply4AM').on('click',function(){
     scrollTo(".form-AM");
     $('#cv').click(function(){alert("UPLOAD HERE")});
 });
-  $('form').on('submit', function(event) {
+  $('form, .contact-form').on('submit', function(event) {
     event.preventDefault();
     var form = $(this);
     console.log(form);
