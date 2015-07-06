@@ -38,33 +38,39 @@ $(document).ready(function(){
   $('.btnViewPL').click(function(){scrollTo('#price');});
   $('.btnStartup').click(function(){
       scrollTo('.form-container');
-      $('#message').val('I want to schedule a demo of startup plan.');
+      $('#message').val('I would like to schedule a demo of startup plan. '+$('#message').val());
   });
   $('.btnSmallBiz').click(function(){
       scrollTo('.form-container');
-      $('#message').val('I want to schedule a demo of small business plan.');
+      $('#message').val('I would like to schedule a demo of small business plan. '+$('#message').val());
   });
   $('.btnEnterprise').click(function(){
       scrollTo('.form-container');
-      $('#message').val('I want to schedule a demo of enterprise plan.');
+      $('#message').val('I would like to schedule a demo of enterprise plan. '+$('#message').val());
   });
   $('.btnCustom').click(function(){
       scrollTo('.form-container');
-      $('#message').val('I want to schedule a demo of custom plan.');
+      $('#message').val('I would like to schedule a demo of custom plan. '+$('#message').val());
   });
 
   function scrollTo(sectionClass){
     $('html,body').animate({
      scrollTop:$(sectionClass).offset().top},'slow');
   }
-  $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() >= $(document).height() - $(".footer").height() ){
-      $(".back-to-top").css("bottom",$(".footer").height()+$(".back-to-top").height());
-    }else{
-      $(".back-to-top").css("bottom","20px");
-    }
-  });
-
+  var positionName = "";
+  var formStr ='';
+$('.apply4SE').on('click',function(){
+    positionName="Software Engineer";
+    formStr='<div class="wrap form-wrap"><div class="container form-container"><div class="row"><div class="col-md-8 col-md-offset-2 col-xs-12 interested-in"><h2>Apply for '+positionName+'</h2></div><div class="contact-form box"><div class="row"><div class="col-md-8 .col-xs-12 col-md-offset-2"><form class="job-form box" action="/job-form" method="POST"><div class="form-group"><input type="text" class="form-control" id="fullName" placeholder=" NAME"></div><div class="form-group"><input type="email" class="form-control" id="email" placeholder=" E-MAIL"></div><div class="form-group"><div class="form-control" id="cv" placeholder=" CV"><i class="fa fa-file-text"></i>&nbsp;&nbsp;UPLOAD YOUR CV</div></div><div class="form-group"><textarea rows="5" class="form-control" id="message" placeholder=" COVER LETTER"></textarea></div><div class="form-group"><div class="col-sm-offset-"><button type="submit" class="btn btn-form">Submit</button></div></div></form></div></div></div></div></div></div>';
+    $('.form-SE').append(formStr);
+    scrollTo(".form-SE");
+});
+$('.apply4AM').on('click',function(){
+    positionName="Account Manager";
+    formStr='<div class="wrap form-wrap"><div class="container form-container"><div class="row"><div class="col-md-8 col-md-offset-2 col-xs-12 interested-in"><h2>Apply for '+positionName+'</h2></div><div class="contact-form box"><div class="row"><div class="col-md-8 .col-xs-12 col-md-offset-2"><form class="job-form box" action="/job-form" method="POST"><div class="form-group"><input type="text" class="form-control" id="fullName" placeholder=" NAME"></div><div class="form-group"><input type="email" class="form-control" id="email" placeholder=" E-MAIL"></div><div class="form-group"><div class="form-control" id="cv" placeholder=" CV"><i class="fa fa-file-text"></i>&nbsp;&nbsp;UPLOAD YOUR CV</div></div><div class="form-group"><textarea rows="5" class="form-control" id="message" placeholder=" COVER LETTER"></textarea></div><div class="form-group"><div class="col-sm-offset-"><button type="submit" class="btn btn-form">Submit</button></div></div></form></div></div></div></div></div></div>';
+    $('.form-AM').append(formStr);
+    scrollTo(".form-AM");
+});
   $('form').on('submit', function(event) {
     event.preventDefault();
     var form = $(this);
