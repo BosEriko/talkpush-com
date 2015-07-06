@@ -405,8 +405,6 @@ p {
 /*client images*/
 .clients {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .client-logos {
@@ -496,7 +494,7 @@ p {
 .introduction-about {
   margin: auto;
   margin-top: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .about-us {
@@ -519,7 +517,7 @@ p {
 .clients h2 {
   color: #575756;
   font-weight: 600;
-  margin-top: -5px;
+  margin-top: 15px;
   padding-bottom: 20px;
 }
 
@@ -674,4 +672,42 @@ p {
 
 .se-form {
     
+}
+
+.introduction-about iframe {
+    margin-top: 20px;
+    min-height: 240px;
+    min-width: 400px;
+    max-width: 400px; 
+}
+.introduction-our-history iframe{
+    margin-top: 30px;
+    min-height: 240px;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.introduction-our-history {
+    text-align: center;
+}
+
+.our-history-text {
+    text-align: left;
+}
+
+.intro-text {
+    text-align: left !important;
+}
+
+.wrap-grey {
+    background: #fafafa;
+    width: 100%;
+}
+
+.form-message-box {
+    text-align: center;
+    opacity: 0;
+}
+#cv{
+    cursor: pointer;
 }
