@@ -56,6 +56,9 @@ p {
   margin-top: none;
   margin-bottom: 35px;
 }
+.terms-content p{
+    color:black;
+}
 
 .btn {
   background-color: #8AA815;
