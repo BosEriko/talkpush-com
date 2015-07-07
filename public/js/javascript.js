@@ -59,28 +59,31 @@ $(document).ready(function(){
   var positionName = "";
   var formStr ='';
 
-    $('.apply4SE').on('click',function(){
-        var isVisible = $( ".form-apply" ).is( ":visible" );
-        if(!isVisible){
-            $(".form-apply").toggle();
-        }
-        positionName="Software Engineer";
-        $(".positionName").html(positionName);
-        scrollTo(".form-apply");
-    });
-        $(".btnTrial").click(function(){
+  $('.apply4SE').on('click',function(){
+      var isVisible = $( ".form-apply" ).is( ":visible" );
+      if(!isVisible){
+          $(".form-apply").toggle();
+      }
+      positionName="Software Engineer";
+      $("#position-name").html(positionName);
+      $("#position").val(positionName);
+      scrollTo(".form-apply");
+  });
+      $(".btnTrial").click(function(){
 
-            scrollTo(".form-container");
-        });
-    $('.apply4AM').on('click',function(){
-        var isVisible = $( ".form-apply" ).is( ":visible" );
-        if(!isVisible){
-            $(".form-apply").toggle();
-        }
-        positionName="Account Manager";
-        $(".positionName").html(positionName);
-        scrollTo(".form-apply");
-    });
+          scrollTo(".form-container");
+      });
+  $('.apply4AM').on('click',function(){
+      var isVisible = $( ".form-apply" ).is( ":visible" );
+      if(!isVisible){
+          $(".form-apply").toggle();
+      }
+      positionName="Account Manager";
+      $("#position-name").html(positionName);
+      $("#position").val(positionName);
+      scrollTo(".form-apply");
+  });
+
   $('form').on('submit', function(event) {
     event.preventDefault();
     var form = $(this);
@@ -111,4 +114,40 @@ $(document).ready(function(){
     })
     this.reset()
   });
+
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    var form = $(this);
+    console.log(form);
+
+    var data = {
+      fullName: $("#fullName").val(),
+      email: $("#email").val(),
+      company: $("#cv").val(),
+      message: $("#message").val(),
+      position: $("#position-name").val()
+    };
+    console.log(data)
+    $.ajax({
+      url: form.attr('action'),
+      dataType: 'json',
+      contentType: 'application/json',
+      type: 'POST',
+      data : JSON.stringify(data),
+      accepts: "application/json",
+      error: function(req, err){
+        console.log('error message: ' + err);
+        $(".form-message-box").html(err);
+        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+      },
+      success: function(json) {
+        $(".form-message-box").html("Successful!");
+        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+      }
+    })
+    this.reset()
+  });
+
+
+
 });
