@@ -58,12 +58,23 @@ $(document).ready(function(){
   }
   var positionName = "";
   var formStr ='';
-    
+    $('#cv').on('click',function(){
+        $('.cv-file').click();
+    });
+    $('.cv-file').change(function(){
+        if($('.cv-file').val()===""){
+            $('.file-text').html("No File Selected");
+        }else{
+            $('.file-text').html($('.cv-file').val());
+        }
+        
+    });
     $('.apply4SE').on('click',function(){
         var isVisible = $( ".form-apply" ).is( ":visible" );
         if(!isVisible){
             $(".form-apply").toggle();
         }
+        $("#message").val("");
         positionName="Software Engineer";
         $(".positionName").html(positionName);
         scrollTo(".form-apply");
@@ -77,6 +88,7 @@ $(document).ready(function(){
         if(!isVisible){
             $(".form-apply").toggle();
         }
+        $("#message").val("");
         positionName="Account Manager";
         $(".positionName").html(positionName);
         scrollTo(".form-apply");
