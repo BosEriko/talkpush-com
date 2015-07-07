@@ -31,3 +31,10 @@ post '/contact-form', :provides => :json do
     }
   })
 end
+
+post '/job-form', :provides => :json do
+  params = JSON.parse(request.body.read)
+  puts "job application"
+  puts params
+
+end
