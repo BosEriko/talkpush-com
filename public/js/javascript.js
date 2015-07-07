@@ -84,10 +84,11 @@ $(document).ready(function(){
       scrollTo(".form-apply");
   });
 
-  $('form').on('submit', function(event) {
+  $('#contact-form').on('submit', function(event) {
+    // console.log("contact form")
     event.preventDefault();
     var form = $(this);
-    console.log(form);
+    // console.log(form);
 
     var data = {
       fullName: $("#fullName").val(),
@@ -95,6 +96,7 @@ $(document).ready(function(){
       company: $("#company").val(),
       message: $("#message").val()
     };
+    // console.log("data = " + data)
     $.ajax({
       url: form.attr('action'),
       dataType: 'json',
@@ -112,22 +114,24 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
       }
     })
+    // console.log(this)
     this.reset()
   });
 
-  $('form').on('submit', function(event) {
+  $('#application-form').on('submit', function(event) {
+    // console.log("application form")
     event.preventDefault();
     var form = $(this);
-    console.log(form);
+    // console.log(form);
 
     var data = {
       fullName: $("#fullName").val(),
       email: $("#email").val(),
-      company: $("#cv").val(),
-      message: $("#message").val(),
-      position: $("#position-name").val()
+      cv: $("#cv").val(),
+      coverLetter: $("#cover-letter").val(),
+      position: $("#position").val()
     };
-    console.log(data)
+    // console.log("data = " + data)
     $.ajax({
       url: form.attr('action'),
       dataType: 'json',
@@ -145,9 +149,7 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
       }
     })
+    // console.log(this)
     this.reset()
   });
-
-
-
 });
