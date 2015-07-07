@@ -34,7 +34,8 @@ post '/contact-form', :provides => :json do
 end
 
 post '/job-form', :provides => :json do
-  params = JSON.parse(request.body.read)
+  # params = JSON.parse(request.body.read)
+
   Pony.mail({
   :to => ENV["TO_ADDRESS"],
   :via => :smtp,
@@ -42,6 +43,10 @@ post '/job-form', :provides => :json do
   :subject => "Application for #{params["position"]}",
   # :headers => { 'Content-Type' => 'text/html' }, #for adding html emails into the body field
   :body => params["fullName"] + " has applied for the position of " + params["position"] + "\n" + params["email"] + "\n\n" + params["coverLetter"],
+  :attachments => {
+    params[:file][:filename] => File.read(params[:file][:tempfile])
+  },
+  :headers => { "Content-Type" => "multipart/mixed", "Content-Transfer-Encoding" => "base64", "Content-Disposition" => "attachment" },
   :via_options => {
     :address        => 'smtp.gmail.com',
     :port           => '25',
@@ -51,7 +56,7 @@ post '/job-form', :provides => :json do
     :domain         => ENV["DOMAIN"]
     }
   })
-  puts params
+  # puts params
 end
 
 # "#{params["fullName"]} has applied for the position of #{params"position"} \n Email address: #{params["email"]} \n #{params["coverLetter"]}",

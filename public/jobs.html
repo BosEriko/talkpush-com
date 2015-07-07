@@ -166,7 +166,7 @@ Preferred but not mandatory:
             <div class="contact-form box">
               <div class="row">
                 <div class="col-md-8 .col-xs-12 col-md-offset-2">
-                  <form id="application-form" class="box" action="/job-form" method="POST">
+                  <form id="application-form" class="box" action="/job-form" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <input type="text" class="form-control" id="fullName" placeholder=" NAME" required>
                     </div>
@@ -178,7 +178,7 @@ Preferred but not mandatory:
                       <div class="form-control" id="cv" placeholder=" CV">
                         <i class="fa fa-file-text"></i>&nbsp;&nbsp;<span class="file-text">UPLOAD YOUR CV </span>
                       </div>
-                        <input type="file" class="cv-file" name="attachement" style="float:right;display:none"/>
+                        <input type="file" id="cv-file" name="attachement" style="float:right;display:none"/>
                       </div>
                     <div class="form-group">
                       <textarea rows="5" class="form-control" id="cover-letter" placeholder=" COVER LETTER"></textarea>

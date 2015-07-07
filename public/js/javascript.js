@@ -85,13 +85,13 @@ $(document).ready(function(){
   });
 
   $('#cv').on('click',function(){
-    $('.cv-file').click();
+    $('#cv-file').click();
   });
-  $('.cv-file').change(function(){
-    if($('.cv-file').val()===""){
+  $('#cv-file').change(function(){
+    if($('#cv-file').val()===""){
         $('.file-text').html("No File Selected");
     }else{
-        $('.file-text').html($('.cv-file').val());
+        $('.file-text').html($('#cv-file').val());
     }
 
   });
@@ -135,22 +135,29 @@ $(document).ready(function(){
     event.preventDefault();
     var form = $(this);
     // console.log(form);
+    var fd = new FormData();
+    fd.append( 'file', $("#cv-file")[0].files[0] );
+    fd.append("fullName", $("#fullName").val());
+    fd.append("email", $("#email").val());
+    fd.append("coverLetter", $("#cover-letter").val());
+    fd.append("position", $("#position").val());
 
-    var data = {
-      fullName: $("#fullName").val(),
-      email: $("#email").val(),
-      cv: $("#cv").val(),
-      coverLetter: $("#cover-letter").val(),
-      position: $("#position").val()
-    };
+    // var data = {
+    //   fullName: $("#fullName").val(),
+    //   email: $("#email").val(),
+    //   cv: fd,
+    //   coverLetter: $("#coverLetter".val(),
+    //   position: $("#position").val()
+    // };
     // console.log("data = " + data)
     $.ajax({
       url: form.attr('action'),
-      dataType: 'json',
-      contentType: 'application/json',
+      // dataType: 'json',
+      processData: false,
+      contentType: false,
       type: 'POST',
-      data : JSON.stringify(data),
-      accepts: "application/json",
+      data: fd,
+      // accepts: "application/json",
       error: function(req, err){
         console.log('error message: ' + err);
         $(".form-message-box").html(err);
