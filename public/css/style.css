@@ -714,3 +714,6 @@ p {
 #cv{
     cursor: pointer;
 }
+.form-apply {
+    display: none;
+}
