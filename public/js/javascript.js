@@ -84,6 +84,18 @@ $(document).ready(function(){
       scrollTo(".form-apply");
   });
 
+  $('#cv').on('click',function(){
+    $('.cv-file').click();
+  });
+  $('.cv-file').change(function(){
+    if($('.cv-file').val()===""){
+        $('.file-text').html("No File Selected");
+    }else{
+        $('.file-text').html($('.cv-file').val());
+    }
+
+  });
+
   $('#contact-form').on('submit', function(event) {
     // console.log("contact form")
     event.preventDefault();

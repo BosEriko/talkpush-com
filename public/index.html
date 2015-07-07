@@ -12,6 +12,16 @@
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <title>Talkpush - Let the Talent Talk</title>
   <link rel="shortcut icon" href="favicon.ico">
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46858485-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
   <div class="header-top"></div>
@@ -211,9 +221,25 @@ THAN EVER BEFORE</h1>
                 </div>
               </form>
             </div>
-          </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder=" E-MAIL">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="company" placeholder=" COMPANY">
+            </div>
+            <div class="form-group">
+              <textarea rows="5" class="form-control" id="message" placeholder=" REQUEST A DEMO / ASK FOR A FREE TRIAL / JUST SAY HI"></textarea>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-">
+                <button type="submit" class="btn btn-form">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-xs-12 form-message-box">#Message Box</div>
         </div>
@@ -372,5 +398,6 @@ THAN EVER BEFORE</h1>
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
   <script src="js/bootstrap.js"></script>
   <script src="js/javascript.js"></script>
+
 </body>
 </html>
