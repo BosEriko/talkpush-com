@@ -31,6 +31,7 @@ $(document).ready(function(){
   $(".intro-button").click(function() {
     $('#myModal').modal('show');
   });
+
   $('.btnBenefits').click(function(){scrollTo('.keyBenefits')});
   $('.back-to-top').click(function(){scrollTo("body");});
   $('.btnFeatures').click(function(){scrollTo('.keyFeatures');});
@@ -40,60 +41,66 @@ $(document).ready(function(){
       scrollTo('.form-container');
       $('#message').val('I would like to schedule a demo of startup plan. ');
   });
+
   $('.btnSmallBiz').click(function(){
       scrollTo('.form-container');
       $('#message').val('I would like to schedule a demo of small business plan. ');
   });
+
   $('.btnEnterprise').click(function(){
       scrollTo('.form-container');
       $('#message').val('I would like to schedule a demo of enterprise plan. ');
   });
+
   $('.btnCustom').click(function(){
       scrollTo('.form-container');
       $('#message').val('I would like to know more detail of custom plan. ');
   });
+
   function scrollTo(sectionClass){
     $('html,body').animate({
      scrollTop:$(sectionClass).offset().top},'slow');
   }
+
   var positionName = "";
   var formStr ='';
 
   $('.apply4SE').on('click',function(){
-      var isVisible = $( ".form-apply" ).is( ":visible" );
-      if(!isVisible){
-          $(".form-apply").toggle();
-      }
-      positionName="Software Engineer";
-      $("#position-name").html(positionName);
-      $("#position").val(positionName);
-      scrollTo(".form-apply");
+    var isVisible = $( ".form-apply" ).is( ":visible" );
+    if(!isVisible){
+      $(".form-apply").toggle();
+    }
+    positionName="Software Engineer";
+    $("#position-name").html(positionName);
+    $("#position").val(positionName);
+    scrollTo(".form-apply");
   });
-      $(".btnTrial").click(function(){
 
-          scrollTo(".form-container");
-      });
+  $(".btnTrial").click(function(){
+      scrollTo(".form-container");
+  });
+
   $('.apply4AM').on('click',function(){
-      var isVisible = $( ".form-apply" ).is( ":visible" );
-      if(!isVisible){
-          $(".form-apply").toggle();
-      }
-      positionName="Account Manager";
-      $("#position-name").html(positionName);
-      $("#position").val(positionName);
-      scrollTo(".form-apply");
+    var isVisible = $( ".form-apply" ).is( ":visible" );
+    if(!isVisible){
+      $(".form-apply").toggle();
+    }
+    positionName="Account Manager";
+    $("#position-name").html(positionName);
+    $("#position").val(positionName);
+    scrollTo(".form-apply");
   });
 
   $('#cv').on('click',function(){
     $('#cv-file').click();
   });
+
   $('#cv-file').change(function(){
     if($('#cv-file').val()===""){
-        $('.file-text').html("No File Selected");
+      $('.file-text').html("No File Selected");
     }else{
-        $('.file-text').html($('#cv-file').val());
+      $('.file-text').html($('#cv-file').val());
     }
-
   });
 
   $('#contact-form').on('submit', function(event) {
@@ -138,12 +145,10 @@ $(document).ready(function(){
 
     $.ajax({
       url: form.attr('action'),
-      // dataType: 'json',
       processData: false,
       contentType: false,
       type: 'POST',
       data: fd,
-      // accepts: "application/json",
       error: function(req, err){
         console.log('error message: ' + err);
         $(".form-message-box").html(err);
