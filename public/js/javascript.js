@@ -169,6 +169,6 @@ $(document).ready(function(){
       }
     })
     // console.log(this)
-    this.reset()
+    // this.reset()
   });
 });

@@ -36,6 +36,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   json
+  mail
   pony
   sinatra
   sinatra-reloader
