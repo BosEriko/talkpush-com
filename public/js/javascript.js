@@ -58,45 +58,47 @@ $(document).ready(function(){
   }
   var positionName = "";
   var formStr ='';
-    $('#cv').on('click',function(){
-        $('.cv-file').click();
-    });
-    $('#cv-file').change(function(){
-        if($('.cv-file').val()===""){
-            $('.file-text').html("No File Selected");
-        }else{
-            $('.file-text').html($('.cv-file').val());
-        }
 
-    });
-    $('.apply4SE').on('click',function(){
-        var isVisible = $( ".form-apply" ).is( ":visible" );
-        if(!isVisible){
-            $(".form-apply").toggle();
-        }
-        $("#message").val("");
-        positionName="Software Engineer";
-        $(".positionName").html(positionName);
-        scrollTo(".form-apply");
-    });
-        $(".btnTrial").click(function(){
+  $('.apply4SE').on('click',function(){
+      var isVisible = $( ".form-apply" ).is( ":visible" );
+      if(!isVisible){
+          $(".form-apply").toggle();
+      }
+      positionName="Software Engineer";
+      $("#position-name").html(positionName);
+      $("#position").val(positionName);
+      scrollTo(".form-apply");
+  });
+      $(".btnTrial").click(function(){
 
-            scrollTo(".form-container");
-        });
-    $('.apply4AM').on('click',function(){
-        var isVisible = $( ".form-apply" ).is( ":visible" );
-        if(!isVisible){
-            $(".form-apply").toggle();
-        }
-        $("#message").val("");
-        positionName="Account Manager";
-        $(".positionName").html(positionName);
-        scrollTo(".form-apply");
-    });
-  $('form').on('submit', function(event) {
+          scrollTo(".form-container");
+      });
+  $('.apply4AM').on('click',function(){
+      var isVisible = $( ".form-apply" ).is( ":visible" );
+      if(!isVisible){
+          $(".form-apply").toggle();
+      }
+      positionName="Account Manager";
+      $("#position-name").html(positionName);
+      $("#position").val(positionName);
+      scrollTo(".form-apply");
+  });
+
+  $('#cv').on('click',function(){
+    $('#cv-file').click();
+  });
+  $('#cv-file').change(function(){
+    if($('#cv-file').val()===""){
+        $('.file-text').html("No File Selected");
+    }else{
+        $('.file-text').html($('#cv-file').val());
+    }
+
+  });
+
+  $('#contact-form').on('submit', function(event) {
     event.preventDefault();
     var form = $(this);
-    console.log(form);
 
     var data = {
       fullName: $("#fullName").val(),
@@ -121,8 +123,37 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
       }
     })
+    this.reset()
   });
 
+  $('#application-form').on('submit', function(event) {
+    event.preventDefault();
+    var form = $(this);
+    var fd = new FormData();
+    fd.append( 'file', $("#cv-file")[0].files[0] );
+    fd.append("fullName", $("#fullName").val());
+    fd.append("email", $("#email").val());
+    fd.append("coverLetter", $("#cover-letter").val());
+    fd.append("position", $("#position").val());
+
+    $.ajax({
+      url: form.attr('action'),
+      // dataType: 'json',
+      processData: false,
+      contentType: false,
+      type: 'POST',
+      data: fd,
+      // accepts: "application/json",
+      error: function(req, err){
+        console.log('error message: ' + err);
+        $(".form-message-box").html(err);
+        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+      },
+      success: function(json) {
+        $(".form-message-box").html("Successful!");
+        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+      }
+    })
+    this.reset()
+  });
 });
-
-
