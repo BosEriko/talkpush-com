@@ -97,10 +97,8 @@ $(document).ready(function(){
   });
 
   $('#contact-form').on('submit', function(event) {
-    // console.log("contact form")
     event.preventDefault();
     var form = $(this);
-    // console.log(form);
 
     var data = {
       fullName: $("#fullName").val(),
@@ -108,7 +106,6 @@ $(document).ready(function(){
       company: $("#company").val(),
       message: $("#message").val()
     };
-    // console.log("data = " + data)
     $.ajax({
       url: form.attr('action'),
       dataType: 'json',
@@ -126,15 +123,12 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
       }
     })
-    // console.log(this)
     this.reset()
   });
 
   $('#application-form').on('submit', function(event) {
-    // console.log("application form")
     event.preventDefault();
     var form = $(this);
-    // console.log(form);
     var fd = new FormData();
     fd.append( 'file', $("#cv-file")[0].files[0] );
     fd.append("fullName", $("#fullName").val());
@@ -142,14 +136,6 @@ $(document).ready(function(){
     fd.append("coverLetter", $("#cover-letter").val());
     fd.append("position", $("#position").val());
 
-    // var data = {
-    //   fullName: $("#fullName").val(),
-    //   email: $("#email").val(),
-    //   cv: fd,
-    //   coverLetter: $("#coverLetter".val(),
-    //   position: $("#position").val()
-    // };
-    // console.log("data = " + data)
     $.ajax({
       url: form.attr('action'),
       // dataType: 'json',
@@ -168,7 +154,6 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
       }
     })
-    // console.log(this)
-    // this.reset()
+    this.reset()
   });
 });
