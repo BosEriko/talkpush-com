@@ -61,13 +61,13 @@ $(document).ready(function(){
     $('#cv').on('click',function(){
         $('.cv-file').click();
     });
-    $('.cv-file').change(function(){
+    $('#cv-file').change(function(){
         if($('.cv-file').val()===""){
             $('.file-text').html("No File Selected");
         }else{
             $('.file-text').html($('.cv-file').val());
         }
-        
+
     });
     $('.apply4SE').on('click',function(){
         var isVisible = $( ".form-apply" ).is( ":visible" );
@@ -112,7 +112,7 @@ $(document).ready(function(){
       data : JSON.stringify(data),
       accepts: "application/json",
       error: function(req, err){
-        console.log('error message: ' + err); 
+        console.log('error message: ' + err);
         $(".form-message-box").html(err);
         $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
       },
