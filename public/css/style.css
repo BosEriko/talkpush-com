@@ -790,3 +790,25 @@ p {
         margin-right: -13px;
 }
 
+
+.floating-window {
+    position: fixed;
+    right: 20px;
+    top:200px;
+    width: 200px;
+    font-size: 10px;
+    z-index: 999;
+}
+.floating-window li:hover{
+    text-decoration: underline;
+	cursor: pointer;
+    display: block;
+}
+.floating-window ul {
+	list-style: none;
+    color: #575756;
+}
+.floating-window .active{
+    color: #8aa815;
+    font-size: 13px;
+}
