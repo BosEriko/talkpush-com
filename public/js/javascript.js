@@ -32,27 +32,63 @@ $(document).ready(function(){
     $('#myModal').modal('show');
   });
 
+
+    $(".btnCompany").click(function(e){
+        console.log(e.currentTarget);
+        _fbq.push('track', 'ViewContent');
+    });
+    $(".btnFeatures").click(function(e){
+        console.log(e.currentTarget);
+        _fbq.push('track', 'ViewContent');
+    });
+    $(".btnBenefits").click(function(e){
+        console.log(e.currentTarget);
+        _fbq.push('track', 'ViewContent');
+    });
+    $(".btnBlog").click(function(e){
+        console.log(e.currentTarget);
+        _fbq.push('track', 'ViewContent');
+    });
+    $(".btnJob").click(function(e){
+        console.log(e.currentTarget);
+        _fbq.push('track', 'ViewContent');
+    });
+    $(".btnMytalkpush").click(function(e){
+        console.log(e.currentTarget);
+        _fbq.push('track', 'ViewContent');
+    });
+    $(".backtohome").click(function(e){
+        console.log(e.currentTarget);
+        _fbq.push('track', 'ViewContent');
+    });
   $('.btnBenefits').click(function(){scrollTo('.keyBenefits')});
   $('.back-to-top').click(function(){scrollTo("body");});
   $('.btnFeatures').click(function(){scrollTo('.keyFeatures');});
   $('.btnUserCases').click(function(){scrollTo('#user-cases');});
-  $('.btnViewPL').click(function(){scrollTo('#price');});
+  $('.btnViewPL').click(function(){
+      scrollTo('#price');
+      _fbq.push('track', 'Lead');
+  });
   $('.btnStartup').click(function(){
+      _fbq.push('track', 'Lead');
       scrollTo('.form-container');
       $('#message').val('I would like to schedule a demo of startup plan. ');
   });
 
   $('.btnSmallBiz').click(function(){
+      _fbq.push('track', 'Lead');
       scrollTo('.form-container');
       $('#message').val('I would like to schedule a demo of small business plan. ');
   });
 
   $('.btnEnterprise').click(function(){
+      _fbq.push('track', 'Lead');
       scrollTo('.form-container');
       $('#message').val('I would like to schedule a demo of enterprise plan. ');
   });
 
   $('.btnCustom').click(function(){
+      _fbq.push('track', 'Lead');
       scrollTo('.form-container');
       $('#message').val('I would like to know more detail of custom plan. ');
   });
@@ -128,6 +164,8 @@ $(document).ready(function(){
       success: function(json) {
         $(".form-message-box").html("Successful!");
         $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+          
+        _fbq.push('track', 'CompleteRegistration');
       }
     })
     this.reset()
