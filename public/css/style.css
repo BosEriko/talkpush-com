@@ -520,7 +520,7 @@ p {
 }
 
 .clients h2 {
-  color: #575756;
+/*  color: #575756;*/
   font-weight: 600;
   margin-top: 15px;
   padding-bottom: 20px;
@@ -712,7 +712,7 @@ p {
 
 .form-message-box {
     text-align: center;
-    opacity: 0;
+    display: none;
 }
 #cv{
     cursor: pointer;

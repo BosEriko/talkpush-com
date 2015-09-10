@@ -111,6 +111,16 @@ $(document).ready(function(){
     $("#position").val(positionName);
     scrollTo(".form-apply");
   });
+ $('.apply4DMA').on('click',function(){
+    var isVisible = $( ".form-apply" ).is( ":visible" );
+    if(!isVisible){
+      $(".form-apply").toggle();
+    }
+    positionName="DIGITAL HR MARKETING ANALYST";
+    $("#position-name").html(positionName);
+    $("#position").val(positionName);
+    scrollTo(".form-apply");
+  });
 
   $(".btnTrial").click(function(){
       scrollTo(".form-container");
