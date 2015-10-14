@@ -61,6 +61,7 @@ $(document).ready(function(){
         //console.log(e.currentTarget);
         //_fbq.push('track', 'ViewContent');
     });
+    $('.btnFreeTrial').click(function(){scrollTo('#contact-form-container')});
   $('.btnBenefits').click(function(){scrollTo('.keyBenefits')});
   $('.back-to-top').click(function(){scrollTo("body");});
   $('.btnFeatures').click(function(){scrollTo('.keyFeatures');});
@@ -169,16 +170,17 @@ $(document).ready(function(){
       error: function(req, err){
         console.log('error message: ' + err);
         $(".form-message-box").html(err);
-        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
+          
+        this.reset();
         $(".form-message-box").html("Successful!");
-        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
           
         _fbq.push('track', 'CompleteRegistration');
       }
     })
-    this.reset()
   });
 
   $('#application-form').on('submit', function(event) {
@@ -199,14 +201,14 @@ $(document).ready(function(){
       data: fd,
       error: function(req, err){
         console.log('error message: ' + err);
-        $(".form-message-box").html(err);
-        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+        $(".form-message-box").html(err+"");
+        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
-        $(".form-message-box").html("Successful!");
-        $(".form-message-box").animate({"opacity":"1"},"slow").animate({"opacity":"0"},2000);
+        $(".form-message-box").html("Successful! Thanks for your submission.");
+        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
+        this.reset();
       }
     })
-    this.reset()
   });
 });

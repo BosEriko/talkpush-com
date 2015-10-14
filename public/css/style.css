@@ -543,7 +543,7 @@ p {
     margin-top: 60px;
 }
 
-.btnFeatures ,.btnBenefits, .btnUserCases{
+.btnFeatures ,.btnBenefits, .btnUserCases, .btnFreeTrial{
     cursor: pointer;
 }
 
@@ -712,7 +712,7 @@ p {
 
 .form-message-box {
     text-align: center;
-    display: none;
+    display: block;
 }
 #cv{
     cursor: pointer;
@@ -812,3 +812,12 @@ p {
     color: #8aa815;
     font-size: 13px;
 }
+
+.streetdeal_wps {
+    margin-top:0px;
+}
+
+.lazada_wps {
+    margin-top:0px;
+}
+
