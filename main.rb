@@ -29,6 +29,10 @@ get '/xmaspromotion' do
   File.read(File.join('public/xmaspromotion', 'index.html'))
 end
 
+get '/xmaspromotion/' do
+  File.read(File.join('public/xmaspromotion', 'index.html'))
+end
+
 post '/contact-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
