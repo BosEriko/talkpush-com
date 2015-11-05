@@ -547,6 +547,13 @@ p {
     cursor: pointer;
 }
 
+.btnFreeTrial {
+	background: #8aa815;
+    color: #fff !important;
+    width: 100px;
+    text-align: center;
+}
+
 
 
 .collapse>.nav .active {
