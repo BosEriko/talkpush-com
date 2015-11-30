@@ -207,7 +207,7 @@ $(document).ready(function(){
       success: function(json) {
         $(".form-message-box").html("Successful! Thanks for your submission.");
         $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
-        this.reset();
+        $("#application-form")[0].reset();
       }
     })
   });
