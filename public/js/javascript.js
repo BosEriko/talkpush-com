@@ -169,7 +169,7 @@ $(document).ready(function(){
       accepts: "application/json",
       error: function(req, err){
         console.log('error message: ' + err);
-        $(".form-message-box").html(err +"occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
+        $(".form-message-box").html(err +" occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
         $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
@@ -186,7 +186,7 @@ $(document).ready(function(){
     event.preventDefault();
     var form = $(this);
     var fd = new FormData();
-    fd.append( 'file', $("#cv-file")[0].files[0] );
+    fd.append('file', $("#cv-file")[0].files[0] );
     fd.append("fullName", $("#fullName").val());
     fd.append("email", $("#email").val());
     fd.append("coverLetter", $("#cover-letter").val());
@@ -200,7 +200,7 @@ $(document).ready(function(){
       data: fd,
       error: function(req, err){
         console.log('error message: ' + err);
-        $(".form-message-box").html(err+"occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
+        $(".form-message-box").html(err+" occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
         $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {

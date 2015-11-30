@@ -56,15 +56,24 @@ post '/job-form' do
   position = params["position"]
   email = params["email"]
   cover_letter = params["coverLetter"]
-  file_name = params[:file][:filename]
-  tempfile = params[:file][:tempfile]
-
-  Mail.deliver do
-    to      ENV["TO_ADDRESS"]
-    from    ENV["EMAIL_ADDRESS"]
-    subject "Application for #{position}"
-    body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
-    add_file :filename => file_name, :content => File.read(tempfile)
+  if(params.has_key?(:file))
+      file_name = params[:file][:filename]
+      tempfile = params[:file][:tempfile]
+      Mail.deliver do
+        to      ENV["TO_ADDRESS"]
+        from    ENV["EMAIL_ADDRESS"]
+        subject "Application for #{position}"
+        body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
+        add_file :filename => file_name, :content => File.read(tempfile)
+      end
+  else
+      Mail.deliver do
+        to      ENV["TO_ADDRESS"]
+        from    ENV["EMAIL_ADDRESS"]
+        subject "Application for #{position}"
+        body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
+      end
   end
+  
 
 end
