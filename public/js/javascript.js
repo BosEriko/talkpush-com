@@ -169,14 +169,13 @@ $(document).ready(function(){
       accepts: "application/json",
       error: function(req, err){
         console.log('error message: ' + err);
-        $(".form-message-box").html(err);
-        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
+        $(".form-message-box").html(err +"occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
+        $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
-          
         $("#contact-form")[0].reset()
         $(".form-message-box").html("Successful!");
-        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
+        $(".form-message-box").animate({"opacity":"1"},"slow").delay(5000).animate({"opacity":"0"},2000);
           
         _fbq.push('track', 'CompleteRegistration');
       }
@@ -201,12 +200,12 @@ $(document).ready(function(){
       data: fd,
       error: function(req, err){
         console.log('error message: ' + err);
-        $(".form-message-box").html(err+"");
-        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
+        $(".form-message-box").html(err+"occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
+        $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
         $(".form-message-box").html("Successful! Thanks for your submission.");
-        $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
+        $(".form-message-box").animate({"opacity":"1"},"slow").delay(5000).animate({"opacity":"0"},2000);
         $("#application-form")[0].reset();
       }
     })
