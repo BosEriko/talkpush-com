@@ -188,6 +188,9 @@ $(document).ready(function(){
     var fd = new FormData();
     if(typeof $("#cv-file")[0].files[0] !="undefined"){
         fd.append('file', $("#cv-file")[0].files[0] );
+        fd.append("haveFile",true);
+    }else{
+        fd.append("haveFile",false);
     }
     fd.append("fullName", $("#fullName").val());
     fd.append("email", $("#email").val());
