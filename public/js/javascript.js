@@ -186,7 +186,9 @@ $(document).ready(function(){
     event.preventDefault();
     var form = $(this);
     var fd = new FormData();
-    fd.append('file', $("#cv-file")[0].files[0] );
+    if(typeof $("#cv-file")[0].files[0] !="undefined"){
+        fd.append('file', $("#cv-file")[0].files[0] );
+    }
     fd.append("fullName", $("#fullName").val());
     fd.append("email", $("#email").val());
     fd.append("coverLetter", $("#cover-letter").val());
