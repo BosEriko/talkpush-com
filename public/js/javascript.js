@@ -174,7 +174,7 @@ $(document).ready(function(){
       },
       success: function(json) {
           
-        this.reset();
+        $("#contact-form")[0].reset()
         $(".form-message-box").html("Successful!");
         $(".form-message-box").animate({"opacity":"1"},"slow").delay(3000).animate({"opacity":"0"},2000);
           
