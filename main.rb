@@ -56,7 +56,7 @@ post '/job-form' do
   position = params["position"]
   email = params["email"]
   cover_letter = params["coverLetter"]
-  if(params.has_key?(:file))
+    if(params.has_key?(:filename))
       file_name = params[:file][:filename]
       tempfile = params[:file][:tempfile]
       Mail.deliver do
