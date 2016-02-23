@@ -157,8 +157,8 @@ p {
 }
 
 /*benefits*/
-.key-benefits h2 {
-  color: #8aa815;
+.keyBenefits h2 {
+/*  color: #fff;*/
   font-weight: 600;
   margin-top: 50px;
   margin-bottom: 8px;
@@ -173,12 +173,10 @@ p {
   padding-bottom: 20px;
 }
 
-#benefits p {
-  color: #575756;
-}
+
 
 #benefits .glyphicon {
-  border: #8AA815 3px solid;
+  border: #fff 3px solid;
   border-radius: 48px;
   color: #FFF;
   font-size: 40px;
@@ -215,7 +213,7 @@ p {
 
 .know-more h2 {
   color: rgb(50,58,69);
-/*    color: white;*/
+/*    color: #fff;*/
   font-weight: 600;
 }
 
@@ -515,7 +513,7 @@ p {
 }
 
 .know-more-about h2 {
-  color: white;
+  color: #fff;
   padding-bottom: 15px;
 }
 
@@ -627,7 +625,7 @@ p {
 }
 
 .benefits-box {
-    max-width: 400px;
+/*    max-width: 400px;*/
 }
 
 
@@ -645,7 +643,7 @@ p {
 }
 
 .keyBenefits {
-    background-color: #fafafa;
+/*    background-color: #fafafa;*/
 }
 
 .recruit-header {
@@ -734,6 +732,7 @@ p {
 
 .what-people-say {
     min-height: 350px;
+/*    background-color: #fafafa !important;*/
 }
 
 .what-people-say .bottom-line {
@@ -828,3 +827,36 @@ p {
     margin-top:0px;
 }
 
+
+.recruitment-acceleration {
+    background-color: #fafafa;
+    
+    text-align: center;
+}
+.recruitment-acceleration p{
+    color: #575756 !important;
+}
+.recuirement-accleration .ra-box{
+/*    max-width: 400px;*/
+    
+}
+
+.recruitment-acceleration .glyphicon {
+    width: 92px;
+    height: 92px;
+    border: #8AA815 3px solid;
+    border-radius: 48px;
+    color: #FFF;
+    font-size: 40px;
+    padding: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.what-people-say p {
+/*    color: #565657 !important;*/
+}
+
+.featured-on {
+    background: #fafafa;
+}
