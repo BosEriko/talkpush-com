@@ -863,3 +863,7 @@ p {
 .featured-on {
     background: #fafafa;
 }
+
+.hrtoday {
+    max-width: 150px;
+}
