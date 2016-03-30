@@ -24,7 +24,9 @@ end
 get '/' do
   File.read(File.join('public', 'index.html'))
 end
-
+get '/faqs' do
+    File.read(File.join('public/faqs','index.html'));
+end
 get '/xmaspromotion' do
   File.read(File.join('public/xmaspromotion', 'index.html'))
 end
