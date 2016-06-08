@@ -813,6 +813,18 @@ p {
 	cursor: pointer;
     display: block;
 }
+.wrap-partnership li{
+	font-weight: 100;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.wrap-partnership ul {
+   list-style: none;
+}
+.wrap-partnership ul li:before {
+   content: "•";
+    padding-right: 15px;
+}
 .floating-window ul {
 	list-style: none;
     color: #575756;
@@ -859,6 +871,9 @@ p {
 .what-people-say p {
 /*    color: #565657 !important;*/
 }
+.wrap-partnership p{
+    color: #565657;
+}
 
 .featured-on {
     background: #fafafa;
@@ -866,4 +881,24 @@ p {
 
 .hrtoday {
     max-width: 150px;
+}
+
+.wrap-partnership {
+    background-color: #fafafa;
+    color: #565657;
+}
+
+.header-partnership {
+    background: url('../images/partnership_background_2x.jpg');
+    background-size: cover;
+    background-position-x: center;
+    height: 550px;
+    
+}
+
+.sign-up {
+    padding: 20px 50px;
+    background-color: #8aa815;
+    border: none;
+    color: white;
 }
