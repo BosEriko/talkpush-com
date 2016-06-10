@@ -205,7 +205,7 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
-        $("#contact-form")[0].reset()
+        $("#partnership-form")[0].reset()
         $(".form-message-box").html("Successful!");
         $(".form-message-box").animate({"opacity":"1"},"slow").delay(5000).animate({"opacity":"0"},2000);
           
