@@ -183,6 +183,8 @@ $(document).ready(function(){
     })
   });
   $('#partnership-form').on('submit', function(event) {
+    $(".btn-form > span").hide();
+    $(".btn-form > .sk-circle").show();
     event.preventDefault();
     var form = $(this);
 
@@ -200,13 +202,17 @@ $(document).ready(function(){
       data : JSON.stringify(data),
       accepts: "application/json",
       error: function(req, err){
+        $(".btn-form > span").show();
+        $(".btn-form > .sk-circle").hide();
         console.log('error message: ' + err);
         $(".form-message-box").html(err +" occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
         $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
+        $(".btn-form > span").show();
+        $(".btn-form > .sk-circle").hide();
         $("#partnership-form")[0].reset()
-        $(".form-message-box").html("Successful!");
+        $(".form-message-box").html("<br/>Successful!");
         $(".form-message-box").animate({"opacity":"1"},"slow").delay(5000).animate({"opacity":"0"},2000);
           
         _fbq.push('track', 'CompleteRegistration');
