@@ -93,6 +93,7 @@ $(document).ready(function(){
       scrollTo('.form-container');
       $('#message').val('I would like to know more detail of custom plan. ');
   });
+  $('.sign-up').click(function(){scrollTo('#partnership-form')});
 
   function scrollTo(sectionClass){
     $('html,body').animate({
@@ -181,7 +182,37 @@ $(document).ready(function(){
       }
     })
   });
+  $('#partnership-form').on('submit', function(event) {
+    event.preventDefault();
+    var form = $(this);
 
+    var data = {
+      fullName: $("#fullName").val(),
+      email: $("#email").val(),
+      company: $("#company").val(),
+      message: $("#message").val()
+    };
+    $.ajax({
+      url: form.attr('action'),
+      dataType: 'json',
+      contentType: 'application/json',
+      type: 'POST',
+      data : JSON.stringify(data),
+      accepts: "application/json",
+      error: function(req, err){
+        console.log('error message: ' + err);
+        $(".form-message-box").html(err +" occurred! <br>Please send a email to <a href='mailto:hello@talkpush.com'>hello@talkpush.com</a>.");
+        $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
+      },
+      success: function(json) {
+        $("#contact-form")[0].reset()
+        $(".form-message-box").html("Successful!");
+        $(".form-message-box").animate({"opacity":"1"},"slow").delay(5000).animate({"opacity":"0"},2000);
+          
+        _fbq.push('track', 'CompleteRegistration');
+      }
+    })
+  });
   $('#application-form').on('submit', function(event) {
     event.preventDefault();
     var form = $(this);
