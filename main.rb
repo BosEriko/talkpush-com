@@ -64,7 +64,7 @@ post '/partnership-form', :provides => :json do
   message = params["message"]
 
   Mail.deliver do
-    to      "eato.lau@talkpush.com"
+    to      ENV["PARTNERSHIP_RECIPIENT"]
     from    ENV["EMAIL_ADDRESS"]
       subject "Partnership enquiry from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
