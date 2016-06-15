@@ -55,6 +55,22 @@ post '/contact-form', :provides => :json do
 
 end
 
+post '/sourcing-form', :provides => :json do
+  params = JSON.parse(request.body.read)
+
+  full_name = params["fullName"]
+  email = params["email"]
+  company = params["company"]
+  message = params["message"]
+
+  Mail.deliver do
+    to      ENV["TO_ADDRESS"]
+    from    ENV["EMAIL_ADDRESS"]
+      subject "Sourcing enquiry from #{full_name} at #{company}"
+    body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
+  end
+end
+
 post '/partnership-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
@@ -69,7 +85,6 @@ post '/partnership-form', :provides => :json do
       subject "Partnership enquiry from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
-
 end
 
 post '/job-form' do

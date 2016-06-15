@@ -872,36 +872,38 @@ p {
 /*    color: #565657 !important;*/
 }
 .wrap-partnership p{
-    color: #565657;
+  color: #565657;
 }
 
 .featured-on {
-    background: #fafafa;
+  background: #fafafa;
 }
 
 .hrtoday {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 .wrap-partnership {
-    background-color: #fafafa;
-    color: #565657;
+  background-color: #fafafa;
+  color: #565657;
 }
 
 .header-partnership {
-    background: url('../images/partnership_background_2x.jpg');
-    background-size: cover;
-    background-position-x: center;
-    height: 550px;
+  background: url('../images/partnership_background_2x.jpg');
+  background-size: cover;
+  background-position-x: center;
+  height: 550px;
     
 }
 
-.sign-up {
-    padding: 20px 50px;
-    background-color: #8aa815;
-    border: none;
-    color: white;
+.sign-up,.sign-up-sourcing {
+  padding: 20px 50px;
+  background-color: #8aa815;
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
 }
-#partnership-form .input-field{
+#partnership-form .input-field,#sourcing-form .input-field{
   margin-top: 5px
 }

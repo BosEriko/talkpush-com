@@ -94,6 +94,7 @@ $(document).ready(function(){
       $('#message').val('I would like to know more detail of custom plan. ');
   });
   $('.sign-up').click(function(){scrollTo('#partnership-form')});
+  $('.sign-up-sourcing').click(function(){scrollTo('#sourcing-form')});
 
   function scrollTo(sectionClass){
     $('html,body').animate({
