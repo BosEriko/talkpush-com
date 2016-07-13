@@ -891,7 +891,7 @@ p {
   background: #fafafa;
 }
 
-.hrtoday {
+.hrtoday, .hrmagazine {
   max-width: 150px;
 }
 
