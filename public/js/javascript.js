@@ -233,7 +233,7 @@ $(document).ready(function(){
         _fbq.push('track', 'CompleteRegistration');
       }
     })
-  });
+  }); 
   $('#partnership-form').on('submit', function(event) {
     $(".btn-form > span").hide();
     $(".btn-form > .sk-circle").show();
