@@ -223,7 +223,40 @@ p {
 .know-more-btn {
   padding: 5px;
 }
-
+.wrap.demo{
+  background: #ffffff;
+  color:#323A45;
+}
+.demo input{
+  font-family: "PT Sans Narrow";
+  height:50px;
+  font-size: 35px;
+  color: #575756;
+  width:100%;
+}
+.demo button{
+  color: #ffffff;
+  font-size: 28px;
+  background: #8AA815;
+  border: 0px;
+  text-align: center;
+  width: 100%;
+  margin-top:5px;
+}
+.demo .separate-line{
+  background: #e0e0e0;
+  width: 1px;
+  height: 120px;
+  position: absolute;
+  left: 50%;
+}
+.demo p {
+  color:#323A45;
+  font-size: 18px;
+}
+.demo h2{
+  color:#8AA815;
+}
 /*form section*/
 
 .interested-in {

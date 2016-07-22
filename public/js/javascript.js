@@ -61,7 +61,11 @@ $(document).ready(function(){
         //console.log(e.currentTarget);
         //_fbq.push('track', 'ViewContent');
     });
-    $('.btnFreeTrial').click(function(){scrollTo('#contact-form-container')});
+    $('.btnFreeTrial').click(function(){
+      scrollTo('#contact-form-container');
+      // ga('send', 'event', [eventCategory]*, [eventAction]*, [eventLabel], [eventValue], [fieldsObject]);
+      ga('send', 'event', "signup", "clicked", "Signup-button(contact-form)",document.referrer);
+    });
   $('.btnBenefits').click(function(){scrollTo('.keyBenefits')});
   $('.back-to-top').click(function(){scrollTo("body");});
   $('.btnFeatures').click(function(){scrollTo('.keyFeatures');});
@@ -93,8 +97,16 @@ $(document).ready(function(){
       scrollTo('.form-container');
       $('#message').val('I would like to know more detail of custom plan. ');
   });
-  $('.sign-up').click(function(){scrollTo('#partnership-form')});
-  $('.sign-up-sourcing').click(function(){scrollTo('#sourcing-form')});
+  $('.sign-up').click(function(){
+    scrollTo('#partnership-form');
+    ga('send', 'event', "signup", "clicked", "Signup-button(partnership-form)",document.referrer);
+
+  });
+  $('.sign-up-sourcing').click(function(){
+    scrollTo('#sourcing-form')
+    ga('send', 'event', "signup", "clicked", "Signup-button(sourcing-form)",document.referrer);
+
+  });
 
   function scrollTo(sectionClass){
     $('html,body').animate({
@@ -175,6 +187,7 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
+        ga('send', 'event', "signup", "submitted", "Signup-form(contact-form)",document.referrer);
         $("#contact-form")[0].reset()
         $(".form-message-box").html("Successful!");
         $(".form-message-box").animate({"opacity":"1"},"slow").delay(5000).animate({"opacity":"0"},2000);
@@ -210,6 +223,7 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
+        ga('send', 'event', "signup", "submitted", "Signup-form(sourcing-form)",document.referrer);
         $(".btn-form > span").show();
         $(".btn-form > .sk-circle").hide();
         $("#sourcing-form")[0].reset()
@@ -247,6 +261,7 @@ $(document).ready(function(){
         $(".form-message-box").animate({"opacity":"1","color":"red"},"slow").delay(15000).animate({"opacity":"0"},2000);
       },
       success: function(json) {
+        ga('send', 'event', "signup", "submitted", "Signup-form(partnership-form)",document.referrer);
         $(".btn-form > span").show();
         $(".btn-form > .sk-circle").hide();
         $("#partnership-form")[0].reset()
@@ -289,5 +304,42 @@ $(document).ready(function(){
         $("#application-form")[0].reset();
       }
     })
+  });
+
+  $(".demo button").on("click",function(e){
+    alert($(".demo input[name='demo_country_code']").val()+$(".demo input[name='demo_phone_no']").val());
+    var env = "testing";
+    var campaignID = "86a305fb202533d6b0d66ac8fe471667";
+    var host = env != "production" ? "staging.talkpush.com" : "my.talkpush.com";
+    var application_url = "http://" + host + "/api/talkpush_services/campaigns/" + campaignID  + "/campaign_invitations";
+    console.log(host)
+
+    var productionApiKey = "735d80bffe5525e86aa19a680b7a6ea7";
+    var productionApiSecret = "2d85fc3203979c704f86b9592a75b82a";
+    var stagingApiKey = "d4afe214add591bb66d6e25a56a2c1b1";
+    var stagingApiSecret = "551c1a40c74d4f7d11c2e6942933b2ad";
+    var apiKey = env != "production" ? stagingApiKey:productionApiKey;
+    var apiSecret = env != "production" ? stagingApiSecret:productionApiSecret;
+    var formData = new FormData();
+    formData.append("api_key", apiKey);
+    formData.append("api_secret", apiSecret);
+    formData.append("campaign_invitation[user_phone_number]",$(".demo input[name='demo_phone_no']").val());
+    formData.append("campaign_invitation[user_country_code]",$(".demo input[name='demo_country_code']").val())
+    $.ajax({
+      url: application_url,
+      type: "POST",
+      data: formdata,
+      mimeType: "multipart/form-data",
+      contentType: false,
+      cache: false,
+      processData: false,
+      crossDomain: true,
+      success: function (data) {
+          handleFormFeedback(formName, "success", data, campaignID);
+      },
+      error: function (data) {
+          handleFormFeedback(formName, "error occured", data, campaignID);
+      }
+    });
   });
 });
