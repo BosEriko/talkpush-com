@@ -344,7 +344,7 @@ $(document).ready(function(){
 //  });
     
     
-    // demo section
+    // demo section //
     
     $('.demo .phone-row button').on('click', function(){
        $('.demo .phone-row').fadeOut(500);
