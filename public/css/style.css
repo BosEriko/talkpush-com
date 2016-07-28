@@ -226,7 +226,60 @@ p {
 .wrap.demo{
   background: #ffffff;
   color:#323A45;
+    padding: 20px 0;
 }
+
+.demo .text,
+.demo .phone-section {
+    padding: 0 50px; 
+}
+
+
+.demo .btn-demo {
+    height: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+    width: 100px;
+    background: #8aa815 !important;
+}
+
+.demo .phone-row input {
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid #f0f0f0;
+}
+
+.demo .input-row {
+    padding: 50px 0;
+    height: auto;
+    display: none;
+}
+
+.demo .input-row label {
+    font-size: 12px;
+    font-weight: 600;
+}
+.demo .input-row input {
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.demo .input-row button {
+    width: 100%;
+    border: 0;
+    height: 50px;
+    background: #8aa815;
+    color: white;
+}
+
+.demo .thankyou-row {
+    padding: 50px 0;
+    display: none;
+}
+/*
 .demo input{
   font-family: "PT Sans Narrow";
   height:50px;
@@ -234,6 +287,8 @@ p {
   color: #575756;
   width:100%;
 }
+*/
+/*
 .demo button{
   color: #ffffff;
   font-size: 28px;
@@ -243,16 +298,19 @@ p {
   width: 100%;
   margin-top:5px;
 }
+*/
+
+
 .demo .separate-line{
   background: #e0e0e0;
-  width: 1px;
+  width: 5px;
   height: 120px;
   position: absolute;
   left: 50%;
 }
 .demo p {
   color:#323A45;
-  font-size: 18px;
+  font-size: 14px;
 }
 .demo h2{
   color:#8AA815;

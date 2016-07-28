@@ -306,40 +306,57 @@ $(document).ready(function(){
     })
   });
 
-  $(".demo button").on("click",function(e){
-    alert($(".demo input[name='demo_country_code']").val()+$(".demo input[name='demo_phone_no']").val());
-    var env = "testing";
-    var campaignID = "86a305fb202533d6b0d66ac8fe471667";
-    var host = env != "production" ? "staging.talkpush.com" : "my.talkpush.com";
-    var application_url = "http://" + host + "/api/talkpush_services/campaigns/" + campaignID  + "/campaign_invitations";
-    console.log(host)
-
-    var productionApiKey = "735d80bffe5525e86aa19a680b7a6ea7";
-    var productionApiSecret = "2d85fc3203979c704f86b9592a75b82a";
-    var stagingApiKey = "d4afe214add591bb66d6e25a56a2c1b1";
-    var stagingApiSecret = "551c1a40c74d4f7d11c2e6942933b2ad";
-    var apiKey = env != "production" ? stagingApiKey:productionApiKey;
-    var apiSecret = env != "production" ? stagingApiSecret:productionApiSecret;
-    var formData = new FormData();
-    formData.append("api_key", apiKey);
-    formData.append("api_secret", apiSecret);
-    formData.append("campaign_invitation[user_phone_number]",$(".demo input[name='demo_phone_no']").val());
-    formData.append("campaign_invitation[user_country_code]",$(".demo input[name='demo_country_code']").val())
-    $.ajax({
-      url: application_url,
-      type: "POST",
-      data: formdata,
-      mimeType: "multipart/form-data",
-      contentType: false,
-      cache: false,
-      processData: false,
-      crossDomain: true,
-      success: function (data) {
-          handleFormFeedback(formName, "success", data, campaignID);
-      },
-      error: function (data) {
-          handleFormFeedback(formName, "error occured", data, campaignID);
-      }
+//  $(".demo button").on("click",function(e){
+//    alert($(".demo input[name='demo_country_code']").val()+$(".demo input[name='demo_phone_no']").val());
+//    var env = "testing";
+//    var campaignID = "86a305fb202533d6b0d66ac8fe471667";
+//    var host = env != "production" ? "staging.talkpush.com" : "my.talkpush.com";
+//    var application_url = "http://" + host + "/api/talkpush_services/campaigns/" + campaignID  + "/campaign_invitations";
+//    console.log(host)
+//
+//    var productionApiKey = "735d80bffe5525e86aa19a680b7a6ea7";
+//    var productionApiSecret = "2d85fc3203979c704f86b9592a75b82a";
+//    var stagingApiKey = "d4afe214add591bb66d6e25a56a2c1b1";
+//    var stagingApiSecret = "551c1a40c74d4f7d11c2e6942933b2ad";
+//    var apiKey = env != "production" ? stagingApiKey:productionApiKey;
+//    var apiSecret = env != "production" ? stagingApiSecret:productionApiSecret;
+//    var formData = new FormData();
+//    formData.append("api_key", apiKey);
+//    formData.append("api_secret", apiSecret);
+//    formData.append("campaign_invitation[user_phone_number]",$(".demo input[name='demo_phone_no']").val());
+//    formData.append("campaign_invitation[user_country_code]",$(".demo input[name='demo_country_code']").val())
+//    $.ajax({
+//      url: application_url,
+//      type: "POST",
+//      data: formdata,
+//      mimeType: "multipart/form-data",
+//      contentType: false,
+//      cache: false,
+//      processData: false,
+//      crossDomain: true,
+//      success: function (data) {
+//          handleFormFeedback(formName, "success", data, campaignID);
+//      },
+//      error: function (data) {
+//          handleFormFeedback(formName, "error occured", data, campaignID);
+//      }
+//    });
+//  });
+    
+    
+    // demo section
+    
+    $('.demo .phone-row button').on('click', function(){
+       $('.demo .phone-row').fadeOut(500);
+       setTimeout(function(){
+           $('.demo .input-row').fadeIn(700);
+       }, 500);
     });
-  });
+    
+    $('.demo .input-row button').on('click', function(){
+       $('.demo .input-row').fadeOut(500);
+       setTimeout(function(){
+           $('.demo .thankyou-row').fadeIn(700);
+       }, 500);
+    });
 });
