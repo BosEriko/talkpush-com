@@ -354,9 +354,28 @@ $(document).ready(function(){
     });
     
     $('.demo .input-row button').on('click', function(){
+        
        $('.demo .input-row').fadeOut(500);
        setTimeout(function(){
            $('.demo .thankyou-row').fadeIn(700);
        }, 500);
+        
+       countToZero();
     });
+    
+    function countToZero(){
+        var count = 15;
+         var counter = setInterval(function(){
+           count -= 1;
+             $('.demo .thankyou-row span#counter').html(count);
+             if (count === 0) {
+                 clearInterval(counter);
+                 $('.demo .thankyou-row').fadeOut(500);
+                 
+                 setTimeout(function(){
+                   $('.demo .phone-row').fadeIn(700);
+               }, 500);
+             }
+       }, 1000);
+    }
 });
