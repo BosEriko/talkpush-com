@@ -236,17 +236,17 @@ p {
 
 
 .demo .btn-demo {
-    height: 50px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    height: 34px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     border: 0;
     width: 100px;
     background: #8aa815 !important;
 }
 
 .demo .phone-row input {
-    height: 50px;
-    font-size: 20px;
+    height: 34px;
+    font-size: 14px;
     border: 1px solid #f0f0f0;
 }
 
@@ -262,17 +262,22 @@ p {
 }
 .demo .input-row input {
     width: 100%;
-    border: 1px solid #f0f0f0;
-    height: 50px;
-    padding-left: 10px;
+    border: 1px solid #ccc;
+    height: 34px;
+    padding-left: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .demo .input-row button {
-    width: 100%;
+    width: 200px;
+    max-width: 100%;
     border: 0;
-    height: 50px;
+    height: 34px;
     background: #8aa815;
     color: white;
+    float: right;
+    margin-top: 10px;
 }
 
 .demo .thankyou-row {
