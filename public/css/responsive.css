@@ -91,6 +91,10 @@
     line-height: 28px;
     margin-top: 70px;
   }
+    
+    .demo .phone-row .phone-section .col-md-9 {
+            padding: 0;
+        }
 }
 /*Eato-responsive-css*/
 
@@ -175,4 +179,34 @@
     .floating-window {
 	   display: none;
     }
+}
+
+@media only screen
+    and (max-width: 419px)  {
+        .demo .phone-row .phone-section .col-md-9 {
+            padding: 0;
+        }
+        .demo .input-row {
+            padding: 0 20px;
+        }
+        
+        .demo .thankyou-row {
+            padding: 0 20px;
+        }
+}
+
+
+@media only screen
+    and (min-width: 420px) and (max-width: 469px) {
+        .demo .phone-row .phone-section .col-md-9 {
+            padding: 0;
+        }
+        
+        .demo .input-row {
+            padding: 0 20px;
+        }
+        
+        .demo .thankyou-row {
+            padding: 0 20px;
+        }
 }
