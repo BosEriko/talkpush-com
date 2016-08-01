@@ -250,6 +250,13 @@ p {
     border: 1px solid #f0f0f0;
 }
 
+span#demo_country_code_error, span#demo_phone_no_error,
+span#demo_first_name_error, span#demo_last_name_error {
+    display: none;
+    color: #eb5d6c;
+    font-size: 10px;
+}
+
 .demo .input-row {
     padding: 50px 0;
     height: auto;
@@ -265,7 +272,7 @@ p {
     border: 1px solid #ccc;
     height: 34px;
     padding-left: 12px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: 14px;
 }
 

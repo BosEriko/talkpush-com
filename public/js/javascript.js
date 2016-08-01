@@ -1,4 +1,19 @@
 $(document).ready(function(){
+    
+    var formData = new FormData();
+var apiKey = "735d80bffe5525e86aa19a680b7a6ea7";
+var apiSecret = "2d85fc3203979c704f86b9592a75b82a";
+var host = "my.talkpush.com";
+var pinNo = "";
+var campaignID = "5fef28085508b481625b916098471e5f-906dfa8d-31ec-467a-9523-fd06f431f48d";
+var dum = "20eaceb388b48322d444698e65a07ad0";
+
+var stagingApiKey = "d4afe214add591bb66d6e25a56a2c1b1";
+var stagingApiSecret = "551c1a40c74d4f7d11c2e6942933b2ad";
+var stagingCampID = "1eed5d360259c27c9c11847f6626b33a";
+var stagingURL = "staging.talkpush.com";
+    
+    
   $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').focus();
   });
@@ -347,13 +362,39 @@ $(document).ready(function(){
     // demo section //
     
     $('.demo .phone-row button').on('click', function(){
-       $('.demo .phone-row').fadeOut(500);
-       setTimeout(function(){
-           $('.demo .input-row').fadeIn(700);
-       }, 500);
+        var countryCode = $('input[name="demo_country_code]').val();
+        var phoneNo = $('input[name="demo_phone_no]').val();
+        
+        if ($('input[name="demo_country_code"]').val() === "" && $('input[name="demo_phone_no"]').val() === "") {
+            $('span#demo_country_code_error, span#demo_phone_no_error').show();
+        }
+        else {
+            $('span#demo_country_code_error, span#demo_phone_no_error').hide();
+            formData.append("api_key", stagingApiKey);
+                formData.append("api_secret", stagingApiSecret);
+                
+                formData.append("campaign_invitation[user_phone_number]",$(".demo input[name='demo_phone_no']").val());
+                formData.append("campaign_invitation[user_country_code]",$(".demo input[name='demo_country_code']").val());
+            
+            $('.demo .phone-row').fadeOut(500);
+           setTimeout(function(){
+               $('.demo .input-row').fadeIn(700);
+           }, 500);
+
+        }
+    
     });
     
     $('.demo .input-row button').on('click', function(){
+        
+        if ($('input[name="first_name"]').val() === "" && $('input[name="last_name"]').val() === "") {
+            $('span#demo_first_name_error, span#demo_last_name_error').show();
+        }
+        else {
+            $('span#demo_first_name_error, span#demo_last_name_error').hide();
+            formData.append("campaign_invitation[first_name]",$(".demo input[name='first_name']").val());
+        formData.append("campaign_invitation[last_name]",$(".demo input[name='last_name']").val());
+        submitData(stagingCampID);
         
        $('.demo .input-row').fadeOut(500);
        setTimeout(function(){
@@ -361,6 +402,9 @@ $(document).ready(function(){
        }, 500);
         
        countToZero();
+        }
+        
+        
     });
     
     function countToZero(){
@@ -371,11 +415,33 @@ $(document).ready(function(){
              if (count === 0) {
                  clearInterval(counter);
                  $('.demo .thankyou-row').fadeOut(500);
+                 $('input[name="first_name"], input[name="last_name"], input[name="demo_country_code"], input[name="demo_phone_no"]').val("");
                  
                  setTimeout(function(){
                    $('.demo .phone-row').fadeIn(700);
                }, 500);
              }
        }, 1000);
+    }
+    
+    
+    function submitData(c) {
+        $.ajax({
+            url: "https://" + stagingURL + "/api/talkpush_services/campaigns/" + c + "/campaign_invitations",
+            type: "POST",
+            data: formData,
+            mimeType: "multipart/form-data",
+            contentType: false,
+            cache: false,
+            processData: false,
+            crossDomain: true,
+            dataType: "json",
+            success: function (data) {
+                
+            },
+            xhrFields: {
+              withCredentials: false
+           }
+        });
     }
 });

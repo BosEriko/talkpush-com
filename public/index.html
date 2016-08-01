@@ -181,17 +181,21 @@
 -->
              <div class="col-md-3" style="padding: 0;">
                 <span style="font-size: 11px;">Country Code:</span><br><br>
-                 <input type="text" class="form-control" placeholder="+00">
+                 <input type="text" name="demo_country_code" class="form-control" placeholder="+00">
+                 <br>
+                 <span id="demo_country_code_error">Country Code is required</span>
              </div>
              
              <div class="col-md-9">
                 <span style="font-size: 11px;">Phone Number:</span><br><br>
                  <div class="input-group">
-                  <input type="text" class="form-control" placeholder="123456789">
+                  <input type="text" name="demo_phone_no" class="form-control" placeholder="123456789">
                   <span class="input-group-btn">
                     <button class="btn btn-demo btn-default" type="button"><i class="glyphicon glyphicon-earphone"></i></button>
                   </span>
                 </div><!-- /input-group -->
+                <br>
+                <span id="demo_phone_no_error">Phone Number is required</span>
               </div>
              </div>
            </div><!-- phone-section -->
@@ -204,11 +208,14 @@
                   <h2 style="color: #313131;">Enter your details here</h2>
                   <br>
 <!--                   <label for="first_name">First Name:</label><br>-->
-                   <input type="text" name="first_name" id="first_name" placeholder="FIRST NAME"><br>
+                   <input type="text" name="first_name" id="first_name" placeholder="FIRST NAME">
+                                    <span id="demo_first_name_error">First Name is required</span>
+
 <!--                   <label for="last_name">Last Name:</label><br>-->
-                   <input type="text" name="last_name" id="last_name" placeholder="LAST NAME"><br>
+                   <input type="text" name="last_name" id="last_name" placeholder="LAST NAME">
+                   <span id="demo_last_name_error">Last Name is required</span>
 <!--                   <label for="mobile">Mobile:</label><br>-->
-                   <input type="text" name="mobile" id="mobile" placeholder="MOBILE"><br>
+<!--                   <input type="text" name="mobile" id="mobile" placeholder="MOBILE"><br>-->
 <!--                   <label for="email">E-mail (Optional):</label><br>-->
                    <input type="text" name="email" id="email" placeholder="E-MAIL"><br>
                    <button type="submit">SUBMIT</button>
