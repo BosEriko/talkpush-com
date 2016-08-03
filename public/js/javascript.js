@@ -402,6 +402,8 @@ var stagingURL = "staging.talkpush.com";
            setTimeout(function(){
                $('.demo .input-row').fadeIn(700);
            }, 500);
+            
+            scrollToClass('.demo');
 
         }
     }
@@ -426,6 +428,7 @@ var stagingURL = "staging.talkpush.com";
        }, 500);
         
        countToZero();
+            scrollToClass('.demo');
         }
     }
     
@@ -469,6 +472,10 @@ var stagingURL = "staging.talkpush.com";
         });
     }
     
+    
+    function scrollToClass(sectionClass){
+        $('html,body').animate({scrollTop:$(sectionClass).offset().top},'fast');
+    }
     
     
     function callNow(c){
