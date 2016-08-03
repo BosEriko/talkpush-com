@@ -455,15 +455,15 @@ var stagingURL = "staging.talkpush.com";
             data: {"api_key":apiKey,"api_secret":apiSecret,"pin":pinNo,"phone_no":$('input[name="demo_phone_no"]').val(),"country_code":$('input[name="demo_country_code"]').val()},
             crossDomain: true,
             success: function (data, b, c) {
-                console.log(data);
-                if (c.status === 200) {
-                    $('.black-box').css('display', 'none');
-                    if(isStaging()==="1"){
-                        window.location.href = "thankyou.html?option=1&staging=1";
-                    }else{
-                        window.location.href = "thankyou.html?option=1";
-                    }
-                }
+//                console.log(data);
+//                if (c.status === 200) {
+//                    $('.black-box').css('display', 'none');
+//                    if(isStaging()==="1"){
+//                        window.location.href = "thankyou.html?option=1&staging=1";
+//                    }else{
+//                        window.location.href = "thankyou.html?option=1";
+//                    }
+//                }
             }
         });
     }
