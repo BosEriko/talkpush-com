@@ -377,7 +377,7 @@ var stagingURL = "staging.talkpush.com";
         }
     });
     
-    $('input[name="first_name"], input[name="last_name"]').bind('keyup', function(e){
+    $('input[name="demo_first_name"], input[name="demo_last_name"], input[name="demo_email"]').bind('keyup', function(e){
        if (e.keyCode === 13) {
            submitDemoDetails();
        } 
