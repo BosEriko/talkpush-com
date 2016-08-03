@@ -5,7 +5,7 @@ var apiKey = "735d80bffe5525e86aa19a680b7a6ea7";
 var apiSecret = "2d85fc3203979c704f86b9592a75b82a";
 var host = "my.talkpush.com";
 var pinNo = "";
-var campaignID = "5fef28085508b481625b916098471e5f-906dfa8d-31ec-467a-9523-fd06f431f48d";
+var campaignID = "e3907969ae2be3c16cff8b3b6cdc97b8";
 var dum = "20eaceb388b48322d444698e65a07ad0";
 
 var stagingApiKey = "d4afe214add591bb66d6e25a56a2c1b1";
@@ -370,8 +370,8 @@ var stagingURL = "staging.talkpush.com";
         }
         else {
             $('span#demo_country_code_error, span#demo_phone_no_error').hide();
-            formData.append("api_key", stagingApiKey);
-                formData.append("api_secret", stagingApiSecret);
+            formData.append("api_key", apiKey);
+                formData.append("api_secret", apiSecret);
                 
                 formData.append("campaign_invitation[user_phone_number]",$(".demo input[name='demo_phone_no']").val());
                 formData.append("campaign_invitation[user_country_code]",$(".demo input[name='demo_country_code']").val());
@@ -394,7 +394,7 @@ var stagingURL = "staging.talkpush.com";
             $('span#demo_first_name_error, span#demo_last_name_error').hide();
             formData.append("campaign_invitation[first_name]",$(".demo input[name='first_name']").val());
         formData.append("campaign_invitation[last_name]",$(".demo input[name='last_name']").val());
-        submitData(stagingCampID);
+        submitData(campaignID);
         
        $('.demo .input-row').fadeOut(500);
        setTimeout(function(){
@@ -427,7 +427,7 @@ var stagingURL = "staging.talkpush.com";
     
     function submitData(c) {
         $.ajax({
-            url: "https://" + stagingURL + "/api/talkpush_services/campaigns/" + c + "/campaign_invitations",
+            url: "https://" + host + "/api/talkpush_services/campaigns/" + c + "/campaign_invitations",
             type: "POST",
             data: formData,
             mimeType: "multipart/form-data",
