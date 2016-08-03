@@ -387,7 +387,7 @@ var stagingURL = "staging.talkpush.com";
         var countryCode = $('input[name="demo_country_code]').val();
         var phoneNo = $('input[name="demo_phone_no]').val();
         
-        if ($('input[name="demo_country_code"]').val() === "" && $('input[name="demo_phone_no"]').val() === "") {
+        if ($('input[name="demo_country_code"]').val() === "" || $('input[name="demo_phone_no"]').val() === "") {
             $('span#demo_country_code_error, span#demo_phone_no_error').show();
         }
         else {
@@ -407,7 +407,7 @@ var stagingURL = "staging.talkpush.com";
     }
     
     function submitDemoDetails() {
-        if ($('input[name="first_name"]').val() === "" && $('input[name="last_name"]').val() === "") {
+        if ($('input[name="first_name"]').val() === "" || $('input[name="last_name"]').val() === "") {
             $('span#demo_first_name_error, span#demo_last_name_error').show();
         }
         else {
