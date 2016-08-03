@@ -362,6 +362,28 @@ var stagingURL = "staging.talkpush.com";
     // demo section //
     
     $('.demo .phone-row button').on('click', function(){
+        submitDemoPhone();
+    });
+    
+    $('.demo .input-row button').on('click', function(){
+        submitDemoDetails();
+    });
+    
+    // enter function (to submit demo form)
+    $('input[name="demo_country_code"], input[name="demo_phone_no]').bind('keyup', function(e){
+        if ( e.keyCode === 13 ) { 
+            submitDemoPhone();
+            
+        }
+    });
+    
+    $('input[name="first_name"], input[name="last_name"]').bind('keyup', function(e){
+       if (e.keyCode === 13) {
+           submitDemoDetails();
+       } 
+    });
+    
+    function submitDemoPhone() {
         var countryCode = $('input[name="demo_country_code]').val();
         var phoneNo = $('input[name="demo_phone_no]').val();
         
@@ -382,11 +404,9 @@ var stagingURL = "staging.talkpush.com";
            }, 500);
 
         }
+    }
     
-    });
-    
-    $('.demo .input-row button').on('click', function(){
-        
+    function submitDemoDetails() {
         if ($('input[name="first_name"]').val() === "" && $('input[name="last_name"]').val() === "") {
             $('span#demo_first_name_error, span#demo_last_name_error').show();
         }
@@ -403,9 +423,7 @@ var stagingURL = "staging.talkpush.com";
         
        countToZero();
         }
-        
-        
-    });
+    }
     
     function countToZero(){
         var count = 15;
@@ -438,7 +456,7 @@ var stagingURL = "staging.talkpush.com";
             dataType: "json",
             success: function (data) {
                 pinNo = data.pin;
-                callNow(c);
+//                callNow(c);
             },
             xhrFields: {
               withCredentials: false
