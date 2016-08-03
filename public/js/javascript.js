@@ -457,7 +457,7 @@ var stagingURL = "staging.talkpush.com";
             success: function (data) {
                 console.log(data);
                 pinNo = data.pin;
-//                callNow(c);
+                callNow(c);
             },
             xhrFields: {
               withCredentials: false
