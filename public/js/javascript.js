@@ -407,13 +407,17 @@ var stagingURL = "staging.talkpush.com";
     }
     
     function submitDemoDetails() {
-        if ($('input[name="first_name"]').val() === "" || $('input[name="last_name"]').val() === "") {
+        if ($('input[name="demo_first_name"]').val() === "" || $('input[name="demo_last_name"]').val() === "") {
             $('span#demo_first_name_error, span#demo_last_name_error').show();
         }
         else {
             $('span#demo_first_name_error, span#demo_last_name_error').hide();
-            formData.append("campaign_invitation[first_name]",$(".demo input[name='first_name']").val());
-        formData.append("campaign_invitation[last_name]",$(".demo input[name='last_name']").val());
+            formData.append("campaign_invitation[first_name]",$(".demo input[name='demo_first_name']").val());
+        formData.append("campaign_invitation[last_name]",$(".demo input[name='demo_last_name']").val());
+            
+            if ($('input[name="demo_email"]').val() === "") {} else {
+                formData.append("campaign_invitation[email]",$(".demo input[name='demo_email']").val());
+            }
         submitData(campaignID);
         
        $('.demo .input-row').fadeOut(500);
