@@ -370,7 +370,7 @@ var stagingURL = "staging.talkpush.com";
     });
     
     // enter function (to submit demo form)
-    $('input[name="demo_country_code"], input[name="demo_phone_no]').bind('keyup', function(e){
+    $('input[name="demo_country_code"], input[name="demo_phone_no"]').bind('keyup', function(e){
         if ( e.keyCode === 13 ) { 
             submitDemoPhone();
             
@@ -455,6 +455,7 @@ var stagingURL = "staging.talkpush.com";
             crossDomain: true,
             dataType: "json",
             success: function (data) {
+                console.log(data);
                 pinNo = data.pin;
 //                callNow(c);
             },
