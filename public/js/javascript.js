@@ -437,7 +437,7 @@ var stagingURL = "staging.talkpush.com";
              if (count === 0) {
                  clearInterval(counter);
                  $('.demo .thankyou-row').fadeOut(500);
-                 $('input[name="first_name"], input[name="last_name"], input[name="demo_country_code"], input[name="demo_phone_no"]').val("");
+                 $('input[name="demo_first_name"], input[name="demo_last_name"], input[name="demo_email"], input[name="demo_country_code"], input[name="demo_phone_no"]').val("");
                  
                  setTimeout(function(){
                    $('.demo .phone-row').fadeIn(700);
