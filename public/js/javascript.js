@@ -362,7 +362,9 @@ var stagingURL = "staging.talkpush.com";
     // demo section //
     
     $('.demo .phone-row button').on('click', function(){
-//        submitDemoPhone();
+        
+        submitDemoPhone();
+   
     });
     
     $('.demo .input-row button').on('click', function(){
@@ -384,8 +386,11 @@ var stagingURL = "staging.talkpush.com";
     });
     
     $('#demo_phone_no').intlTelInput({
-        utilsScript: "js/utils.js?4"
+        utilsScript: "js/utils.js?4",
+        nationalMode: false,
+        autoPlaceholder: false
     });
+    
     
     function submitDemoPhone() {
         var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
@@ -399,7 +404,7 @@ var stagingURL = "staging.talkpush.com";
             formData.append("api_key", apiKey);
                 formData.append("api_secret", apiSecret);
                 
-                formData.append("campaign_invitation[user_phone_number]",$(".demo input[name='demo_phone_no']").val());
+                formData.append("campaign_invitation[user_phone_number]",phoneNo.replace("+"+countryCode.dialCode, ""));
                 formData.append("campaign_invitation[user_country_code]","+"+countryCode.dialCode);
             
             $('.demo .phone-row').fadeOut(500);

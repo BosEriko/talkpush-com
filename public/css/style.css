@@ -246,14 +246,12 @@ p {
     background: #8aa815 !important;
 }
 
-/*
 .demo .phone-row input {
     height: 34px;
     font-size: 14px;
     border: 1px solid #f0f0f0;
     width: 100%;
 }
-*/
 .demo #demo_phone_no {
     width: 100%;
     height: 34px;
