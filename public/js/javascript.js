@@ -373,11 +373,13 @@ var stagingURL = "staging.talkpush.com";
     
     // enter function (to submit demo form)
     $('input[name="demo_phone_no"]').bind('keyup', function(e){
-        if ( e.keyCode === 13 ) { 
+        var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
+        if ($(this).val().replace("+"+countryCode.dialCode, "") != "" && e.keyCode === 13 ) { 
             submitDemoPhone();
             
         }
     });
+    
     
     $('input[name="demo_first_name"], input[name="demo_last_name"], input[name="demo_email"]').bind('keyup', function(e){
        if (e.keyCode === 13) {
@@ -390,8 +392,6 @@ var stagingURL = "staging.talkpush.com";
         nationalMode: false,
         autoPlaceholder: false
     });
-    
-    
     
     
     function submitDemoPhone() {
