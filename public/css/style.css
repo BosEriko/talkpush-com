@@ -241,8 +241,6 @@ p {
     border-bottom-right-radius: 3px;
     border: 0;
     width: 100px;
-    margin-top: -3px;
-    margin-left: -5px;
     background: #8aa815 !important;
 }
 
@@ -253,8 +251,12 @@ p {
     width: 100%;
 }
 .demo #demo_phone_no {
-    width: 100%;
+    width: 100% !important;
     height: 34px;
+}
+
+div.intl-tel-input {
+    width: 100%;
 }
 
 span#demo_country_code_error, span#demo_phone_no_error,
