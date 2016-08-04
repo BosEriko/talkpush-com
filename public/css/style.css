@@ -241,13 +241,22 @@ p {
     border-bottom-right-radius: 3px;
     border: 0;
     width: 100px;
+    margin-top: -3px;
+    margin-left: -5px;
     background: #8aa815 !important;
 }
 
+/*
 .demo .phone-row input {
     height: 34px;
     font-size: 14px;
     border: 1px solid #f0f0f0;
+    width: 100%;
+}
+*/
+.demo #demo_phone_no {
+    width: 100%;
+    height: 34px;
 }
 
 span#demo_country_code_error, span#demo_phone_no_error,
@@ -291,6 +300,8 @@ span#demo_first_name_error, span#demo_last_name_error {
     padding: 50px 0;
     display: none;
 }
+
+.iti-flag {background-image: url("../img/flags.png");}
 /*
 .demo input{
   font-family: "PT Sans Narrow";

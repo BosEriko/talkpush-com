@@ -362,7 +362,7 @@ var stagingURL = "staging.talkpush.com";
     // demo section //
     
     $('.demo .phone-row button').on('click', function(){
-        submitDemoPhone();
+//        submitDemoPhone();
     });
     
     $('.demo .input-row button').on('click', function(){
@@ -370,7 +370,7 @@ var stagingURL = "staging.talkpush.com";
     });
     
     // enter function (to submit demo form)
-    $('input[name="demo_country_code"], input[name="demo_phone_no"]').bind('keyup', function(e){
+    $('input[name="demo_phone_no"]').bind('keyup', function(e){
         if ( e.keyCode === 13 ) { 
             submitDemoPhone();
             
@@ -383,20 +383,24 @@ var stagingURL = "staging.talkpush.com";
        } 
     });
     
+    $('#demo_phone_no').intlTelInput({
+        utilsScript: "js/utils.js?4"
+    });
+    
     function submitDemoPhone() {
-        var countryCode = $('input[name="demo_country_code]').val();
+        var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
         var phoneNo = $('input[name="demo_phone_no]').val();
         
-        if ($('input[name="demo_country_code"]').val() === "" || $('input[name="demo_phone_no"]').val() === "") {
-            $('span#demo_country_code_error, span#demo_phone_no_error').show();
+        if ($('input[name="demo_phone_no"]').val() === "") {
+            $('span#demo_phone_no_error').show();
         }
         else {
-            $('span#demo_country_code_error, span#demo_phone_no_error').hide();
+            $('span#demo_phone_no_error').hide();
             formData.append("api_key", apiKey);
                 formData.append("api_secret", apiSecret);
                 
                 formData.append("campaign_invitation[user_phone_number]",$(".demo input[name='demo_phone_no']").val());
-                formData.append("campaign_invitation[user_country_code]",$(".demo input[name='demo_country_code']").val());
+                formData.append("campaign_invitation[user_country_code]","+"+countryCode.dialCode);
             
             $('.demo .phone-row').fadeOut(500);
            setTimeout(function(){

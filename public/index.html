@@ -15,6 +15,7 @@
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <title>Talkpush - Let the Talent Talk</title>
@@ -174,32 +175,43 @@
               <div class="row">
 <!--
                 <div class="col-xs-3" style="padding-right:0px">
-                  <input type="text" name="demo_country_code" placeholder="+00">
+                  <input type="text" name="demo_country_code">
                 </div>
                 <div class="col-xs-9" style="padding-left:0px">
                   <input type="text" name="demo_phone_no" placeholder="123456789">
                 </div>
 -->
+<!--
              <div class="col-md-3" style="padding: 0;">
-<!--                <span style="font-size: 11px;">Country Code:</span><br><br>-->
-                 <input type="text" name="demo_country_code" class="form-control" placeholder="Country Code">
+                <span style="font-size: 11px;">Country Code:</span><br><br>
+                 <input type="text" id="demo_country_code" name="demo_country_code" class="form-control" placeholder="Country Code">
                  <br>
                  <span id="demo_country_code_error">Country Code is required</span>
              </div>
+-->
              
-             <div class="col-md-9">
-<!--                <span style="font-size: 11px;">Phone Number:</span><br><br>-->
+<!--
+             <div class="col-md-12">
+                <span style="font-size: 11px;">Phone Number:</span><br><br>
                  <div class="input-group">
-                  <input type="text" name="demo_phone_no" class="form-control" placeholder="Mobile Number">
+                  
                   <span class="input-group-btn">
                     <button class="btn btn-demo btn-default" type="button"><i class="glyphicon glyphicon-earphone"></i></button>
                   </span>
-                </div><!-- /input-group -->
+                </div> /input-group 
                 <br>
                 <span id="demo_phone_no_error">Phone Number is required</span>
               </div>
+-->
+              <div class="col-md-12">
+                 
+                  <input type="text" id="demo_phone_no" name="demo_phone_no" >
+                  <button class="btn btn-demo btn-default"><i class="glyphicon glyphicon-earphone"></i></button>
+              </div>
              </div>
            </div><!-- phone-section -->
+           
+           
            
            
             </div><!-- phone-row -->
@@ -477,6 +489,8 @@
           <i class="fa fa-arrow-circle-up"></i>
         </a>
         <script src="js/bootstrap.js"></script>
+        <script src="js/intlTelInput.min.js"></script>
         <script src="js/javascript.js"></script>
+        
       </body>
     </html>
