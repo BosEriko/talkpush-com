@@ -392,9 +392,11 @@ var stagingURL = "staging.talkpush.com";
     });
     
     
+    
+    
     function submitDemoPhone() {
         var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
-        var phoneNo = $('input[name="demo_phone_no]').val();
+        var phoneNo = $('input[name="demo_phone_no"]').val().replace("+"+countryCode.dialCode, "");
         
         if ($('input[name="demo_phone_no"]').val() === "") {
             $('span#demo_phone_no_error').show();
@@ -404,7 +406,7 @@ var stagingURL = "staging.talkpush.com";
             formData.append("api_key", apiKey);
                 formData.append("api_secret", apiSecret);
                 
-                formData.append("campaign_invitation[user_phone_number]",phoneNo.replace("+"+countryCode.dialCode, ""));
+                formData.append("campaign_invitation[user_phone_number]",phoneNo);
                 formData.append("campaign_invitation[user_country_code]","+"+countryCode.dialCode);
             
             $('.demo .phone-row').fadeOut(500);
