@@ -400,7 +400,8 @@ var stagingURL = "staging.talkpush.com";
     $('#demo_phone_no').intlTelInput({
         utilsScript: "js/utils.js?4",
         nationalMode: false,
-        autoPlaceholder: false
+        autoPlaceholder: false,
+        preferredCountries: ["hk", "ph", "fr"]
     });
     
     
