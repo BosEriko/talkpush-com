@@ -296,7 +296,9 @@ span#demo_first_name_error, span#demo_last_name_error {
     margin-top: 10px;
 }
 
-.demo .thankyou-row {
+.demo .thankyou-row,
+.demo .thankyou-row .thankyou-text,
+.demo .thankyou-row .duplicate-text {
     padding: 50px 0;
     display: none;
 }

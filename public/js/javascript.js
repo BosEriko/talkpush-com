@@ -407,7 +407,7 @@ var stagingURL = "staging.talkpush.com";
                 formData.append("api_secret", apiSecret);
                 
                 formData.append("campaign_invitation[user_phone_number]",phoneNo);
-                formData.append("campaign_invitation[user_country_code]","+"+countryCode.dialCode);
+                formData.append("campaign_invitation[user_country_code]",countryCode.dialCode);
             
             $('.demo .phone-row').fadeOut(500);
            setTimeout(function(){
@@ -473,9 +473,20 @@ var stagingURL = "staging.talkpush.com";
             crossDomain: true,
             dataType: "json",
             success: function (data) {
-                console.log(data);
-                pinNo = data.pin;
-                callNow(c);
+                
+                if (data.error === "duplicated") {
+                    console.log(data);
+                    $('.demo .thankyou-row .thankyou-text').hide();
+                    $('.demo .thankyou-row .duplicate-text').show();
+                }
+                else {
+                    console.log(data);
+                    pinNo = data.pin;
+                    $('.demo .thankyou-row .duplicate-text').hide();
+                    $('.demo .thankyou-row .thankyou-text').show();
+                    callNow(c);
+                }
+                
             },
             xhrFields: {
               withCredentials: false
@@ -489,11 +500,13 @@ var stagingURL = "staging.talkpush.com";
     }
     
     
-    function callNow(c){
+    function callNow(a,b,c){
+        var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
+        var phoneNo = $('input[name="demo_phone_no"]').val().replace("+"+countryCode.dialCode, "");
        $.ajax({
             url: "http://" + host + "/api/talkpush_services/campaigns/" + c + "/campaign_invitations/call",
             type: "POST",
-            data: {"api_key":apiKey,"api_secret":apiSecret,"pin":pinNo,"phone_no":$('input[name="demo_phone_no"]').val(),"country_code":$('input[name="demo_country_code"]').val()},
+            data: {"api_key":apiKey,"api_secret":apiSecret,"pin":pinNo,"phone_no":phoneNo,"country_code":countryCode.dialCode},
             crossDomain: true,
             success: function (data, b, c) {
 //                console.log(data);
