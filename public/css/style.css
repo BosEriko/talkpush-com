@@ -226,7 +226,85 @@ p {
 .wrap.demo{
   background: #ffffff;
   color:#323A45;
+    padding: 20px 0;
 }
+
+.demo .text,
+.demo .phone-section {
+    padding: 0 50px; 
+}
+
+
+.demo .btn-demo {
+    height: 34px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 0;
+    width: 100px;
+    background: #8aa815 !important;
+}
+
+.demo .phone-row input {
+    height: 34px;
+    font-size: 14px;
+    border: 1px solid #f0f0f0;
+    width: 100%;
+}
+.demo #demo_phone_no {
+    width: 100% !important;
+    height: 34px;
+}
+
+div.intl-tel-input {
+    width: 100%;
+}
+
+span#demo_country_code_error, span#demo_phone_no_error,
+span#demo_first_name_error, span#demo_last_name_error {
+    display: none;
+    color: #eb5d6c;
+    font-size: 10px;
+}
+
+.demo .input-row {
+    padding: 50px 0;
+    height: auto;
+    display: none;
+}
+
+.demo .input-row label {
+    font-size: 12px;
+    font-weight: 600;
+}
+.demo .input-row input {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 34px;
+    padding-left: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.demo .input-row button {
+    width: 200px;
+    max-width: 100%;
+    border: 0;
+    height: 34px;
+    background: #8aa815;
+    color: white;
+    float: right;
+    margin-top: 10px;
+}
+
+.demo .thankyou-row,
+.demo .thankyou-row .thankyou-text,
+.demo .thankyou-row .duplicate-text {
+    padding: 50px 0;
+    display: none;
+}
+
+.iti-flag {background-image: url("../img/flags.png");}
+/*
 .demo input{
   font-family: "PT Sans Narrow";
   height:50px;
@@ -234,6 +312,8 @@ p {
   color: #575756;
   width:100%;
 }
+*/
+/*
 .demo button{
   color: #ffffff;
   font-size: 28px;
@@ -243,16 +323,19 @@ p {
   width: 100%;
   margin-top:5px;
 }
+*/
+
+
 .demo .separate-line{
   background: #e0e0e0;
-  width: 1px;
+  width: 5px;
   height: 120px;
   position: absolute;
   left: 50%;
 }
 .demo p {
   color:#323A45;
-  font-size: 18px;
+  font-size: 14px;
 }
 .demo h2{
   color:#8AA815;

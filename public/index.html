@@ -9,11 +9,13 @@
     <!--    <meta property="og:video" content="https://www.youtube.com/embed/d-cYz6QCWSo" />-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <title>Talkpush - Let the Talent Talk</title>
@@ -155,48 +157,111 @@
             </div>
           </div>
         </div>
-        <div class="container wrap demo" style="display:none">
-          <div class="row">
-            <h2>Interview Demo</h2>
-          </div>
-          <div class="row">
-            &nbsp;
-          </div>
-          <div class="row">
-            &nbsp;
-          </div>
-          <div class="row">
-            <div class="col-sm-offset-1 col-sm-5">
+        <div class="container wrap demo">
+          
+          
+          <div class="row phone-row">
+           <h2>Try it now</h2>
+              <br><br>
+               <div class="col-sm-offset-1 col-sm-5 text">
+             <h4>Experience Talkpush for yourself here</h4>
               <p>
-              Experience Talkpush for yourself here. Simply enter your phone number below and receive a call from us which will ask you a few straightforward questions about your recruitment activity. These questions will help us get to know you better and get back to you with relevant info and case studies.
+               Simply enter your phone number on the provided space and receive a call from us which will ask you a few straightforward questions about your recruitment activity. <br><br>These questions will help us get to know you better and get back to you with relevant info and case studies.
               </p>
             </div>
-            <div class="separate-line hidden-xs"></div>
-            <div class="col-sm-5">
+<!--            <div class="separate-line hidden-xs"></div>-->
+            <div class="col-sm-5 phone-section">
+             <br><br>
               <div class="row">
+<!--
                 <div class="col-xs-3" style="padding-right:0px">
-                  <input type="text" name="demo_country_code" placeholder="+00">
+                  <input type="text" name="demo_country_code">
                 </div>
                 <div class="col-xs-9" style="padding-left:0px">
                   <input type="text" name="demo_phone_no" placeholder="123456789">
                 </div>
+-->
+<!--
+             <div class="col-md-3" style="padding: 0;">
+                <span style="font-size: 11px;">Country Code:</span><br><br>
+                 <input type="text" id="demo_country_code" name="demo_country_code" class="form-control" placeholder="Country Code">
+                 <br>
+                 <span id="demo_country_code_error">Country Code is required</span>
+             </div>
+-->
+             
+<!--
+             <div class="col-md-12">
+                <span style="font-size: 11px;">Phone Number:</span><br><br>
+                 <div class="input-group">
+                  
+                  <span class="input-group-btn">
+                    <button class="btn btn-demo btn-default" type="button"><i class="glyphicon glyphicon-earphone"></i></button>
+                  </span>
+                </div> /input-group 
+                <br>
+                <span id="demo_phone_no_error">Phone Number is required</span>
               </div>
-              <div class="row">
-                
+-->
+              <div class="col-md-12">
+                 <div class="input-group">
+                  <input type="text" id="demo_phone_no" name="demo_phone_no">
+                  <span class="input-group-btn">
+                    <button class="btn btn-demo btn-default" type="button"><i class="glyphicon glyphicon-earphone"></i></button>
+                  </span>
+                </div> 
+                  
+<!--                  <button class="btn btn-demo btn-default"><i class="glyphicon glyphicon-earphone"></i></button>-->
               </div>
-              <div class="row">
-                <div class="col-xs-6 col-xs-offset-6">
-                  <button><i class="glyphicon glyphicon-earphone"></i> </button>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              &nbsp;
-            </div>
-            <div class="row">
-              &nbsp;
-            </div>
-          </div>
+             </div>
+           </div><!-- phone-section -->
+           
+           
+           
+           
+            </div><!-- phone-row -->
+            
+             <div class="col-md-4 col-md-offset-4 input-row">
+               <div class="col-md-12">
+                  <h2 style="color: #313131;">Enter your details here</h2>
+                  <br>
+<!--                   <label for="first_name">First Name:</label><br>-->
+                   <input type="text" name="demo_first_name" id="first_name" placeholder="FIRST NAME">
+                                    <span id="demo_first_name_error">First Name is required</span>
+
+<!--                   <label for="last_name">Last Name:</label><br>-->
+                   <input type="text" name="demo_last_name" id="last_name" placeholder="LAST NAME">
+                   <span id="demo_last_name_error">Last Name is required</span>
+<!--                   <label for="mobile">Mobile:</label><br>-->
+<!--                   <input type="text" name="mobile" id="mobile" placeholder="MOBILE"><br>-->
+<!--                   <label for="email">E-mail (Optional):</label><br>-->
+                   <input type="text" name="demo_email" id="email" placeholder="E-MAIL"><br>
+                   <button type="submit">SUBMIT</button>
+               </div>
+               
+           </div><!-- input-row -->
+           
+           <div class="col-md-6 col-md-offset-3 thankyou-row text-center">
+               <div class="thankyou-text">
+                   <h2>Thank you for your interest at Talkpush!</h2>
+               <br>
+               <p>We are calling you now.</p>
+               <p>Please check your phone to pick up the call. You'll experience the Talkpush interview as if you were a candidate applying for a job.</p>
+               <br>
+               <p style="font-size: 12px;">This section will refresh in <span id="counter">15</span> second(s).</p>
+               </div>
+               <div class="duplicate-text">
+                   <p style="color: #EB5D6C;">Demo request in progress already.</p>
+                   <p>Please enter a new phone number or wait for 15 minutes to try again.</p>
+                   <br>
+                   <p style="font-size: 12px;">This section will refresh in <span id="counter">15</span> second(s).</p>
+               </div>
+           </div>
+            
+            
+            
+            <br><br>
+          
         </div>
         <div class="wrap keyBenefits" id="benefits">
           <div class="row benefits">
@@ -437,6 +502,8 @@
           <i class="fa fa-arrow-circle-up"></i>
         </a>
         <script src="js/bootstrap.js"></script>
+        <script src="js/intlTelInput.js"></script>
         <script src="js/javascript.js"></script>
+        
       </body>
     </html>
