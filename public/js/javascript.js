@@ -190,7 +190,10 @@ var stagingURL = "staging.talkpush.com";
   });
 
   $('#contact-form').on('submit', function(event) {
-    event.preventDefault();
+      
+      event.preventDefault();
+    if (checkSendMessageFields()) {
+        
     var form = $(this);
 
     var data = {
@@ -219,7 +222,8 @@ var stagingURL = "staging.talkpush.com";
           
         _fbq.push('track', 'CompleteRegistration');
       }
-    })
+    });
+    }
   });
   $('#sourcing-form').on('submit', function(event) {
     $(".btn-form > span").hide();
@@ -373,27 +377,36 @@ var stagingURL = "staging.talkpush.com";
     
     $('.demo .phone-row button').on('click', function(){
         
-        submitDemoPhone();
+       
+            submitDemoPhone();
+        
+        
    
     });
     
     $('.demo .input-row button').on('click', function(){
-        submitDemoDetails();
+        
+            submitDemoDetails();
+        
     });
     
     // enter function (to submit demo form)
     $('input[name="demo_phone_no"]').bind('keyup', function(e){
-        var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
-        if ($(this).val().replace("+"+countryCode.dialCode, "") != "" && e.keyCode === 13 ) { 
-            submitDemoPhone();
-            
-        }
+        
+            var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
+            if ($(this).val().replace("+"+countryCode.dialCode, "") != "" && e.keyCode === 13 ) { 
+                submitDemoPhone();
+
+            }
+        
     });
     
     
     $('input[name="demo_first_name"], input[name="demo_last_name"], input[name="demo_email"]').bind('keyup', function(e){
        if (e.keyCode === 13) {
-           submitDemoDetails();
+           
+               submitDemoDetails();
+           
        } 
     });
     
@@ -532,4 +545,49 @@ var stagingURL = "staging.talkpush.com";
             }
         });
     }
+    
+    function checkSendMessageFields() {
+        var tf = true;
+        var emailReg = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+        
+        if ($('#fullName').val() === "") {
+            $('span#fullName_error').show();
+            tf = false;
+        }
+        else {
+            $('span#fullName_error').hide();
+        }
+        
+        if ($('#email').val() === "") {
+            $('span#email_error').show();
+            tf = false;
+        }
+        else {
+            if (!emailReg.test($('#email').val())) {
+                $('span#email_error').html('Please enter a valid E-mail address');
+                $('span#email_error').show();
+            }
+            else {
+                $('span#email_error').hide();
+            }
+            
+        }
+        
+//        if ($('#company').val() === "") {
+//            $('span#company_error').show();
+//            tf = false;
+//        }
+//        
+//        if ($('#message').val() === "") {
+//            $('span#message_error').show();
+//            tf = false;
+//        }
+        
+        if (!tf) {
+            scrollToClass('.contact-form');
+        }
+        
+        return tf;
+    }
+   
 });

@@ -205,12 +205,12 @@
 -->
               <div class="col-md-12">
                  <div class="input-group">
-                  <input type="text" id="demo_phone_no" name="demo_phone_no">
+                  <input type="tel" id="demo_phone_no" name="demo_phone_no">
                   <span class="input-group-btn">
                     <button class="btn btn-demo btn-default" type="button"><i class="glyphicon glyphicon-earphone"></i></button>
                   </span>
                 </div> 
-                  
+                  <span id="demo_phone_no_error">Phone Number is required</span>
 <!--                  <button class="btn btn-demo btn-default"><i class="glyphicon glyphicon-earphone"></i></button>-->
               </div>
              </div>
@@ -226,16 +226,16 @@
                   <h2 style="color: #313131;">Enter your details here</h2>
                   <br>
 <!--                   <label for="first_name">First Name:</label><br>-->
-                   <input type="text" name="demo_first_name" id="first_name" placeholder="FIRST NAME">
+                   <input type="text" name="demo_first_name" id="demo_first_name" placeholder="FIRST NAME">
                                     <span id="demo_first_name_error">First Name is required</span>
 
 <!--                   <label for="last_name">Last Name:</label><br>-->
-                   <input type="text" name="demo_last_name" id="last_name" placeholder="LAST NAME">
+                   <input type="text" name="demo_last_name" id="demo_last_name" placeholder="LAST NAME">
                    <span id="demo_last_name_error">Last Name is required</span>
 <!--                   <label for="mobile">Mobile:</label><br>-->
 <!--                   <input type="text" name="mobile" id="mobile" placeholder="MOBILE"><br>-->
 <!--                   <label for="email">E-mail (Optional):</label><br>-->
-                   <input type="text" name="demo_email" id="email" placeholder="E-MAIL"><br>
+                   <input type="text" name="demo_email" id="demo_email" placeholder="E-MAIL"><br>
                    <button type="submit">SUBMIT</button>
                </div>
                
@@ -419,16 +419,20 @@
                   <div class="col-md-8 col-xs-10 col-xs-offset-1 col-md-offset-2">
                     <form id="contact-form" class="box" action="/contact-form" method="POST">
                       <div class="form-group">
-                        <input type="text" class="form-control" id="fullName" placeholder=" NAME" required>
+                        <input type="text" class="form-control" id="fullName" placeholder=" NAME" >
+                        <span id="fullName_error">Please fill out the NAME field</span>
                       </div>
                       <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder=" E-MAIL" required>
+                        <input type="email" class="form-control" id="email" placeholder=" E-MAIL" >
+                        <span id="email_error">Please fill out the E-MAIL field</span>
                       </div>
                       <div class="form-group">
                         <input type="text" class="form-control" id="company" placeholder=" COMPANY">
+<!--                        <span id="company_error">Please fill out the COMPANY field</span>-->
                       </div>
                       <div class="form-group">
                         <textarea rows="5" class="form-control" id="message" placeholder=" REQUEST A DEMO / ASK FOR A FREE TRIAL / JUST SAY HI"></textarea>
+<!--                        <span id="message_error">Please fill out the MESSAGE field</span>-->
                       </div>
                       <div class="form-group">
                         <div class="col-sm-offset-">

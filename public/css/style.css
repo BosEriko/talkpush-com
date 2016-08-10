@@ -260,7 +260,8 @@ div.intl-tel-input {
 }
 
 span#demo_country_code_error, span#demo_phone_no_error,
-span#demo_first_name_error, span#demo_last_name_error {
+span#demo_first_name_error, span#demo_last_name_error,
+span#email_error, span#fullName_error, span#company_error, span#message_error{
     display: none;
     color: #eb5d6c;
     font-size: 10px;
