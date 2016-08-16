@@ -24,6 +24,12 @@ end
 get '/' do
   File.read(File.join('public', 'index.html'))
 end
+get '/free-demo' do
+  File.read(File.join('public/free-demo', 'index.html'))
+end
+get '/free-demo/' do
+  File.read(File.join('public/free-demo', 'index.html'))
+end
 get '/faqs/' do
     File.read(File.join('public/faqs','index.html'));
 end
@@ -40,15 +46,15 @@ end
 
 post '/contact-form', :provides => :json do
   params = JSON.parse(request.body.read)
-
   full_name = params["fullName"]
   email = params["email"]
   company = params["company"]
   message = params["message"]
 
   Mail.deliver do
-    to      ENV["TO_ADDRESS"]
-    from    ENV["EMAIL_ADDRESS"]
+    # to      ENV["TO_ADDRESS"]
+    to      "eato.lau@talkpush.com"
+    from    "eato.lau@talkpush.com" #ENV["EMAIL_ADDRESS"]
     subject "A message from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
