@@ -28,7 +28,7 @@ $(function () {
       success: function(json) {
         $(".loadingBlockStyle").hide();
         $("form")[0].reset()
-        $(".form-message-box").html("Request Sent! We will geet back to you as soon as possible.");
+        $(".form-message-box").html("Request Sent! We will get back to you as soon as possible.");
         $(".form-message-box").animate({"opacity":"1"},"slow").delay(15000).animate({"opacity":"0"},2000);      
       }
     });
