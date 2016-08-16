@@ -60,8 +60,7 @@ post '/contact-form', :provides => :json do
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
   content_type :json
-  { sucess => 'sucess'}.to_json
-  status 200
+  { :sucess => 'sucess'}.to_json
 end
 
 post '/sourcing-form', :provides => :json do
