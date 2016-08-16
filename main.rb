@@ -75,6 +75,8 @@ post '/sourcing-form', :provides => :json do
       subject "Sourcing enquiry from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
+  status 200
+  "message received"
 end
 
 post '/partnership-form', :provides => :json do
