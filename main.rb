@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require 'json'
 require 'dotenv'
 require 'mail'
+require 'json'
 
 Dotenv.load
 
@@ -58,7 +59,9 @@ post '/contact-form', :provides => :json do
     subject "A message from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
-
+  content_type :json
+  { sucess => 'sucess'}.to_json
+  status 200
 end
 
 post '/sourcing-form', :provides => :json do
@@ -75,9 +78,6 @@ post '/sourcing-form', :provides => :json do
       subject "Sourcing enquiry from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
-  status 200
-  content_type :json
-  { sucess => 'sucess'}.to_json
 end
 
 post '/partnership-form', :provides => :json do
