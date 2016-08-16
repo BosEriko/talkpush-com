@@ -53,9 +53,8 @@ post '/contact-form', :provides => :json do
   message = params["message"]
 
   Mail.deliver do
-    # to      ENV["TO_ADDRESS"]
-    to      "eato.lau@talkpush.com"
-    from    "eato.lau@talkpush.com" #ENV["EMAIL_ADDRESS"]
+    to      ENV["TO_ADDRESS"]
+    from    ENV["EMAIL_ADDRESS"]
     subject "A message from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
