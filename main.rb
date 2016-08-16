@@ -76,7 +76,8 @@ post '/sourcing-form', :provides => :json do
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
   status 200
-  "message received"
+  content_type :json
+  { sucess => 'sucess'}.to_json
 end
 
 post '/partnership-form', :provides => :json do
