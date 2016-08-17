@@ -87,3 +87,29 @@ input{
   margin:0 auto;
   top: 50%
 }
+.pop-up{
+  max-width: 680px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30%;
+  background: #8aa815;
+  padding: 30px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.cancel{
+  border: 3px solid #4a4a4a;
+  height: 30px;
+  width: 30px;
+  content: "X";
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+  border-radius: 30px;
+  color: #4a4a4a;
+  text-align: center;
+  font-size: 18px;
+}
