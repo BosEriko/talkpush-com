@@ -376,37 +376,25 @@ var stagingURL = "staging.talkpush.com";
     // demo section //
     
     $('.demo .phone-row button').on('click', function(){
-        
-       
             submitDemoPhone();
-        
-        
-   
     });
     
     $('.demo .input-row button').on('click', function(){
-        
             submitDemoDetails();
-        
     });
     
     // enter function (to submit demo form)
     $('input[name="demo_phone_no"]').bind('keyup', function(e){
-        
             var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
             if ($(this).val().replace("+"+countryCode.dialCode, "") != "" && e.keyCode === 13 ) { 
                 submitDemoPhone();
-
             }
-        
     });
     
     
     $('input[name="demo_first_name"], input[name="demo_last_name"], input[name="demo_email"]').bind('keyup', function(e){
        if (e.keyCode === 13) {
-           
                submitDemoDetails();
-           
        } 
     });
     
@@ -450,18 +438,15 @@ var stagingURL = "staging.talkpush.com";
         else {
             $('span#demo_first_name_error, span#demo_last_name_error').hide();
             formData.append("campaign_invitation[first_name]",$(".demo input[name='demo_first_name']").val());
-        formData.append("campaign_invitation[last_name]",$(".demo input[name='demo_last_name']").val());
-            
+            formData.append("campaign_invitation[last_name]",$(".demo input[name='demo_last_name']").val());
             if ($('input[name="demo_email"]').val() === "") {} else {
                 formData.append("campaign_invitation[email]",$(".demo input[name='demo_email']").val());
             }
         submitData(campaignID);
-        
        $('.demo .input-row').fadeOut(500);
        setTimeout(function(){
            $('.demo .thankyou-row').fadeIn(700);
        }, 500);
-        
        countToZero();
             scrollToClass('.demo');
         }
@@ -497,7 +482,6 @@ var stagingURL = "staging.talkpush.com";
             crossDomain: true,
             dataType: "json",
             success: function (data) {
-                
                 if (data.error === "duplicated") {
                     console.log(data);
                     $('.demo .thankyou-row .thankyou-text').hide();
@@ -510,20 +494,15 @@ var stagingURL = "staging.talkpush.com";
                     $('.demo .thankyou-row .thankyou-text').show();
                     callNow(c);
                 }
-                
             },
             xhrFields: {
               withCredentials: false
            }
         });
     }
-    
-    
     function scrollToClass(sectionClass){
         $('html,body').animate({scrollTop:$(sectionClass).offset().top},'fast');
     }
-    
-    
     function callNow(a,b,c){
         var countryCode = $('#demo_phone_no').intlTelInput("getSelectedCountryData");
         var phoneNo = $('input[name="demo_phone_no"]').val().replace("+"+countryCode.dialCode, "");
@@ -545,7 +524,6 @@ var stagingURL = "staging.talkpush.com";
             }
         });
     }
-    
     function checkSendMessageFields() {
         var tf = true;
         var emailReg = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
@@ -570,9 +548,7 @@ var stagingURL = "staging.talkpush.com";
             else {
                 $('span#email_error').hide();
             }
-            
         }
-        
 //        if ($('#company').val() === "") {
 //            $('span#company_error').show();
 //            tf = false;
@@ -582,12 +558,25 @@ var stagingURL = "staging.talkpush.com";
 //            $('span#message_error').show();
 //            tf = false;
 //        }
-        
         if (!tf) {
             scrollToClass('.contact-form');
         }
-        
         return tf;
     }
+    $(".carousel").owlCarousel({
+      items : 8,
+      lazyLoad : true,
+      slideSpeed: 200,
+      autoPlay: 2500,
+      stopOnHover: false,
+      itemsMobile: [479,3],
+      itemsTablet: [768,4],
+      itemsDesktopSmall: [979,6],
+      itemsDesktop: [1199,8],
+      pagination:false
+    }); 
+    $("#go-down").on("click",function(){
+      scrollTo(".keyFeatures");
+    })
    
 });
