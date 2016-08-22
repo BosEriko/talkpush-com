@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <link href="css/foundation-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/foundation-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <title>Talkpush - Getting Started</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <script>
@@ -17,271 +17,385 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+      
       ga('create', 'UA-46858485-2', 'auto');
       ga('send', 'pageview');
-
+      
     </script>
-      <script>
-          
-        function scrollTo(sectionClass){
-            $('html,body').animate({
-            scrollTop:$(sectionClass).offset().top},'slow');
+    <script>
+      function scrollTo(sectionClass){
+          $('html,body').animate({
+          scrollTop:$(sectionClass).offset().top},'slow');
+      }
+        $(function(){
+            //document ready
+         $("#clickable").on("click",".f1",function(e){
+              scrollTo(".g1");
+          });
+          $("#clickable").on("click",".f2",function(e){
+              scrollTo(".g2");
+          });
+          $("#clickable").on("click",".f3",function(e){
+              scrollTo(".g3");
+          });
+          $("#clickable").on("click",".f4",function(e){
+              scrollTo(".g4");
+          });
+          $("#clickable").on("click",".f5",function(e){
+              scrollTo(".g5");
+          });
+            
+        });
+        function removeAClass(){
+            $(".f1").removeClass("active");
+            $(".f2").removeClass("active");
+            $(".f3").removeClass("active");
+            $(".f4").removeClass("active");
+            $(".f5").removeClass("active");
         }
-          $(function(){
-              //document ready
-           $("#clickable").on("click",".f1",function(e){
-                scrollTo(".g1");
-            });
-            $("#clickable").on("click",".f2",function(e){
-                scrollTo(".g2");
-            });
-            $("#clickable").on("click",".f3",function(e){
-                scrollTo(".g3");
-            });
-            $("#clickable").on("click",".f4",function(e){
-                scrollTo(".g4");
-            });
-            $("#clickable").on("click",".f5",function(e){
-                scrollTo(".g5");
-            });
-              
-          });
-          function removeAClass(){
-              $(".f1").removeClass("active");
-              $(".f2").removeClass("active");
-              $(".f3").removeClass("active");
-              $(".f4").removeClass("active");
-              $(".f5").removeClass("active");
+        $(window).scroll(function(){
+          var currX = $(window).scrollTop();
+          var gv1 = $(".g1").offset().top;
+          var gv2 = $(".g2").offset().top;
+          var gv3 = $(".g3").offset().top;
+          var gv4 = $(".g4").offset().top;
+          var gv5 = $(".g5").offset().top;
+          if (currX < gv2){
+              removeAClass();
+              $(".f1").addClass("active");
+          }else{
+              if (currX < gv3){
+                  removeAClass();
+                  $(".f2").addClass("active");
+              }else{
+                  if (currX < gv4){
+                      removeAClass();
+                      $(".f3").addClass("active");
+                  }else{
+                      if(currX < gv5){
+                          removeAClass();
+                          $(".f4").addClass("active");
+                      }else{
+                          removeAClass();
+                          $(".f5").addClass("active");
+                      }
+                  }
+              }
           }
-          $(window).scroll(function(){
-            var currX = $(window).scrollTop();
-            var gv1 = $(".g1").offset().top;
-            var gv2 = $(".g2").offset().top;
-            var gv3 = $(".g3").offset().top;
-            var gv4 = $(".g4").offset().top;
-            var gv5 = $(".g5").offset().top;
-            if (currX < gv2){
-                removeAClass();
-                $(".f1").addClass("active");
-            }else{
-                if (currX < gv3){
-                    removeAClass();
-                    $(".f2").addClass("active");
-                }else{
-                    if (currX < gv4){
-                        removeAClass();
-                        $(".f3").addClass("active");
-                    }else{
-                        if(currX < gv5){
-                            removeAClass();
-                            $(".f4").addClass("active");
-                        }else{
-                            removeAClass();
-                            $(".f5").addClass("active");
-                        }
-                    }
-                }
-            }
-          });
-      </script>
-      <!-- Begin Inspectlet Embed Code -->
-<script type="text/javascript" id="inspectletjs">
-window.__insp = window.__insp || [];
-__insp.push(['wid', 537720177]);
-(function() {
-function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
-document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', __ldinsp) : window.addEventListener('load', __ldinsp, false)) : __ldinsp();
-
-})();
-</script>
-<!-- End Inspectlet Embed Code -->
-      <style>
-          iframe{
-              max-width: 560px;
-              min-width: 240px;
-          }
-      </style>
+        });
+    </script>
+    <!-- Begin Inspectlet Embed Code -->
+    <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 537720177]);
+      (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+      document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', __ldinsp) : window.addEventListener('load', __ldinsp, false)) : __ldinsp();
+      
+      })();
+    </script>
+    <!-- End Inspectlet Embed Code -->
+    <style>
+      iframe{
+      max-width: 560px;
+      min-width: 240px;
+      }
+    </style>
   </head>
   <body>
-      <div class="floating-window">
-          <ul id="clickable">
-              <li class="f1 active">INTRODUCTION</li>
-              <li class="f2">GETTING STARTED</li>
-<!--
-              <ul>
-                  <li>CREATING CAMPAIGNS &amp; INTERVIEW TEMPLATES</li>
-                  <li>ADDING CANDIDATES AND CAMPAIGN CONFIGURATION</li>
-                  <li>BATCH IMPORT CSV</li>
-                  <li>PERSONALIZED INVITATION</li>
-              </ul>
--->
-              <li class="f3">THE INTERVIEW</li>
-<!--
-              <ul>
-                  <li>TRANSFERRING INTERVIEWS TO TALKPUSH</li>
-                  <li>MANAGE CANDIDATE WORKFLOW, SEARCHING CANDIDATES AND EXpORT</li>
-              </ul>
--->
-              <li class="f4">VIEWING CANDIDATE RESPONSES</li>
-<!--
-              <ul>
-                  <li>DUPLICATE TAGS</li>
-                  <li>SHARING CANDIDATES</li>
-                  <li>EXPORTING CAMPAIGN DATA</li>
-              </ul>
--->
-              <li class="f5">WHAT YOU CA DO AFTER INVITING CANDIDATES</li>
-<!--
-              <ul>
-                  <li>REFRESH A PIN CODE</li>
-                  <li>INCREASE RESPONSE RATES</li>
-              </ul>
--->
+    <div class="floating-window">
+      <ul id="clickable">
+        <li class="f1 active">INTRODUCTION</li>
+        <li class="f2">GETTING STARTED</li>
+        <!--
+          <ul>
+              <li>CREATING CAMPAIGNS &amp; INTERVIEW TEMPLATES</li>
+              <li>ADDING CANDIDATES AND CAMPAIGN CONFIGURATION</li>
+              <li>BATCH IMPORT CSV</li>
+              <li>PERSONALIZED INVITATION</li>
           </ul>
-      </div>
+          -->
+        <li class="f3">THE INTERVIEW</li>
+        <!--
+          <ul>
+              <li>TRANSFERRING INTERVIEWS TO TALKPUSH</li>
+              <li>MANAGE CANDIDATE WORKFLOW, SEARCHING CANDIDATES AND EXpORT</li>
+          </ul>
+          -->
+        <li class="f4">VIEWING CANDIDATE RESPONSES</li>
+        <!--
+          <ul>
+              <li>DUPLICATE TAGS</li>
+              <li>SHARING CANDIDATES</li>
+              <li>EXPORTING CAMPAIGN DATA</li>
+          </ul>
+          -->
+        <li class="f5">WHAT YOU CA DO AFTER INVITING CANDIDATES</li>
+        <!--
+          <ul>
+              <li>REFRESH A PIN CODE</li>
+              <li>INCREASE RESPONSE RATES</li>
+          </ul>
+          -->
+      </ul>
+    </div>
     <div class="header-top"></div>
-      <div class="header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed mobile-menu-icon" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <div class="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed mobile-menu-icon" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar sub-corp-color-bg"></span>
             <span class="icon-bar sub-corp-color-bg"></span>
             <span class="icon-bar sub-corp-color-bg"></span>
-          </button>
+            </button>
             <div class="logo">
-                 <a href="index.html" class="navbar-brand active"><img class="img-responsive" src="images/logo.png"></a>
+              <a href="index.html" class="navbar-brand active backtohome"><img class="img-responsive" src="images/logo-s.png"></a>
             </div>
-         
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SOLUTIONS <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  <!-- <li><a>Recuritment Automation</a></li> -->
+                  <li><a href="./partnership.html">RPO Partners</a></li>
+                  <li><a href="./sourcing.html">Soucring</a></li>
+                </ul>
+              </li>
+              <li>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMPANY <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="./about.html">About Us</a></li>
+                  <li><a href="http://blog.talkpush.com">Blog</a></li>
+                  <li><a href="./jobs.html">Career</a></li>
+                </ul>
+              </li>
+              <li>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="http://read.corilla.com/Talkpush/User-Guide.html#">Documentation</a></li>
+                  <!-- <li><a>FAQ</a></li> -->
+                  <li><a href="./termsandcond.html">Terms &amp; Conditions</a></li>
+                  <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </li>
+              <li><a class="btnFreeTrial" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html#benefits">Benefits</a></li>
-              <li><a href="about.html" >Company</a></li>
-<!--            <li><a href="index.html#features" class="btnFeatures">Features</a></li>-->
-<li><a href="./partnership.html" >Partnership</a></li>
-              <li><a href="http://blog.talkpush.com/">Blog</a></li>
-              <li><a href="jobs.html">Career</a></li>
-              <li><a href="http://my.talkpush.com/">Log In</a></li>
-              <li><a class="btnFreeTrial" href="index.html#contact-form-container">Sign Up</a></li>
-<!--
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Company<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
--->
-<!--                  <li><a href="jobs.html">Jobs</a></li>-->
-                
-<!--
-              </ul>
-            </li>
--->
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
-    </nav>
-  </div>
-      
-    <div class="privacy-content container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <h1 style="margin-top: 50px;" >Getting Started</h1>
-                <br>
-                <h4 class="intro g1">Introduction</h4>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/qNOAqSltda0" frameborder="0" allowfullscreen></iframe>
-<!--                <div style="border-top:1px;border-bottom:0px; width:90%;margin-left:auto;margin-right:auto; border:solid black"></div>-->
-                <br><hr><br>
-                <h4 class="g2">
-                    Getting Started</h4>
-                <h5>Creating campaigns & interview templates</h5>
-                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/hvF0D8vVH_4" frameborder="0" allowfullscreen></iframe>
-                <h5>Adding Candidates and campaign configuration</h5>
-                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/1bN7ZV1xfuQ" frameborder="0" allowfullscreen></iframe>
-                <h5>Batch import CSV</h5>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/nnpw9hB6iZE" frameborder="0" allowfullscreen></iframe>
-                <h5>Personalized invitation</h5>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/R3vvnYkMaXg" frameborder="0" allowfullscreen></iframe>
-<br><hr><br><h4 class="g3">The interview</h4>
-                <h5>Transferring interviews to Talkpush</h5>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ashb9pFOb_Q" frameborder="0" allowfullscreen></iframe>
-            <h5>Manage candidate workflow, searching candidates and exporting to excel</h5>
-
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/CT6EYoYavAc" frameborder="0" allowfullscreen></iframe>
-            <br><hr><br>
-                <h4 class="g4">Viewing Candidate Responses</h4>
-            <h5>Duplicate tags</h5> 
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/NNyEbJcTA2w" frameborder="0" allowfullscreen></iframe>
-        <h5>Sharing Candidates</h5> 
-                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/9-6uqcDZIcA" frameborder="0" allowfullscreen></iframe>
-      <h5>Exporting Campaign Data</h5> 
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/T_lnu3TryiE" frameborder="0" allowfullscreen></iframe>
-                <br><hr><br>
-<h4 class="g5">What you can do after inviting Candidates</h4>
-                <h5>Refresh a PIN code</h5>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/kImLCR1v22s" frameborder="0" allowfullscreen></iframe>
-                <h5>Increase response rates</h5>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/48qQ4KJTlk0" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-     <div class="row">&nbsp;</div>
-        <div class="row">&nbsp;</div>
+        <!--/.container-fluid -->
+      </nav>
     </div>
-  <div class="footer">
-    <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <p><a href="mailto:hello@talkpush.com">hello@talkpush.com</a></p>
-            <p><br>
-<span class="phoneNo">+(852)  9188 7562 </span><span class="phoneNo-country">	|  Hong Kong</span><br>
-<span class="phoneNo">+(63) 917 5075734</span><span class="phoneNo-country">	|  Philippines</span><br>
-<span class="phoneNo">+(33) 7 82 96 83 16</span><span class="phoneNo-country">  |  France</span><br>
-<span class="phoneNo">+(44) 7751 860193</span><span class="phoneNo-country">	|  United Kingdom</span><br>
-<span class="phoneNo">+(1)  415 363 9911</span><span class="phoneNo-country">	|  United States</span>
-</p>
+    <div class="privacy-content container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1 style="margin-top: 50px;" >Getting Started</h1>
+          <br>
+          <h4 class="intro g1">Introduction</h4>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/qNOAqSltda0" frameborder="0" allowfullscreen></iframe>
+          <!--                <div style="border-top:1px;border-bottom:0px; width:90%;margin-left:auto;margin-right:auto; border:solid black"></div>-->
+          <br>
+          <hr>
+          <br>
+          <h4 class="g2">
+            Getting Started
+          </h4>
+          <h5>Creating campaigns & interview templates</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/hvF0D8vVH_4" frameborder="0" allowfullscreen></iframe>
+          <h5>Adding Candidates and campaign configuration</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/1bN7ZV1xfuQ" frameborder="0" allowfullscreen></iframe>
+          <h5>Batch import CSV</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/nnpw9hB6iZE" frameborder="0" allowfullscreen></iframe>
+          <h5>Personalized invitation</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/R3vvnYkMaXg" frameborder="0" allowfullscreen></iframe>
+          <br>
+          <hr>
+          <br>
+          <h4 class="g3">The interview</h4>
+          <h5>Transferring interviews to Talkpush</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/ashb9pFOb_Q" frameborder="0" allowfullscreen></iframe>
+          <h5>Manage candidate workflow, searching candidates and exporting to excel</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/CT6EYoYavAc" frameborder="0" allowfullscreen></iframe>
+          <br>
+          <hr>
+          <br>
+          <h4 class="g4">Viewing Candidate Responses</h4>
+          <h5>Duplicate tags</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/NNyEbJcTA2w" frameborder="0" allowfullscreen></iframe>
+          <h5>Sharing Candidates</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/9-6uqcDZIcA" frameborder="0" allowfullscreen></iframe>
+          <h5>Exporting Campaign Data</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/T_lnu3TryiE" frameborder="0" allowfullscreen></iframe>
+          <br>
+          <hr>
+          <br>
+          <h4 class="g5">What you can do after inviting Candidates</h4>
+          <h5>Refresh a PIN code</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/kImLCR1v22s" frameborder="0" allowfullscreen></iframe>
+          <h5>Increase response rates</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/48qQ4KJTlk0" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+      </div>
+      <div class="row">&nbsp;</div>
+      <div class="row">&nbsp;</div>
+    </div>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="wrap form-wrap">
+              <div class="container-fluid form-container" id="contact-form-container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-xs-12 interested-in">
+                    <h2>Send us your details to receive a free demo</h2>
+                  </div>
+                  <div class="contact-form box">
+                    <div class="row">
+                      <div class="col-md-8 col-xs-10 col-xs-offset-1 col-md-offset-2">
+                        <form id="contact-form" class="box" action="/contact-form" method="POST">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="fullName" placeholder=" NAME" required>
+                            <span id="fullName_error">Please fill out the NAME field</span>
+                          </div>
+                          <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder=" E-MAIL" required>
+                            <span id="email_error">Please fill out the E-MAIL field</span>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="company" placeholder=" COMPANY">
+                            <!--                        <span id="company_error">Please fill out the COMPANY field</span>-->
+                          </div>
+                          <div class="form-group">
+                            <textarea rows="5" class="form-control" id="message" placeholder=" REQUEST A DEMO / ASK FOR A FREE TRIAL / JUST SAY HI"></textarea>
+                            <!--                        <span id="message_error">Please fill out the MESSAGE field</span>-->
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-">
+                              <button type="submit" class="btn btn-form">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-xs-12 form-message-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer container-fluid">
+      <div class="row">
+        &nbsp;
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-sm-6">
+          <div class="title">
+            CONTACT
+          </div>
+          <br/><br/>
+          <div class="content">
             <p>
+              hello@talkpush.com<br/>
+              +(852) 9188 7562&nbsp;&nbsp;&nbsp;|&nbsp;Hong Kong<br/>
+              +(63) 917 5075734&nbsp;|&nbsp;Philippines<br/>
+              +(33) 7 82 96 83 16|&nbsp;France<br/>
+              +(44) 7751 860193&nbsp;|&nbsp;UK<br/>
+              +(1) 415 363 9911&nbsp;&nbsp;|&nbsp;United States<br/>
+            </p>
+          </div>
+          <div class="social-icon">
+            <a href="https://www.facebook.com/letthetalenttalk"><img src="images/social-icons/facebook.png" width="26px"></a>
+            <a href="https://www.twitter.com/talkpush"><img src="images/social-icons/twitter.png" width="26px"></a>
+            <a href="https://www.linkedin.com/company/talkpush"><img src="images/social-icons/linkedin.png" width="26px"></a>
+            <a href="https://www.youtube.com/c/Talkpush"><img src="images/social-icons/youtube.png" width="26px"></a>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="title">
+            OFFICE
+          </div>
+          <br/><br/>
+          <div class="content">
+            <p>
+              Hong Kong:
               Unit 6, 8F,<br/>
               Arion Commercial Centre,<br/>
               2-12 Queen's Road West,<br/>
-              Sheung Wan, Hong Kong
-            </p>
-            <p>
-              Philippines:
-              <br>
-              11th Floor
-              <br>
-              Pearl Bank  Center,
+              Sheung Wan, Hong Kong<br/>
               <br/>
-              Valero St. Bel Air Makati 
+              Philippines: <br/>
+              11th Floor 
+              Pearl Bank Center, <br/>
+              Valero St. Bel Air Makati<br/>
             </p>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12 footer-right">
-        <p>
-            <a href="termsandcond.html" class="tcandpp">TERMS &amp; CONDITIONS</a> 
-           <a href="privacy-policy.html" class="tcandpp">PRIVACY POLICY</a>
-          </p>  
-              <div class="social-row">  <a class="social-link" href="https://www.youtube.com/c/Talkpush" target="_blank"><img src="images/youtube-icon.png" alt="facebook" width="27px"></a>
-          <a class="social-link" href="https://www.facebook.com/letthetalenttalk" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
-          <a class="social-link" href="https://www.linkedin.com/company/Talkpush" target="_blank"><img src="images/linkedin.png" alt="linked-in"></a>
-          <a class="social-link" href="https://www.twitter.com/talkpush" target="_blank"><img src="images/twitter.png" alt="twitter"></a></div>
-            
+        <div class="col-md-2 col-md-offset-3 col-sm-offset-0 col-sm-4">
+          <div class="title">
+            SOLUTIONS
+          </div>
+          <br/><br/>
+          <div class="content">
+            <p>
+              <!-- <a>Recuritment Automation</a><br/> -->
+              <a href="./partnership.html">RPO Partnership</a><br/>
+              <a href="./sourcing.html">Soucring</a><br/>
+            </p>
+          </div>
         </div>
+        <div class="col-md-1 col-sm-4">
+          <div class="title">
+            COMPANY
+          </div>
+          <br/><br/>
+          <div class="content">
+            <p>
+              <a href="./about.html">About Us</a><br/>
+              <a href="http://blog.talkpush.com">Blog</a><br/>
+              <a href="./jobs.html">Career</a><br/>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <div class="title">
+            OTHERS
+          </div>
+          <br/><br/>
+          <div class="content">
+            <p>
+              <a href="http://read.corilla.com/Talkpush/User-Guide.html#">Documentation</a><br/>
+              <!-- <a>FAQ</a><br/> -->
+              <a href="./termsandcond.html">Terms &amp; Conditions</a><br/>
+              <a href="./privacy-policy.html">Privacy Policy</a><br/>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        &nbsp;
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          All right reserved © Talkpush 2016
+        </div>
+      </div>
+      <div class="row">
+        &nbsp;
+      </div>
     </div>
-        
-      
-    </div>
-  </div>
-
-  <a class="back-to-top" style="display: inline;">
+    <a class="back-to-top" style="display: inline;">
     <i class="fa fa-arrow-circle-up"></i>
-  </a>
-
-
-
-<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-  <script src="js/bootstrap.js"></script>
-  <script src="js/javascript.js"></script>
-</body>
+    </a>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/javascript.js"></script>
+  </body>
 </html>
