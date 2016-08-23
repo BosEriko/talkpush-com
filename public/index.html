@@ -74,10 +74,11 @@
     </div>
     <!-- intro video finished -->
     <div class="video-hero" style="height:500px;position: relative;overflow: hidden;">
-      <video class="video is-playing" autoplay muted loop="true" poster="https://s3-ap-southeast-1.amazonaws.com/talkpush-cdn/microsites/talkpush/poster.jpg" style="position: absolute;min-width: 100%;min-height: 100%;width: auto;height: auto;top: 50%;left: 50%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%);">
+      <video class="video is-playing hidden-xs" autoplay muted loop="true" poster="https://s3-ap-southeast-1.amazonaws.com/talkpush-cdn/microsites/talkpush/poster.jpg" style="position: absolute;min-width: 100%;min-height: 100%;width: auto;height: auto;top: 50%;left: 50%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%);">
         <source src="https://s3-ap-southeast-1.amazonaws.com/talkpush-cdn/microsites/talkpush/talkpush.mp4" type="video/mp4">
         <source src="https://s3-ap-southeast-1.amazonaws.com/talkpush-cdn/microsites/talkpush/talkpush.webm" type="video/webm">
       </video>
+      <div class="video-overlay hidden-sm hidden-md hidden-lg" style="background-image: url('https://s3-ap-southeast-1.amazonaws.com/talkpush-cdn/microsites/talkpush/mobile_bg.png');position: absolute;top: 0;left: 0;bottom: 0;right: 0;pointer-events: none;opacity: 1;background-repeat: no-repeat;background-position: center;background-size: cover"></div>      
       <div class="video-overlay" style="background-image: url('images/black-small-checks.png');position: absolute;top: 0;left: 0;bottom: 0;right: 0;pointer-events: none;opacity: 0.5;background-repeat: repeat;"></div>
       <div class="header">
         <nav class="navbar">
@@ -131,8 +132,12 @@
       </div>
       <div class="container" style="z-index:10;position:absolute;width:100%">
         <div class="introduction">
-          <h1 class="intro-header" style="margin-top: 150px;color: #fff;">RECRUIT FASTER AND BETTER<br>THAN EVER BEFORE</h1>
-          <br/><br/>
+          <h1 class="intro-header" style="margin-top: 100px;color: #fff;">RECRUIT FASTER AND BETTER<br>THAN EVER BEFORE</h1>
+          <br/>
+          <div class="introVideo">
+            <a href="https://www.youtube.com/embed/d-cYz6QCWSo" data-toggle="modal" data-target="#myModal"><i class="fi-play-circle play"></i></a>
+          </div>
+          <br/>
           <img src="images/downarrow.png" width="25px" id="go-down">
         </div>
       </div>
