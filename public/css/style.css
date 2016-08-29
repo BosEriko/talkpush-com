@@ -1076,3 +1076,28 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   line-height: 24px;
   font-weight: 300;
 }
+.scroll-div{
+  height: 950px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+}
+.scroll-div > .row{
+  margin-bottom: 15px;
+}
+.scroll-div p{
+  margin: 0px !important;
+}
+.scroll-div img{
+  width: 100%;
+}
+.scroll1::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+.scroll1::-webkit-scrollbar-track {
+  background: #ddd;
+}
+ 
+.scroll1::-webkit-scrollbar-thumb {
+  background: #666; 
+}
