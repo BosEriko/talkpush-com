@@ -399,9 +399,9 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   border-bottom: 1px solid #8aa815;
   font-weight: inherit;
   height: 40px;
-  padding-top: 10px;
   text-transform: uppercase;
   text-align: center;
+  padding: 10px 0px;
 }
 
 .btn-form {
