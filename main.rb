@@ -77,6 +77,20 @@ post '/sourcing-form', :provides => :json do
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
 end
+post '/first-time-sub-form', :provides => :json do
+  params = JSON.parse(request.body.read)
+
+  email = params["email"]
+
+  Mail.deliver do
+    # to      ENV["TO_ADDRESS"]
+    # from    ENV["EMAIL_ADDRESS"]
+      to "eato.lau@talkpush.com"
+      from "eato.lau@talkpush.com"
+      subject "First time sign up from #{email}"
+    body    "A new first time sign up #{email}"
+  end
+end
 
 post '/partnership-form', :provides => :json do
   params = JSON.parse(request.body.read)

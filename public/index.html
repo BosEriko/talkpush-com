@@ -22,8 +22,21 @@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="//parsleyjs.org/dist/parsley.min.js"></script>
+    <script type="text/javascript" src="js/js.cookie.js"></script>
     <title>Talkpush - Let the Talent Talk</title>
     <link rel="shortcut icon" href="favicon.ico">
+    <script type="text/javascript">
+      $(document).ready(function(){
+        if(typeof Cookies.get('last_visit') ==="undefined"){
+          console.log("FIRED")
+          Cookies.set('last_visit', new Date, { expires: 365});
+          $("#subscription_pop_up").modal('show')  
+        }else{
+          console.log("not fired")
+        }
+      })
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -61,6 +74,70 @@
     </style>
   </head>
   <body>
+    <div class="modal fade" id="subscription_pop_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2>First time here?</h2>
+            <h3>Sign up today to learn more about Talkpush and how to hire faster, better, smarter with a free demo</h3>
+            <br/><br/><br/><br/>
+            <script>
+              $(document).ready(function(){
+                $('#subscription_pop_up form').parsley();
+                $("#subscription_pop_up form").on("submit",function(e){
+                  e.preventDefault();
+                  console.log("Load")
+                  $(".loading-spinner").css("display","inline-block");
+                  $.ajax({
+                    url: "./first-time-sub-form",
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    type: 'POST',
+                    data : JSON.stringify($("input[type='email']").val()),
+                    accepts: "application/json",
+                    error: function(req, err){
+                      $(".loading-spinner").hide();
+                      $("input[type='email']").val("")
+                      $("#subscription_pop_up .error").show();
+                      var a = setInterval(function(){
+                        $("#subscription_pop_up .error").hide();
+                        clearInterval(a)
+                      },5000);
+                      console.log('error message: ' + err);
+                    },
+                    success: function(json) {
+                      $(".loading-spinner").hide();
+                      $("#subscription_pop_up .form").hide();
+                      $("#subscription_pop_up .thankyoumsg").show();
+                      var a = setInterval(function(){
+                        $('#subscription_pop_up').modal('hide');
+                        clearInterval(a)
+                      },5000);
+                      $("input[type='email']").val("")
+                    }
+                  });
+                })
+              })
+            </script>
+            <form class="form">
+              <div class="inputWrapper">
+              <input type="email" placeholder="EMAIL" required="" />
+              </div>
+              <button id="btnSignup" value="submit"><div class="loading-spinner"></div> SIGN UP</button>
+              <span class="error">Error ocurred. Please try again later.</span>
+              <h5>We hate spam as much as you do, your email is safe with us.</h5>
+              <hr/>
+              <a href="#" onclick="$('#subscription_pop_up').modal('hide')">No, Thanks</a>
+            </form>
+            <div class="thankyoumsg">
+              Thank you for sign up. Our team will contact you shortly.
+              <hr/>
+              <a href="#" onclick="$('#subscription_pop_up').modal('hide')">Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="header-top"></div>
     <!-- modal start -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
