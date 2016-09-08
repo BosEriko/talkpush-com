@@ -22,7 +22,7 @@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="//parsleyjs.org/dist/parsley.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.4.4/parsley.min.js"></script>
     <script type="text/javascript" src="js/js.cookie.js"></script>
     <title>Talkpush - Let the Talent Talk</title>
     <link rel="shortcut icon" href="favicon.ico">
@@ -84,7 +84,7 @@
             <script>
               $(document).ready(function(){
                 $('#subscription_pop_up form').parsley();
-                $("#subscription_pop_up form").on("submit",function(e){
+                $("#subscription_pop_up form").submit(function(e){
                   e.preventDefault();
                   console.log("Load")
                   $(".loading-spinner").css("display","inline-block");
