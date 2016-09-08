@@ -83,12 +83,10 @@ post '/first-time-sub-form', :provides => :json do
   email = params["email"]
 
   Mail.deliver do
-    # to      ENV["TO_ADDRESS"]
-    # from    ENV["EMAIL_ADDRESS"]
-      to "eato.lau@talkpush.com"
-      from "eato.lau@talkpush.com"
+    to      ENV["TO_ADDRESS"]
+    from    ENV["EMAIL_ADDRESS"]
       subject "First time sign up from #{email}"
-    body    "A new first time sign up #{email}"
+    body    "A new first time sign up \n Email: #{email}"
   end
 end
 
