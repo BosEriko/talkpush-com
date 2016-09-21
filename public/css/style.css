@@ -1247,3 +1247,7 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   list-style: none;
   padding: 0 5px;
 }
+.wrap.pricing-plan h4{
+  color: #575756;
+  text-align: center;
+}
