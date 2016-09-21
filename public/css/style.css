@@ -1251,3 +1251,37 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   color: #575756;
   text-align: center;
 }
+.pricing-plan .plan-header{
+  background: #8aa815;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+.pricing-plan .plan-content,.pricing-plan .plan-extra-content{
+  border: 3px solid #8AA815;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px;
+  color:#575756;
+  font-weight: 300;
+}
+.pricing-plan .plan-extra-content{
+  border-top:0px;
+}
+.pricing-plan .plan-content ul{
+  text-align: left;
+}
+.plan-header b{
+  font-size: 18px;
+  font-weight: 600;
+}
+.plan-header h5{
+  font-weight: 200;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: none;
+}
+.plan-header h6{
+  font-size: 10;
+  font-weight: 100;
+}
