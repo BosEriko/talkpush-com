@@ -1265,6 +1265,9 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   color:#575756;
   font-weight: 300;
 }
+.pricing-plan .plan-content{
+  min-height: 290px;
+}
 .pricing-plan .plan-extra-content{
   border-top:0px;
 }
@@ -1284,4 +1287,84 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
 .plan-header h6{
   font-size: 10;
   font-weight: 100;
+}
+.additional, .additional p, .additional h4 {
+  color: #ffffff;
+  text-align: center;
+}
+.additional h4{
+  text-align:center;
+}
+.additional .intro-header{
+  color: #8AA815;
+}
+.additional-box-header, .additional-box-content{
+  background: #8AA815;
+  padding: 10px;
+  text-align: center;
+}
+.additional-box-header b{
+  font-size: 18px;
+  font-weight: 600;
+}
+.additional-box-content{
+  line-height: 1.5;
+  background: none;
+  border: 3px solid #8AA815;
+  text-align: center;
+  font-weight: 300;
+  min-height: 175px;
+}
+.additional-box-header h6{
+  font-size: 10;
+  font-weight: 100;
+}
+.additional button{
+  color:#fff;
+  font-size: 18px;
+  padding: 20px;
+  background: #EB5D6C;
+  border: none;
+  border-radius: 5px;
+}
+.pop-up{
+  display: none;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.50);
+  border-radius: 5px;
+  font-size: 12px;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  color: #575756;
+}
+.hints{
+  border-bottom: 1px dotted #b1b1b1;
+}
+.wrap.clients{
+  background: #FAFAFA;
+}
+.clients h3{
+  font-size: 18px;
+  color: #323A45;
+  font-weight: 500;
+  text-transform: none;
+}
+.pricing-logo{
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+}
+#telecommModal p{
+  color:#575756;
+  font-weight: 300;
+}
+#telecommModal h3{
+  color:#8AA815;
+}
+#telecommModal{
+  color:#575756;
+  font-weight: 300;
+}
+#quoteModal .modal-content{
+  background: #8AA815;
 }

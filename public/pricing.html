@@ -22,6 +22,87 @@
       ga('send', 'pageview');
       
     </script>
+    <script type="text/javascript">
+
+      $(function() {
+        var moveLeft = 20;
+        var moveDown = 20;
+        
+        $('#inter-creator').hover(function(e) {
+          $('.inter-creator.pop-up').show();
+        }, function() {
+          $('.inter-creator.pop-up').hide();
+        });
+        
+        $('#inter-creator').mousemove(function(e) {
+          $(".inter-creator.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+
+        $('#resume-parsing').hover(function(e) {
+          $('.cv-parsing.pop-up').show();
+        }, function() {
+          $('.cv-parsing.pop-up').hide();
+        });
+        
+        $('#resume-parsing').mousemove(function(e) {
+          $(".cv-parsing.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+
+        $('#high-volume-phoneline').hover(function(e) {
+          $('.high-volume-phoneline.pop-up').show();
+        }, function() {
+          $('.high-volume-phoneline.pop-up').hide();
+        });
+        
+        $('#high-volume-phoneline').mousemove(function(e) {
+          $(".high-volume-phoneline.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+
+        $('#web-call-out').hover(function(e) {
+          $('.web-call-out.pop-up').show();
+        }, function() {
+          $('.web-call-out.pop-up').hide();
+        });
+        
+        $('#web-call-out').mousemove(function(e) {
+          $(".web-call-out.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $('#sms-apply').hover(function(e) {
+          $('.sms-apply.pop-up').show();
+        }, function() {
+          $('.sms-apply.pop-up').hide();
+        });
+        
+        $('#sms-apply').mousemove(function(e) {
+          $(".sms-apply.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $('#ad-landing-page').hover(function(e) {
+          $('.ad-landing-page.pop-up').show();
+        }, function() {
+          $('.ad-landing-page.pop-up').hide();
+        });
+        
+        $('#ad-landing-page').mousemove(function(e) {
+          $(".ad-landing-page.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $('#ats-integration').hover(function(e) {
+          $('.ats-integration.pop-up').show();
+        }, function() {
+          $('.ats-integration.pop-up').hide();
+        });
+        
+        $('#ats-integration').mousemove(function(e) {
+          $(".ats-integration.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $("#quote").on("click",function(e){
+          var planValue = $("input[name='plan']").val();
+          var additionalValues = $('input:checkbox:checked').map(function() {
+            return this.value;
+          }).get();
+
+        })
+      });
+    </script>
   </head>
   <body>
     <div class="header-top"></div>
@@ -106,24 +187,25 @@
               <br>
               <br>
               <ul>
-                <li>Interview creator &nbsp;<img src="images/question-circle.png"></li>
-                <li>Unlimited # of campaigns &nbsp;<img src="images/question-circle.png"></li>
-                <li>Resume parsing &nbsp;<img src="images/question-circle.png"></li>
-                <li>High volume phone line &nbsp;<img src="images/question-circle.png"></li>
+                <li><span class="hints" id="inter-creator">Interview creator &nbsp;<img src="images/question-circle.png" ></span></li>
+                <li>Unlimited # of campaigns</li>
+                <li><span class="hints" id="resume-parsing">Resume parsing &nbsp;<img src="images/question-circle.png"></span></li>
+                <li><span class="hints" id="high-volume-phoneline">High volume phone line &nbsp;<img src="images/question-circle.png"></span></li>
                 <li>Reports and analytics </li>
-                <li>Web Call Out &nbsp;<img src="images/question-circle.png"></li>
+                <li><span class="hints" id="web-call-out">Web Call Out &nbsp;<img src="images/question-circle.png"></span></li>
                 <li>Up to <b>3,000</b> SMS per month</li>
               </ul>
             </div>
             <div class="plan-extra-content">
               No setup fee<br/>
               Telecom charges may apply<br/>
-              <u><a>(See details)</a></u>
+              <u><a data-toggle="modal" data-target="#telecommModal">(See details)</a></u>
             </div>
+            <br/>
           </div>
           <div class="col-sm-4">
             <div class="plan-header">
-              <input type="radio" name="plan" value="Starter">
+              <input type="radio" name="plan" value="Business">
               <b>Business</b>
               <h5>$450 per month</h5>
               <h6>(Minimum 3 months commitment)</h6>
@@ -133,58 +215,168 @@
               and up to 10 users
               <br>
               <br>
+              <div style="text-align: left;padding-left:20px">
+                Same features as for the Starter Edition with in addition: 
+              </div>
+              <br>
               <ul>
-                <li>Interview creator &nbsp;<img src="images/question-circle.png"></li>
-                <li>Unlimited # of campaigns &nbsp;<img src="images/question-circle.png"></li>
-                <li>Resume parsing &nbsp;<img src="images/question-circle.png"></li>
-                <li>High volume phone line &nbsp;<img src="images/question-circle.png"></li>
-                <li>Reports and analytics </li>
-                <li>Web Call Out &nbsp;<img src="images/question-circle.png"></li>
-                <li>Up to <b>3,000</b> SMS per month</li>
+                <li>Web Call Out</li>
+                <li>Autocall feature</li>
+                <li>Facebook Lead Ad Integration</li>
+                <li>Up to <b>5,000</b> SMS per month*</li>
               </ul>
             </div>
             <div class="plan-extra-content">
               No setup fee<br/>
               Telecom charges may apply<br/>
-              <u><a>(See details)</a></u>
+              <u><a data-toggle="modal" data-target="#telecommModal">(See details)</a></u>
             </div>
+            <br/>
           </div>
           <div class="col-sm-4">
             <div class="plan-header">
-              <input type="radio" name="plan" value="Starter">
-              <b>Starter</b>
-              <h5>$188 per month</h5>
+              <input type="radio" name="plan" value="Enterprise">
+              <b>Enterprise</b>
+              <h5>$880 per month</h5>
               <h6>(Minimum 3 months commitment)</h6>
             </div>
             <div class="plan-content">
-              Up to <b>500</b> candidates per month<br/>
-              and up to 3 users
+              <b>5,000+</b> candidates per month<br/>
+              and unlimited users 
               <br>
+              <br>
+              <div style="text-align: left;padding-left:20px">
+                Same features as for the Business Edition with in addition: 
+              </div>
               <br>
               <ul>
-                <li>Interview creator &nbsp;<img src="images/question-circle.png"></li>
-                <li>Unlimited # of campaigns &nbsp;<img src="images/question-circle.png"></li>
-                <li>Resume parsing &nbsp;<img src="images/question-circle.png"></li>
-                <li>High volume phone line &nbsp;<img src="images/question-circle.png"></li>
-                <li>Reports and analytics </li>
-                <li>Web Call Out &nbsp;<img src="images/question-circle.png"></li>
-                <li>Up to <b>3,000</b> SMS per month</li>
+                <li><span class="hints" id="sms-apply">SMS Apply &nbsp;<img src="images/question-circle.png"></span></li>
+                <li><span class="hints" id="ad-landing-page">3 Custom designed ad landing pages &nbsp;<img src="images/question-circle.png"></span></li>
+                <li><span class="hints" id="ats-integration">ATS integration &nbsp;<img src="images/question-circle.png"></span></li>
+                <li>Dedicated Client Services Executive</li>
+                <li>Up to <b>20,000</b> SMS per month*</li>
               </ul>
             </div>
             <div class="plan-extra-content">
               No setup fee<br/>
               Telecom charges may apply<br/>
-              <u><a>(See details)</a></u>
+              <u><a data-toggle="modal" data-target="#telecommModal">(See details)</a></u>
             </div>
+            <br/>
+          </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <div class="col-xs-12">
+            Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>
           </div>
         </div>
       </div>
       <div class="row">&nbsp;</div>
     </div>
-    <div class="wrap">
+    <div class="wrap additional">
       <div class="container">
         <div class="row">&nbsp;</div>
+        <div class="row">
+          <h1 class="intro-header" style="text-align:center;max-width:750px;margin:0 auto;font-weight:600;">
+            Grow your Talent Pool with these Options
+          </h1>
+          <p style="text-align:center;max-width:800px;margin:0 auto;font-size:18px;">
+            We’re excited about working with you to increase the size of your talent pool. Here are just some of the solutions we can develop with you to increase your sourcing volumes.  
+          </p>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <h4>SUPPORT YOUR RECRUITMENT CHANNELS WITH THESE ADD-ON OPTIONS</h4>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header" style="padding-left: 0;padding-right: 0">
+              <input type="checkbox" name="additional-option" value="Facebook Chatbot">
+              <b>Facebook Chatbot<br/>Starting at $180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              Receiving a steady stream of inquiries from candidates on your Facebook page? Install the Talkpush Facebook Chatbot to automatically validate which job they want to apply to and to add them to your Talkpush campaign.<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header ">
+              <input type="checkbox" name="additional-option" value="Referral Portal">
+              <b>Referral Portal<br/>$180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              Make it easier for employees to invite their friends via social media or SMS. We custom-design your web portal in line with your company’s brand and data privacy law. You can track and reward employees’ contributions.<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header ">
+              <input type="checkbox" name="additional-option" value="Branded Mobile Apps">
+              <b>Branded Mobile Apps<br/>$180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              Offer candidates a completely branded experience via a mobile phone application where they can browse and apply for jobs. Candidates will also be able to pre-qualify themselves for a role via digital interview.<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header ">
+              <input type="checkbox" name="additional-option" value="SMS Apply">
+              <b>SMS Apply<br/>$180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              You can activate a dedicated phone number for your candidates to send in their application via SMS. As soon as they SMS, they are added to a campaign and called back to complete the digital interview. No internet access required!<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button id="quote" data-toggle="modal" data-target="#quoteModal">RECEIVE AN EMAIL QUOTE</button>
+          </div>
+        </div>
       </div>
+      <div class="row">&nbsp;</div>
+    </div>
+    <div class="wrap clients">
+      <div class="row">&nbsp;</div>
+      <div class="row">
+        <h3>Loved and trusted by some of the largest employers in the world</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-xs-3">
+          <img src="/images/pricing/lazada.png" class="pricing-logo">
+        </div>
+        <div class="col-sm-2 col-xs-3">
+          <img src="/images/pricing/genpact.png" class="pricing-logo">
+        </div>
+        <div class="col-sm-2 col-xs-3">
+          <img src="/images/pricing/sheraton.png" class="pricing-logo">
+        </div>
+        <div class="col-sm-1 col-xs-3">
+          <img src="/images/pricing/axa.png" class="pricing-logo">
+        </div>
+        <div class="col-sm-2 col-xs-3">
+          <img src="/images/pricing/prudential.png" class="pricing-logo">
+        </div>
+        <div class="col-sm-2 col-xs-3">
+          <img src="/images/pricing/uber.png" class="pricing-logo">
+        </div>
+        <div class="col-sm-1 col-xs-3">
+          <img src="/images/pricing/sitel.png" class="pricing-logo">
+        </div>
+      </div>
+      <div class="row">&nbsp;</div>
     </div>
     <!-- Menu Bar Sign up form -->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -235,6 +427,107 @@
           </div>
         </div>
       </div>
+    </div>
+    <!-- Telecomm Modal -->
+    <div class="modal fade" id="telecommModal" tabindex="-1" role="dialog" aria-labelledby="telecommModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <h3>Telecom charges: Per completed interview</h3>
+                <p>Talkpush charges a per-completed-interview fee for each completed interview at the end of the month. The charge varies depending on the method and the location of the call.</p>
+                <u>Interviews completed via the Web</u>
+                <p>Candidate can complete their digital interview over the web, either via an application they can download for free on their mobile phone, or via a compatible internet browser (Chrome, Firefox, Explorer)</p>
+                <ul>
+                  <li>Starter and Business Package: No telecom charges.</li>
+                  <li>Enterprise Package: $0.50 per completed interview beyond the initial 7,000 completed interviews in the month.</li>
+                </ul>
+                <u>Interviews completed over the phone</u>
+                <p>If you want to maximize your participation rate (some candidates may not want to use the mobile app or their browser), we recommend that you conduct the digital interviews by calling the candidates directly on their phone. It is still the most effective way to get a hold of someone. Talkpush takes on the telecommunication charges for the call made to the candidates and charges you a varying rate depending on the location of the candidate: </p>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-1">
+                  Where are your candidates? 
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                  Price per completed interview 
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                  <select>
+                    <option>Australia</option>
+                  </select>
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                  <b><span id="telecomm-charge">$0.8</span></b>
+                </div>
+              </div>
+              <div class="row">
+                This charge covers all related telecommunication expenses, including missed or incomplete phone calls to candidates.  An invoice for the month is then calculated and sent based on the number of completed interviews multiplied by the applicable per-interview rate, as listed above.
+              </div>
+              <div class="row">
+                <u>Additional SMS package</u>
+              </div>
+              <div class="row">
+                <p>Should you need to send out more than SMS package that is included in your subscription package, you can purchase an extra package of 5,000 SMS for $150. Every package partially consumed is counted in full for that month.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <h3>Yes, please email me a quote for the subscription to the following services:</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-1">
+                  <b>SELECTED PLAN</b>
+                </div>
+                <div class="col-sm-5 ">
+                  <b>ADDITIONAL CHANNELS</b>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-1">
+                  <span id="selected-plan">SELECTED PLAN</span>
+                </div>
+                <div class="col-sm-5 ">
+                  <span id="additional-channels">ADDITIONAL CHANNELS</span>
+                </div>
+              </div>
+              <div class="row">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inter-creator pop-up">
+      Interview creation feature allowing you to design and customize the interview audio questionnaire for each campaign, including access to the extensive Interview Question Database.
+    </div>
+    <div class="cv-parsing pop-up">
+      Résumé parsing technology to import résumés from all your recruitment channels, including job boards, career sites, Facebook, etc. 
+    </div>
+    <div class="high-volume-phoneline pop-up">
+      Able to handle more than 10 concurrent incoming calls
+    </div>
+    <div class="web-call-out pop-up">
+      Web call out feature allows candidates to receive every phone call instead of initiating it, without having to incur any telecom charges. 
+    </div>
+    <div class="sms-apply pop-up">
+      Activate a dedicated phone number where candidates can apply by sending their details via SMS. Candidates can simply SMS their name and campaign number and they will be automatically added to a particular Talkpush campaign and be called back by Talkpush immediately.  
+    </div>
+    <div class="ad-landing-page pop-up">
+      Ad landing pages are custom designed to be mobile friendly, easy to complete, and in accordance with your company branding guidelines. 
+    </div>
+    <div class="ats-integration pop-up">
+      We offer integration with all the leading ATS systems for our enterprise customers. Integration can be done at different stages of the recruitment according to your preferences (pre or post digital interview). 
     </div>
     <div class="footer container-fluid">
       <div class="row">
