@@ -1261,12 +1261,12 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   border: 3px solid #8AA815;
   text-align: center;
   line-height: 1.5;
-  padding: 20px;
+  padding: 10px;
   color:#575756;
   font-weight: 300;
 }
 .pricing-plan .plan-content{
-  min-height: 290px;
+  min-height: 270px;
 }
 .pricing-plan .plan-extra-content{
   border-top:0px;
