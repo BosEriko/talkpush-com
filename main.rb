@@ -89,8 +89,8 @@ post '/quotation-form', :provides => :json do
   Mail.deliver do
     to      ENV["TO_ADDRESS"]
     from    ENV["EMAIL_ADDRESS"]
-      subject "Quotation enquiry from #{name} at #{company}"
-    body    "#{name}\n#{company}\n#{email}\n\n#{message}\n\nExpected volumes: #{volumes}\nAdditional Channels:#{additionalChannels}"
+      subject "Quotation enquiry from #{full_name} at #{company}"
+    body    "#{full_name}\n#{company}\n#{email}\n\n#{message}\n\nExpected volumes: #{volumes}\nAdditional Channels:#{additionalChannels}"
   end
 end
 post '/first-time-sub-form', :provides => :json do
