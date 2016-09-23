@@ -1255,7 +1255,7 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   background: #8aa815;
   text-align: center;
   color: #ffffff;
-  padding: 20px;
+  padding: 10px;
 }
 .pricing-plan .plan-content,.pricing-plan .plan-extra-content{
   border: 3px solid #8AA815;
@@ -1266,7 +1266,7 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   font-weight: 300;
 }
 .pricing-plan .plan-content{
-  min-height: 270px;
+  min-height: 230px;
 }
 .pricing-plan .plan-extra-content{
   border-top:0px;
