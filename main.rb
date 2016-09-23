@@ -77,6 +77,22 @@ post '/sourcing-form', :provides => :json do
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
 end
+post '/quotation-form', :provides => :json do
+  params = JSON.parse(request.body.read)
+
+  full_name = params["name"]
+  email = params["email"]
+  company = params["company"]
+  message = params["message"]
+  volumes = params["volumes"]
+  additionalChannels = params["additionalChannels"]
+  Mail.deliver do
+    to      ENV["TO_ADDRESS"]
+    from    ENV["EMAIL_ADDRESS"]
+      subject "Quotation enquiry from #{name} at #{company}"
+    body    "#{name}\n#{company}\n#{email}\n\n#{message}\n\nExpected volumes: #{volumes}\nAdditional Channels:#{additionalChannels}"
+  end
+end
 post '/first-time-sub-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
