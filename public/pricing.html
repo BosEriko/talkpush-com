@@ -158,10 +158,6 @@
             accepts: "application/json",
             error: function(req, err){
               $(".loading-spinner").hide();
-              $("#quoteModal input[type='email']").val("")
-              $("#quoteModal input[name='name']").val("")
-              $("#quoteModal input[name='company']").val("")
-              $("#quoteModal input[name='phone']").val("")
               $("#quoteModal .error").show();
               var a = setInterval(function(){
                 $("#quoteModal .error").hide();
@@ -180,6 +176,10 @@
               var a = setInterval(function(){
                 $('#quoteModal').modal('hide');
                 clearInterval(a)
+              },5000);
+              var b = setInterval(function(){
+                $("#quoteModal .thankyoumsg").hide();
+                clearInterval(b)
               },5000);
             }
           });
