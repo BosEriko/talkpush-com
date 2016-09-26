@@ -1461,7 +1461,7 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   color: #FFFFFF;
   text-transform: none;
   font-weight: 100;
-  max-width: 740px;
+  max-width: 720px;
   display: block;
   margin: 0 auto;
 }
