@@ -1473,6 +1473,6 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
 .wrap-chatbot-faq p{
   color: #575756;
 }
-.wrap-chatbot-faq li{
+.wrap-chatbot-faq .question{
   margin-bottom: 10px;
 }
