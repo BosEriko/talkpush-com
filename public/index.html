@@ -28,16 +28,18 @@
     <link rel="shortcut icon" href="favicon.ico">
     <script type="text/javascript">
       $(document).ready(function(){
-        var b = setInterval(function(){
-          if(typeof Cookies.get('last_visit') ==="undefined"){
-            console.log("FIRED")
-            Cookies.set('last_visit', new Date, { expires: 365});
-            $("#subscription_pop_up").modal('show')  
-          }else{
-            console.log("not fired")
-          }
-          clearInterval(b);
-        },6000);
+        if(!window.mobilecheck()){
+          var b = setInterval(function(){
+            if(typeof Cookies.get('last_visit') ==="undefined"){
+              console.log("FIRED")
+              Cookies.set('last_visit', new Date, { expires: 365});
+              $("#subscription_pop_up").modal('show')  
+            }else{
+              console.log("not fired")
+            }
+            clearInterval(b);
+          },6000);          
+        }
       })
     </script>
     <script>
