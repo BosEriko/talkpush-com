@@ -1423,3 +1423,53 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   color: #ffffff;
   padding: 10px;
 }
+.wrap-chatbot{
+  font-weight: 300;
+  color: #ffffff;
+  background: #2c333c;
+  padding-top: 20px;
+}
+.wrap-chatbot .verticalLine{
+  // border-left: 3px solid #ffffff;
+  background: url("../images/chatbot/vertical-line.png") no-repeat 50%;
+}
+.chatbot-description{
+  text-align: center;
+}
+.chatbot-img{
+  max-width: 320px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.chatbot-section-title{
+  transform: rotate(-90deg);
+  font-weight:Bold;
+  font-size: 26px;
+}
+.section-circle{
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -120%;
+}
+.call-to-stanley{
+  /* Want to find out mor: */
+  font-style: italic;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-transform: none;
+  font-weight: 100;
+  max-width: 740px;
+  display: block;
+  margin: 0 auto;
+}
+.wrap-chatbot-faq{
+  background: #fafafa;
+  color: #575756;
+  font-weight: 200;
+}
+.wrap-chatbot-faq li{
+  margin-bottom: 10px;
+}
