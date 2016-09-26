@@ -1476,3 +1476,15 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
 .wrap-chatbot-faq .question{
   margin-bottom: 10px;
 }
+.wrap-chatbot-faq .toggle-faq-content{
+  display: none;
+}
+.call-to-quote{
+  width: 230px;
+  margin: 5px auto;
+  background: #8AA815;
+  padding: 20px;
+  border: none;
+  display: block;
+  color: #ffffff;
+}
