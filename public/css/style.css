@@ -1248,7 +1248,6 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   padding: 0 5px;
 }
 .wrap.pricing-plan h4{
-  color: #575756;
   text-align: center;
 }
 .pricing-plan .plan-header{
@@ -1280,13 +1279,15 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
 }
 .plan-header h5{
   font-weight: 200;
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
   text-transform: none;
+  margin: 0;
 }
 .plan-header h6{
   font-size: 10;
   font-weight: 100;
+  margin: 0;
 }
 .additional, .additional p, .additional h4 {
   color: #ffffff;
