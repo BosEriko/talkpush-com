@@ -1354,6 +1354,17 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
 .pricing-logo{
   -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
   filter: grayscale(100%);
+  display: table;
+  margin: 0 auto;
+}
+.pricing-img-box{
+  display:table-cell;
+  height: 48px;
+  width: 100%;
+  vertical-align: middle;
+}
+.pricing-img-box-wrapper{
+  display: table;
 }
 #telecommModal p{
   color:#575756;
@@ -1371,6 +1382,19 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   width: 100%;
   height: 36px;
   background: #ffffff;
+}
+#telecommModal .btnClose{
+  font-size: 24px;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  background: #fff;
+  border: 3px solid #575756;
+  border-radius: 30px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
 }
 #see-detail{
   cursor: pointer;
