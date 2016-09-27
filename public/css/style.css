@@ -1434,7 +1434,7 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   background: url("../images/chatbot/vertical-line.png") no-repeat 50%;
 }
 .chatbot-description{
-  text-align: center;
+  text-align: justify;
 }
 .chatbot-img{
   max-width: 320px;
@@ -1443,25 +1443,33 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   margin: 0 auto;
 }
 .chatbot-section-title{
-  transform: rotate(-90deg);
+  // transform: rotate(-90deg);
   font-weight:Bold;
   font-size: 26px;
+  position: absolute;
+  top: 36%;
+}
+.chatbot-section-title.hidden-sm{
+  position: inherit;
 }
 .section-circle{
   width: 55px;
   height: 55px;
   margin: 0 auto;
   display: block;
-  margin-top: -120%;
+  // margin-top: -120%;
+  top: 36%;
+  left: 36%;
+  position: absolute;
 }
 .call-to-stanley{
   /* Want to find out mor: */
-  font-style: italic;
-  font-size: 16px;
+  text-align: center;
+  font-size: 18px;
   color: #FFFFFF;
   text-transform: none;
   font-weight: 100;
-  max-width: 720px;
+  max-width: 780px;
   display: block;
   margin: 0 auto;
 }
