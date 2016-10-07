@@ -1524,3 +1524,21 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
   display: block;
   color: #ffffff;
 }
+.btnConverse img{
+  width: 15px;
+}
+.btnConverse:hover, .btnConverse:active, .btnConverse:visited{
+  color:#ffffff;
+  text-decoration: none;
+}
+.btnConverse{
+  color: #ffffff;
+  display: block;
+  height: 36px;
+  text-align: center;
+  width: 250px;
+  background: rgb(0, 132, 255);
+  margin: 0 auto;
+  font-size: 16px;
+  padding-top: 5px;
+}
