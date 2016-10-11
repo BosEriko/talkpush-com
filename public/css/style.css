@@ -1053,6 +1053,7 @@ span#email_error, span#fullName_error, span#company_error, span#message_error{
 
 .carousel .item{
   height: 120px;
+  max-width: 120px;
   margin: 3px;
   display: table-cell;
   vertical-align: middle
