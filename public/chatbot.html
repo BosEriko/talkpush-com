@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
@@ -14,558 +15,539 @@
     <title>Talkpush - Chatbot</title>
     <link rel="shortcut icon" href="./images/favicon.ico">
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-46858485-2', 'auto');
-      ga('send', 'pageview');
-      
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46858485-2', 'auto');
+        ga('send', 'pageview');
     </script>
     <script type="text/javascript">
-      $(document).ready(function(){
-        $('#quoteModal form').parsley();
-        $("#quoteModal form").submit(function(e){
-          e.preventDefault();
-          console.log("Load")
-          $(".loading-spinner").css("display","inline-block");
-          $.ajax({
-            url: "./quotation-form",
-            dataType: 'json',
-            contentType: 'application/json',
-            type: 'POST',
-            data : JSON.stringify({
-              email:$("#quoteModal input[type='email']").val(),
-              name:$("#quoteModal input[name='name']").val(),
-              company:$("#quoteModal input[name='company']").val(),
-              phone:$("#quoteModal input[name='phone']").val(),
-              volumes:"N/A",
-              additionalChannels:"Chatbot"
-            }),
-            accepts: "application/json",
-            error: function(req, err){
-              $(".loading-spinner").hide();
-              $("#quoteModal .error").show();
-              var a = setInterval(function(){
-                $("#quoteModal .error").hide();
-                clearInterval(a)
-              },5000);
-              console.log('error message: ' + err);
-            },
-            success: function(json) {
-              $(".loading-spinner").hide();
-              $("#quoteModal input[type='email']").val("")
-              $("#quoteModal input[name='name']").val("")
-              $("#quoteModal input[name='company']").val("")
-              $("#quoteModal input[name='phone']").val("")
-              $("#quoteModal .form").hide();
-              $("#quoteModal .thankyoumsg").show();
-              var a = setInterval(function(){
-                $('#quoteModal').modal('hide');
-                clearInterval(a)
-              },5000);
-              var b = setInterval(function(){
-                $("#quoteModal .thankyoumsg").hide();
-                clearInterval(b)
-              },5000);
-            }
-          });
-        });
-      })
+        $(document).ready(function() {
+            $('#quoteModal form').parsley();
+            $("#quoteModal form").submit(function(e) {
+                e.preventDefault();
+                console.log("Load")
+                $(".loading-spinner").css("display", "inline-block");
+                $.ajax({
+                    url: "./quotation-form",
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        email: $("#quoteModal input[type='email']").val(),
+                        name: $("#quoteModal input[name='name']").val(),
+                        company: $("#quoteModal input[name='company']").val(),
+                        phone: $("#quoteModal input[name='phone']").val(),
+                        volumes: "N/A",
+                        additionalChannels: "Chatbot"
+                    }),
+                    accepts: "application/json",
+                    error: function(req, err) {
+                        $(".loading-spinner").hide();
+                        $("#quoteModal .error").show();
+                        var a = setInterval(function() {
+                            $("#quoteModal .error").hide();
+                            clearInterval(a)
+                        }, 5000);
+                        console.log('error message: ' + err);
+                    },
+                    success: function(json) {
+                        $(".loading-spinner").hide();
+                        $("#quoteModal input[type='email']").val("")
+                        $("#quoteModal input[name='name']").val("")
+                        $("#quoteModal input[name='company']").val("")
+                        $("#quoteModal input[name='phone']").val("")
+                        $("#quoteModal .form").hide();
+                        $("#quoteModal .thankyoumsg").show();
+                        var a = setInterval(function() {
+                            $('#quoteModal').modal('hide');
+                            clearInterval(a)
+                        }, 5000);
+                        var b = setInterval(function() {
+                            $("#quoteModal .thankyoumsg").hide();
+                            clearInterval(b)
+                        }, 5000);
+                    }
+                });
+            });
+        })
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="header-top"></div>
     <div class="header">
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed mobile-menu-icon" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed mobile-menu-icon" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar sub-corp-color-bg"></span>
             <span class="icon-bar sub-corp-color-bg"></span>
             <span class="icon-bar sub-corp-color-bg"></span>
             </button>
-            <div class="logo">
-              <a href="./index.html" class="navbar-brand active"><img class="img-responsive" src="./images/logo.png"></a>
+                    <div class="logo">
+                        <a href="./index.html" class="navbar-brand active"><img class="img-responsive" src="./images/logo.png"></a>
+                    </div>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SOLUTIONS <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./features.html">Automation</a></li>
+                                <li><a href="./sourcing.html">Sourcing</a></li>
+                                <li><a href="#">Chatbot</a></li>
+                                <li><a href="./pricing.html">Pricing</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMPANY <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./about.html">About Us</a></li>
+                                <li><a href="./partnership.html">Partners</a></li>
+                                <li><a href="http://blog.talkpush.com">Blog</a></li>
+                                <li><a href="./jobs.html">Career</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://my.talkpush.com/" class="btnMytalkpush">Log In</a></li>
+                        <li><a class="btnFreeTrial" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
             </div>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SOLUTIONS <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="./features.html">Automation</a></li>
-                  <li><a href="./sourcing.html">Sourcing</a></li>
-                  <li><a href="#">Chatbot</a></li>
-                  <li><a href="./pricing.html">Pricing</a></li>
-                </ul>
-              </li>
-              <li>
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMPANY <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="./about.html">About Us</a></li>
-                  <li><a href="./partnership.html">Partners</a></li>
-                  <li><a href="http://blog.talkpush.com">Blog</a></li>
-                  <li><a href="./jobs.html">Career</a></li>
-                </ul>
-              </li>
-              <li><a href="http://my.talkpush.com/" class="btnMytalkpush">Log In</a></li>
-              <li><a class="btnFreeTrial" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>
-            </ul>
-          </div>
-          <!--/.nav-collapse -->
+            <!--/.container-fluid -->
+        </nav>
+        <div class="container">
+            <br/>
+            <br/>
+            <h2 style="color:#323A45;text-align:center;max-width:650px;margin:0 auto;">Meet Stanley</h2>
+            <h4 style="color:#323A45;text-align:center;max-width:780px;margin:0 auto;">Your Perfect Recruitment Assistant</h4>
+            <br/>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4" style="text-align: center;">
+                    <a class="btnConverse" href="//m.me/letthetalenttalk/" target="_blank" style="">
+                        <img src="/images/fbm.png" /> Converse with Stanley
+                    </a>
+                </div>
+            </div>
+            <br/>
         </div>
-        <!--/.container-fluid -->
-      </nav>
-      <div class="container">
-        <br/>
-        <br/>
-        <h2 style="color:#323A45;text-align:center;max-width:650px;margin:0 auto;">Meet Stanley</h2>
-        <h4 style="color:#323A45;text-align:center;max-width:780px;margin:0 auto;">Your Perfect Recruitment Assistant</h4>
-        <br/>
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4" style="text-align: center;">
-            <a class="btnConverse" href="//m.me/letthetalenttalk/" target="_blank" style="">
-              <img src="/images/fbm.png"/> Converse with Stanley
-            </a>
-          </div>
-        </div>
-        <br/>
-      </div>
     </div>
     <div class="wrap wrap-chatbot">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 hidden-sm hidden-md hidden-lg">
-            <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #FA9151;transform: rotate(0deg)">Engaging</div>
-            <div class="chatbot-section-title hidden-xs" style="color: #FA9151;">Engaging</div>
-            <!-- <img src="./images/chatbot/engaging.png" class="chatbot-img"> -->
-          </div>
-          <div class="col-sm-5 chatbot-description">
-            <div>
-              <b>24/7</b><br/>
-              Stanley works around the clock to take over 80% of recruitment related inquiries around the clock.
-            </div><br/>
-            <div>
-              <b>Always On</b><br/>
-              Stanley automates the recruitment application process to ensure all candidates who are looking to sign up gets processed right away.
-            </div><br/>
-            <div>
-              <b>Immediate Response</b><br/>
-              Stanley responds to candidates right when they message him, engaging them when they’re most interested.
-            </div><br/>
-          </div>
-          <div class="col-sm-2">
-            <div class="verticalLine hidden-sm hidden-xs ">
-              <br/><br/><br/><br/><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 hidden-sm hidden-md hidden-lg">
+                    <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #FA9151;transform: rotate(0deg)">Engaging</div>
+                    <div class="chatbot-section-title hidden-xs" style="color: #FA9151;">Engaging</div>
+                    <!-- <img src="./images/chatbot/engaging.png" class="chatbot-img"> -->
+                </div>
+                <div class="col-sm-5 chatbot-description">
+                    <div>
+                        <b>24/7</b><br/> Stanley works around the clock to take over 80% of recruitment related inquiries around the clock.
+                    </div><br/>
+                    <div>
+                        <b>Always On</b><br/> Stanley automates the recruitment application process to ensure all candidates who are looking to sign up gets processed right away.
+                    </div><br/>
+                    <div>
+                        <b>Immediate Response</b><br/> Stanley responds to candidates right when they message him, engaging them when they’re most interested.
+                    </div><br/>
+                </div>
+                <div class="col-sm-2">
+                    <div class="verticalLine hidden-sm hidden-xs ">
+                        <br/><br/><br/><br/><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    <img src="./images/chatbot/orange-circle.png" class="section-circle hidden-sm hidden-xs " />
+                </div>
+                <div class="col-sm-5 hidden-xs">
+                    <span class="hidden-xs"><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
+                    <div class="chatbot-section-title hidden-xs" style="color: #FA9151;">Engaging</div>
+                    <!-- <img src="./images/chatbot/engaging.png" class="chatbot-img"> -->
+                </div>
+                <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
             </div>
-            <img src="./images/chatbot/orange-circle.png" class="section-circle hidden-sm hidden-xs "/>
-          </div>
-          <div class="col-sm-5 hidden-xs">
-            <span class="hidden-xs"><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
-            <div class="chatbot-section-title hidden-xs" style="color: #FA9151;">Engaging</div>
-            <!-- <img src="./images/chatbot/engaging.png" class="chatbot-img"> -->
-          </div>
-          <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
-        </div>
-        <div class="row">
-          <div class="col-sm-5">
-            <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #74BDCA;transform: rotate(0deg)">Interviewing</div>
-            <span class="hidden-xs"><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
-            <div class="chatbot-section-title hidden-xs" style="color: #74BDCA;right:0">Interviewing</div>
-            <!-- <img src="./images/chatbot/interviewing.png" class="chatbot-img"> -->
-          </div>
-          <div class="col-sm-2">
-            <div class="verticalLine hidden-sm hidden-xs ">
-              <br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #74BDCA;transform: rotate(0deg)">Interviewing</div>
+                    <span class="hidden-xs"><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
+                    <div class="chatbot-section-title hidden-xs" style="color: #74BDCA;right:0">Interviewing</div>
+                    <!-- <img src="./images/chatbot/interviewing.png" class="chatbot-img"> -->
+                </div>
+                <div class="col-sm-2">
+                    <div class="verticalLine hidden-sm hidden-xs ">
+                        <br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    <img src="./images/chatbot/seablue-circle.png" class="section-circle hidden-sm hidden-xs " />
+                </div>
+                <div class="col-sm-5 chatbot-description">
+                    <div>
+                        <b>Unique Candidate Experience</b><br/> Stanley provides candidates an application process which is interactive, instantaneous and sets your company apart from competition.
+                    </div><br/>
+                    <div>
+                        <b>Familiar Interfaces</b><br/> The new generations of talent were raised in the age of messaging. Facebook messenger is the interface they are most familiar with, helping you engage with them on familiar ground.
+                    </div><br/>
+                    <div>
+                        <b>One to Many</b><br/> Stanley is able to conduct multiple interviews at the same time, making your recruitment marketing efforts completely scalable, even with fixed resources.
+                    </div><br/>
+                </div>
+                <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
             </div>
-            <img src="./images/chatbot/seablue-circle.png" class="section-circle hidden-sm hidden-xs " />
-          </div>
-          <div class="col-sm-5 chatbot-description">
-            <div>
-              <b>Unique Candidate Experience</b><br/>
-              Stanley provides candidates an application process which is interactive, instantaneous and sets your company apart from competition.
-            </div><br/>
-            <div>
-              <b>Familiar Interfaces</b><br/>
-              The new generations of talent were raised in  the age of messaging. Facebook messenger is the interface they are most familiar with, helping you engage with them on familiar ground.
-            </div><br/>
-            <div>
-              <b>One to Many</b><br/>
-              Stanley is able to conduct multiple interviews at the same time, making your recruitment marketing efforts completely scalable, even with fixed resources.
-            </div><br/>
-          </div>
-          <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
-        </div>
-        <div class="row">
-          <div class="col-sm-5 hidden-sm hidden-md hidden-lg">
-            <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #EDC87D;transform: rotate(0deg)">Screening</div>
-            <div class="chatbot-section-title hidden-xs" style="color: #EDC87D;">Screening</div>
-            <!-- <img src="./images/chatbot/screening.png" class="chatbot-img"> -->
-          </div>
-          <div class="col-sm-5 chatbot-description">
-            <div>
-              <b>Unbiased Selection</b><br/>
-              Stanley asks the important questions, captures the answers, and automatically creates a shortlist of candidates via knockout questions. Stanley has no personal preferences for any group of the population.
-            </div><br/>
-            <div>
-              <b>Built for Speed</b><br/>
-              Stanley captures the candidate information, and makes it available for review by your recruitment team in an interface built for speed. By spending only a minute or two per candidate, your recruitment team will be able to process hundreds of candidates effectively, and without leaving any candidates in the dark.
-            </div><br/>
-            <div>
-              <b>Reliable Data</b><br/>
-              Stanley doesn’t make any typing or omission error. He asks every important question, and verifies all the data directly with the candidate. 
-            </div><br/>
-          </div>
-          <div class="col-sm-2">
-            <div class="verticalLine hidden-sm hidden-xs ">
-              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div class="row">
+                <div class="col-sm-5 hidden-sm hidden-md hidden-lg">
+                    <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #EDC87D;transform: rotate(0deg)">Screening</div>
+                    <div class="chatbot-section-title hidden-xs" style="color: #EDC87D;">Screening</div>
+                    <!-- <img src="./images/chatbot/screening.png" class="chatbot-img"> -->
+                </div>
+                <div class="col-sm-5 chatbot-description">
+                    <div>
+                        <b>Unbiased Selection</b><br/> Stanley asks the important questions, captures the answers, and automatically creates a shortlist of candidates via knockout questions. Stanley has no personal preferences for any group of the population.
+                    </div><br/>
+                    <div>
+                        <b>Built for Speed</b><br/> Stanley captures the candidate information, and makes it available for review by your recruitment team in an interface built for speed. By spending only a minute or two per candidate, your recruitment
+                        team will be able to process hundreds of candidates effectively, and without leaving any candidates in the dark.
+                    </div><br/>
+                    <div>
+                        <b>Reliable Data</b><br/> Stanley doesn’t make any typing or omission error. He asks every important question, and verifies all the data directly with the candidate.
+                    </div><br/>
+                </div>
+                <div class="col-sm-2">
+                    <div class="verticalLine hidden-sm hidden-xs ">
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    <img src="./images/chatbot/yellow-circle.png" class="section-circle hidden-sm hidden-xs" />
+                </div>
+                <div class="col-sm-5 hidden-xs">
+                    <!-- <img src="./images/chatbot/screening.png" class="chatbot-img"> -->
+                    <span class="hidden-xs"><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
+                    <div class="chatbot-section-title hidden-xs" style="color: #EDC87D;">Screening</div>
+                </div>
+                <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
             </div>
-            <img src="./images/chatbot/yellow-circle.png" class="section-circle hidden-sm hidden-xs" />
-          </div>
-          <div class="col-sm-5 hidden-xs">
-            <!-- <img src="./images/chatbot/screening.png" class="chatbot-img"> -->
-            <span class="hidden-xs"><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
-            <div class="chatbot-section-title hidden-xs" style="color: #EDC87D;">Screening</div>
-          </div>
-          <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
-        </div>
-        <div class="row">
-          <div class="col-sm-5">
-            <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #87C56C;transform: rotate(0deg)">Communicating</div>
-            <span class="hidden-xs"><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
-            <div class="chatbot-section-title hidden-xs" style="color: #87C56C;right:0">Communicating</div>
-            <!-- <img src="./images/chatbot/communicating.png" class="chatbot-img"> -->
-          </div>
-          <div class="col-sm-2">
-            <div class="verticalLine hidden-sm hidden-xs ">
-              <br/><br/><br/><br/><br/><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="chatbot-section-title hidden-sm hidden-md hidden-lg" style="color: #87C56C;transform: rotate(0deg)">Communicating</div>
+                    <span class="hidden-xs"><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
+                    <div class="chatbot-section-title hidden-xs" style="color: #87C56C;right:0">Communicating</div>
+                    <!-- <img src="./images/chatbot/communicating.png" class="chatbot-img"> -->
+                </div>
+                <div class="col-sm-2">
+                    <div class="verticalLine hidden-sm hidden-xs ">
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br><br><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    <img src="./images/chatbot/green-circle.png" class="section-circle hidden-sm hidden-xs" />
+                </div>
+                <div class="col-sm-5 chatbot-description">
+                    <div>
+                        <b>Keep Candidates Informed</b><br/> Stanley can tell the candidate as soon as the decision is made, and then instruct the candidates on the next steps immediately (e.g. “Congratulations, we love your profile, please confirm that
+                        you can come to our office tomorrow… “ ) Man Machine Cooperation
+                    </div><br/>
+                    <div>
+                        <b>Facilitated</b><br/> Stanley is great, but he’s only robot! Where Stanley fails to understand your candidates, your recruiters will be able to take over seamlessly and continue to chat via Messenger through the Talkpush interface.
+                    </div><br/>
+                    <div>
+                        <b>Seize the Moment</b><br/> Great talents don’t wait around. That’s why you need Stanley on your team to establish a conversation with the candidate right when they visit your page, not 24 hours later.
+                    </div><br/>
+                </div>
+                <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
             </div>
-            <img src="./images/chatbot/green-circle.png" class="section-circle hidden-sm hidden-xs"/>
-          </div>
-          <div class="col-sm-5 chatbot-description">
-            <div>
-              <b>Keep Candidates Informed</b><br/>
-              Stanley can tell the candidate as soon as the decision is made, and then instruct the candidates on the next steps immediately (e.g. “Congratulations, we love your profile, please confirm that you can come to our office tomorrow… “ ) Man Machine Cooperation
-            </div><br/>
-            <div>
-              <b>Facilitated</b><br/>
-              Stanley is great, but he’s only robot! Where Stanley fails to understand your candidates, your recruiters will be able to take over seamlessly and continue to chat via Messenger through the Talkpush interface.
-            </div><br/>
-            <div>
-              <b>Seize the Moment</b><br/>
-              Great talents don’t wait around.  That’s why you need Stanley on your team to establish a conversation with the candidate right when they visit your page, not 24 hours later.
-            </div><br/>
-          </div>
-          <hr class="hidden-sm hidden-md hidden-lg" width="90%" />
+            <div class="row">&nbsp;</div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <h2>Want to find out more about Stanley the chatbot?</h2><br/>
+                <p class="call-to-stanley">Stanley is currently handling recruitment for Talkpush, Check out the video below to find out how Stanley can process your candidates!</p>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/n4PAoxC1678" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <button class="call-to-quote" data-toggle="modal" data-target="#quoteModal">GET YOUR QUOTE NOW</button>
+            </div>
+            <div class="row">&nbsp;</div>
         </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-          <h2>Want to find out more about Stanley the chatbot?</h2><br/><p class="call-to-stanley">Stanley is currently handling recruitment for Talkpush, Check out the video below to find out how Stanley can process your candidates!</p>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/n4PAoxC1678" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="row">
-          <button class="call-to-quote" data-toggle="modal" data-target="#quoteModal">GET YOUR QUOTE NOW</button>
-        </div>
-        <div class="row">&nbsp;</div>
-      </div>
     </div>
     <div class="wrap wrap-chatbot-faq">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2 style="margin-top:5px;"><u><a style="color:#8aa815;cursor:pointer" onclick="$('.toggle-faq-content').toggle('slow');">FAQ</a></u></h2>
-          </div>
-        </div>
-        <div class="toggle-faq-content">
-          <div class="row">&nbsp;</div>
-          <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
-              <div class="question">
-                <b>Who is this “Stanley” you speak of? </b><br/>
-                Stanley is a chatbot which handles the incoming messages on your Facebook Page and is able to serve as a the first point of contact between candidates and your recruitment team. <br/>
-              </div>
-              <div class="question">
-                <b>Can Stanley educate candidates on the jobs we are offering?</b><br/>
-                In the basic form, yes, the bot provides detail job descriptions to help candidates determine their career interest and redirects their job application to the right job openings.<br/>
-              </div>
-              <div class="question">
-                <b>Can Stanley collect candidate info for us and feed our ATS?</b><br/>
-                Yes. The Stanley collects the candidates’ profile information from Facebook (with the candidate’s consent), followed by pointed question which you decide. The collected data can be transferred to your existing databases or ATS automatically. <br/>
-              </div>
-              <div class="question">
-                <b>Can Stanley initiate the digital phone interview?</b><br/>
-                Yes, Stanley can initiate a phone interview as soon as the candidate is ready to be interviewed<br/>
-              </div>
-              <div class="question">
-                <b>Can the candidate schedule the digital interview at a different time if he or she is not available at the time?</b><br/>
-                Yes, Stanley can handle scheduling with natural language processing where candidates can type: “5pm Tomorrow” and the he will be able to schedule the interview initiation when the time comes. <br/>
-              </div>
-              <div class="question">
-                <b>Can Stanley handle other incoming messages that are not related to job applications?</b><br/>
-                Yes, Stanley can handle incoming inquiries and you’ll be able to view them inside Talkpush and respond to them individually. <br/>
-              </div>
-              <div class="question">
-                <b>Where is Stanley the chatbot hosted?</b><br/>
-                The Stanley chatbot application needs to be install on your Facebook page. This can be done in a few clicks by a non-technical staff. <br/>
-              </div>
-              <div class="question">
-                <b>Can I install Stanley on any Facebook page? </b><br/>
-                Stanley only works if your Facebook page’s primary objective is recruitment. While Stanley can handle exceptions, by redirecting the traffic to the right people or phone number, it will not engage in a discussion with your users on anything other than recruitment related matters. <br/>
-              </div>
-              <div class="question">
-                <b>How long does it take before Stanley can start working for us?</b><br/>
-                If you’re satisfied with our standard workflow, we can activate it in a matter of hours.<br/>
-              </div>
-              <div class="question">
-                <b>Is it possible to customize Stanley so it sounds different from other bots? More energetic and fun for example.</b><br/>
-                Yes. Talkpush offers you a chance to change the personality of the bot and teaching it what to say during every stage of the conversation. <br/>
-              </div>
-              <div class="question">
-                <b>Where can I view the conversation between Stanley and my candidates?</b><br/>
-                You may view the full conversation history on Talkpush<br/>
-              </div>
-              <div class="question">
-                <b>Can I converse with my candidates real time?</b><br/>
-                Yes. You maybe take over from Stanley anytime during the conversation creating a seamless transfer between bot and human.<br/>
-              </div>
-              <div class="question">
-                <b>Can we turn off Stanley at any time?</b><br/>
-                Yes. We’re not sure why you’d want to turn this amazing recruitment assisstant off but in the event that you do. You can simply deactivate Stanley inside your Talkpush account and you’ll have full control of your Facebook Page messaging again.  <br/>
-              </div>
-              <div class="question">
-                <b>How much will the implementation cost us?</b><br/>
-                See our <a href="./pricing.html">pricing page</a> for more details and email us at <u><a href="mailto:stanley@talkpush.com">stanley@talkpush.com</a></u> to get a quotation.<br/>
-              </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 style="margin-top:5px;"><u><a style="color:#8aa815;cursor:pointer" onclick="$('.toggle-faq-content').toggle('slow');">FAQ</a></u></h2>
+                </div>
             </div>
-          </div>
-          <div class="row">&nbsp;</div>
-          <div class="row">&nbsp;</div>
+            <div class="toggle-faq-content">
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="question">
+                            <b>Who is this “Stanley” you speak of? </b><br/> Stanley is a chatbot which handles the incoming messages on your Facebook Page and is able to serve as a the first point of contact between candidates and your recruitment team.
+                            <br/>
+                        </div>
+                        <div class="question">
+                            <b>Can Stanley educate candidates on the jobs we are offering?</b><br/> In the basic form, yes, the bot provides detail job descriptions to help candidates determine their career interest and redirects their job application
+                            to the right job openings.<br/>
+                        </div>
+                        <div class="question">
+                            <b>Can Stanley collect candidate info for us and feed our ATS?</b><br/> Yes. The Stanley collects the candidates’ profile information from Facebook (with the candidate’s consent), followed by pointed question which you decide.
+                            The collected data can be transferred to your existing databases or ATS automatically. <br/>
+                        </div>
+                        <div class="question">
+                            <b>Can Stanley initiate the digital phone interview?</b><br/> Yes, Stanley can initiate a phone interview as soon as the candidate is ready to be interviewed<br/>
+                        </div>
+                        <div class="question">
+                            <b>Can the candidate schedule the digital interview at a different time if he or she is not available at the time?</b><br/> Yes, Stanley can handle scheduling with natural language processing where candidates can type: “5pm
+                            Tomorrow” and the he will be able to schedule the interview initiation when the time comes. <br/>
+                        </div>
+                        <div class="question">
+                            <b>Can Stanley handle other incoming messages that are not related to job applications?</b><br/> Yes, Stanley can handle incoming inquiries and you’ll be able to view them inside Talkpush and respond to them individually. <br/>
+                        </div>
+                        <div class="question">
+                            <b>Where is Stanley the chatbot hosted?</b><br/> The Stanley chatbot application needs to be install on your Facebook page. This can be done in a few clicks by a non-technical staff. <br/>
+                        </div>
+                        <div class="question">
+                            <b>Can I install Stanley on any Facebook page? </b><br/> Stanley only works if your Facebook page’s primary objective is recruitment. While Stanley can handle exceptions, by redirecting the traffic to the right people or phone
+                            number, it will not engage in a discussion with your users on anything other than recruitment related matters. <br/>
+                        </div>
+                        <div class="question">
+                            <b>How long does it take before Stanley can start working for us?</b><br/> If you’re satisfied with our standard workflow, we can activate it in a matter of hours.<br/>
+                        </div>
+                        <div class="question">
+                            <b>Is it possible to customize Stanley so it sounds different from other bots? More energetic and fun for example.</b><br/> Yes. Talkpush offers you a chance to change the personality of the bot and teaching it what to say
+                            during every stage of the conversation. <br/>
+                        </div>
+                        <div class="question">
+                            <b>Where can I view the conversation between Stanley and my candidates?</b><br/> You may view the full conversation history on Talkpush<br/>
+                        </div>
+                        <div class="question">
+                            <b>Can I converse with my candidates real time?</b><br/> Yes. You maybe take over from Stanley anytime during the conversation creating a seamless transfer between bot and human.<br/>
+                        </div>
+                        <div class="question">
+                            <b>Can we turn off Stanley at any time?</b><br/> Yes. We’re not sure why you’d want to turn this amazing recruitment assisstant off but in the event that you do. You can simply deactivate Stanley inside your Talkpush account
+                            and you’ll have full control of your Facebook Page messaging again. <br/>
+                        </div>
+                        <div class="question">
+                            <b>How much will the implementation cost us?</b><br/> See our <a href="./pricing.html">pricing page</a> for more details and email us at <u><a href="mailto:stanley@talkpush.com">stanley@talkpush.com</a></u> to get a quotation.<br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row">&nbsp;</div>
+            </div>
         </div>
-      </div>
     </div>
     <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="container-fluid">
-              <form>
-              <div class="row">
-                &nbsp;
-              </div>
-              <div class="row">
-                <h3>Please send us the following informations:</h3>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <input type="text" name="name" placeholder="Name" required="">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                &nbsp;
+                            </div>
+                            <div class="row">
+                                <h3>Please send us the following informations:</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" name="name" placeholder="Name" required="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" name="email" placeholder="Work Email" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" name="company" placeholder="Company" required="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="phone" placeholder="Telephone" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 col-sm-offset-8">
+                                    <button> <div class="loading-spinner"></div> Submit</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span class="error">Error ocurred. Please try again later.</span>
+                            </div>
+                        </form>
+                        <div class="row thankyoumsg">
+                            <br/><br/>
+                            <h2 style="color:#ffffff">Thank you for your enquiry.</h2>
+                            <br/><br/>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                  <input type="email" name="email" placeholder="Work Email" required="">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <input type="text" name="company" placeholder="Company" required="">
-                </div>
-                <div class="col-sm-6">
-                  <input type="text" name="phone" placeholder="Telephone" required="">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4 col-sm-offset-8">
-                  <button> <div class="loading-spinner"></div> Submit</button>
-                </div>
-              </div>
-              <div class="row">
-                <span class="error">Error ocurred. Please try again later.</span>
-              </div>
-              </form>
-              <div class="row thankyoumsg">
-                <br/><br/>
-                <h2 style="color:#ffffff">Thank you for your enquiry.</h2>
-                <br/><br/>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="wrap form-wrap">
-              <div class="container-fluid form-container" id="contact-form-container">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2 col-xs-12 interested-in">
-                    <h2>Send us your details to receive a free demo</h2>
-                  </div>
-                  <div class="contact-form box">
-                    <div class="row">
-                      <div class="col-md-8 col-xs-10 col-xs-offset-1 col-md-offset-2">
-                        <form id="contact-form" class="box" action="/contact-form" method="POST">
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="fullName" placeholder=" NAME" required>
-                            <span id="fullName_error">Please fill out the NAME field</span>
-                          </div>
-                          <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder=" E-MAIL" required>
-                            <span id="email_error">Please fill out the E-MAIL field</span>
-                          </div>
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="company" placeholder=" COMPANY">
-                            <!--                        <span id="company_error">Please fill out the COMPANY field</span>-->
-                          </div>
-                          <div class="form-group">
-                            <textarea rows="5" class="form-control" id="message" placeholder=" REQUEST A DEMO / ASK FOR A FREE TRIAL / JUST SAY HI"></textarea>
-                            <!--                        <span id="message_error">Please fill out the MESSAGE field</span>-->
-                          </div>
-                          <div class="form-group">
-                            <div class="col-sm-offset-">
-                              <button type="submit" class="btn btn-form">Submit</button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="wrap form-wrap">
+                        <div class="container-fluid form-container" id="contact-form-container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 col-xs-12 interested-in">
+                                    <h2>Send us your details to receive a free demo</h2>
+                                </div>
+                                <div class="contact-form box">
+                                    <div class="row">
+                                        <div class="col-md-8 col-xs-10 col-xs-offset-1 col-md-offset-2">
+                                            <form id="contact-form" class="box" action="/contact-form" method="POST">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="fullName" placeholder=" NAME" required>
+                                                    <span id="fullName_error">Please fill out the NAME field</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="email" placeholder=" E-MAIL" required>
+                                                    <span id="email_error">Please fill out the E-MAIL field</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="company" placeholder=" COMPANY">
+                                                    <!--                        <span id="company_error">Please fill out the COMPANY field</span>-->
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea rows="5" class="form-control" id="message" placeholder=" REQUEST A DEMO / ASK FOR A FREE TRIAL / JUST SAY HI"></textarea>
+                                                    <!--                        <span id="message_error">Please fill out the MESSAGE field</span>-->
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-offset-">
+                                                        <button type="submit" class="btn btn-form">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                        </form>
-                      </div>
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 col-xs-12 form-message-box"></div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2 col-xs-12 form-message-box"></div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <!-- Chatbot video -->
     <div class="modal fade" id="chatbotVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8gjDRvw6-gw" frameborder="0" allowfullscreen></iframe>
-          </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8gjDRvw6-gw" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <div class="footer container-fluid">
-      <div class="row">
-        &nbsp;
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="title">About Talkpush:</div>
-          <div class="content">Talkpush is making volume hiring fun and personal again. Turn social media into an effective talent sourcing engine by giving candidates a voice and chat-enabled platform where they can talk about their suitability for a role as soon as they apply. Find out how you can use Talkpush to engage in real-time conversations with tens of thousands of candidates by writing to us today.</div>
-          <br>
+        <div class="row">
+            &nbsp;
         </div>
-        <div class="col-md-2 col-md-offset-1 col-sm-offset-0 col-sm-4">
-          <div class="title">
-            SOLUTIONS
-          </div>
-          <br/>
-          <div class="content">
-              <a href="./features.html">Automation</a><br/>
-              <a href="./sourcing.html">Sourcing</a><br/>
-              <a href="./chatbot.html">Chatbot</a><br/>
-              <a href="./pricing.html">Pricing</a><br/>
-          </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="title">About Talkpush:</div>
+                <div class="content">Talkpush is making volume hiring fun and personal again. Turn social media into an effective talent sourcing engine by giving candidates a voice and chat-enabled platform where they can talk about their suitability for a role as soon as
+                    they apply. Find out how you can use Talkpush to engage in real-time conversations with tens of thousands of candidates by writing to us today.</div>
+                <br>
+            </div>
+            <div class="col-md-2 col-md-offset-1 col-sm-offset-0 col-sm-4">
+                <div class="title">
+                    SOLUTIONS
+                </div>
+                <br/>
+                <div class="content">
+                    <a href="./features.html">Automation</a><br/>
+                    <a href="./sourcing.html">Sourcing</a><br/>
+                    <a href="./chatbot.html">Chatbot</a><br/>
+                    <a href="./pricing.html">Pricing</a><br/>
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-4">
+                <div class="title">
+                    COMPANY
+                </div>
+                <br/>
+                <div class="content">
+                    <a href="./about.html">About Us</a><br/>
+                    <a href="./partnership.html">Partners</a><br/>
+                    <a href="http://blog.talkpush.com">Blog</a><br/>
+                    <a href="./jobs.html">Career</a><br/>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <div class="title">
+                    OTHERS
+                </div>
+                <br/>
+                <div class="content">
+                    <a href="http://read.corilla.com/Talkpush/User-Guide.html#">Documentation</a><br/>
+                    <!-- <a>FAQ</a><br/> -->
+                    <a href="./termsandcond.html">Terms &amp; Conditions</a><br/>
+                    <a href="./privacy-policy.html">Privacy Policy</a><br/>
+                </div>
+            </div>
         </div>
-        <div class="col-md-1 col-sm-4">
-          <div class="title">
-            COMPANY
-          </div>
-          <br/>
-          <div class="content">
-              <a href="./about.html">About Us</a><br/>
-              <a href="./partnership.html">Partners</a><br/>
-              <a href="http://blog.talkpush.com">Blog</a><br/>
-              <a href="./jobs.html">Career</a><br/>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-4">
-          <div class="title">
-            OTHERS
-          </div>
-          <br/>
-          <div class="content">
-              <a href="http://read.corilla.com/Talkpush/User-Guide.html#">Documentation</a><br/>
-              <!-- <a>FAQ</a><br/> -->
-              <a href="./termsandcond.html">Terms &amp; Conditions</a><br/>
-              <a href="./privacy-policy.html">Privacy Policy</a><br/>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="title">
-            CONTACT
-          </div>
-          <br/>
-          <div class="content">
-              hello@talkpush.com<br/>
-              +(852) 9188 7562&nbsp;&nbsp;&nbsp;|&nbsp;Hong Kong<br/>
-              +(63) 917 5075734&nbsp;|&nbsp;Philippines<br/>
-              +(33) 7 82 96 83 16|&nbsp;France<br/>
-              +(44) 7751 860193&nbsp;|&nbsp;UK<br/>
-              +(1) 415 363 9911&nbsp;&nbsp;|&nbsp;United States<br/>
-          </div>
-          <div class="social-icon">
-            <a href="https://www.facebook.com/letthetalenttalk"><img src="images/social-icons/facebook.png" width="26px"></a>
-            <a href="https://www.twitter.com/talkpush"><img src="images/social-icons/twitter.png" width="26px"></a>
-            <a href="https://www.linkedin.com/company/talkpush"><img src="images/social-icons/linkedin.png" width="26px"></a>
-            <a href="https://www.youtube.com/c/Talkpush"><img src="images/social-icons/youtube.png" width="26px"></a>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="title">
-            OFFICE
-          </div>
-          <br/>
-          <div class="content">
-              Hong Kong:
-              Unit 6, 8F,<br/>
-              Arion Commercial Centre,<br/>
-              2-12 Queen's Road West,<br/>
-              Sheung Wan, Hong Kong<br/>
-              <br/>
-              Philippines: <br/>
-              11th Floor 
-              Pearl Bank Center, <br/>
-              Valero St. Bel Air Makati<br/>
-            </p>
-          </div>
-        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="title">
+                    CONTACT
+                </div>
+                <br/>
+                <div class="content">
+                    hello@talkpush.com<br/> +(852) 9188 7562&nbsp;&nbsp;&nbsp;|&nbsp;Hong Kong<br/> +(63) 917 5075734&nbsp;|&nbsp;Philippines<br/> +(33) 7 82 96 83 16|&nbsp;France<br/> +(44) 7751 860193&nbsp;|&nbsp;UK<br/> +(1) 415 363 9911&nbsp;&nbsp;|&nbsp;United
+                    States<br/>
+                </div>
+                <div class="social-icon">
+                    <a href="https://www.facebook.com/letthetalenttalk"><img src="images/social-icons/facebook.png" width="26px"></a>
+                    <a href="https://www.twitter.com/talkpush"><img src="images/social-icons/twitter.png" width="26px"></a>
+                    <a href="https://www.linkedin.com/company/talkpush"><img src="images/social-icons/linkedin.png" width="26px"></a>
+                    <a href="https://www.youtube.com/c/Talkpush"><img src="images/social-icons/youtube.png" width="26px"></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="title">
+                    OFFICE
+                </div>
+                <br/>
+                <div class="content">
+                    Hong Kong: Unit 6, 8F,<br/> Arion Commercial Centre,<br/> 2-12 Queen's Road West,<br/> Sheung Wan, Hong Kong<br/>
+                    <br/> Philippines: <br/> 11th Floor Pearl Bank Center, <br/> Valero St. Bel Air Makati<br/>
+                    </p>
+                </div>
+            </div>
 
-      </div>
-      <div class="row">
-        &nbsp;
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="content">
-            All right reserved © Talkpush 2016
-          </div>
         </div>
-      </div>
-      <div class="row">
-        &nbsp;
-      </div>
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="content">
+                    All right reserved © Talkpush 2016
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            &nbsp;
+        </div>
     </div>
     <a class="back-to-top" style="display: inline;">
-    <i class="fa fa-arrow-circle-up"></i>
+        <i class="fa fa-arrow-circle-up"></i>
     </a>
     <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script src="./js/bootstrap.js"></script>
     <script src="./js/javascript.js"></script>
-  </body>
+</body>
+
 </html>
