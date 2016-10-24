@@ -184,6 +184,16 @@ $(document).ready(function() {
         $("#position").val(positionName);
         scrollTo(".form-apply");
     });
+    $('.apply4CSE').on('click', function() {
+        var isVisible = $(".form-apply").is(":visible");
+        if (!isVisible) {
+            $(".form-apply").toggle();
+        }
+        positionName = "Client Services Executive";
+        $("#position-name").html(positionName);
+        $("#position").val(positionName);
+        scrollTo(".form-apply");
+    });
 
     $('#cv').on('click', function() {
         $('#cv-file').click();
