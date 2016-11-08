@@ -1820,7 +1820,7 @@ span#message_error {
 }
 
 .wrap-chatbot-faq .toggle-faq-content {
-    display: none;
+    display: block;
 }
 
 .call-to-quote {
