@@ -149,6 +149,16 @@ $(document).ready(function() {
     var positionName = "";
     var formStr = '';
 
+    $('.apply4GH').on('click', function() {
+        var isVisible = $(".form-apply").is(":visible");
+        if (!isVisible) {
+            $(".form-apply").toggle();
+        }
+        positionName = "Growth Hacking Intern";
+        $("#position-name").html(positionName);
+        $("#position").val(positionName);
+        scrollTo(".form-apply");
+    });
     $('.apply4SE').on('click', function() {
         var isVisible = $(".form-apply").is(":visible");
         if (!isVisible) {
