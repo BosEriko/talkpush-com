@@ -1,0 +1,137 @@
+@media only screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      .annual-video {
+           width:500px; 
+           height:281px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+      
+}
+
+@media only screen
+    and (min-width: 992px) and (max-width: 1199px) {
+         
+}
+
+@media only screen
+    and (min-width: 768px) and (max-width: 991px) {
+        
+
+}
+
+@media only screen
+    and (min-width: 570px) and (max-width: 767px) {
+        
+        
+}
+
+@media only screen
+    and (min-width: 470px) and (max-width: 569px) {
+        
+}
+
+@media only screen
+    and (min-width: 420px) and (max-width: 469px) {
+        
+        
+}
+
+@media only screen
+    and (max-width: 419px) {
+        
+        .wrapper {
+            height: auto !important;
+        }
+        
+        header .login-navbar,
+        header .menu-navbar {
+            display: none;
+        }
+        
+        header .mobile-navbar {
+            border-top: 15px solid #87C930;
+            background: white;
+            display: block;
+        }
+        
+        header .navbar-brand img {
+            width: 100px;
+            margin-top: -15px;
+        }
+        
+        header .mobile-navbar .navbar-collapse li.active {
+            background: #D6D6D9 !important;
+        }
+        
+        header .mobile-navbar .navbar-toggle {
+            border-radius: 0;
+            border: 1px solid #D6D6D9;
+        }
+        
+        header .mobile-navbar .navbar-toggle span {
+            background: #D6D6D9;
+        }
+        
+        section.main-page {
+            padding-top: 70px;
+        }
+        
+        section.main-page .text {
+            text-align: center;
+        }
+        
+        section.benefits {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        section.benefits .categories h3 {
+            font-size: 10px;
+            cursor: pointer !important;
+        }
+        
+        section.benefits .arrows {
+            display: none;
+        }
+        
+        section.benefits .owl-carousel img {
+            width: 50px;
+        }
+        
+        section.benefits .owl-carousel .owl-item {
+/*            width: 180px !important;*/
+        }
+        
+        section.benefits .owl-carousel h4 {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        section.benefits .owl-carousel p {
+            font-size: 10px;
+        }
+        
+        section.sign-up {
+            padding-top: 0;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        
+        section.sign-up .form {
+            margin-top: 50px;
+        }
+        
+        section.sign-up .form .btn-form {
+            float: none;
+            width: 100%;
+        }
+        
+}
