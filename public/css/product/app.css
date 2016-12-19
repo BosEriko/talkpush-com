@@ -1,0 +1,341 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper, main {
+    height:100%;
+    min-height:100%;/*for mozilla*/
+}
+
+html>body .content {
+    height:auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+}
+
+header .navbar {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+header .navbar a {
+    color: #333B3D;
+    font-weight: 600;
+}
+
+header .navbar a:hover {
+    background: transparent;
+    color: #87C930 !important;
+}
+
+header .navbar a:focus {
+    background: transparent;
+}
+
+header .login-navbar {
+    border-top: 15px solid #87C930;
+    background: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    height: auto !important;
+    box-shadow: none;
+}
+
+header .login-navbar a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header .login-navbar a#sign-up {
+    color: #87C930 !important;
+}
+
+header .menu-navbar {
+    background: none;
+    border: 0;
+    box-shadow: none;
+}
+
+header .menu-navbar img {
+    width: 200px;
+    margin-top: -30px;
+}
+
+header .menu-navbar img#logo-white {
+    display: none;
+}
+
+header .menu-navbar a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+header .menu-navbar li.menu {
+    display: inline-block;
+    position: relative;
+}
+
+header .menu-navbar li.menu ul {
+    padding: 0 15px;
+    margin-left: 15px;
+    list-style: none;
+    display: none;
+    position: absolute;
+    transition: 0.5s;
+}
+
+header .menu-navbar li.menu ul li {
+    padding: 10px 0;
+    text-decoration: none;
+    color: #87C930;
+}
+
+header .menu-navbar li.menu ul li a {
+    text-decoration: none;
+    text-transform: none;
+}
+
+header .menu-navbar li.menu:hover ul {
+    display: block;
+    transform: 0.5s;
+}
+
+header .menu-navbar li.menu:hover a#story,
+header .menu-navbar li.menu:hover a#product{
+    color: #87C930;
+}
+
+header .menu-navbar li.menu ul#product-submenu {
+    margin-left: 70px;
+    margin-top: -28px;
+    font-size: 12px;
+    display: none;
+}
+
+header .menu-navbar li.menu ul li.menu:hover ul {
+    display: block !important;
+}
+
+header .mobile-navbar {
+    display: none;
+}
+
+section.main-page {
+    padding-top: 200px;
+}
+
+section.main-page h2 {
+    color: #87C930;
+    font-weight: 600;
+}
+
+section.main-page .text {
+    padding: 50px 15px;
+    overflow: scroll;
+}
+
+section.benefits {
+    padding-top: 200px;
+}
+
+section.benefits .container {
+    position: relative;
+}
+
+section.benefits h3 {
+    color: #D6D6D9;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+section.benefits h3.active {
+    color: #87C930;
+}
+
+section.benefits .owl-carousel img {
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+section.benefits .owl-carousel .text-center {
+    padding: 15px;
+    text-align: center;
+}
+
+section.benefits .owl-carousel h4 {
+    color: #87C930;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 50px
+}
+
+.arrows {
+    position: absolute;
+    width: 100%;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #D6D6D9;
+  float: right;
+    margin-right: -50px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  position: absolute;
+  border-right:30px solid #D6D6D9; 
+    margin-left: -50px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+section.sign-up {
+    padding-top: 200px;
+    background: #333B3D;
+}
+
+section.sign-up h2 {
+    color: #87C930;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+section.sign-up h3 {
+    color: white;
+}
+
+section.sign-up p {
+    color: white;
+    font-size:18px;
+}
+
+section.sign-up .form .form-control {
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+section.sign-up .form .btn-form {
+    width: 200px;
+    height: 40px;
+    border: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    background: #87C930;
+    color: white;
+    float: right;
+}
+
+.demo .text,
+.demo .phone-section {
+    padding: 0 50px;
+}
+
+.demo .btn-demo {
+    height: 34px;
+    border-radius: 0;
+    color: white;
+    text-shadow: 0;
+    border: 0;
+    width: 100px;
+    background: #8aa815 !important;
+}
+
+.demo .phone-row input {
+    height: 34px;
+    font-size: 14px;
+    border: 1px solid #f0f0f0;
+    width: 100%;
+}
+
+.demo #demo_phone_no {
+    width: 100% !important;
+    height: 34px;
+}
+
+div.intl-tel-input {
+    width: 100%;
+}
+
+.demo .input-row {
+    padding: 50px 0;
+    height: auto;
+    display: none;
+}
+
+.demo .input-row label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.demo .input-row input {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 34px;
+    padding-left: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.demo .input-row button {
+    width: 200px;
+    max-width: 100%;
+    border: 0;
+    height: 34px;
+    background: #8aa815;
+    color: white;
+    float: right;
+    margin-top: 10px;
+}
+
+.demo .thankyou-row,
+.demo .thankyou-row .thankyou-text,
+.demo .thankyou-row .duplicate-text {
+    padding: 50px 0;
+    display: none;
+}
+
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #D6D6D9;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.onepage-pagination li a.active:before{
+  width: 15px;
+  height: 15px;
+  background: #87C930;
+  border: 1px solid #87C930;
+  margin-top: -4px;
+  left: 7px;
+}
