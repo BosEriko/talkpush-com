@@ -1,0 +1,227 @@
+
+@media only screen and (min-width: 993px), only screen and (min-device-width: 993px) {
+    .inline-video {
+      display: none !important;
+    }
+    .inline-video>iframe{
+        min-height: 250px;
+    }
+    .spec-right-xs{
+        display: none;
+    }
+    .spec-right{
+        display: block;
+    }
+    .ts-box-media-logo {
+        display: none;
+    }
+    .what-people-say .bottom-line{
+        margin-top: 0px;
+    }
+    .streetdeal_wps {
+        margin-top:20px;
+    }
+
+    .lazada_wps {
+        margin-top:25px;
+    }
+
+    .shore_wps {
+        margin-top:10px;
+    }
+    .floating-window {
+       display: block;
+    }
+}
+
+@media only screen and (max-width : 992px) and (min-width: 769px), only screen and (max-device-width: 992px) and (min-device-width:769px){
+    .inline-video {
+      display: none !important;
+    }
+    .spec-right-xs{
+        display: block;
+    }
+    .spec-right{
+        display: none;
+    }
+    .ts-box-media-logo {
+        display: block;
+    }
+    .what-people-say .bottom-line{
+        margin-top: 0px;
+    }
+        .streetdeal_wps {
+        margin-top:20px;
+    }
+
+    .lazada_wps {
+        margin-top:25px;
+    }
+
+    .shore_wps {
+        margin-top:10px;
+    }
+    .floating-window {
+	   display: block;
+    }
+    
+    .demo .phone-row .phone-section .col-md-9 {
+            padding: 0;
+            margin-top: 10px;
+    }
+    
+    .demo .input-row {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width : 768px), only screen and (max-device-width: 768px) {
+  .introduction h1 {
+    font-size: 23px;
+    line-height: 28px;
+    margin-top: 70px;
+  }
+    .footer-right {
+        text-align: left;
+    }
+    .tcandpp {
+        margin-left: 0px;
+    }
+    .social-link {
+      padding-left: 0px;
+        padding-right: 10px;
+    }
+    
+}
+
+@media only screen and (max-width : 768px), only screen and (max-device-width: 768px) {
+  .introduction h1 {
+    font-size: 23px;
+    line-height: 28px;
+    margin-top: 70px;
+  }
+    
+    .demo .phone-row .phone-section .col-md-9 {
+            padding: 0;
+        }
+}
+/*Eato-responsive-css*/
+
+@media only screen and (max-width:768px),only screen and (max-device-width:768px){
+    .dropdown-menu > li > a {
+        padding-top: 3px;
+    }
+    .nav a {
+        margin-top: 3px;
+    }
+    #navbar{
+        margin-top: 10px;
+    }
+    .navbar-header>.logo{
+        width:200px;margin-left:auto;margin-right:auto;
+    }
+    .dropdown-menu > li > a {
+      border-bottom: 0px solid #8aa815;
+    }
+    .interested-dropdown-menu {
+      margin-left: 0px;
+    }
+    .inline-video {
+      display:block !important;
+        margin-bottom: 30px;
+    }
+    .introVideo,.txtFOHH{
+      display: none !important;
+    }    
+    .intro-video {
+      float:none;
+    }
+    .ere-logo {
+        margin-top: 0px;
+    }
+    .tia-logo {
+        margin-top: 0px;
+    }
+    .benefits-box,.recuirement-accleration ra-box{
+        margin: 0px auto 0px auto;
+    }
+    .spec-right-xs{
+        display: block;
+    }
+    .spec-right{
+        display: none;
+    }
+    .ts-box-media-logo {
+        display: block;
+    }
+    .what-people-say .bottom-line{
+        margin-top:-20px;
+    }
+    .streetdeal_wps {
+        margin-top:30px;
+    }
+
+    .lazada_wps {
+        margin-top:30px;
+    }
+
+    .shore_wps {
+        margin-top:0px;
+    }
+
+    .lazada_content_wps {
+        margin-top: -20px;
+    }
+    .lazada_content_wps {
+        margin-top: -60px !important;
+    }
+    .streetdeal_content_wps{
+        margin-top: -60px !important;
+    }
+    .sheraton_content_wps{
+        margin-top: -40px !important;
+    }
+
+    .shore_content_wps{
+        margin-top: -40px !important;
+    }
+    .floating-window {
+	   display: none;
+    }
+}
+
+
+@media only screen
+    and (max-width: 419px)  {
+        .demo .phone-row .phone-section .col-md-9 {
+            padding: 0;
+            margin-top: 10px;
+        }
+        
+        
+        .demo .input-row {
+            padding: 0 20px;
+        }
+        
+        .demo .thankyou-row {
+            padding: 0 20px;
+        }
+}
+
+
+@media only screen
+    and (min-width: 420px) and (max-width: 469px) {
+        .demo .phone-row .phone-section .col-md-9 {
+            padding: 0;
+            margin-top: 10px;
+        }
+    
+        
+        .demo .input-row {
+            padding: 0 20px;
+        }
+        
+        .demo .thankyou-row {
+            padding: 0 20px;
+        }
+}

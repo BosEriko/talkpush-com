@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Talkpush 2.0 | Product</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+    <link rel="stylesheet" href="css/product/app.css">
+    <link rel="stylesheet" href="css/product/responsive-xs.css">
+</head>
+<body>
+   
+   <!-- Menu Bar Sign up form -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="wrap form-wrap">
+              <div class="container-fluid form-container" id="contact-form-container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-xs-12 interested-in">
+                    <h2>Send us your details to receive a free demo</h2>
+                  </div>
+                  <div class="contact-form box">
+                    <div class="row">
+                      <div class="col-md-8 col-xs-10 col-xs-offset-1 col-md-offset-2">
+                        <form id="contact-form" class="box" action="/contact-form" method="POST">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="fullName" placeholder=" NAME" required>
+                            <span id="fullName_error">Please fill out the NAME field</span>
+                          </div>
+                          <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder=" E-MAIL" required>
+                            <span id="email_error">Please fill out the E-MAIL field</span>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="company" placeholder=" COMPANY">
+                            <!--                        <span id="company_error">Please fill out the COMPANY field</span>-->
+                          </div>
+                          <div class="form-group">
+                            <textarea rows="5" class="form-control" id="message" placeholder=" REQUEST A DEMO / ASK FOR A FREE TRIAL / JUST SAY HI"></textarea>
+                            <!--                        <span id="message_error">Please fill out the MESSAGE field</span>-->
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-">
+                              <button type="submit" class="btn btn-form">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-xs-12 form-message-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+            <nav class="navbar login-navbar">
+               <div class="container">
+                   <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                   </div>
+                   <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://my.talkpush.com/managers/sign_in">Log in</a></li>
+                    <li><a href="#" id="sign-up" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>
+                  </ul>
+                   
+               </div>
+           </nav>
+           <nav class="navbar menu-navbar">
+               <div class="container">
+                   <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a href="#" id="logo"><img src="img/talkpush-white-logo.png" id="logo-white" alt="">
+                      <img src="img/talkpush-black-logo.png" alt="" id="logo-black"></a>
+                   </div>
+                   <ul class="nav navbar-nav navbar-right">
+                    <li class="menu">
+                        <a href="index.html" id="story">Story</a>
+                        <ul id="story-submenu">
+                            <li><a href="index.html#2" id="change">Change</a></li>
+                            <li><a href="index.html#3" id="benefits">Benefits</a></li>
+                            <li><a href="index.html#4" id="unique">Unique</a></li>
+                            <li><a href="index.html#5" id="testimonials">Testimonials</a></li>
+                          </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#">Product</a>
+<!--
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Sourcing</a></li>
+                            <li><a href="#">Screening</a></li>
+                            <li><a href="#">Hiring</a></li>
+                            <li><a href="#">Messaging</a></li>
+                            <li><a href="#">Demo</a></li>
+                          </ul>
+                          
+-->
+                       <ul>
+                            <li><a href="https://talkpush.com/features.html">Automation</a></li>
+                            <li><a href="https://talkpush.com/sourcing.html">Sourcing</a></li>
+                            <li><a href="https://talkpush.com/chatbot.html">Chatbot</a></li>
+                            <li><a href="https://talkpush.com/pricing.html">Pricing</a></li>
+                          </ul>
+                    </li>
+                    <li><a href="https://www.talkpush.com/about.html">Company</a></li>
+                    <li><a href="https://blog.talkpush.com/">Blog</a></li>
+                  </ul>
+                   
+               </div>
+           </nav>
+           
+           <!-- MOBILE NAVBAR
+           ========================================== -->
+           <nav class="navbar mobile-navbar">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">
+                      <img src="img/talkpush-black-logo.png" alt="">
+                  </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="index.html">Story <span class="sr-only">(current)</span></a></li>
+                    
+                    <li>
+                        <a href="product.html">Product</a> 
+                    </li>
+                  </ul>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Company</a></li>
+                    <li>
+                      <a href="#">Blog</a>
+                      
+                      
+                    </li>
+                    <li><a href="https://my.talkpush.com/managers/sign_in">Log in</a></li>
+                    <li><a href="#" id="sign-up" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+    
+    <main>
+       <section class="wrapper main-page">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-12 text-center">
+                       <h2>RECRUIT FASTER AND BETTER THAN EVER BEFORE</h2>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-6 image">
+                       <img src="img/monitor.png" alt="" class="img-responsive">
+                   </div>
+                   <div class="col-md-6 text">
+                       <p>
+                           Talkpush is changing the recruitment world thanks to its unique and disrupt- ing features. Our product team is mainly focused on one thing: making it easier for candidates to get heard. We are excited to work with companies that want to improve the candidate experience by making the job application process faster, easier and more optimized for mobile, all the while giving candidates a chance to tell you who they are.
+                           <br><br>
+Our software is integrated with the leading cloud communications platform and the leading voice transcription engine, making it easy to connect with candidates from all over the world, in over 30 languages. In fact, Talkpush is the only universal platform which can engage with every candidate, regard- less of what phone they have or how connected or technology-savvy they are.
+                            <br><br>
+To expand your talent pool further, our software collects applications from all channels, including social media and messaging platforms. In order to get                                                                          - ment Chatbot which can initiate interview phone calls automatically. This is just one of the many tools we have built in order to turn your social media presence into a talent sourcing engine. Once you’ve let the talent talk, we bet                                                      
+                       </p>
+                   </div>
+               </div>
+           </div>
+       </section>
+       
+       <section class="wrapper benefits">
+           <div class="container">
+               <div class="row categories">
+                   <div class="col-md-3 col-xs-3 text-center">
+                       <h3 class="active" data-order="1">Sourcing</h3>
+                   </div>
+                   <div class="col-md-3 col-xs-3 text-center">
+                       <h3 data-order="2">Screening</h3>
+                   </div>
+                   <div class="col-md-3 col-xs-3 text-center">
+                       <h3 data-order="3">Reviewing</h3>
+                   </div>
+                   <div class="col-md-3 col-xs-3 text-center">
+                       <h3 data-order="4">Messaging</h3>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12">
+                       <hr>
+                   </div>
+               </div>
+               <div class="row arrows">
+                   <div class="arrow-left"></div>
+                    <div class="arrow-right"></div>
+               </div>
+               <div class="row icons">
+                   <div class="owl-carousel" id="owl-carousel">
+                       <!-- SOURCING
+                       ============================================= -->
+                       <div class="text-center">
+                           <img src="img/product/sourcing.png" alt="">
+                           <h4>SOCIAL MEDIA SOURCING</h4>
+                           <br>
+                           <p>
+                               Talkpush integrates seamlessly with all kinds of social media advertising allowing candidate
+                               a comprehensive candidate entry. [Read more]
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/simplified.png" alt="">
+                           <h4>SIMPLIFIED APPLICATION FORMS</h4>
+                           <p>
+                               SMS to apply or fill a 3-field form on a dedicated career page to apply. The simpler the application method, the more candidate applications captured. Maximizing advertising costs &amp; efforts
+                           </p>
+
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/chatbot.png" alt="">
+                           <h4>AI CHATBOT ASSISTANT</h4>
+                           <br>
+                           <p>
+                               Having a Chatbot installed on
+    yoru Facebook page will allow automatic job application sorting so applications can go into the correct recruiters hands, without human intervention. Easy on recruiters and even easier for candidates to choose on mobile.
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/resume.png" alt="">
+                           <h4>RESUME PARSING</h4>
+                           <br>
+                           <p>
+                               Received a resume? Drop it into
+    Talkpush so we can analyze and organize the candidate’s contact, experience and skills into a nice
+                           </p>
+                       </div>
+                       
+                       <!-- SCREENING
+                       ============================================= -->
+                       
+                       <div class="text-center">
+                           <img src="img/product/interview.png" alt="">
+                           <h4>INTERVIEW CREATOR</h4>
+                           <p>
+                               Ask the questions that matters the most in your own voice, or pick from 300+ pre-recorded
+                         languages.
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/video.png" alt="">
+                           <h4>VIDEO INTERVIEW</h4>
+                           <p>
+                               Using our Android Application (Playstore button), candidates are invited to record a 10-second introduction video. On Facebook Messenger Chatbot interviews, 15 seconds.
+                           </p>
+
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/autocall.png" alt="">
+                           <h4>PHONE INTERVIEW</h4>
+                           <p>
+                               No Data is not an excuse, or a problem for recruiters. Candidate can always complete an interview through a regular phone network but receiving a phone call or calling our hotline.
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/chatbot.png" alt="">
+                           <h4>CHATBOT INTERVIEW</h4>
+                           <p>
+                               
+                           </p>
+                       </div>
+                       
+                       <!-- REVIEWING
+                       ============================================= -->
+                       
+                       <div class="text-center">
+                           <img src="img/product/share.png" alt="">
+                           <h4>AUDIO PROFILE SHARING</h4>
+                           <br>
+                           <p>
+                               Talkpush integrates seamlessly with all kinds of social media advertising allowing candidate
+                                   a comprehensive candidate entry. [Read more]
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/googlespeech.png" alt="">
+                           <h4>GOOGLE SPEECH API TRANSCRIPTIONS</h4>
+                           <p>
+                              SMS to apply or fill a 3-field form on a dedicated career page to apply. The simpler the application method, the more candidate applications captured. Maximizing advertising costs &amp; efforts      
+                           </p>
+
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/analytics.png" alt="">
+                           <h4>OPTIMIZED OPERATIONS WITH ANALYTICS</h4>
+                           <p>
+                               Having a Chatbot installed on
+    yoru Facebook page will allow automatic job application sorting so applications can go into the correct recruiters hands, without human intervention. Easy on recruiters and even easier for candidates to choose on mobile.
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           
+                       </div>
+                       
+                       <!-- MESSAGING
+                       ============================================= -->
+                       
+                       <div class="text-center">
+                           <img src="img/product/messenger.png" alt="">
+                           <h4>FACEBOOK MESSAGING</h4>
+                           <br>
+                           <p>
+                               Talkpush integrates seamlessly with all kinds of social media advertising allowing candidate
+                                   a comprehensive candidate entry. [Read more]
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/googlespeech.png" alt="">
+                           <h4>2-WAY SMS</h4>
+                           <br>
+                           <p>
+                              SMS to apply or fill a 3-field form on a dedicated career page to apply. The simpler the application method, the more candidate applications captured. Maximizing advertising costs &amp; efforts      
+                           </p>
+
+                       </div>
+                       <div class="text-center">
+                           <img src="img/product/email.png" alt="">
+                           <h4>EMAIL CONVERSATION WITH PARSING</h4>
+                           <p>
+                               Having a Chatbot installed on
+    yoru Facebook page will allow automatic job application sorting so applications can go into the correct recruiters hands, without human intervention. Easy on recruiters and even easier for candidates to choose on mobile.
+                           </p>
+                       </div>
+                       <div class="text-center">
+                           
+                       </div>
+                       
+                   </div>
+               </div>
+           </div>
+       </section>
+       
+       <section class="sign-up demo">
+           <div class="container">
+               <div class="row phone-row">
+                <div class="col-md-12 text-center">
+                    <h2>Try it now</h2>
+                    <h3>Experience Talkpush for yourself here</h3>
+                <br><br>
+                </div>
+                <div class="col-sm-6 text">
+                    <p>
+                        Simply enter your phone number on the provided space and receive a call from us which will ask you a few straightforward questions about your recruitment activity. <br><br>These questions will help us get to know you better and
+                        get back to you with relevant info and case studies.
+                    </p>
+                </div>
+                <div class="col-sm-6 phone-section">
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input type="tel" id="demo_phone_no" name="demo_phone_no">
+                                <span class="input-group-btn">
+                  <button class="btn btn-demo btn-default" type="button">Call</button>
+                  </span>
+                            </div>
+                            <span id="demo_phone_no_error">Phone Number is required</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+       </section>
+       
+        
+    </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script src="js/intlTelInput.js"></script>
+<script src="js/product/app.js"></script>
+
+</body>
+</html>
