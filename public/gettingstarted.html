@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/foundation-icons.css" rel="stylesheet">
+    <link href="./o/css/bootstrap.css" rel="stylesheet">
+    <link href="./o/css/style.css" rel="stylesheet">
+    <link href="./o/css/responsive.css" rel="stylesheet">
+    <link href="./o/css/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/jquery.simpleslider.js"></script>
-    <title>Talkpush - About Us</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <title>Talkpush - Getting Started</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,6 +21,68 @@
       ga('create', 'UA-46858485-2', 'auto');
       ga('send', 'pageview');
       
+    </script>
+    <script>
+      function scrollTo(sectionClass){
+          $('html,body').animate({
+          scrollTop:$(sectionClass).offset().top},'slow');
+      }
+        $(function(){
+            //document ready
+         $("#clickable").on("click",".f1",function(e){
+              scrollTo(".g1");
+          });
+          $("#clickable").on("click",".f2",function(e){
+              scrollTo(".g2");
+          });
+          $("#clickable").on("click",".f3",function(e){
+              scrollTo(".g3");
+          });
+          $("#clickable").on("click",".f4",function(e){
+              scrollTo(".g4");
+          });
+          $("#clickable").on("click",".f5",function(e){
+              scrollTo(".g5");
+          });
+            
+        });
+        function removeAClass(){
+            $(".f1").removeClass("active");
+            $(".f2").removeClass("active");
+            $(".f3").removeClass("active");
+            $(".f4").removeClass("active");
+            $(".f5").removeClass("active");
+        }
+        $(window).scroll(function(){
+          var currX = $(window).scrollTop();
+          var gv1 = $(".g1").offset().top;
+          var gv2 = $(".g2").offset().top;
+          var gv3 = $(".g3").offset().top;
+          var gv4 = $(".g4").offset().top;
+          var gv5 = $(".g5").offset().top;
+          if (currX < gv2){
+              removeAClass();
+              $(".f1").addClass("active");
+          }else{
+              if (currX < gv3){
+                  removeAClass();
+                  $(".f2").addClass("active");
+              }else{
+                  if (currX < gv4){
+                      removeAClass();
+                      $(".f3").addClass("active");
+                  }else{
+                      if(currX < gv5){
+                          removeAClass();
+                          $(".f4").addClass("active");
+                      }else{
+                          removeAClass();
+                          $(".f5").addClass("active");
+                      }
+                  }
+              }
+          }
+        });
     </script>
     <!-- Begin Inspectlet Embed Code -->
     <script type="text/javascript" id="inspectletjs">
@@ -33,8 +95,50 @@
       })();
     </script>
     <!-- End Inspectlet Embed Code -->
+    <style>
+      iframe{
+      max-width: 560px;
+      min-width: 240px;
+      }
+    </style>
   </head>
   <body>
+    <div class="floating-window">
+      <ul id="clickable">
+        <li class="f1 active">INTRODUCTION</li>
+        <li class="f2">GETTING STARTED</li>
+        <!--
+          <ul>
+              <li>CREATING CAMPAIGNS &amp; INTERVIEW TEMPLATES</li>
+              <li>ADDING CANDIDATES AND CAMPAIGN CONFIGURATION</li>
+              <li>BATCH IMPORT CSV</li>
+              <li>PERSONALIZED INVITATION</li>
+          </ul>
+          -->
+        <li class="f3">THE INTERVIEW</li>
+        <!--
+          <ul>
+              <li>TRANSFERRING INTERVIEWS TO TALKPUSH</li>
+              <li>MANAGE CANDIDATE WORKFLOW, SEARCHING CANDIDATES AND EXpORT</li>
+          </ul>
+          -->
+        <li class="f4">VIEWING CANDIDATE RESPONSES</li>
+        <!--
+          <ul>
+              <li>DUPLICATE TAGS</li>
+              <li>SHARING CANDIDATES</li>
+              <li>EXPORTING CAMPAIGN DATA</li>
+          </ul>
+          -->
+        <li class="f5">WHAT YOU CA DO AFTER INVITING CANDIDATES</li>
+        <!--
+          <ul>
+              <li>REFRESH A PIN CODE</li>
+              <li>INCREASE RESPONSE RATES</li>
+          </ul>
+          -->
+      </ul>
+    </div>
     <div class="header-top"></div>
     <div class="header">
       <nav class="navbar">
@@ -47,7 +151,7 @@
             <span class="icon-bar sub-corp-color-bg"></span>
             </button>
             <div class="logo">
-              <a href="../index.html" class="navbar-brand active backtohome"><img class="img-responsive" src="images/logo.png"></a>
+              <a href="./index.html" class="navbar-brand active backtohome"><img class="img-responsive" src="./o/images/logo-s.png"></a>
             </div>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
@@ -79,149 +183,58 @@
         <!--/.container-fluid -->
       </nav>
     </div>
-    <div class="container">
+    <div class="privacy-content container">
       <div class="row">
-        <div class="introduction-about">
-          <div class="col-md-6 col-xs-12 col-sm-12">
-            <iframe src="https://www.youtube.com/embed/jL_q1l6oiqU" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-6 col-xs-12 intro-text">
-            <h1 class="intro-header-about">About Talkpush</h1>
-            <p class="about-us">
-              Talkpush is a technology solution provider specialized in accelerating talent acquisition through the automation of the sourcing and screening of candidates. The company's core product is a platform which allows to capture and assess the voice of thousands of job seekers on a daily basis. Founded in Hong Kong in 2013, Talkpush has rapidly expanded its operations and now supports employers in over 10 countries.
-            </p>
-            <p class="about-us">In an age when everyone is connected via their mobile phones, it is still surprisingly difficult for job candidates to get their voices heard by prospective employers. The Talkpush team started with a simple goal in mind: make it as easy as possible for employers to hear what every candidate has to say. </p>
-          </div>
+        <div class="col-md-10 col-md-offset-1">
+          <h1 style="margin-top: 50px;" >Getting Started</h1>
+          <br>
+          <h4 class="intro g1">Introduction</h4>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/qNOAqSltda0" frameborder="0" allowfullscreen></iframe>
+          <!--                <div style="border-top:1px;border-bottom:0px; width:90%;margin-left:auto;margin-right:auto; border:solid black"></div>-->
+          <br>
+          <hr>
+          <br>
+          <h4 class="g2">
+            Getting Started
+          </h4>
+          <h5>Creating campaigns & interview templates</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/hvF0D8vVH_4" frameborder="0" allowfullscreen></iframe>
+          <h5>Adding Candidates and campaign configuration</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/1bN7ZV1xfuQ" frameborder="0" allowfullscreen></iframe>
+          <h5>Batch import CSV</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/nnpw9hB6iZE" frameborder="0" allowfullscreen></iframe>
+          <h5>Personalized invitation</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/R3vvnYkMaXg" frameborder="0" allowfullscreen></iframe>
+          <br>
+          <hr>
+          <br>
+          <h4 class="g3">The interview</h4>
+          <h5>Transferring interviews to Talkpush</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/ashb9pFOb_Q" frameborder="0" allowfullscreen></iframe>
+          <h5>Manage candidate workflow, searching candidates and exporting to excel</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/CT6EYoYavAc" frameborder="0" allowfullscreen></iframe>
+          <br>
+          <hr>
+          <br>
+          <h4 class="g4">Viewing Candidate Responses</h4>
+          <h5>Duplicate tags</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/NNyEbJcTA2w" frameborder="0" allowfullscreen></iframe>
+          <h5>Sharing Candidates</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/9-6uqcDZIcA" frameborder="0" allowfullscreen></iframe>
+          <h5>Exporting Campaign Data</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/T_lnu3TryiE" frameborder="0" allowfullscreen></iframe>
+          <br>
+          <hr>
+          <br>
+          <h4 class="g5">What you can do after inviting Candidates</h4>
+          <h5>Refresh a PIN code</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/kImLCR1v22s" frameborder="0" allowfullscreen></iframe>
+          <h5>Increase response rates</h5>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/48qQ4KJTlk0" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
-    <div class="container wrap what-people-say">
-      <h2>WHAT PEOPLE SAY ...</h2>
-      <br><br>
-      <div class="col-md-3 col-xs-8 col-sm-4 col-sm-offset-2 col-xs-offset-2 col-md-offset-0">
-        <p class="top-line">
-          <i>The interview to offer ratio has also been improved and we can now hit the same hiring targets with fewer interviews.
-          </i>
-          <br><br>Keith Cheung
-        </p>
-        <p class="bottom-line sheraton_content_wps">
-          <img src="images/Sheraton_logo_wps.png" height="90px" style="padding:5px;">
-        </p>
-      </div>
-      <div class="col-md-3 col-xs-8 col-sm-4 col-sm-offset-0 col-xs-offset-2 col-md-offset-0">
-        <p class="top-line">
-          <i>Talkpush improves the candidates' experience, reduces the time spent with unqualified candidates, and improves the quality of our hires.
-          </i>
-          <br><br>Darcy Lalonde
-        </p>
-        <p class="bottom-line shore_content_wps"><img src="images/shore_logo_wps.png" width="120px" class="shore_wps"></p>
-      </div>
-      <div class="col-sm-1 col-sm-offset-12 ts-box-media-logo">&nbsp;</div>
-      <div class="col-md-3 col-xs-8 col-sm-4 col-sm-offset-2 col-xs-offset-2 col-md-offset-0">
-        <p class="top-line">
-          <i>Talkpush brings efficiency to mass recruitment.</i>
-          <br><br><br>Abigail Goh
-        </p>
-        <p class="bottom-line lazada_content_wps"><img src="images/Lazada_Logo_wps.png" width="150px" class="lazada_wps"></p>
-      </div>
-      <div class="col-md-3 col-xs-8 col-sm-4 col-sm-offset-0 col-xs-offset-2 col-md-offset-0">
-        <p class="top-line">
-          <i>Talkpush has improved the quality of our team while making the process more efficient.
-          </i>
-          <br><br>Gregory Costamagna
-        </p>
-        <p class="bottom-line streetdeal_content_wps">
-          <img src="images/streetdeal_logo_wps.png" width="170px"  class="streetdeal_wps">
-        </p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="container">
-        <div class="know-more">
-          <div class="row">
-            <div class="col-md-12">
-              <h2>Want to know more?</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 know-more-btn">
-              <button type="button" class="btn" onclick="window.location.href='http://blog.talkpush.com'"><span><i class="btn-left-icon fi-megaphone"></i></span> &nbsp;Visit Our Blog </button>
-            </div>
-            <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 know-more-btn">
-              <button type="button" class="btn intro-button"><span><i class="btn-right-icon fi-monitor"></i></span> Watch Our Introduction</button>
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/9AohYk8sH4U" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 know-more-btn">
-              <button type="button" class="btn" data-toggle="modal" data-target="#myModal2"><span><i class="btn-right-icon fi-star"></i></span> Try Our Free Trial</button>
-            </div>
-          </div>
-          <!--
-            <div class="row">
-              <div class="col-md-3 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 know-more-btn">
-                <button class="btn" onclick="location.href='index.html#price'"><span><i class="btn-left-icon fi-list-thumbnails"></i></span>&nbsp;View the Price list </button>
-              </div>
-              <div class="col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 know-more-btn">
-                <button type="button" class="btn" onclick="window.location.href='index.html#contact-form'"><span><i class="btn-right-icon fi-star"></i></span> Try Our Free Trial</button>
-              </div>
-            </div>
-            -->
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid lightgrey-row featured-on">
-      <div class="container clients" id="featured-on">
-        <div class="row">
-          <h2>Featured on</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-2 col-sm-6 col-sm-offset-0">
-            <a href="http://e27.co/can-talkpush-disrupt-the-recruitment-industry-20141211/" target="_blank"><img src="images/e27-g.png"/></a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-sm-offset-0">
-            <a href="http://ere.net/2014/11/08/this-startup-wants-you-on-the-phone-not-video/" target="_blank">
-            <img src="images/tag-g.png"/>
-            </a>
-          </div>
-          <div class="col-md-1 ts-box-media-logo">&nbsp;</div>
-          <div class="col-md-3 col-sm-6">
-            <a href="https://www.techinasia.com/talkpush-phone-screening-job-candidates/" target="_blank">
-            <img src="images/techinasia-g.png"/>
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6 col-sm-offset-0">
-            <a href="http://www.ere.net/2014/11/08/this-startup-wants-you-on-the-phone-not-video/" target="_blank">
-            <img src="images/ere-g.png"/>
-            </a>
-          </div>
-          <div class="col-md-2 col-md-offset-0 col-sm-6">
-            <a href="http://www.strategyeyedigital.com/2015/09/11/seedcampweek2015/" target="_blank">
-            <img src="images/se-g.png"/>
-            </a>
-          </div>
-          <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0">
-            <a href="http://www.scmp.com/tech/start-ups/article/2001966/hk-startup-looks-make-mass-hiring-easier-talkpush" target="_blank"><img src="images/scmp-g.png"/></a>
-          </div>
-          <div class="col-md-3 col-md-offset-0 col-sm-6">
-            <a href="https://www.hrtoday.ch/fr/article/doper-lefficience-du-recrutement-dans-les-pays-mergents" target="_blank">
-            <img src="images/hrtoday-g.png"/>
-            </a>
-          </div>
-          <div class="col-md-3 col-md-offset-0 col-sm-6">
-            <a href="https://issuu.com/hrmagazinehk/docs/hrmag_summer_2016_issuu/50" target="_blank">
-            <img src="images/hrmag-g.png"/>
-            </a>
-          </div>
-        </div>
-        <div class="row">&nbsp;</div>
-      </div>
+      <div class="row">&nbsp;</div>
+      <div class="row">&nbsp;</div>
     </div>
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -334,10 +347,10 @@
               +(1) 415 363 9911&nbsp;&nbsp;|&nbsp;United States<br/>
           </div>
           <div class="social-icon">
-            <a href="https://www.facebook.com/letthetalenttalk"><img src="images/social-icons/facebook.png" width="26px"></a>
-            <a href="https://www.twitter.com/talkpush"><img src="images/social-icons/twitter.png" width="26px"></a>
-            <a href="https://www.linkedin.com/company/talkpush"><img src="images/social-icons/linkedin.png" width="26px"></a>
-            <a href="https://www.youtube.com/c/Talkpush"><img src="images/social-icons/youtube.png" width="26px"></a>
+            <a href="https://www.facebook.com/letthetalenttalk"><img src="./o/images/social-icons/facebook.png" width="26px"></a>
+            <a href="https://www.twitter.com/talkpush"><img src="./o/images/social-icons/twitter.png" width="26px"></a>
+            <a href="https://www.linkedin.com/company/talkpush"><img src="./o/images/social-icons/linkedin.png" width="26px"></a>
+            <a href="https://www.youtube.com/c/Talkpush"><img src="./o/images/social-icons/youtube.png" width="26px"></a>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -379,7 +392,7 @@
     <i class="fa fa-arrow-circle-up"></i>
     </a>
     <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/javascript.js"></script>
+    <script src="./o/js/bootstrap.js"></script>
+    <script src="./o/js/javascript.js"></script>
   </body>
 </html>
