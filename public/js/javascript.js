@@ -43,6 +43,15 @@ function checkSendMessageFields() {
         return tf;
     }
 $(document).ready(function(){
+    // <!-- Start of Smartsupp Live Chat script -->
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '24cb0f70c39995773a14b044623581688d760d60';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='//www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
     $(".navbar-toggle").on("click",function(){
         if(isOver($(".hero-video")) && $("#navbar").attr("aria-expanded")!=="true"){
             $(".menu-bar").addClass("background-blue");
