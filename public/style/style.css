@@ -324,8 +324,9 @@ h2{
 .logos.ere{
     background-image: url("../img/logos/ere.png");
 }
-.logos.se{
-    background-image: url("../img/logos/se.png");
+.logos.rm{
+    margin: 5px 0px;
+    background-image: url("../img/logos/recruiter.png");
 }
 .logos.scmp{
     background-image: url("../img/logos/scmp.png");
