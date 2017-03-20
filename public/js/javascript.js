@@ -42,6 +42,13 @@ function checkSendMessageFields() {
         }
         return tf;
     }
+var _mfq = _mfq || [];
+ (function() {
+   var mf = document.createElement("script");
+   mf.type = "text/javascript"; mf.async = true;
+   mf.src = "//cdn.mouseflow.com/projects/98e6ad72-92b7-40ab-a5d1-36b3a2973c42.js";
+   document.getElementsByTagName("head")[0].appendChild(mf);
+ })();
 $(document).ready(function(){
     $(".navbar-toggle").on("click",function(){
         if(isOver($(".hero-video")) && $("#navbar").attr("aria-expanded")!=="true"){
