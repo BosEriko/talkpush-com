@@ -579,3 +579,32 @@ footer .title {
     color: #88C930;
     font-weight: 400;
 }
+.locations .box{
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 10px 20px;
+    position: relative;
+    display: block;
+}
+.locations .hongkong{
+    background-image:url("../img/hongkong.png");
+}
+.locations .india{
+    background-image:url("../img/gurgaon.png");
+}
+.locations .philippines{
+    background-image: url("../img/manila.png")
+}
+.locations h2{
+    margin-top: 38%;
+    font-weight: 800;
+}
+.locations span{
+    margin-top: 0%;
+    font-weight: 600;
+}
