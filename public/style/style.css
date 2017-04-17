@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
-
 html,body{
     height: 100%;
     font-family: Helvetica, 'Open Sans', sans-serif;
@@ -597,9 +595,6 @@ footer .title {
   text-transform: none;
 }
 .jumbotron#calendly a.calendly-button{
-  border-color: #fff;
-  border-style: solid;
-  border-width: 2px;
   color: #575756;
   display: block;
   padding: 10px 20px;
@@ -607,8 +602,9 @@ footer .title {
   background-color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color .25s ease-in-out;
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: inherit;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 @media (min-width: 768px){
   .jumbotron#calendly a.calendly-button{
