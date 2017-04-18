@@ -201,6 +201,16 @@ $(document).ready(function() {
         $("#position").val(positionName);
         scrollTo(".form-apply");
     });
+    $('.apply4MLE').on('click', function() {
+        var isVisible = $(".form-apply").is(":visible");
+        if (!isVisible) {
+            $(".form-apply").toggle();
+        }
+        positionName = "Machine Learning Engineer";
+        $("#position-name").html(positionName);
+        $("#position").val(positionName);
+        scrollTo(".form-apply");
+    });
     $('.apply4CSE').on('click', function() {
         var isVisible = $(".form-apply").is(":visible");
         if (!isVisible) {
@@ -585,7 +595,7 @@ $(document).ready(function() {
         //            $('span#company_error').show();
         //            tf = false;
         //        }
-        //        
+        //
         //        if ($('#message').val() === "") {
         //            $('span#message_error').show();
         //            tf = false;
