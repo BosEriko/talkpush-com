@@ -1518,10 +1518,6 @@ span#message_error {
     font-weight: 300;
 }
 
-.pricing-plan .plan-content {
-    min-height: 230px;
-}
-
 .pricing-plan .plan-extra-content {
     border-top: 0px;
 }
@@ -1886,4 +1882,23 @@ span#message_error {
     margin-top: 0%;
     font-weight: 600;
     color: #fff
+}
+.topQuoteButton{
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgba(235, 93, 108, 1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0,0,0,.1);
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin: 10px;
+  color: #fff;
+  -webkit-transition: background-color .25s;
+  transition: background-color .25s;
+}
+.topQuoteButton:hover,
+.topQuoteButton:focus{
+  background-color: rgba(235, 93, 108, .9);
 }
