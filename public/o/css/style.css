@@ -1524,6 +1524,7 @@ span#message_error {
 
 .pricing-plan .plan-content ul {
     text-align: left;
+    min-height: 100px;
 }
 
 .plan-header b {
