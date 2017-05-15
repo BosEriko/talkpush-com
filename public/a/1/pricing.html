@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./o/css/bootstrap.css" rel="stylesheet">
+    <link href="./o/css/style.css" rel="stylesheet">
+    <link href="./o/css/responsive.css" rel="stylesheet">
+    <link href="./o/css/foundation-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./o/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./o/css/loading-sk-circle.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.4.4/parsley.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <title>Talkpush - Pricing</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46858485-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+
+      $(function() {
+        if(window.location.search ==="?telecom=1"){
+          $("#telecommModal").modal("show");
+        }
+        var moveLeft = 20;
+        var moveDown = 20;
+
+        $('#inter-creator').hover(function(e) {
+          $('.inter-creator.pop-up').show();
+        }, function() {
+          $('.inter-creator.pop-up').hide();
+        });
+
+        $('#inter-creator').mousemove(function(e) {
+          $(".inter-creator.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+
+        $('#resume-parsing').hover(function(e) {
+          $('.cv-parsing.pop-up').show();
+        }, function() {
+          $('.cv-parsing.pop-up').hide();
+        });
+
+        $('#resume-parsing').mousemove(function(e) {
+          $(".cv-parsing.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+
+        $('#high-volume-phoneline').hover(function(e) {
+          $('.high-volume-phoneline.pop-up').show();
+        }, function() {
+          $('.high-volume-phoneline.pop-up').hide();
+        });
+
+        $('#high-volume-phoneline').mousemove(function(e) {
+          $(".high-volume-phoneline.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+
+        $('#web-call-out').hover(function(e) {
+          $('.web-call-out.pop-up').show();
+        }, function() {
+          $('.web-call-out.pop-up').hide();
+        });
+
+        $('#web-call-out').mousemove(function(e) {
+          $(".web-call-out.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $('#sms-apply').hover(function(e) {
+          $('.sms-apply.pop-up').show();
+        }, function() {
+          $('.sms-apply.pop-up').hide();
+        });
+
+        $('#sms-apply').mousemove(function(e) {
+          $(".sms-apply.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $('#ad-landing-page').hover(function(e) {
+          $('.ad-landing-page.pop-up').show();
+        }, function() {
+          $('.ad-landing-page.pop-up').hide();
+        });
+
+        $('#ad-landing-page').mousemove(function(e) {
+          $(".ad-landing-page.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $('#ats-integration').hover(function(e) {
+          $('.ats-integration.pop-up').show();
+        }, function() {
+          $('.ats-integration.pop-up').hide();
+        });
+
+        $('#ats-integration').mousemove(function(e) {
+          $(".ats-integration.pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        $("#quote").on("click",function(e){
+          if(typeof $("input[name='plan']:checked").val() === "undefined"){
+            $(".additional .error").show();
+            var a = setInterval(function(){
+              $(".additional .error").hide();
+              clearInterval(a)
+            },5000);
+            $("#quoteModal").modal('hide');
+          }else{
+            $("#quoteModal").modal('show');
+          }
+          var planValue = $("input[name='plan']:checked").val();
+          var additionalValues = $('input:checkbox:checked').map(function() {
+            return this.value;
+          }).get();
+          var newline ="";
+          for(var i = 0; i <additionalValues.length;i++){
+            newline+="<br/>";
+          }
+          $("#selected-plan").html(planValue+newline)
+          var additionalValuesStr = "";
+          $.each(additionalValues,function(i,v){
+            additionalValuesStr+= v+"<br/>"
+          })
+          $("#additional-channels").html(additionalValuesStr===""?"N/A":additionalValuesStr);
+        })
+        // Starter
+        $(".topQuoteButton.starter").on("click",function(e){
+          $(".inputStarter").prop('checked',true);
+            if(typeof $("input[name='plan']:checked").val() === "undefined"){
+              $(".additional .error").show();
+              var a = setInterval(function(){
+                $(".additional .error").hide();
+                clearInterval(a)
+              },5000);
+              $("#quoteModal").modal('hide');
+            }else{
+              $("#quoteModal").modal('show');
+            }
+            var planValue = $("input[name='plan']:checked").val();
+            var additionalValues = $('input:checkbox:checked').map(function() {
+              return this.value;
+            }).get();
+            var newline ="";
+            for(var i = 0; i <additionalValues.length;i++){
+              newline+="<br/>";
+            }
+            $("#selected-plan").html(planValue+newline)
+            var additionalValuesStr = "";
+            $.each(additionalValues,function(i,v){
+              additionalValuesStr+= v+"<br/>"
+            })
+            $("#additional-channels").html(additionalValuesStr===""?"N/A":additionalValuesStr);
+        })
+        // Business
+        $(".topQuoteButton.business").on("click",function(e){
+          $(".inputBusiness").prop('checked',true);
+          if(typeof $("input[name='plan']:checked").val() === "undefined"){
+            $(".additional .error").show();
+            var a = setInterval(function(){
+              $(".additional .error").hide();
+              clearInterval(a)
+            },5000);
+            $("#quoteModal").modal('hide');
+          }else{
+            $("#quoteModal").modal('show');
+          }
+          var planValue = $("input[name='plan']:checked").val();
+          var additionalValues = $('input:checkbox:checked').map(function() {
+            return this.value;
+          }).get();
+          var newline ="";
+          for(var i = 0; i <additionalValues.length;i++){
+            newline+="<br/>";
+          }
+          $("#selected-plan").html(planValue+newline)
+          var additionalValuesStr = "";
+          $.each(additionalValues,function(i,v){
+            additionalValuesStr+= v+"<br/>"
+          })
+          $("#additional-channels").html(additionalValuesStr===""?"N/A":additionalValuesStr);
+        })
+        // Enterprise
+        $(".topQuoteButton.enterprise").on("click",function(e){
+          $(".inputEnterprise").prop('checked',true);
+          if(typeof $("input[name='plan']:checked").val() === "undefined"){
+            $(".additional .error").show();
+            var a = setInterval(function(){
+              $(".additional .error").hide();
+              clearInterval(a)
+            },5000);
+            $("#quoteModal").modal('hide');
+          }else{
+            $("#quoteModal").modal('show');
+          }
+          var planValue = $("input[name='plan']:checked").val();
+          var additionalValues = $('input:checkbox:checked').map(function() {
+            return this.value;
+          }).get();
+          var newline ="";
+          for(var i = 0; i <additionalValues.length;i++){
+            newline+="<br/>";
+          }
+          $("#selected-plan").html(planValue+newline)
+          var additionalValuesStr = "";
+          $.each(additionalValues,function(i,v){
+            additionalValuesStr+= v+"<br/>"
+          })
+          $("#additional-channels").html(additionalValuesStr===""?"N/A":additionalValuesStr);
+        })
+      });
+      $(document).ready(function(){
+        $("#telecommModal .btnClose").on("click",function(e){
+          $("#telecommModal").modal("hide");
+        });
+        $("#telecomm-country").on("change",function(e){
+          $("#telecomm-charge").html(e.target.value);
+        });
+        $('#quoteModal form').parsley();
+        $("#quoteModal form").submit(function(e){
+          var additionalValues = $('input:checkbox:checked').map(function() {
+            return this.value;
+          }).get();
+          var additionalValuesStr = ""
+          $.each(additionalValues,function(i,v){
+            additionalValuesStr+= v;
+            if(additionalValues.length-1 != i){
+              additionalValuesStr +=" & ";
+            }
+          })
+          e.preventDefault();
+          console.log("Load")
+          $(".loading-spinner").css("display","inline-block");
+          $.ajax({
+            url: "./quotation-form",
+            dataType: 'json',
+            contentType: 'application/json',
+            type: 'POST',
+            data : JSON.stringify({
+              email:$("#quoteModal input[type='email']").val(),
+              name:$("#quoteModal input[name='name']").val(),
+              company:$("#quoteModal input[name='company']").val(),
+              phone:$("#quoteModal input[name='phone']").val(),
+              volumes:$("input[name='plan']:checked").val(),
+              additionalChannels:additionalValuesStr
+            }),
+            accepts: "application/json",
+            error: function(req, err){
+              $(".loading-spinner").hide();
+              $("#quoteModal .error").show();
+              var a = setInterval(function(){
+                $("#quoteModal .error").hide();
+                clearInterval(a)
+              },5000);
+              console.log('error message: ' + err);
+            },
+            success: function(json) {
+              $(".loading-spinner").hide();
+              $("#quoteModal input[type='email']").val("")
+              $("#quoteModal input[name='name']").val("")
+              $("#quoteModal input[name='company']").val("")
+              $("#quoteModal input[name='phone']").val("")
+              $("#quoteModal .form").hide();
+              $("#quoteModal .thankyoumsg").show();
+              var a = setInterval(function(){
+                $('#quoteModal').modal('hide');
+                clearInterval(a)
+              },5000);
+              var b = setInterval(function(){
+                $("#quoteModal .thankyoumsg").hide();
+                clearInterval(b)
+              },5000);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="header-top"></div>
+    <div class="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed mobile-menu-icon" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar sub-corp-color-bg"></span>
+            <span class="icon-bar sub-corp-color-bg"></span>
+            <span class="icon-bar sub-corp-color-bg"></span>
+            </button>
+            <div class="logo">
+              <a href="./index.html" class="navbar-brand active"><img class="img-responsive" src="././o/images/logo.png"></a>
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SOLUTIONS <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="./features.html">Automation</a></li>
+                  <li><a href="./sourcing.html">Sourcing</a></li>
+                  <li><a href="./chatbot.html">Chatbot</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </li>
+              <li>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMPANY <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="./about.html">About Us</a></li>
+                  <li><a href="./partnership.html">Partners</a></li>
+                  <li><a href="http://blog.talkpush.com">Blog</a></li>
+                  <li><a href="./jobs.html">Career</a></li>
+                </ul>
+              <li><a href="http://my.talkpush.com/" class="btnMytalkpush">Log In</a></li>
+              <li><a class="btnFreeTrial" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+      </nav>
+      <div class="container">
+        <br/>
+        <h1 class="intro-header" style="color:#575756;text-align:center;max-width:750px;margin:0 auto;font-weight:600;">
+          Ramp up your Hiring Volumes with Talkpush
+        </h1>
+        <p style="color:#323A45;text-align:center;max-width:690px;margin:0 auto;font-size:18px;">
+          Talkpush offers pricing that scales with your recruitment volumes. You pay as you go and upgrade or downgrade your plan based on your projected volumes.
+        </p>
+        <br/>
+      </div>
+    </div>
+    <div class="wrap pricing-plan" style="background:#ffffff">
+      <div class="container">
+        <div class="row">
+          <h4>SELECT ONE OF THE FOLLOWING BASED ON YOUR PROJECTED VOLUME</h4>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="plan-header">
+              <input type="radio" name="plan" value="Starter" class="inputStarter">
+              <b>Starter</b>
+              <div style="font-weight: normal;">Starts at</div>
+              <h5><strong style="color:#444;">$980 per month</strong></h5>
+              <h6>&nbsp;</h6>
+            </div>
+            <div class="plan-content">
+              <ul>
+                <li>No Set up fee</li>
+                <li>3 users (single country)</li>
+                <li>Up to 500 interviews per month included</li>
+                <li>Up to 2,000 SMS sent per month</li>
+              </ul>
+            </div>
+            <div style="background-color: #88C930;text-align: center;">
+              <button class="topQuoteButton starter">Receive an Email Quote</button>
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-4">
+            <div class="plan-header">
+              <input type="radio" name="plan" value="Business" class="inputBusiness">
+              <b>Business</b>
+              <div style="font-weight: normal;">Starts at</div>
+              <h5><strong style="color:#444;">$2,500 per month</strong></h5>
+              <h6>&nbsp;</h6>
+            </div>
+            <div class="plan-content">
+              <ul>
+                <li>No Set up fee</li>
+                <li>10 users in a single country</li>
+                <li>Up to 1,000 interviews per month</li>
+                <li>Up to 5,000 SMS per month</li>
+              </ul>
+            </div>
+            <div style="background-color: #88C930;text-align: center;">
+              <button class="topQuoteButton business">Receive an Email Quote</button>
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-4">
+            <div class="plan-header">
+              <input type="radio" name="plan" value="Enterprise" class="inputEnterprise">
+              <b>Enterprise</b>
+              <div><br /></div>
+              <h5><strong style="color:#444;">Ask for a Custom Quote</strong></h5>
+              <h6>&nbsp;</h6>
+            </div>
+            <div class="plan-content">
+              <ul>
+                <li>Global / Multi-Country Rollout</li>
+                <li>Unlimited Interview Packages</li>
+                <li>Integrate with your ATS</li>
+              </ul>
+            </div>
+            <div style="background-color: #88C930;text-align: center;">
+              <button class="topQuoteButton enterprise">Receive an Email Quote</button>
+            </div>
+            <br/>
+          </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p style="font-size: 11px; color: #444;">
+              <strong>Terms and conditions apply:</strong> Additional charges apply if more than 500 interviews per month. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">&nbsp;</div>
+    </div>
+    <div class="wrap additional">
+      <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <h1 class="intro-header" style="text-align:center;max-width:750px;margin:0 auto;font-weight:600;">
+            Grow your Talent Pool with these Options
+          </h1>
+          <p style="text-align:center;max-width:800px;margin:0 auto;font-size:18px;">
+            We’re excited about working with you to increase the size of your talent pool. Here are just some of the solutions we can develop with you to increase your sourcing volumes.
+          </p>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <h4>SUPPORT YOUR RECRUITMENT CHANNELS WITH THESE ADD-ON OPTIONS</h4>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header" style="padding-left: 0;padding-right: 0">
+              <input type="checkbox" name="additional-option" value="Facebook Chatbot">
+              <b>Facebook Chatbot<br/>Starting at $180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              Receiving a steady stream of inquiries from candidates on your Facebook page? Install the Talkpush Facebook Chatbot to automatically validate which job they want to apply to and to add them to your Talkpush campaign.<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header ">
+              <input type="checkbox" name="additional-option" value="Referral Portal">
+              <b>Referral Portal<br/>$180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              Make it easier for employees to invite their friends via social media or SMS. We custom-design your web portal in line with your company’s brand and data privacy law. You can track and reward employees’ contributions.<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header ">
+              <input type="checkbox" name="additional-option" value="Branded Mobile Apps">
+              <b>Branded Mobile Apps<br/>$180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              Offer candidates a completely branded experience via a mobile phone application where they can browse and apply for jobs. Candidates will also be able to pre-qualify themselves for a role via digital interview.<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+          <div class="col-sm-3 additional-box">
+            <div class="additional-box-header ">
+              <input type="checkbox" name="additional-option" value="SMS Apply">
+              <b>SMS Apply<br/>$180 per month*</b>
+              <h6>Starting price, terms and conditions apply</h6>
+            </div>
+            <div class="additional-box-content ">
+              You can activate a dedicated phone number for your candidates to send in their application via SMS. As soon as they SMS, they are added to a campaign and called back to complete the digital interview. No internet access required!<br/>
+              <!-- <u><a>(See Detail)</a></u> -->
+            </div>
+            <br/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button id="quote">RECEIVE AN EMAIL QUOTE</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+             <span class="error"><br/>Please select your projected volume first.</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">&nbsp;</div>
+    </div>
+    <div class="container-fluid lightgrey-row featured-on">
+      <div class="container clients" id="featured-on">
+        <div class="row">
+          <h2>Featured on</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-sm-6 col-sm-offset-0">
+            <a href="http://e27.co/can-talkpush-disrupt-the-recruitment-industry-20141211/" target="_blank"><img src="./o/images/e27-g.png"/></a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-sm-offset-0">
+            <a href="http://ere.net/2014/11/08/this-startup-wants-you-on-the-phone-not-video/" target="_blank">
+            <img src="./o/images/tag-g.png"/>
+            </a>
+          </div>
+          <div class="col-md-1 ts-box-media-logo">&nbsp;</div>
+          <div class="col-md-3 col-sm-6">
+            <a href="https://www.techinasia.com/talkpush-phone-screening-job-candidates/" target="_blank">
+            <img src="./o/images/techinasia-g.png"/>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-offset-0">
+            <a href="http://www.ere.net/2014/11/08/this-startup-wants-you-on-the-phone-not-video/" target="_blank">
+            <img src="./o/images/ere-g.png"/>
+            </a>
+          </div>
+          <div class="col-md-2 col-md-offset-0 col-sm-6">
+            <a href="http://www.strategyeyedigital.com/2015/09/11/seedcampweek2015/" target="_blank">
+            <img src="./o/images/se-g.png"/>
+            </a>
+          </div>
+          <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0">
+            <a href="http://www.scmp.com/tech/start-ups/article/2001966/hk-startup-looks-make-mass-hiring-easier-talkpush" target="_blank"><img src="./o/images/scmp-g.png"/></a>
+          </div>
+          <div class="col-md-3 col-md-offset-0 col-sm-6">
+            <a href="https://www.hrtoday.ch/fr/article/doper-lefficience-du-recrutement-dans-les-pays-mergents" target="_blank">
+            <img src="./o/images/hrtoday-g.png"/>
+            </a>
+          </div>
+          <div class="col-md-3 col-md-offset-0 col-sm-6">
+            <a href="https://issuu.com/hrmagazinehk/docs/hrmag_summer_2016_issuu/50" target="_blank">
+            <img src="./o/images/hrmag-g.png"/>
+            </a>
+          </div>
+        </div>
+        <div class="row">&nbsp;</div>
+      </div>
+    </div>
+    <!-- Menu Bar Sign up form -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="wrap form-wrap">
+              <div class="container-fluid form-container" id="contact-form-container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-xs-12 interested-in">
+                    <h2>Send us your details to receive a free demo</h2>
+                  </div>
+                  <div class="contact-form box">
+                    <div class="row">
+                      <div class="col-md-8 col-xs-10 col-xs-offset-1 col-md-offset-2">
+                        <form id="contact-form" class="box" action="/contact-form" method="POST">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="fullName" placeholder=" NAME" required>
+                            <span id="fullName_error">Please fill out the NAME field</span>
+                          </div>
+                          <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder=" E-MAIL" required>
+                            <span id="email_error">Please fill out the E-MAIL field</span>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="company" placeholder=" COMPANY">
+                            <!--                        <span id="company_error">Please fill out the COMPANY field</span>-->
+                          </div>
+                          <div class="form-group">
+                            <textarea rows="5" class="form-control" id="message" placeholder=" REQUEST A DEMO / ASK FOR A FREE TRIAL / JUST SAY HI"></textarea>
+                            <!--                        <span id="message_error">Please fill out the MESSAGE field</span>-->
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-">
+                              <button type="submit" class="btn btn-form">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-xs-12 form-message-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Telecomm Modal -->
+    <div class="modal fade" id="telecommModal" tabindex="-1" role="dialog" aria-labelledby="telecommModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="btnClose">
+                <i class="fa fa-times"></i>
+              </div>
+              <div class="row">
+                <h3>Telecom charges: Per completed interview</h3>
+                <p>Talkpush charges a per-completed-interview fee for each completed interview at the end of the month. The charge varies depending on the method and the location of the call.</p>
+                <u><b>All inclusive package</b></u>
+                <p>If you would like to receive a quotation for an all-inclusive package, which would include all the telecom expenses (phone calls and SMS) that you project to be making, you can email <a href="mailto:hello@talkpush.com">hello@talkpush.com</a> with an estimate for your total annual interviewing volumes (number of candidates interviewed) by country. </p>
+                <u><b>Interviews completed via the Web / Messaging / Mobile App</b></u>
+                <p>
+                  Candidate can complete their digital interview over the web, via Facebook Messenger, via a mobile application (downloadable for free), or via a compatible internet browser (Chrome, Firefox, Explorer) on WebRTC. The initial 100 completed interviews completed via these methods will not be charged to you.
+                  <br/><br/>
+                  Beyond the initial 100 interviews completed over Web or Messaging or Mobile App, <b>the cost per completed interview is $0.40.</b>
+                </p>
+                <u><b>Interviews completed over the phone</b></u>
+                <p>If you want to maximize your participation rate (some candidates may not want to use the mobile app or their browser), we recommend that you conduct the digital interviews by calling the candidates directly on their phone. It is still the most effective way to get a hold of someone. Talkpush takes on the telecommunication charges for the call made to the candidates and charges you a varying rate depending on the location of the candidate: </p>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-1">
+                  Where are your candidates?
+                </div>
+                <div class="col-sm-5">
+                  Price per completed interview
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                  <select id="telecomm-country">
+                    <option value="$0.90"> Australia </option>
+                    <option value="$0.90"> Brazil </option>
+                    <option value="$0.50"> China </option>
+                    <option value="$1.00"> France </option>
+                    <option value="$1.00"> Germany </option>
+                    <option value="$0.50"> Hong Kong </option>
+                    <option value="$0.22"> India  </option>
+                    <option value="$0.90"> Indonesia </option>
+                    <option value="N/A"> Kenya </option>
+                    <option value="$0.80"> Malaysia </option>
+                    <option value="$1.00"> Macau </option>
+                    <option value="$1.80"> Mauritius </option>
+                    <option value="N/A"> Morocco </option>
+                    <option value="$2.00"> Philippines </option>
+                    <option value="$0.80"> Romania </option>
+                    <option value="$1.00"> Russia </option>
+                    <option value="$1.00"> Singapore </option>
+                    <option value="$0.90"> South Africa </option>
+                    <option value="$1.00"> Sweden </option>
+                    <option value="$0.80"> Thailand </option>
+                    <option value="$1.00"> United Kingdom </option>
+                    <option value="$0.80"> United States </option>
+                    <option value="$1.20"> Vietnam </option>
+                  </select>
+                </div>
+                <div class="col-sm-5">
+                  <b><span id="telecomm-charge">$0.8</span></b>
+                </div>
+              </div>
+              <div class="row">
+                &nbsp;
+              </div>
+              <div class="row">
+                This charge covers all related telecommunication expenses, including missed or incomplete phone calls to candidates.  An invoice for the month is then calculated and sent based on the number of completed interviews multiplied by the applicable per-interview rate, as listed above.
+              </div>
+              <div class="row">
+                <u><b>Additional SMS package</b></u>
+              </div>
+              <div class="row">
+                <p>Should you need to send out more than SMS package that is included in your subscription package, you can purchase an extra package of 5,000 SMS for $150. Every package partially consumed is counted in full for that month.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+              <div class="row">
+                <h3>Yes, please email me a quote for the subscription to the following services:</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-1 table-header">
+                  <span><b>SELECTED PLAN</b></span>
+                </div>
+                <div class="col-sm-5 table-header">
+                  <span><b>ADDITIONAL CHANNELS</b></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-1 table-content">
+                  <span id="selected-plan">SELECTED PLAN</span>
+                </div>
+                <div class="col-sm-5 table-content">
+                  <span id="additional-channels">ADDITIONAL CHANNELS</span>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" name="name" placeholder="Name" required="">
+                </div>
+                <div class="col-sm-6">
+                  <input type="email" name="email" placeholder="Work Email" required="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" name="company" placeholder="Company" required="">
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" name="phone" placeholder="Telephone" required="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-8">
+                  <button> <div class="loading-spinner"></div> Submit</button>
+                </div>
+              </div>
+              <div class="row">
+                <span class="error">Error ocurred. Please try again later.</span>
+              </div>
+              </form>
+              <div class="row thankyoumsg">
+                <br/><br/>
+                <h2 style="color:#ffffff">Thank you for your enquiry.</h2>
+                <br/><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inter-creator pop-up">
+      Interview creation feature allowing you to design and customize the interview audio questionnaire for each campaign, including access to the extensive Interview Question Database.
+    </div>
+    <div class="cv-parsing pop-up">
+      Résumé parsing technology to import résumés from all your recruitment channels, including job boards, career sites, Facebook, etc.
+    </div>
+    <div class="high-volume-phoneline pop-up">
+      Able to handle more than 10 concurrent incoming calls
+    </div>
+    <div class="web-call-out pop-up">
+      Web call out feature allows candidates to receive every phone call instead of initiating it, without having to incur any telecom charges.
+    </div>
+    <div class="sms-apply pop-up">
+      Activate a dedicated phone number where candidates can apply by sending their details via SMS. Candidates can simply SMS their name and campaign number and they will be automatically added to a particular Talkpush campaign and be called back by Talkpush immediately.
+    </div>
+    <div class="ad-landing-page pop-up">
+      Ad landing pages are custom designed to be mobile friendly, easy to complete, and in accordance with your company branding guidelines.
+    </div>
+    <div class="ats-integration pop-up">
+      We offer integration with all the leading ATS systems for our enterprise customers. Integration can be done at different stages of the recruitment according to your preferences (pre or post digital interview).
+    </div>
+    <div class="footer container-fluid">
+      <div class="row">
+        &nbsp;
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="title">About Talkpush:</div>
+          <div class="content">Talkpush is making volume hiring fun and personal again. Talkpush is a recruitment platform that leverages the power of messaging and social media. The solution consists of Stanley, a recruitment chatbot compatible with Facebook and WeChat, which conducts interviews and an application management tool, which allows recruiters to evaluate and hire candidates faster than ever before.</div>
+          <br>
+        </div>
+        <div class="col-md-2 col-md-offset-1 col-sm-offset-0 col-sm-4">
+          <div class="title">
+            SOLUTIONS
+          </div>
+          <br/>
+          <div class="content">
+              <a href="./features.html">Automation</a><br/>
+              <a href="./sourcing.html">Sourcing</a><br/>
+              <a href="./chatbot.html">Chatbot</a><br/>
+              <a href="./pricing.html">Pricing</a><br/>
+          </div>
+        </div>
+        <div class="col-md-1 col-sm-4">
+          <div class="title">
+            COMPANY
+          </div>
+          <br/>
+          <div class="content">
+              <a href="./about.html">About Us</a><br/>
+              <a href="./partnership.html">Partners</a><br/>
+              <a href="http://blog.talkpush.com">Blog</a><br/>
+              <a href="./jobs.html">Career</a><br/>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <div class="title">
+            OTHERS
+          </div>
+          <br/>
+          <div class="content">
+              <a href="http://read.corilla.com/Talkpush/User-Guide.html#">Documentation</a><br/>
+              <!-- <a>FAQ</a><br/> -->
+              <a href="./termsandcond.html">Terms &amp; Conditions</a><br/>
+              <a href="./privacy-policy.html">Privacy Policy</a><br/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="title">
+            CONTACT
+          </div>
+          <br/>
+          <div class="content">
+              hello@talkpush.com<br/>
+              +(852) 9188 7562&nbsp;&nbsp;&nbsp;|&nbsp;Hong Kong<br/>
+              +(63) 917 5075734&nbsp;|&nbsp;Philippines<br/>
+              +(33) 7 82 96 83 16|&nbsp;France<br/>
+              +(44) 7751 860193&nbsp;|&nbsp;UK<br/>
+              +(1) 415 363 9911&nbsp;&nbsp;|&nbsp;United States<br/>
+          </div>
+          <div class="social-icon">
+            <a href="https://www.facebook.com/letthetalenttalk"><img src="./o/images/social-icons/facebook.png" width="26px"></a>
+            <a href="https://www.twitter.com/talkpush"><img src="./o/images/social-icons/twitter.png" width="26px"></a>
+            <a href="https://www.linkedin.com/company/talkpush"><img src="./o/images/social-icons/linkedin.png" width="26px"></a>
+            <a href="https://www.youtube.com/c/Talkpush"><img src="./o/images/social-icons/youtube.png" width="26px"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="title">
+            OFFICE
+          </div>
+          <br/>
+          <div class="content">
+              Hong Kong:
+              Unit 6, 8F,<br/>
+              Arion Commercial Centre,<br/>
+              2-12 Queen's Road West,<br/>
+              Sheung Wan, Hong Kong<br/>
+              <br/>
+              Philippines: <br/>
+              11th Floor
+              Pearl Bank Center, <br/>
+              Valero St. Bel Air Makati<br/>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        &nbsp;
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="content">
+            All right reserved © Talkpush 2016
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        &nbsp;
+      </div>
+    </div>
+    <a class="back-to-top" style="display: inline;">
+    <i class="fa fa-arrow-circle-up"></i>
+    </a>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="./o/js/bootstrap.js"></script>
+    <script src="./o/js/javascript.js"></script>
+  </body>
+</html>

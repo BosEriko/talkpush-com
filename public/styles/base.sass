@@ -1,0 +1,872 @@
+// compileOnSave
+
+// Imports
+@import normalize.css
+@import aos.css
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+@import url('https://fonts.googleapis.com/css?family=Dosis')
+
+// Colors
+$theme: #72de2f
+
+// Breakpoints
+$break-smallest: 320px
+$break-smaller: 481px
+$break-small: 641px
+$break-medium: 961px
+$break-large: 1025px
+$break-larger: 1281px
+
+// Cross Browser Compatibility
+@mixin prefix($property, $value)
+    -webkit-#{$property}: $value
+    -moz-#{$property}: $value
+    -ms-#{$property}: $value
+    -o-#{$property}: $value
+
+// Flex Code Shortcut
+@mixin display-flex()
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+@mixin flex-1()
+  -webkit-box-flex: 1
+  -ms-flex: 1
+  flex: 1
+
+@mixin align-items-center()
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+
+// Global Style
+\:root
+    font-size: 14px
+    transition: font-size 0.3s 0s ease-in-out
+    -webkit-transition: font-size 0.3s 0s ease-in-out
+    @media screen and (min-width: $break-smaller)
+        font-size: 15px
+    @media screen and (min-width: $break-medium)
+        font-size: 16px
+    @media screen and (min-width: $break-larger)
+        font-size: 17px
+
+body
+    background-attachment: fixed
+    background-color: #fff
+    background-image: url("../images/background.jpg")
+    background-position: center
+    background-size: cover
+    color: #000
+    font-family: 'Dosis', sans-serif
+    font-size: 1rem
+    overflow-x: hidden
+
+a,
+a:hover
+    color: #444
+
+*
+    box-sizing: border-box
+
+.container
+    margin: 0 auto
+    max-width: 980px
+    padding: 0 10px
+    width: 100%
+h1.gl
+    font-weight: normal
+    margin: 0
+    padding: 20px 20px 0 20px
+    text-align: center
+    &::after
+        background-color: #fff
+        content: ""
+        display: block
+        height: 5px
+        margin: 20px auto 0 auto
+        width: 40px
+p.gl
+    margin: 0
+    padding: 20px
+    text-align: center
+
+// Video Parallax
+#video-parallax
+  display: none
+  height: 100vh
+  left: 0
+  overflow: hidden
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: -1
+  @media screen and (min-width: $break-medium)
+    display: block
+  video
+    width: 100%
+
+// Header
+header
+    @include prefix(transition, all 0.3s ease-in-out)
+    background-color: #fff
+    box-shadow: 0 0 10px rgba(0,0,0,.25)
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 2
+    @media screen and (min-width: $break-medium)
+        background-color: transparent
+        box-shadow: none
+    &.active
+        background-color: #fff
+        box-shadow: 0 0 10px rgba(0,0,0,.25)
+        .divider
+            .logo
+                a.logo
+                    background-image: url("../images/logo-black.png")
+                    height: 40px
+                    margin: 15px 0
+                    width: 101px
+            .menu
+                ul
+                    li
+                        a
+                            color: #444
+                            &:before
+                                background-color: #444
+                        &:last-child
+                            a
+                                @media screen and (min-width: $break-medium)
+                                    background-color: #555
+                                    border-color: rgba(0,0,0,.2)
+                                &:hover,
+                                &:focus
+                                    @media screen and (min-width: $break-medium)
+                                        background-color: #333
+    .divider
+        @media screen and (min-width: $break-medium)
+            @include display-flex()
+            @include align-items-center()
+        .logo
+            @include display-flex()
+            @include align-items-center()
+            a.logo
+                @include prefix(transition, all 0.3s ease-in-out)
+                background-image: url("../images/logo-black.png")
+                background-repeat: none
+                background-size: cover
+                display: inline-block
+                height: 40px
+                margin: 15px 0
+                width: 101px
+                @media screen and (min-width: $break-medium)
+                    background-image: url("../images/logo-white.png")
+                    height: 60px
+                    margin: 20px 0
+                    width: 152px
+                span
+                    display: none
+            a.menu-button
+                @include flex-1()
+                font-size: 1.5rem
+                margin-right: 20px
+                text-align: right
+                @include prefix(transition, color 0.3s ease-in-out)
+                @media screen and (min-width: $break-medium)
+                    display: none
+                &:hover,
+                &:focus
+                    color: $theme
+        .menu
+            border-color: rgba(0,0,0,.1)
+            border-style: solid
+            border-width: 1px 0 0 0
+            display: none
+            text-align: center
+            @media screen and (min-width: $break-medium)
+                @include flex-1()
+                border: none
+                display: block !important
+                text-align: right
+            color: #fff
+            ul
+                list-style-type: none
+                margin: 0
+                padding: 10px
+                li
+                    display: block
+                    @media screen and (min-width: $break-medium)
+                        display: inline-block
+                        margin-right: 20px
+                    a
+                        color: #444
+                        display: block
+                        overflow: hidden
+                        padding: 10px
+                        position: relative
+                        text-decoration: none
+                        @media screen and (min-width: $break-medium)
+                            @include prefix(transition, color 0.3s ease-in-out)
+                            color: #fff
+                            display: inline-block
+                        &:before
+                            @media screen and (min-width: $break-medium)
+                                @include prefix(transform, scaleX(0))
+                                @include prefix(transition, transform 0.3s ease-in-out)
+                                background-color: #fff
+                                bottom: 0
+                                content: ""
+                                height: 2px
+                                left: 0
+                                position: absolute
+                                width: 100%
+                        &:hover,
+                        &:focus
+                            color: $theme
+                            &:before
+                                @include prefix(transform, scaleX(1))
+                    &:last-child
+                        margin: 0
+                        a
+                            @media screen and (min-width: $break-medium)
+                                @include prefix(transition, background-color 0.3s ease-in-out)
+                                background-color: rgba(255,255,255,.25)
+                                border-color: rgba(0,0,0,.25)
+                                border-style: solid
+                                border-width: 3px
+                                border-radius: 100px
+                                color: #fff
+                                padding: 10px 20px
+                                text-decoration: none
+                            &:before
+                                display: none
+                            &:hover,
+                            &:focus
+                                @media screen and (min-width: $break-medium)
+                                    background-color: rgba(136,201,48,.75)
+                                    color: #fff
+                            i
+                                display: none
+                                margin-right: 10px
+                                @media screen and (min-width: $break-medium)
+                                    display: inline
+// Top Section
+@keyframes see-more-animation
+    33%
+        @include prefix(transform, translateY(0))
+    66%
+        @include prefix(transform, translateY(-20px))
+    99%
+        @include prefix(transform, translateY(0))
+#top-section
+  @include display-flex()
+  @include align-items-center()
+  background-color: rgba(0,0,0,.5)
+  background-image: url("../images/filter.png")
+  box-shadow: inset 0 -10px 10px rgba(0,0,0,.25)
+  height: 100vh
+  overflow: hidden
+  position: relative
+  width: 100%
+  z-index: 1
+  .text
+    @include flex-1()
+    color: #fff
+    text-align: center
+    h3
+      font-size: 2rem
+      font-weight: normal
+      line-height: 3rem
+      margin: 0
+      padding: 0
+      text-shadow: 5px 5px 0 rgba(0,0,0,.25)
+    ul
+      @media screen and (min-width: $break-medium)
+        @include display-flex()
+      list-style-type: none
+      margin: 20px 0 0 0
+      padding: 0
+      li
+        @media screen and (min-width: $break-medium)
+          @include flex-1()
+          text-align: left
+        &:nth-child(1)
+          @media screen and (min-width: $break-medium)
+            text-align: right
+        a.main
+          background-color: rgba(136,201,48,.75)
+        a
+          @include prefix(transition, transform 0.3s ease-in-out)
+          background-color: rgba(255,255,255,.25)
+          border-color: rgba(0,0,0,.25)
+          border-style: solid
+          border-width: 2px
+          color: #fff
+          display: inline-block
+          margin: 10px
+          max-width: 250px
+          padding: 10px
+          text-align: center
+          text-decoration: none
+          width: 100%
+          &:focus,
+          &:hover
+            @include prefix(transform, scale(1.1))
+          i
+            margin-right: 5px
+  .see-more
+      animation-duration: 3s
+      animation-iteration-count: infinite
+      animation-name: see-more-animation
+      bottom: 0
+      font-size: 2.5rem
+      left: 0
+      margin-bottom: 20px
+      position: absolute
+      right: 0
+      text-align: center
+      width: 100%
+      a
+          @include prefix(transition, color 0.3s ease-in-out)
+          color: rgba(255,255,255,.5)
+          text-decoration: none
+          &:hover,
+          &:focus
+              color: #fff
+
+// Adapting Section
+#adapting-section
+    background-image: url("../images/section-backgrounds/adapting.jpg")
+    background-position: center
+    background-size: cover
+    color: #444
+    .filter
+        background-color: rgba(255,255,255,.95)
+        padding: 2rem 0
+        h1.gl
+            &::after
+                background-color: #444
+        @media screen and (min-width: $break-medium)
+            padding: 5rem 0
+        .divide
+            @media screen and (min-width: $break-medium)
+                @include display-flex()
+            .box
+                @media screen and (min-width: $break-medium)
+                    @include flex-1()
+                background-color: #fff
+                border-color: rgba(0,0,0,0.15)
+                border-radius: 3px
+                border-style: solid
+                border-width: 1px
+                box-shadow: 0 0 10px rgba(0,0,0,0.2)
+                margin: 20px
+                overflow: hidden
+                .stats
+                    background-color: #252525
+                    color: #fff
+                    .st-title
+                        color: $theme
+                        font-size: .85rem
+                        padding: 10px
+                        text-align: center
+                    .st-graph
+                        border-color: rgba(255,255,255,.5)
+                        border-style: solid
+                        border-width: 0 0 1px 0
+                        position: relative
+                        &::before
+                            content: ""
+                            display: block
+                            padding-top: 50%
+                        .line
+                            border-color: rgba(255,255,255,.5)
+                            border-style: dotted
+                            border-width: 1px 0 0 0
+                            left: 0
+                            position: absolute
+                            top: 0
+                            width: 100%
+                            span.number
+                                font-size: .5rem
+                                left: 5px
+                                position: absolute
+                                top: 5px
+                        .bars
+                            bottom: 0
+                            height: 100%
+                            left: 0
+                            position: absolute
+                            width: 100%
+                            @include display-flex()
+                            .bar-holder
+                                height: 100%
+                                position: relative
+                                text-align: center
+                                @include flex-1()
+                                .bar
+                                    background-color: rgba(255,255,255,.5)
+                                    bottom: 0
+                                    font-size: .75rem
+                                    left: 50%
+                                    margin-left: -1rem
+                                    padding-top: 5px
+                                    position: absolute
+                                    text-align: center
+                                    width: 2rem
+                    .st-bar-description
+                        @include display-flex()
+                        font-size: .75rem
+                        .item
+                            text-align: center
+                            padding: 10px
+                            @include flex-1()
+                .data
+                    @media screen and (min-width: $break-medium)
+                        @include flex-1()
+                    .title
+                        font-weight: bold
+                        padding: 10px 10px 5px 10px
+                    .message
+                        padding: 0 10px 10px 10px
+
+
+// Drive Numbers Section
+#drive-section
+    background-image: url("../images/section-backgrounds/drive.jpeg")
+    background-position: center
+    background-size: cover
+    color: #fff
+    .filter
+        background-color: rgba(50,58,69,.95)
+        padding: 2rem 0
+        @media screen and (min-width: $break-medium)
+            padding: 5rem 0
+        .divide
+            @media screen and (min-width: $break-medium)
+                @include display-flex()
+            .box
+                margin: 20px
+                text-align: center
+                @media screen and (min-width: $break-medium)
+                    @include flex-1()
+                .numbers
+                    color: $theme
+                    font-size: 3rem
+                    margin-bottom: 20px
+                .message
+                    font-size: 1.25rem
+
+// Assistant Section
+#assistant-section
+    background-image: url("../images/section-backgrounds/assistant.jpeg")
+    background-position: center
+    background-size: cover
+    color: #444
+    .filter
+        background-color: rgba(255,255,255,.95)
+        padding: 2rem 0
+        h1.gl
+            &::after
+                background-color: #444
+        @media screen and (min-width: $break-medium)
+            padding: 5rem 0
+        .divide
+            @media screen and (min-width: $break-medium)
+                @include display-flex()
+            .box
+                @media screen and (min-width: $break-medium)
+                    @include flex-1()
+                .title
+                    font-size: 1.15rem
+                    font-weight: bold
+                    padding: 20px
+                    text-align: center
+                .iphone
+                    margin: 0 auto 20px auto
+                    position: relative
+                    width: 200px
+                    z-index: 1
+                    img.frame
+                        position: relative
+                        max-width: 100%
+                        z-index: 2
+                    .video-holder
+                        background-color: #444
+                        height: 300px
+                        left: 17px
+                        overflow: hidden
+                        position: absolute
+                        top: 49px
+                        width: 163px
+                        z-index: 1
+                        img.video
+                            height: 100%
+                            width: 100%
+
+
+// Pricing Section
+#pricing-section
+    background-image: url("../images/section-backgrounds/pricing.jpeg")
+    background-position: center
+    background-size: cover
+    color: #fff
+    .filter
+        background-color: rgba(50,58,69,.95)
+        padding: 2rem 0
+        @media screen and (min-width: $break-medium)
+            padding: 5rem 0
+        .divide
+            @media screen and (min-width: $break-medium)
+                @include display-flex()
+            .box
+                background-color: #fff
+                border-radius: 3px
+                box-shadow: 0 0 10px rgba(0,0,0,.5)
+                color: #000
+                margin: 20px
+                @media screen and (min-width: $break-medium)
+                    @include flex-1()
+                h1
+                    color: $theme
+                    font-size: 1.5rem
+                    font-weight: normal
+                    margin: 0
+                    padding: 20px
+                    text-align: center
+                .price
+                    background-color: #dedede
+                    padding: 20px
+                    text-align: center
+                    span.sign
+                        color: $theme
+                        font-size: 1.5rem
+                        vertical-align: top
+                    span.number
+                        font-size: 2rem
+                        line-height: 2rem
+                        padding: 0 10px
+                        vertical-align: baseline
+                    span.time
+                        vertical-align: baseline
+                    .range
+                        font-size: .75rem
+                        margin-bottom: 10px
+                        opacity: .75
+                .cta
+                    a
+                        @include prefix(transition, transform .25s ease-in-out)
+                        background-color: $theme
+                        border-color: rgba(0,0,0,.35)
+                        border-radius: 3px
+                        border-style: solid
+                        border-width: 1px
+                        color: rgba(0,0,0,.75)
+                        display: block
+                        margin: 20px 20px 0 20px
+                        padding: 10px
+                        text-align: center
+                        text-decoration: none
+                        display: none // temp
+                        &:hover,
+                        &:focus
+                            @include prefix(transform, scale(1.05))
+                ul
+                    list-style-type: none
+                    margin: 0
+                    padding: 0 20px
+                    li
+                        border-color: rgba(0,0,0,.1)
+                        border-style: solid
+                        border-width: 0 0 1px 0
+                        padding: 20px 0
+                        &:last-child
+                            border-width: 0
+        h4.subtitle
+            font-size: .85rem
+            font-weight: normal
+            padding: 0 20px 20px 20px
+            a
+                color: $theme
+                text-decoration: none
+                &:hover,
+                &:focus
+                    text-decoration: underline
+
+// Testimonial Section
+#testimonial-section
+    background-image: url("../images/section-backgrounds/testimonial.jpg")
+    background-position: center
+    background-size: cover
+    color: #444
+    .filter
+        background-color: rgba(255,255,255,.95)
+        padding: 2rem 0
+        h1.gl
+            &::after
+                background-color: #444
+        @media screen and (min-width: $break-medium)
+            padding: 5rem 0
+        .divide
+            @media screen and (min-width: $break-medium)
+                @include display-flex()
+            .box
+                background-color: #eee
+                border-color: rgba(0,0,0,.15)
+                border-radius: 3px
+                border-style: solid
+                border-width: 1px
+                box-shadow: 0 0 10px rgba(0,0,0,.2)
+                color: #000
+                margin: 20px
+                overflow: hidden
+                @media screen and (min-width: $break-medium)
+                    @include flex-1()
+                .video
+                    border-color: $theme
+                    border-style: solid
+                    border-width: 3px 0 0 0
+                    height: 0
+                    padding-bottom: 45.5%
+                    padding-top: 30px
+                    position: relative
+                    iframe
+                        height: 100%
+                        left: 0
+                        position: absolute
+                        top: 0
+                        width: 100%
+                .message
+                    background-color: #fff
+                    border-color: rgba(0,0,0,.15)
+                    border-style: solid
+                    border-width: 0 0 1px 0
+                    font-size: 1rem
+                    font-style: italic
+                    line-height: 1.25rem
+                    padding: 20px
+                    position: relative
+                    @media screen and (min-width: $break-medium)
+                        font-size: .85rem
+                        min-height: 150px
+                .speaker
+                    color: #555
+                    padding: 20px
+                    position: relative
+                    .name
+                        font-weight: bold
+                        padding-bottom: 10px
+                    .position
+                        font-size: .85rem
+                    .icon
+                        color: $theme
+                        font-size: 3rem
+                        top: 20px
+                        opacity: .5
+                        position: absolute
+                        right: 20px
+                        z-index: -1
+
+// Try Section
+#try-section
+    background-color: #212121
+    color: #fff
+    padding: 1rem 0
+    .title
+        font-size: 2rem
+        text-align: center
+        padding: 20px
+    .divide
+        @media screen and (min-width: $break-medium)
+            @include display-flex()
+        a.box
+            background-color: rgba(255,255,255,.1)
+            border-radius: 3px
+            color: #fff
+            display: block
+            margin: 20px
+            padding: 20px
+            text-align: center
+            text-decoration: none
+            @include prefix(transition, all .25s ease-in-out)
+            @media screen and (min-width: $break-medium)
+                @include flex-1()
+            &:hover,
+            &:focus
+                background-color: $theme
+                color: rgba(0,0,0,0.75)
+                .icon
+                    svg
+                        path
+                            fill: rgba(0,0,0,0.75)
+            .icon
+                font-size: 3rem
+                margin-bottom: 20px
+                svg
+                    height: 3rem !important
+                    margin: 0 !important
+                    padding: 0  !important
+                    path
+                        @include prefix(transition, all .25s ease-in-out)
+                        fill: #fff
+            .message
+                font-size: 1.15rem
+
+// Pop-up
+#dark-filter
+    background-color: rgba(0,0,0,.75)
+    bottom: 0
+    display: none
+    height: 100%
+    left: 0
+    padding: 20px
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    z-index: 100000
+    #pop-up
+        background-color: #fff
+        border-radius: 3px
+        box-shadow: 0 0 10px rgba(0,0,0,.25)
+        margin: 10px auto
+        max-width: 100%
+        padding: 20px
+        position: relative
+        width: 400px
+        .close-and-title
+            margin-bottom: 20px
+            @include display-flex()
+            .title
+                @include flex-1()
+                color: #444
+                font-size: 1.15rem
+            a.close-button
+                color: rgba(0,0,0,.75)
+                display: inline-block
+                font-size: 1.15rem
+                position: absolute
+                right: 20px
+                text-decoration: none
+                top: 20px
+                @include prefix(transition, color .25s ease-in-out)
+                &:hover,
+                &:focus
+                    color: rgba(0,0,0,.5)
+        form
+            input, button
+                background-image: none
+                border-radius: 3px
+                border-style: solid
+                border-width: 1px
+                display: inline-block
+                margin-bottom: 10px
+                padding: 10px
+                width: 100%
+            input
+                border-color: rgba(0,0,0,.5)
+            button
+                background-color: $theme
+                border-color: rgba(0,0,0,0.35)
+                color: rgba(0,0,0,0.75)
+                cursor: pointer
+                @include prefix(transition, transform .25s ease-in-out)
+                &:hover,
+                &:focus
+                    @include prefix(transform, scale(1.05))
+
+// Back to old Website button
+a.back-button
+    background-color: rgba(0,0,0,.75)
+    border-radius: 5px
+    bottom: 0
+    color: #fff
+    display: block
+    left: 0
+    margin: 20px
+    padding: 20px
+    position: fixed
+    text-decoration: none
+    z-index: 2
+    @include prefix(transition, background-color .25s ease-in-out)
+    &:hover,
+    &:focus
+        background-color: rgba(0,0,0,.5)
+
+// Footer Section
+footer
+    background-color: #292929
+    color: #fff
+    .divider
+        padding: 10px
+        @media screen and (min-width: $break-medium)
+            @include display-flex()
+        .section
+            padding: 30px 10px
+            @media screen and (min-width: $break-medium)
+                @include flex-1()
+            h4
+                font-weight: normal
+                margin: 0
+                padding: 0 0 10px 0
+                text-transform: uppercase
+            ul
+                list-style-type: none
+                margin: 0
+                padding: 0
+                li
+                    color: #aaa
+                    padding: 5px 0
+                    a
+                        color: #aaa
+                        text-decoration: none
+                        @include prefix(transition, color .25s ease-in-out)
+                        i
+                            margin-right: 10px
+                        &:hover,
+                        &:focus
+                            color: $theme
+    .copyright
+        background-color: #151515
+        padding: 20px
+        text-align: center
+
+// Mailchimp Form
+#mc_embed_signup
+    h4
+        font-weight: normal
+        margin: 0
+        padding: 0 0 10px 0
+        text-transform: uppercase
+    .mc-label-title
+        color: #aaa
+    input
+        &#mce-EMAIL.required.email
+            background-color: rgba(255,255,255,.1)
+            border-color: rgba(255,255,255,.1)
+            border-radius: 3px
+            border-style: solid
+            border-width: 2px
+            color: #fff
+            display: block
+            margin: 10px 0
+            padding: 10px
+            width: 100%
+        &#mc-embedded-subscribe.button
+            @include prefix(transition, opacity .25s ease-in-out)
+            background-color: $theme
+            border-color: rgba(0,0,0,.25)
+            border-radius: 3px
+            border-style: solid
+            border-width: 1px
+            color: #fff
+            cursor: pointer
+            display: block
+            padding: 5px
+            width: 100%
+            &:hover,
+            &focus
+                opacity: .85

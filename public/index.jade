@@ -1,0 +1,367 @@
+//output:index.html, pretty:false
+
+//- Global Variable Start
+- pageCode = "index"
+include ./_variables.jade
+//- Global Variable End
+
+doctype
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="description", content="#{siteDescription}")
+        meta(name="keywords" content="#{metaKeywords}")
+        title #{siteTitle}
+        link(type="text/css", rel="StyleSheet", href="./styles/base.css")
+        if favicon
+            link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
+        
+        // Open Graph Start
+        meta(property="og:title", content="#{siteTitle}")
+        if siteImage
+            meta(property="og:image", content="#{siteImage}")
+        meta(property="og:description", content="#{siteDescription}")
+        // Open Graph End
+        
+        <!--[if lt IE 9]>
+        script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+        script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+        <![endif]-->
+        
+    body
+      // Video Parallax
+      #video-parallax
+        video(autoplay, loop)
+          source(src="https://s3-ap-southeast-1.amazonaws.com/talkpush-cdn/microsites/talkpush/talkpush-2-chat-noaudio.mp4", type="video/mp4")
+      
+      // Header
+      header
+        .container
+            .divider
+                .logo
+                    a(href="#top-section").logo
+                        span Talk Push Logo
+                    a(href="#").menu-button
+                        i(class="fa fa-bars",aria-hidden="true")
+                .menu
+                    ul
+                        li: a(href="/") Home
+                        // li: a(href="#") Pricing
+                        li: a(href="https://medium.com/@Talkpush", target="_blank") Blog
+                        // li: a(href="#") Contact Us
+                        li: a(href="https://calendly.com/talkpush/20-minute-talkpush-demo/", target="_blank")
+                            i(class="fa fa-envelope-open-o fa-fw", aria-hidden="true")
+                            | Book a Demo
+      
+      // Top Section
+      #top-section
+        .text
+          h3  Recruitment Platform for the Messaging Age
+          ul
+            li: a(href="https://m.me/letthetalenttalk/", target="_blank").main
+              i(class="fa fa-commenting fa-fw", aria-hidden="true")
+              span Talk with Stanley
+            li: a(href="#pricing-section")
+              i(class="fa fa-book fa-fw", aria-hidden="true")
+              span Check the Pricing
+        .see-more
+            a(href="#adapting-section"): i(class="fa fa-chevron-down fa-fw", aria-hidden="true")
+            
+      // Adapting Section
+      #adapting-section
+        .filter
+            .container
+                h1.gl(data-aos="fade-up") Adapting Recruitment to New Behaviors
+                p.gl(data-aos="fade-up") Meet your candidates where they live and create engaging digital recruitment experiences
+                .divide
+                    .box(data-aos="flip-right")
+                        .stats
+                            .st-title Attention spans are getting shorter
+                            .st-graph
+                                .line: span.number 12
+                                .line(style="top: 16.6%"): span.number 10
+                                .line(style="top: 33.2%"): span.number 8
+                                .line(style="top: 49.8%"): span.number 6
+                                .line(style="top: 66.4%"): span.number 4
+                                .line(style="top: 83%"): span.number 2
+                                .bars
+                                    .bar-holder: .bar(style="height: 100%") 12
+                                    .bar-holder: .bar(style="height: 66.4%;background-color:rgba(114,222,47,.6)") 8
+                            .st-bar-description
+                                .item 2008
+                                .item Now
+                        .data
+                            .title The fastest way to apply
+                            .message In less than 5 minutes, candidates can apply, complete a first screening, and be told if they are shortlisted. This used to take days.
+                    .box(data-aos="flip-right", data-aos-delay="300")
+                        .stats
+                            .st-title People are spending more time on their phone
+                            .st-graph
+                                .line: span.number 3 . 10
+                                .line(style="top: 33.3%"): span.number 1 . 70
+                                .line(style="top: 66.6%"): span.number 1 . 20
+                                .bars
+                                    .bar-holder: .bar(style="height: 100%;background-color:rgba(114,222,47,.6)") 3.10
+                                    .bar-holder: .bar(style="height: 66.6%") 1.70
+                                    .bar-holder: .bar(style="height: 33.3%") 1.20
+                            .st-bar-description
+                                .item Millenials
+                                .item Gen X
+                                .item Baby Boomers
+                        .data
+                            .title Find them where they live
+                            .message Talkpush allows you to engage a conversation with candidates on the platform they live on: Facebook Messenger, WeChat, Line, etc.
+                    .box(data-aos="flip-right", data-aos-delay="600")
+                        .stats
+                            .st-title % Open Rate
+                            .st-graph
+                                .line: span.number 100
+                                .line(style="top: 20%"): span.number 80
+                                .line(style="top: 40%"): span.number 60
+                                .line(style="top: 60%"): span.number 40
+                                .line(style="top: 80%"): span.number 20
+                                .bars
+                                    .bar-holder: .bar(style="height: 20%") 20
+                                    .bar-holder: .bar(style="height: 100%;background-color:rgba(114,222,47,.6)") 100
+                            .st-bar-description
+                                .item Email
+                                .item Messaging
+                        .data
+                            .title A captive audience
+                            .message Once a conversation is engaged with a candidate via Talkpush, it lives on. Using SMS and messaging, employers get a 99% read rate and 70%+ response rate.
+    
+      // Drive Numbers Section
+      #drive-section
+        .filter
+            .container
+                h1.gl(data-aos="fade-up") Drive the Numbers that Matter
+                p.gl(data-aos="fade-up") Turn your team into Augmented Recruiters through automation and AI
+                .divide
+                    .box(data-aos="zoom-in")
+                        .numbers 150,013
+                        .message Stanley has interviewed more candidates than any recruiters (chatbot or not) in the World.
+                    .box(data-aos="zoom-in", data-aos-delay="300")
+                        .numbers 6,042
+                        .message Hired since 2016. Talkpush users hire hundreds of personnel every month.
+                    .box(data-aos="zoom-in", data-aos-delay="600")
+                        .numbers 67%
+                        .message Reduction in cost per hire thanks to improved conversion rate on the marketing spend
+      
+      // Assistant Section
+      #assistant-section
+        .filter
+            .container
+                h1.gl(data-aos="fade-up") An Assistant that Does it All
+                p.gl(data-aos="fade-up") Leave the boring, repetitive stuff to Stanley who delivers them in real-time, 24/7.
+                .divide
+                    .box(data-aos="zoom-in")
+                        .title Greets your candidates
+                        .iphone
+                            img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
+                            .video-holder
+                                img.video(src="./images/assistant/1.gif", alt="screen-1")
+                    .box(data-aos="zoom-in", data-aos-delay="300")
+                        .title Interviews them
+                        .iphone
+                            img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
+                            .video-holder
+                                img.video(src="./images/assistant/2.gif", alt="screen-2")
+                    .box(data-aos="zoom-in", data-aos-delay="600")
+                        .title Scheduling
+                        .iphone
+                            img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
+                            .video-holder
+                                img.video(src="./images/assistant/3.gif", alt="screen-3")
+      
+      // Pricing Section
+      #pricing-section
+        .filter
+            .container
+                h1.gl(data-aos="fade-up") Ramp up your Hiring Volumes with Talkpush
+                p.gl(data-aos="fade-up") Talkpush offers pricing that scales with your recruitment volumes. You pay as you go and upgrade or downgrade your plan based on your projected volumes.
+                .divide
+                    .box(data-aos="flip-right")
+                        h1 Starter
+                        .price
+                            .range Starts at
+                            span.sign $
+                            span.number 980
+                            span.time / month
+                        .cta
+                            a(href="#").button-price#starter Receive an Email Quote
+                        ul
+                            li No Set up fee
+                            li 3 users (single country)
+                            li Up to 500 interviews per month included
+                            li Up to 2,000 SMS sent per month
+                    .box(data-aos="flip-right", data-aos-delay="300")
+                        h1 Business
+                        .price
+                            .range Starts at
+                            span.sign $
+                            span.number 2,500
+                            span.time / month
+                        .cta
+                            a(href="#").button-price#business Receive an Email Quote
+                        ul
+                            li No Set up fee
+                            li 10 users in a single country
+                            li Up to 1,000 interviews per month
+                            li Up to 5,000 SMS per month
+                    .box(data-aos="flip-right", data-aos-delay="600")
+                        h1 Enterprise
+                        .price
+                            .range Ask for a
+                            span.number Custom Quote
+                        .cta
+                            a(href="#").button-price#enterprise Receive an Email Quote
+                        ul
+                            li Global / Multi-Country Rollout
+                            li Unlimited Interview Packages
+                            li Integrate with your ATS
+                h4.subtitle(data-aos="fade-up") <strong>Terms and conditions apply:</strong> Additional charges apply if more than 500 interviews per month. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>.
+        
+      // Testimonial Section
+      #testimonial-section
+        .filter
+            .container
+                h1.gl(data-aos="fade-up") Clients love Talkpush
+                p.gl(data-aos="fade-up") Leading employers have decided to Let the Talent Talk with Talkpush
+                .divide
+                    .box(data-aos="flip-right")
+                        .video
+                            iframe(width='560', height='315', src='https://www.youtube.com/embed/nFRDqo_rc3o?rel=0&amp;showinfo=0', frameborder='0', allowfullscreen='false')
+                        .message We have been using Talkpush since 2014 and it has streamlined our recruitment tremendously. We are able to spend more time with the quality candidates and have increased our interview to hire ratio.
+                        .speaker
+                            .name — Keith Cheung
+                            .position Head of Talent Acquisition Sheraton and St. Regis Macau at Sheraton
+                            .icon: i.fa.fa-quote-right.fa-fw
+                    .box(data-aos="flip-right", data-aos-delay="300")
+                        .video
+                            iframe(width='560', height='315', src='https://www.youtube.com/embed/g4i0vKSu0f4?rel=0&amp;showinfo=0', frameborder='0', allowfullscreen='false')
+                        .message Talkpush is a way to process candidates fast. I mean really fast!
+                        .speaker
+                            .name — Bruce Dela Rosa
+                            .position Sourcing Manager at Genpact
+                            .icon: i.fa.fa-quote-right.fa-fw
+                    .box(data-aos="flip-right", data-aos-delay="600")
+                        .video
+                            iframe(width='560', height='315', src='https://www.youtube.com/embed/lvYOmb8OVPE?rel=0&amp;showinfo=0', frameborder='0', allowfullscreen='false')
+                        .message Talkpush helps us automating the recruitment process, especially the initial call outs and collecting the information we need from candidates.
+                        .speaker
+                            .name — Anna Pinaroc
+                            .position Recruitment Manager at Afni
+                            .icon: i.fa.fa-quote-right.fa-fw
+                    
+      // Try Section
+      #try-section
+        .container
+            .title Try it now
+            .divide
+                // a(href="#").box
+                //  .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
+                //  .message Via Call
+                a(href="https://m.me/letthetalenttalk/", target="_blank").box
+                    .icon
+                        svg(xmlns='http://www.w3.org/2000/svg', viewbox='96 93 322 324')
+                            path(d='M257 93c-88.918 0-161 67.157-161 150 0 47.205 23.412 89.311 60 116.807V417l54.819-30.273C225.449 390.801 240.948 393 257 393c88.918 0 161-67.157 161-150S345.918 93 257 93zm16 202l-41-44-80 44 88-94 42 44 79-44-88 94z', fill='#fff')
+                    .message Via Messenger
+                // a(href="#").box
+                //  .icon: i.fa.fa-whatsapp.fa-fw(aria-hidden='true')
+                //  .message Via WhatsApp
+                 
+      // Pop-up
+      #dark-filter
+          #pop-up
+            .close-and-title
+                .title Random Pack
+                a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
+            form
+                input(type="text", name="name", placeholder="Full Name")
+                input(type="text", name="company", placeholder="Company")
+                input(type="text", name="workemail", placeholder="Work Email")
+                input(type="text", name="telephone", placeholder="Telephone")
+                button(type="submit") Submit
+                
+      // Back to old Website button
+      a.back-button(href="./a/1", target="_blank") Back to Old Design
+      
+      // Footer Section
+      footer
+        .container
+            .divider
+                .section
+                    h4 Sitemap
+                    ul
+                        li: a(href="/// ")
+                            i.fa.fa-home.fa-fw(aria-hidden='true')
+                            | Home
+                        // li: a(href="#")
+                        //     i.fa.fa-user-circle-o.fa-fw(aria-hidden='true')
+                        //     | About Us
+                        // li: a(href="#") 
+                        //     i.fa.fa-book.fa-fw(aria-hidden='true')
+                        //     | Pricing
+                        li: a(href="https://medium.com/@Talkpush", target="_blank") 
+                         i.fa.fa-pencil.fa-fw(aria-hidden='true')
+                         | Blog
+                        // li: a(href="#") 
+                        //     i.fa.fa-envelope.fa-fw(aria-hidden='true')
+                        //     | Contact Us
+                .section
+                    h4 Find Us On
+                    ul
+                        li: a(href="https://www.facebook.com/letthetalenttalk", target="_blank")
+                            i.fa.fa-facebook.fa-fw(aria-hidden='true')
+                            | Facebook
+                        li: a(href="https://www.twitter.com/talkpush", target="_blank") 
+                            i.fa.fa-twitter.fa-fw(aria-hidden='true')
+                            | Twitter
+                        li: a(href="https://www.linkedin.com/company/talkpush", target="_blank") 
+                            i.fa.fa-linkedin.fa-fw(aria-hidden='true')
+                            | LinkedIn
+                        li: a(href="https://www.youtube.com/c/Talkpush", target="_blank") 
+                            i.fa.fa-youtube-play.fa-fw(aria-hidden='true')
+                            | YouTube
+                .section
+                    h4 Miscellaneous
+                    ul
+                        li: a(href="http://read.corilla.com/Talkpush/User-Guide.html", target="_blank")
+                            i.fa.fa-file-text.fa-fw(aria-hidden='true')
+                            | Documentation
+                        // li: a(href="#") 
+                        //     i.fa.fa-handshake-o.fa-fw(aria-hidden='true')
+                        //     | Terms &amp; Conditions
+                        // li: a(href="#") 
+                        //     i.fa.fa-user-secret.fa-fw(aria-hidden='true')
+                        //     | Privacy Policy
+                .section
+                    // Begin MailChimp Signup Form
+                    #mc_embed_signup
+                      form#mc-embedded-subscribe-form.validate(action='//talkpush.us9.list-manage.com/subscribe/post?u=2e2a41c362afe641e3bee5ed3&id=3485ede50a', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                        #mc_embed_signup_scroll
+                          h4 Monthly Newsletter
+                          .mc-field-group
+                            label(for='mce-EMAIL').mc-label-title Read our newsletter as soon as it gets out. You can unsubscribe anytime you want after subscribing.
+                            input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='example@gmail.com')
+                          #mce-responses.clear
+                            #mce-error-response.response(style='display:none')
+                            #mce-success-response.response(style='display:none')
+                          // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                          div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                            input(type='text', name='b_2e2a41c362afe641e3bee5ed3_3485ede50a', tabindex='-1', value='')
+                          .clear
+                            input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
+                    // End mc_embed_signup
+
+        .copyright All rights reserved © Talkpush 2017
+      
+
+      
+      
+      // Scripts Section
+      script(src="#{jQuery}")
+      script(src="./scripts/app.js")
+      script(src="./scripts/aos.js")
