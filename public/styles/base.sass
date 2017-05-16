@@ -357,20 +357,18 @@ header
             .box
                 @media screen and (min-width: $break-medium)
                     @include flex-1()
-                background-color: #fff
-                border-color: rgba(0,0,0,0.15)
+                background-color: #444
+                border-color: rgba(0,0,0,0.5)
                 border-radius: 3px
                 border-style: solid
                 border-width: 1px
-                box-shadow: 0 0 10px rgba(0,0,0,0.2)
+                box-shadow: 0 0 10px rgba(0,0,0,0.5)
                 margin: 20px
                 overflow: hidden
                 .stats
                     background-color: #252525
                     color: #fff
                     .st-title
-                        color: $theme
-                        font-size: .85rem
                         padding: 10px
                         text-align: center
                     .st-graph
@@ -425,6 +423,8 @@ header
                             padding: 10px
                             @include flex-1()
                 .data
+                    color: #fff
+                    text-align: center
                     @media screen and (min-width: $break-medium)
                         @include flex-1()
                     .title
