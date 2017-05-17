@@ -71,6 +71,14 @@ $(function(){
     /* Pop-up Start */
     $(".button-price").click(function(e){
         $("#dark-filter").fadeToggle("fast");
+        $("#dark-filter .pp-price-section").css("display", "block");
+        $("#dark-filter .we-chat-icon").css("display", "none");
+        e.preventDefault();
+    });
+    $("#we-chat-button").click(function(e){
+        $("#dark-filter").fadeToggle("fast");
+        $("#dark-filter .we-chat-icon").css("display", "block");
+        $("#dark-filter .pp-price-section").css("display", "none");
         e.preventDefault();
     });
     $("#dark-filter .close-button").click(function(e){
@@ -85,6 +93,9 @@ $(function(){
     });
     $(".button-price#enterprise").click(function(){
         $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Enterprise Pack</span>");
+    });
+    $("#we-chat-button").click(function(){
+        $("#dark-filter .title").html("<span style='font-weight: bold'>WeChat QR Code</span>");
     });
     $("#dark-filter").click(function(){
         $(this).fadeOut("fast");

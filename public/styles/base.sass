@@ -748,55 +748,64 @@ header
     top: 0
     width: 100%
     z-index: 100000
-    #pop-up
-        background-color: #fff
-        border-radius: 3px
-        box-shadow: 0 0 10px rgba(0,0,0,.25)
-        margin: 10px auto
-        max-width: 100%
-        padding: 20px
-        position: relative
-        width: 400px
-        .close-and-title
-            margin-bottom: 20px
-            @include display-flex()
-            .title
-                @include flex-1()
-                color: #444
-                font-size: 1.15rem
-            a.close-button
-                color: rgba(0,0,0,.75)
-                display: inline-block
-                font-size: 1.15rem
-                position: absolute
-                right: 20px
-                text-decoration: none
-                top: 20px
-                @include prefix(transition, color .25s ease-in-out)
-                &:hover,
-                &:focus
-                    color: rgba(0,0,0,.5)
-        form
-            input, button
-                background-image: none
-                border-radius: 3px
-                border-style: solid
-                border-width: 1px
-                display: inline-block
-                margin-bottom: 10px
-                padding: 10px
-                width: 100%
-            input
-                border-color: rgba(0,0,0,.5)
-            button
-                background-color: $theme
-                border-color: rgba(0,0,0,0.35)
-                color: rgba(0,0,0,0.75)
-                cursor: pointer
-                @include prefix(transition, transform .25s ease-in-out)
-                &:hover,
-                &:focus
-                    @include prefix(transform, scale(1.05))
+    #pop-up-aligner
+        @include display-flex()
+        @include align-items-center()
+        height: 100%
+        #pop-up
+            background-color: #fff
+            border-radius: 3px
+            box-shadow: 0 0 10px rgba(0,0,0,.25)
+            margin: 10px auto
+            max-width: 100%
+            padding: 20px
+            position: relative
+            width: 400px
+            .close-and-title
+                margin-bottom: 20px
+                @include display-flex()
+                .title
+                    @include flex-1()
+                    color: #444
+                    font-size: 1.15rem
+                a.close-button
+                    color: rgba(0,0,0,.75)
+                    display: inline-block
+                    font-size: 1.15rem
+                    position: absolute
+                    right: 20px
+                    text-decoration: none
+                    top: 20px
+                    @include prefix(transition, color .25s ease-in-out)
+                    &:hover,
+                    &:focus
+                        color: rgba(0,0,0,.5)
+            form.pp-price-section
+                display: none
+                input, button
+                    background-image: none
+                    border-radius: 3px
+                    border-style: solid
+                    border-width: 1px
+                    display: inline-block
+                    margin-bottom: 10px
+                    padding: 10px
+                    width: 100%
+                input
+                    border-color: rgba(0,0,0,.5)
+                button
+                    background-color: $theme
+                    border-color: rgba(0,0,0,0.35)
+                    color: rgba(0,0,0,0.75)
+                    cursor: pointer
+                    @include prefix(transition, transform .25s ease-in-out)
+                    &:hover,
+                    &:focus
+                        @include prefix(transform, scale(1.05))
+            .we-chat-icon
+                display: none
+                img
+                    width: 100%
 
 // Back to old Website button
 a.back-button
