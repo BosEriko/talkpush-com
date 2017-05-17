@@ -58,6 +58,16 @@ $(function(){
     });
     /* Menu Button End */
 
+    /* Statistics Side Details Width Start */
+    function resizeStatsSideDetails(){
+        $(".stats .st-side-details span.rotate").css("width", $(".stats .st-graph").height());
+    }
+    resizeStatsSideDetails();
+    $(window).resize(function(){
+        resizeStatsSideDetails();
+    });
+    /* Statistics Side Details Width Start */
+
     /* Pop-up Start */
     $(".button-price").click(function(e){
         $("#dark-filter").fadeToggle("fast");

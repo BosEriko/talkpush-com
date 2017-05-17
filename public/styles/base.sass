@@ -369,55 +369,75 @@ header
                     background-color: #252525
                     color: #fff
                     .st-title
+                        font-weight: bold
                         padding: 10px
                         text-align: center
-                    .st-graph
-                        border-color: rgba(255,255,255,.5)
-                        border-style: solid
-                        border-width: 0 0 1px 0
-                        position: relative
-                        &::before
-                            content: ""
-                            display: block
-                            padding-top: 50%
-                        .line
-                            border-color: rgba(255,255,255,.5)
-                            border-style: dotted
-                            border-width: 1px 0 0 0
-                            left: 0
-                            position: absolute
-                            top: 0
-                            width: 100%
-                            span.number
-                                font-size: .5rem
-                                left: 5px
+                    .st-graph-holder
+                        @include display-flex()
+                        .st-side-details
+                            overflow: hidden
+                            position: relative
+                            width: 20px
+                            span.rotate
+                                @include prefix(transform, rotate(-90deg))
+                                @include prefix(transform-origin, bottom left)
+                                bottom: 0
+                                display: inline-block
+                                font-size: 12px
+                                height: 20px
+                                left: 20px
+                                padding-top: 3px
                                 position: absolute
-                                top: 5px
-                        .bars
-                            bottom: 0
-                            height: 100%
-                            left: 0
-                            position: absolute
-                            width: 100%
-                            @include display-flex()
-                            .bar-holder
-                                height: 100%
-                                position: relative
                                 text-align: center
-                                @include flex-1()
-                                .bar
-                                    background-color: rgba(255,255,255,.5)
-                                    bottom: 0
-                                    font-size: .75rem
-                                    left: 50%
-                                    margin-left: -1rem
-                                    padding-top: 5px
+                        .st-graph
+                            @include flex-1()
+                            border-color: rgba(255,255,255,.5)
+                            border-style: solid
+                            border-width: 0 0 1px 1px
+                            position: relative
+                            &::before
+                                content: ""
+                                display: block
+                                padding-top: 50%
+                            .line
+                                border-color: rgba(255,255,255,.5)
+                                border-style: dotted
+                                border-width: 1px 0 0 0
+                                left: 0
+                                position: absolute
+                                top: 0
+                                width: 100%
+                                span.number
+                                    font-size: .5rem
+                                    left: 5px
                                     position: absolute
+                                    top: 5px
+                            .bars
+                                bottom: 0
+                                height: 100%
+                                left: 0
+                                position: absolute
+                                width: 100%
+                                @include display-flex()
+                                .bar-holder
+                                    height: 100%
+                                    position: relative
                                     text-align: center
-                                    width: 2rem
+                                    @include flex-1()
+                                    .bar
+                                        background-color: rgba(255,255,255,.5)
+                                        bottom: 0
+                                        font-size: .75rem
+                                        left: 50%
+                                        margin-left: -1rem
+                                        padding-top: 5px
+                                        position: absolute
+                                        text-align: center
+                                        width: 2rem
                     .st-bar-description
                         @include display-flex()
-                        font-size: .75rem
+                        margin-left: 20px
+                        font-size: .7rem
                         .item
                             text-align: center
                             padding: 10px
