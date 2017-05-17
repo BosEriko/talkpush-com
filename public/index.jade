@@ -3,6 +3,7 @@
 //- Global Variable Start
 - pageCode = "index"
 - animationSpeed = "800"
+- animationOnce = "true"
 include ./_variables.jade
 //- Global Variable End
 
@@ -74,10 +75,10 @@ html(lang="en")
       #adapting-section
         .filter
             .container
-                h1.gl(data-aos="fade-up") Adapting Recruitment to New Behaviors
-                p.gl(data-aos="fade-up") Meet your candidates where they live and create engaging digital recruitment experiences
+                h1.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Adapting Recruitment to New Behaviors
+                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Meet your candidates where they live and create engaging digital recruitment experiences
                 .divide
-                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .stats
                             .st-title Attention spans are getting shorter
                             .st-graph-holder
@@ -98,7 +99,7 @@ html(lang="en")
                         .data
                             .title Makes applications faster
                             .message In less than 5 minutes, candidates can apply, complete a first screening, and be told if they are shortlisted. This used to take days.
-                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .stats
                             .st-title Millennials are glued to their phone
                             .st-graph-holder
@@ -118,7 +119,7 @@ html(lang="en")
                         .data
                             .title Meet them where they live
                             .message Talkpush allows you to engage a conversation with candidates on the platform they live on: Facebook Messenger, WeChat, Line, etc.
-                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .stats
                             .st-title Most emails never get read
                             .st-graph-holder
@@ -143,16 +144,16 @@ html(lang="en")
       #drive-section
         .filter
             .container
-                h1.gl(data-aos="fade-up") Drive the Numbers that Matter
-                p.gl(data-aos="fade-up") Turn your team into Augmented Recruiters through automation and AI
+                h1.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Drive the Numbers that Matter
+                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Turn your team into Augmented Recruiters through automation and AI
                 .divide
-                    .box(data-aos="zoom-in", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="zoom-in", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .numbers 150,013
                         .message Stanley has interviewed more candidates than any recruiter (chatbot or not) in the World.
-                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .numbers 6,042
                         .message Hired since 2016. Talkpush users hire hundreds of personnel every month.
-                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .numbers 67%
                         .message Reduction in cost per hire thanks to improved conversion rate on the marketing spend
       
@@ -160,22 +161,22 @@ html(lang="en")
       #assistant-section
         .filter
             .container
-                h1.gl(data-aos="fade-up") An Assistant that Does it All
-                p.gl(data-aos="fade-up") Leave the boring, repetitive stuff to Stanley the chatbot, who delivers them in real-time, 24/7.
+                h1.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") An Assistant that Does it All
+                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Leave the boring, repetitive stuff to Stanley the chatbot, who delivers them in real-time, 24/7.
                 .divide
-                    .box(data-aos="zoom-in", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="zoom-in", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .title Welcoming
                         .iphone
                             img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
                             .video-holder
                                 img.video(src="./images/assistant/1.gif", alt="screen-1")
-                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .title Interviewing
                         .iphone
                             img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
                             .video-holder
                                 img.video(src="./images/assistant/2.gif", alt="screen-2")
-                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .title Scheduling
                         .iphone
                             img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
@@ -186,10 +187,10 @@ html(lang="en")
       #pricing-section
         .filter
             .container
-                h1.gl(data-aos="fade-up") Ramp up your Hiring Volumes with Talkpush
-                p.gl(data-aos="fade-up") Talkpush offers pricing that scales with your recruitment volumes. You pay as you go and upgrade or downgrade your plan based on your projected volumes.
+                h1.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Ramp up your Hiring Volumes with Talkpush
+                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Talkpush offers pricing that scales with your recruitment volumes. You pay as you go and upgrade or downgrade your plan based on your projected volumes.
                 .divide
-                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         h1 Starter
                         .price
                             .range Starts at
@@ -203,7 +204,7 @@ html(lang="en")
                             li 3 users (single country)
                             li Up to 500 interviews per month included
                             li Up to 2,000 SMS sent per month
-                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         h1 Business
                         .price
                             .range Starts at
@@ -217,7 +218,7 @@ html(lang="en")
                             li 10 users in a single country
                             li Up to 1,000 interviews per month
                             li Up to 5,000 SMS per month
-                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         h1 Enterprise
                         .price
                             .range Ask for a
@@ -228,16 +229,16 @@ html(lang="en")
                             li Global / Multi-Country Rollout
                             li Unlimited Interview Packages
                             li Integrate with your ATS
-                h4.subtitle(data-aos="fade-up") <strong>Terms and conditions apply:</strong> Additional charges apply if more than 500 interviews per month. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>.
+                h4.subtitle(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") <strong>Terms and conditions apply:</strong> Additional charges apply if more than 500 interviews per month. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>.
         
       // Testimonial Section
       #testimonial-section
         .filter
             .container
-                h1.gl(data-aos="fade-up") Clients love Talkpush
-                p.gl(data-aos="fade-up") Leading employers have decided to Let the Talent Talk with Talkpush
+                h1.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Clients love Talkpush
+                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Leading employers have decided to Let the Talent Talk with Talkpush
                 .divide
-                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .video
                             iframe(width='560', height='315', src='https://www.youtube.com/embed/nFRDqo_rc3o?rel=0&amp;showinfo=0', frameborder='0', allowfullscreen='false')
                         .message We have been using Talkpush since 2014 and it has streamlined our recruitment tremendously. We are able to spend more time with the quality candidates and have increased our interview to hire ratio.
@@ -245,7 +246,7 @@ html(lang="en")
                             .name — Keith Cheung
                             .position Head of Talent Acquisition Sheraton and St. Regis Macau at Sheraton
                             .icon: i.fa.fa-quote-right.fa-fw
-                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .video
                             iframe(width='560', height='315', src='https://www.youtube.com/embed/g4i0vKSu0f4?rel=0&amp;showinfo=0', frameborder='0', allowfullscreen='false')
                         .message Talkpush is a way to process candidates fast. I mean really fast!
@@ -253,7 +254,7 @@ html(lang="en")
                             .name — Bruce Dela Rosa
                             .position Sourcing Manager at Genpact
                             .icon: i.fa.fa-quote-right.fa-fw
-                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}")
+                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
                         .video
                             iframe(width='560', height='315', src='https://www.youtube.com/embed/lvYOmb8OVPE?rel=0&amp;showinfo=0', frameborder='0', allowfullscreen='false')
                         .message Talkpush helps us automating the recruitment process, especially the initial call outs and collecting the information we need from candidates.
