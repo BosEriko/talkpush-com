@@ -32,6 +32,18 @@ html(lang="en")
         script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
         <![endif]-->
         
+        // Smartsupp Live Chat script
+        script(type='text/javascript').
+          var _smartsupp = _smartsupp || {};
+          _smartsupp.key = '24cb0f70c39995773a14b044623581688d760d60';
+          window.smartsupp||(function(d) {
+          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+          c.type='text/javascript';c.charset='utf-8';c.async=true;
+          c.src='//www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+          })(document);
+
+        
     body
       // Video Parallax
       #video-parallax
@@ -51,7 +63,7 @@ html(lang="en")
                     ul
                         li: a(href="/") Home
                         // li: a(href="#") Pricing
-                        li: a(href="https://medium.com/@Talkpush", target="_blank") Blog
+                        li: a(href="https://blog.talkpush.com/", target="_blank") Blog
                         // li: a(href="#") Contact Us
                         li: a(href="https://calendly.com/talkpush/20-minute-talkpush-demo/", target="_blank")
                             i(class="fa fa-envelope-open-o fa-fw", aria-hidden="true")
@@ -64,10 +76,10 @@ html(lang="en")
           ul
             li: a(href="https://m.me/letthetalenttalk/", target="_blank").main
               i(class="fa fa-commenting fa-fw", aria-hidden="true")
-              span Talk to Stanley
-            li: a(href="#pricing-section")
-              i(class="fa fa-book fa-fw", aria-hidden="true")
-              span Check the Pricing
+              span Try out Talkpush
+            li: a(href="https://calendly.com/talkpush/20-minute-talkpush-demo/", target="_blank")
+              i(class="fa fa-envelope-open-o fa-fw", aria-hidden="true")
+              span Book a Demo
         .see-more
             a(href="#adapting-section"): i(class="fa fa-chevron-down fa-fw", aria-hidden="true")
             
@@ -161,7 +173,7 @@ html(lang="en")
       #assistant-section
         .filter
             .container
-                h1.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") An Assistant that Does it All
+                h1.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Stanley is the Recruitment Assistant Who Does it All
                 p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Leave the boring, repetitive stuff to Stanley the chatbot, who delivers them in real-time, 24/7.
                 .divide
                     .box(data-aos="zoom-in", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
@@ -315,7 +327,7 @@ html(lang="en")
                         // li: a(href="#") 
                         //     i.fa.fa-book.fa-fw(aria-hidden='true')
                         //     | Pricing
-                        li: a(href="https://medium.com/@Talkpush", target="_blank") 
+                        li: a(href="https://blog.talkpush.com/", target="_blank") 
                          i.fa.fa-pencil.fa-fw(aria-hidden='true')
                          | Blog
                         // li: a(href="#") 
