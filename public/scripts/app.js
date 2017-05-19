@@ -27,6 +27,9 @@ $(function(){
         }
     }
     $.preloadImages("./images/logo-black.png");
+    $.preloadImages("./images/assistant/1.gif");
+    $.preloadImages("./images/assistant/2.gif");
+    $.preloadImages("./images/assistant/3.gif");
     /* Preload Images End*/
 
     /* Top Section & Header Start */
@@ -104,4 +107,22 @@ $(function(){
         e.stopPropagation();
     });
     /* Pop-up End */
+
+    /* Assistant Section Play Videos Start */
+    $(".iphone #play-1").click(function(e){
+        $("#video-1").attr("src","./images/assistant/1.gif");
+        $(this).fadeOut("fast");
+        e.preventDefault();
+    });
+    $(".iphone #play-2").click(function(e){
+        $("#video-2").attr("src","./images/assistant/2.gif");
+        $(this).fadeOut("fast");
+        e.preventDefault();
+    });
+    $(".iphone #play-3").click(function(e){
+        $("#video-3").attr("src","./images/assistant/3.gif");
+        $(this).fadeOut("fast");
+        e.preventDefault();
+    });
+    /* Assistant Section Play Videos End */
 });
