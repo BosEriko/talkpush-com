@@ -60,14 +60,7 @@ html(lang="en")
                     a(href="#").menu-button
                         i(class="fa fa-bars",aria-hidden="true")
                 .menu
-                    ul
-                        li: a(href="/") Home
-                        // li: a(href="#") Pricing
-                        li: a(href="https://blog.talkpush.com/", target="_blank") Blog
-                        // li: a(href="#") Contact Us
-                        li: a(href="https://calendly.com/talkpush/20-minute-talkpush-demo/", target="_blank")
-                            i(class="fa fa-envelope-open-o fa-fw", aria-hidden="true")
-                            | Book a Demo
+                    include ./_navigation.jade
       
       // Top Section
       #top-section
@@ -314,58 +307,19 @@ html(lang="en")
             .we-chat-icon
                 img(src="./images/try-section/wechat.png", alt="WeChat Icon")
                 
-      // Back to old Website button
-      a.back-button(href="./a/1/index.html", target="_blank") Back to Previous Design
-      
       // Footer Section
       footer
         .container
             .divider
                 .section
                     h4 Sitemap
-                    ul
-                        li: a(href="/// ")
-                            i.fa.fa-home.fa-fw(aria-hidden='true')
-                            | Home
-                        // li: a(href="#")
-                        //     i.fa.fa-user-circle-o.fa-fw(aria-hidden='true')
-                        //     | About Us
-                        // li: a(href="#") 
-                        //     i.fa.fa-book.fa-fw(aria-hidden='true')
-                        //     | Pricing
-                        li: a(href="https://blog.talkpush.com/", target="_blank") 
-                         i.fa.fa-pencil.fa-fw(aria-hidden='true')
-                         | Blog
-                        // li: a(href="#") 
-                        //     i.fa.fa-envelope.fa-fw(aria-hidden='true')
-                        //     | Contact Us
+                    include ./_footer-navigation.jade
                 .section
                     h4 Find Us On
-                    ul
-                        li: a(href="https://www.facebook.com/letthetalenttalk", target="_blank")
-                            i.fa.fa-facebook.fa-fw(aria-hidden='true')
-                            | Facebook
-                        li: a(href="https://www.twitter.com/talkpush", target="_blank") 
-                            i.fa.fa-twitter.fa-fw(aria-hidden='true')
-                            | Twitter
-                        li: a(href="https://www.linkedin.com/company/talkpush", target="_blank") 
-                            i.fa.fa-linkedin.fa-fw(aria-hidden='true')
-                            | LinkedIn
-                        li: a(href="https://www.youtube.com/c/Talkpush", target="_blank") 
-                            i.fa.fa-youtube-play.fa-fw(aria-hidden='true')
-                            | YouTube
+                    include ./_footer-social.jade
                 .section
                     h4 Miscellaneous
-                    ul
-                        li: a(href="http://read.corilla.com/Talkpush/User-Guide.html", target="_blank")
-                            i.fa.fa-file-text.fa-fw(aria-hidden='true')
-                            | Documentation
-                        // li: a(href="#") 
-                        //     i.fa.fa-handshake-o.fa-fw(aria-hidden='true')
-                        //     | Terms &amp; Conditions
-                        // li: a(href="#") 
-                        //     i.fa.fa-user-secret.fa-fw(aria-hidden='true')
-                        //     | Privacy Policy
+                    include ./_footer-miscellaneous.jade
                 .section
                     // Begin MailChimp Signup Form
                     #mc_embed_signup
