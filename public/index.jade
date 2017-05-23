@@ -17,7 +17,6 @@ html(lang="en")
         meta(name="keywords" content="#{metaKeywords}")
         title #{siteTitle} - #{siteDescription}
         link(type="text/css", rel="StyleSheet", href="./styles/base.css")
-        link(type="text/css", rel="StyleSheet", href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/css/intlTelInput.css")
         if favicon
             link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
         
@@ -280,9 +279,9 @@ html(lang="en")
         .container
             .title Try it now
             .divide
-                // a(href="#").box#phone-try
-                //     .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
-                //     .message Via Call
+                // a(href="#").box
+                //  .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
+                //  .message Via Call
                 a(href="https://m.me/letthetalenttalk/", target="_blank").box
                     .icon
                         svg(xmlns='http://www.w3.org/2000/svg', viewbox='96 93 322 324')
@@ -307,18 +306,6 @@ html(lang="en")
                 button(type="submit") Submit
             .we-chat-icon
                 img(src="./images/try-section/wechat.png", alt="WeChat Icon")
-            .phone-try
-                input.input-field-phone-number(type='text', name='demo_phone_no', placeholder='Phone number')
-                #demo_phone_no_error.error
-                    | Error
-                button.btn-solid-green.btn-demo-call Call Me
-                input.input-field-phone-number(type='text', name='demo_name', placeholder='Please enter your name')
-                #demo_name_error.error
-                    | Error
-                input.input-field-phone-number(type='text', name='demo_email', placeholder='Please enter your email')
-                #demo_email_error.error
-                    | Error
-                button.btn-solid-green.btn-demo-submit Submit
                 
       // Footer Section
       footer
@@ -359,9 +346,5 @@ html(lang="en")
       
       // Scripts Section
       script(src="#{jQuery}")
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/js/intlTelInput.min.js")
       script(src="./scripts/app.js")
       script(src="./scripts/aos.js")
-      script(src="./scripts/legacy.js")
-      script(src="./scripts/demo.js")
-      script(src="./scripts/submit.js")
