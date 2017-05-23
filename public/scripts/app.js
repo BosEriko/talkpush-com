@@ -76,11 +76,20 @@ $(function(){
         $("#dark-filter").fadeToggle("fast");
         $("#dark-filter .pp-price-section").css("display", "block");
         $("#dark-filter .we-chat-icon").css("display", "none");
+        $("#dark-filter .phone-try").css("display", "none");
         e.preventDefault();
     });
     $("#we-chat-button").click(function(e){
         $("#dark-filter").fadeToggle("fast");
         $("#dark-filter .we-chat-icon").css("display", "block");
+        $("#dark-filter .pp-price-section").css("display", "none");
+        $("#dark-filter .phone-try").css("display", "none");
+        e.preventDefault();
+    });
+    $("#phone-try").click(function(e){
+        $("#dark-filter").fadeToggle("fast");
+        $("#dark-filter .phone-try").css("display", "block");
+        $("#dark-filter .we-chat-icon").css("display", "none");
         $("#dark-filter .pp-price-section").css("display", "none");
         e.preventDefault();
     });
@@ -99,6 +108,9 @@ $(function(){
     });
     $("#we-chat-button").click(function(){
         $("#dark-filter .title").html("<span style='font-weight: bold'>WeChat QR Code</span>");
+    });
+    $("#phone-try").click(function(){
+        $("#dark-filter .title").html("<span style='font-weight: bold'>Via Call</span>");
     });
     $("#dark-filter").click(function(){
         $(this).fadeOut("fast");
