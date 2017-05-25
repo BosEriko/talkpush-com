@@ -44,16 +44,22 @@ $(function(){
         if(windowScroll <= limit){
             $("#top-section .text").css("opacity" , 1 - windowScroll / limit);
             $("#top-section .text").css("transform", "translateY(" + (windowScroll/2) + "px)");
-            if($("#video-parallax video").get(0).paused)
-                $("#video-parallax video").get(0).play();
+            if($("#video-parallax video").length){
+                if($("#video-parallax video").get(0).paused){
+                    $("#video-parallax video").get(0).play();
+                }
+            }
             if(windowScroll >= 50){
                 $("header").addClass("active");
             }else{
                 $("header").removeClass("active");
             }
         }else{
-            if(!($("#video-parallax video").get(0).paused))
-                $("#video-parallax video").get(0).pause();
+            if($("#video-parallax video").length){
+                if(!($("#video-parallax video").get(0).paused)){
+                    $("#video-parallax video").get(0).pause();
+                }
+            }
         }
     });
     /* Top Section & Header End */
