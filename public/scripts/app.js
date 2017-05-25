@@ -42,14 +42,18 @@ $(function(){
         var windowScroll = $(this).scrollTop();
         var limit = $(window).height();
         if(windowScroll <= limit){
-            $("#video-parallax").css("transform", "translateY(-" + (windowScroll/3) + "px)");
             $("#top-section .text").css("opacity" , 1 - windowScroll / limit);
             $("#top-section .text").css("transform", "translateY(" + (windowScroll/2) + "px)");
+            if($("#video-parallax video").get(0).paused)
+                $("#video-parallax video").get(0).play();
             if(windowScroll >= 50){
                 $("header").addClass("active");
             }else{
                 $("header").removeClass("active");
             }
+        }else{
+            if(!($("#video-parallax video").get(0).paused))
+                $("#video-parallax video").get(0).pause();
         }
     });
     /* Top Section & Header End */
