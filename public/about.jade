@@ -1,0 +1,162 @@
+//output:about.html, pretty:false
+
+//- Global Variable Start
+- pageCode = "about"
+include ./_variables.jade
+//- Global Variable End
+
+doctype
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="description", content="#{siteDescription}")
+        meta(name="keywords" content="#{metaKeywords}")
+        title #{siteTitle} - About Us
+        link(type="text/css", rel="StyleSheet", href="./styles/base.css")
+        if favicon
+            link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
+        
+        // Open Graph Start
+        meta(property="og:title", content="#{siteTitle}")
+        if siteImage
+            meta(property="og:image", content="#{siteImage}")
+        meta(property="og:description", content="#{siteDescription}")
+        // Open Graph End
+        
+        <!--[if lt IE 9]>
+        script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+        script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+        <![endif]-->
+        
+        // Smartsupp Live Chat script
+        script(type='text/javascript').
+          var _smartsupp = _smartsupp || {};
+          _smartsupp.key = '24cb0f70c39995773a14b044623581688d760d60';
+          window.smartsupp||(function(d) {
+          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+          c.type='text/javascript';c.charset='utf-8';c.async=true;
+          c.src='//www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+          })(document);
+
+        
+    body
+      // Header
+      header
+        .container
+            .divider
+                .logo
+                    a(href="./").logo
+                        span Talk Push Logo
+                    a(href="#").menu-button
+                        i(class="fa fa-bars",aria-hidden="true")
+                .menu
+                    include ./_navigation.jade
+      
+      .display-header
+        .filter
+            h1.fade About Us
+      .white-holder.equal
+        div
+            .about-message
+                h1 Things we believe in
+                p Everyone has a voice. Everyone has something to offer. So how come so many candidates never get a chance to be heard? At Talkpush, we take down the invisible wall that stands between candidates and recruiters. We make it easier for conversations to start. We do our part in making the world a more connected and productive place by starting thousands of recruitment conversations every day.
+            .about-message.more-bigger
+                ul.image-masonry
+                    li: .responsive.rect
+                        .image(style="background-image:url('./images/about-page/masonry/1.jpg')")
+                    li: .responsive.rect
+                        .image(style="background-image:url('./images/about-page/masonry/2.jpg')")
+                ul.image-masonry
+                    li: .responsive
+                        .image(style="background-image:url('./images/about-page/masonry/3.jpg')")
+                    li: .responsive
+                        .image(style="background-image:url('./images/about-page/masonry/4.jpg')")
+                    li: .responsive
+                        .image(style="background-image:url('./images/about-page/masonry/5.png')")
+        div    
+            .about-message
+                p We are technologists and humanists. We believe software is designed to serve humans, not the other way around. Automation should be a gradual process built around the user. We design software which is human-centric and mobile-first.
+                p We also love speech. Actual spoken words. Why limit yourselves to the written word if candidates want to speak to you? Speech is more natural, intuitive and data-rich.  Messaging is our preferred communication technology, because it allows for more conversations to happen simultaneously.
+        div
+            .about-message
+                h1 A word from our Founder
+                p Hi there. My name is Max Armbruster.
+                p A decade ago, I used to interview hundreds of candidates over the phone every year. It was gruesome, unproductive, soul-drenching work but I could not find a technology that did not create an additional barrier between me and the candidates. So I just kept on calling…
+        div
+            .about-message.bigger
+                img.max-small(src="./images/about-page/max-small.jpg", alt="Max Small")
+        div
+            .about-message
+                img.max-large(src="./images/about-page/max-large.jpg", alt="Max Large")
+                p Eight years ago, I co-founded an Applicant Tracking Software company in Singapore. Meeting the largest employers in Asia, I noticed that many of them were choosing complicated job application processes with the specific purpose of limiting the number of candidates (less resumes to sift through…). It seemed like a wrong way to go about talent selection.
+                p Five years ago, I sold my company and joined SAP, the enterprise software leader. There, I got a better understanding on how complicated it is to make things simple, particularly for large enterprises. More stakeholders means more complexity, leaving everyone frustrated. I wanted to build a simple recruitment solution that made connecting with candidates as easy as making a phone call.
+                p In 2014, I partnered with experts in web and voice technology and we released the first Talkpush prototype. I founded the company and we signed our first client, a small call center. The rest, as they say, is history.
+                p Today, our software interviews more candidates than any chatbot in the world, and helps thousands of job seekers find work every year. The messaging revolution, allowing for asynchronous conversations to happen on Facebook Messenger, WeChat, WhatsApp and other chat platforms is fuelling new wave of productivity. We were very fortunate to be in this space at the right time.
+                p Tomorrow, we want to re-engineer your recruitment process. Do you wish to create more openness and more simplicity in your recruitment? If so, <a href="mailto:max.armbruster@talkpush.com">drop me a line</a>!
+                p Max
+        div
+            .about-message
+                h1 Our Work Culture
+                p Every day, Talkpush is making it easier for good companies to hire good people, and that makes us feel great.  Admittedly, we have a short attention span but that’s because our days are packed. Making recruitment processes simple is a lot of work. We get it done, removing one barrier at a time.
+                p Some of us work from the office, some of us work from home. We don’t keep track of time. We don’t count the amount of vacation we take. Some of us wear suits, some of us wear shorts and sandals. We don’t think the work/life balance debate makes much sense. We come to work because we want to change the world every day, a little bit at a time. Honestly, it’s the only way to Live.
+            
+        // Address and Career
+        #address-career
+            .address
+                h1
+                    i.fa.fa-map-marker.fa-fw(aria-hidden='true')
+                    span Talkpush's office
+                .content Cityland 3 Condominiums 105, VA Rufino Street, Makati, Philippines
+                .navigation: a(href="https://www.google.com.ph/maps/search/Cityland+3+Condominiums+105,+VA+Rufino+Street,+Makati,+Philippines/@14.5589483,121.0162538,15z/data=!3m1!4b1", target="_blank") Get Directions
+            .career
+                h1
+                    i.fa.fa-users.fa-fw(aria-hidden='true')
+                    span Join our growing team
+                .content Join Talkpush and let's make recruitment fun together
+                .navigation: a.blue(href="#") Careers
+      
+      // Footer Section
+      footer
+        .container
+            .divider
+                .section
+                    h4 Sitemap
+                    include ./_footer-navigation.jade
+                .section
+                    h4 Find Us On
+                    include ./_footer-social.jade
+                .section
+                    h4 Miscellaneous
+                    include ./_footer-miscellaneous.jade
+                .section
+                    // Begin MailChimp Signup Form
+                    #mc_embed_signup
+                      form#mc-embedded-subscribe-form.validate(action='//talkpush.us9.list-manage.com/subscribe/post?u=2e2a41c362afe641e3bee5ed3&id=3485ede50a', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                        #mc_embed_signup_scroll
+                          h4 Monthly Newsletter
+                          .mc-field-group
+                            label(for='mce-EMAIL').mc-label-title Read our newsletter as soon as it gets out. You can unsubscribe anytime you want after subscribing.
+                            input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='example@gmail.com')
+                          #mce-responses.clear
+                            #mce-error-response.response(style='display:none')
+                            #mce-success-response.response(style='display:none')
+                          // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                          div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                            input(type='text', name='b_2e2a41c362afe641e3bee5ed3_3485ede50a', tabindex='-1', value='')
+                          .clear
+                            input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
+                    // End mc_embed_signup
+
+        .copyright All rights reserved © Talkpush 2017
+      
+
+      
+      
+      // Scripts Section
+      script(src="#{jQuery}")
+      script(src="./scripts/app.js")
+      script(src="./scripts/aos.js")
+      script(src="./scripts/about.js")
