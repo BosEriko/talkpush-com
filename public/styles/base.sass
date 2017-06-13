@@ -30,10 +30,10 @@ $break-larger: 1281px
   display: -ms-flexbox
   display: flex
 
-@mixin flex-1()
-  -webkit-box-flex: 1
-  -ms-flex: 1
-  flex: 1
+@mixin flex($value)
+  -webkit-box-flex: $value
+  -ms-flex: $value
+  flex: $value
 
 @mixin align-items-center()
     -webkit-box-align: center
@@ -184,7 +184,7 @@ header
                 span
                     display: none
             a.menu-button
-                @include flex-1()
+                @include flex(1)
                 font-size: 1.5rem
                 margin-right: 20px
                 text-align: right
@@ -201,7 +201,7 @@ header
             display: none
             text-align: center
             @media screen and (min-width: $break-medium)
-                @include flex-1()
+                @include flex(1)
                 border: none
                 display: block !important
                 text-align: right
@@ -287,7 +287,7 @@ header
   width: 100%
   z-index: 1
   .text
-    @include flex-1()
+    @include flex(1)
     color: #fff
     text-align: center
     h3
@@ -305,7 +305,7 @@ header
       padding: 0
       li
         @media screen and (min-width: $break-medium)
-          @include flex-1()
+          @include flex(1)
           text-align: left
         &:nth-child(1)
           @media screen and (min-width: $break-medium)
@@ -368,7 +368,7 @@ header
                 @include display-flex()
             .box
                 @media screen and (min-width: $break-medium)
-                    @include flex-1()
+                    @include flex(1)
                 background-color: #444
                 border-color: rgba(0,0,0,0.5)
                 border-radius: 3px
@@ -402,7 +402,7 @@ header
                                 position: absolute
                                 text-align: center
                         .st-graph
-                            @include flex-1()
+                            @include flex(1)
                             border-color: rgba(255,255,255,.5)
                             border-style: solid
                             border-width: 0 0 1px 1px
@@ -435,7 +435,7 @@ header
                                     height: 100%
                                     position: relative
                                     text-align: center
-                                    @include flex-1()
+                                    @include flex(1)
                                     .bar
                                         background-color: rgba(255,255,255,.5)
                                         bottom: 0
@@ -453,12 +453,12 @@ header
                         .item
                             text-align: center
                             padding: 10px
-                            @include flex-1()
+                            @include flex(1)
                 .data
                     color: #fff
                     text-align: center
                     @media screen and (min-width: $break-medium)
-                        @include flex-1()
+                        @include flex(1)
                     .title
                         font-weight: bold
                         padding: 10px 10px 5px 10px
@@ -482,7 +482,7 @@ header
                 margin: 20px
                 text-align: center
                 @media screen and (min-width: $break-medium)
-                    @include flex-1()
+                    @include flex(1)
                 .numbers
                     color: $theme
                     font-size: 3rem
@@ -507,7 +507,7 @@ header
                 @include display-flex()
             .box
                 @media screen and (min-width: $break-medium)
-                    @include flex-1()
+                    @include flex(1)
                 .title
                     font-size: 1.15rem
                     font-weight: bold
@@ -566,7 +566,7 @@ header
                 color: #000
                 margin: 20px
                 @media screen and (min-width: $break-medium)
-                    @include flex-1()
+                    @include flex(1)
                 h1
                     color: $theme
                     font-size: 1.5rem
@@ -659,7 +659,7 @@ header
                 margin: 20px
                 overflow: hidden
                 @media screen and (min-width: $break-medium)
-                    @include flex-1()
+                    @include flex(1)
                 .video
                     border-color: $theme
                     border-style: solid
@@ -728,7 +728,7 @@ header
             text-decoration: none
             @include prefix(transition, all .25s ease-in-out)
             @media screen and (min-width: $break-medium)
-                @include flex-1()
+                @include flex(1)
             &:hover,
             &:focus
                 background-color: $theme
@@ -780,7 +780,7 @@ header
                 margin-bottom: 20px
                 @include display-flex()
                 .title
-                    @include flex-1()
+                    @include flex(1)
                     color: #444
                     font-size: 1.15rem
                 a.close-button
@@ -833,12 +833,20 @@ footer
         .section
             padding: 30px 10px
             @media screen and (min-width: $break-medium)
-                @include flex-1()
+                @include flex(1)
+                &.bigger
+                    @include flex(2)
             h4
                 font-weight: normal
                 margin: 0
                 padding: 0 0 10px 0
                 text-transform: uppercase
+                &.margin-top
+                    margin-top: 20px
+            p
+                color: #aaa
+                margin: 0
+                padding: 0 0 10px 0
             ul
                 list-style-type: none
                 margin: 0
@@ -846,12 +854,25 @@ footer
                 li
                     color: #aaa
                     padding: 5px 0
+                    i
+                        margin-right: 10px
+            ul.social-icons
+                list-style-type: none
+                margin: 0 0 20px 0
+                padding: 10px
+                text-align: center
+                li
+                    display: inline-block
+                    margin: 0
+                    padding: 0
                     a
-                        color: #aaa
-                        text-decoration: none
                         @include prefix(transition, color .25s ease-in-out)
-                        i
-                            margin-right: 10px
+                        color: #444
+                        display: inline-block
+                        text-decoration: none
+                        margin: 5px
+                        span:last-child
+                            display: none
                         &:hover,
                         &:focus
                             color: $theme
@@ -859,6 +880,23 @@ footer
         background-color: #151515
         padding: 20px
         text-align: center
+        ul
+            font-size: .8rem
+            list-style-type: none
+            margin: 0
+            padding: 10px 0 0 0
+            li
+                display: inline-block
+                margin: 0
+                padding: 0 5px
+                a
+                    display: inline-block
+                    color: #aaa
+                    text-decoration: none
+                    @include prefix(transition, color .25s ease-in-out)
+                    &:hover,
+                    &:focus
+                        color: $theme
 
 // Mailchimp Form
 #mc_embed_signup
@@ -966,7 +1004,7 @@ footer
             background-color: #ddd
             margin: 10px
             padding: 0
-            @include flex-1()
+            @include flex(1)
         .responsive
             position: relative
             width: 100%
@@ -1012,7 +1050,7 @@ footer
         margin: 10px
         padding: 20px
         @media screen and (min-width: $break-small)
-            @include flex-1()
+            @include flex(1)
     .address
         background-color: #5CAB7D
     .career

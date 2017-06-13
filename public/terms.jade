@@ -122,41 +122,7 @@ html(lang="en")
             p 7.13. You grant Talkpush the right to refer to you as a “Client” and mention you and your brand, and company logos, in promotional material, both offline and online. You grant permission to do this during or after any Talkpush services have been rendered activated or terminated.
       
       // Footer Section
-      footer
-        .container
-            .divider
-                .section
-                    h4 Sitemap
-                    include ./_footer-navigation.jade
-                .section
-                    h4 Find Us On
-                    include ./_footer-social.jade
-                .section
-                    h4 Miscellaneous
-                    include ./_footer-miscellaneous.jade
-                .section
-                    // Begin MailChimp Signup Form
-                    #mc_embed_signup
-                      form#mc-embedded-subscribe-form.validate(action='//talkpush.us9.list-manage.com/subscribe/post?u=2e2a41c362afe641e3bee5ed3&id=3485ede50a', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                        #mc_embed_signup_scroll
-                          h4 Monthly Newsletter
-                          .mc-field-group
-                            label(for='mce-EMAIL').mc-label-title Read our newsletter as soon as it gets out. You can unsubscribe anytime you want after subscribing.
-                            input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='example@gmail.com')
-                          #mce-responses.clear
-                            #mce-error-response.response(style='display:none')
-                            #mce-success-response.response(style='display:none')
-                          // real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                          div(style='position: absolute; left: -5000px;', aria-hidden='true')
-                            input(type='text', name='b_2e2a41c362afe641e3bee5ed3_3485ede50a', tabindex='-1', value='')
-                          .clear
-                            input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
-                    // End mc_embed_signup
-
-        .copyright All rights reserved © Talkpush 2017
-      
-
-      
+      include ./_footer.jade
       
       // Scripts Section
       script(src="#{jQuery}")
