@@ -17,6 +17,7 @@ html(lang="en")
         meta(name="keywords" content="#{metaKeywords}")
         title #{siteTitle} - #{siteDescription}
         link(type="text/css", rel="StyleSheet", href="./styles/base.css")
+        link(type="text/css", rel="StyleSheet", href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/css/intlTelInput.css")
         if favicon
             link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
         
@@ -92,7 +93,7 @@ html(lang="en")
             a(href="#adapting-section"): i(class="fa fa-chevron-down fa-fw", aria-hidden="true")
             
       // Adapting Section
-      #adapting-section
+      #adapting-section.white-theme
         .filter
             .container
                 h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Adapting Recruitment to New Behaviors
@@ -161,7 +162,7 @@ html(lang="en")
                             .message Once a conversation is engaged with a candidate via Talkpush, it lives on. Using SMS and messaging, employers get a 99% read rate and 70%+ response rate.
     
       // Drive Numbers Section
-      #drive-section
+      #drive-section.dark-theme
         .filter
             .container
                 h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Drive the Numbers that Matter
@@ -178,7 +179,7 @@ html(lang="en")
                         .message Reduction in cost per hire thanks to improved conversion rate on the marketing spend
       
       // Assistant Section
-      #assistant-section
+      #assistant-section.white-theme
         .filter
             .container
                 h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Stanley is the Recruitment Assistant Who Does it All
@@ -210,7 +211,7 @@ html(lang="en")
                                 a(href="#")#play-3: i.fa.fa-play-circle.fa-fw(aria-hidden='true')
       
       // Pricing Section
-      #pricing-section
+      #pricing-section.dark-theme
         .filter
             .container
                 h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Ramp up your Hiring Volumes with Talkpush
@@ -258,7 +259,7 @@ html(lang="en")
                 h4.subtitle(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") <strong>Terms and conditions apply:</strong> Additional charges apply if more than 500 interviews per month. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>.
         
       // Testimonial Section
-      #testimonial-section
+      #testimonial-section.white-theme
         .filter
             .container
                 h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Clients love Talkpush
@@ -294,9 +295,9 @@ html(lang="en")
         .container
             .title Try it now
             .divide
-                // a(href="#").box
-                //  .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
-                //  .message Via Call
+                a(href="#").box#demo-call-button
+                    .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
+                    .message Via Call
                 a(href="https://m.me/letthetalenttalk/", target="_blank").box
                     .icon
                         svg(xmlns='http://www.w3.org/2000/svg', viewbox='96 93 322 324')
@@ -319,6 +320,22 @@ html(lang="en")
                 input(type="text", name="workemail", placeholder="Work Email")
                 input(type="text", name="telephone", placeholder="Telephone")
                 button(type="submit") Submit
+            form.demo-call-section.demo-phone
+                .step-1
+                    div
+                        input.input-field-phone-number.adjust(type='text', name='demo_phone_no', placeholder='Phone number')
+                        #demo_phone_no_error.error Error
+                    div: button.btn-solid-green.btn-demo-call Call me
+                .step-2
+                    div
+                        input.input-field-phone-number(type='text', name='demo_name', placeholder='Please enter your name')
+                        #demo_name_error.error Error
+                    div
+                        input.input-field-phone-number(type='text', name='demo_email', placeholder='Please enter your email')
+                        #demo_email_error.error Error
+                    div: button.btn-solid-green.btn-demo-submit Submit
+                .step-3
+                    .message Thank you for your interest.
             .we-chat-icon
                 img(src="./images/try-section/wechat.png", alt="WeChat Icon")
                 
@@ -329,3 +346,5 @@ html(lang="en")
       script(src="#{jQuery}")
       script(src="./scripts/app.js")
       script(src="./scripts/aos.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/js/intlTelInput.min.js")
+      script(src="./scripts/call-candidate.js")

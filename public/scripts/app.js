@@ -86,11 +86,20 @@ $(function(){
         $("#dark-filter").fadeToggle("fast");
         $("#dark-filter .pp-price-section").css("display", "block");
         $("#dark-filter .we-chat-icon").css("display", "none");
+        $("#dark-filter .demo-call-section").css("display", "none");
         e.preventDefault();
     });
     $("#we-chat-button").click(function(e){
         $("#dark-filter").fadeToggle("fast");
         $("#dark-filter .we-chat-icon").css("display", "block");
+        $("#dark-filter .pp-price-section").css("display", "none");
+        $("#dark-filter .demo-call-section").css("display", "none");
+        e.preventDefault();
+    });
+    $("#demo-call-button").click(function(e){
+        $("#dark-filter").fadeToggle("fast");
+        $("#dark-filter .demo-call-section").css("display", "block");
+        $("#dark-filter .we-chat-icon").css("display", "none");
         $("#dark-filter .pp-price-section").css("display", "none");
         e.preventDefault();
     });
@@ -108,7 +117,10 @@ $(function(){
         $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Enterprise Pack</span>");
     });
     $("#we-chat-button").click(function(){
-        $("#dark-filter .title").html("<span style='font-weight: bold'>WeChat QR Code</span>");
+        $("#dark-filter .title").html("<span style='font-weight: bold'>Via WeChat</span>");
+    });
+    $("#demo-call-button").click(function(){
+        $("#dark-filter .title").html("<span style='font-weight: bold'>Via Call</span>");
     });
     $("#dark-filter").click(function(){
         $(this).fadeOut("fast");
