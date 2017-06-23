@@ -70,40 +70,23 @@ html(lang="en")
                 .menu
                     include ./_navigation.jade
       
-      .display-header
+      .display-header.about
         .filter
             h1.fade About Us
-      .white-holder.equal
+      .white-holder.equal.white-theme
         div
             .about-message
                 h2.normal Things we believe in
                 p Everyone has a voice. Everyone has something to offer. So how come so many candidates never get a chance to be heard? At Talkpush, we take down the invisible wall that stands between candidates and recruiters. We make it easier for conversations to start. We do our part in making the world a more connected and productive place by starting thousands of recruitment conversations every day.
                 p We are technologists and humanists. We believe software is designed to serve humans, not the other way around. Automation should be a gradual process built around the user. We design software which is human-centric and mobile-first.
                 p We also love speech. Actual spoken words. Why limit yourselves to the written word if candidates want to speak to you? Speech is more natural, intuitive and data-rich.  Messaging is our preferred communication technology, because it allows for more conversations to happen simultaneously.
-            .about-message.more-bigger
-                ul.image-masonry
-                    li: .responsive.rect
-                        .image(style="background-image:url('./images/about-page/masonry/1.jpg')")
-                    li: .responsive.rect
-                        .image(style="background-image:url('./images/about-page/masonry/2.jpg')")
-                ul.image-masonry
-                    li: .responsive
-                        .image(style="background-image:url('./images/about-page/masonry/3.jpg')")
-                    li: .responsive
-                        .image(style="background-image:url('./images/about-page/masonry/4.jpg')")
-                    li: .responsive
-                        .image(style="background-image:url('./images/about-page/masonry/5.png')")
         div
             .about-message
                 h2.normal A word from our Founder
                 p Hi there. My name is Max Armbruster.
                 p A decade ago, I used to interview hundreds of candidates over the phone every year. It was gruesome, unproductive, soul-drenching work but I could not find a technology that did not create an additional barrier between me and the candidates. So I just kept on calling…
         div
-            .about-message.bigger
-                img.max-small(src="./images/about-page/max-small.jpg", alt="Max Small")
-        div
             .about-message
-                img.max-large(src="./images/about-page/max-large.jpg", alt="Max Large")
                 p Eight years ago, I co-founded an Applicant Tracking Software company in Singapore. Meeting the largest employers in Asia, I noticed that many of them were choosing complicated job application processes with the specific purpose of limiting the number of candidates (less resumes to sift through…). It seemed like a wrong way to go about talent selection.
                 p Five years ago, I sold my company and joined SAP, the enterprise software leader. There, I got a better understanding on how complicated it is to make things simple, particularly for large enterprises. More stakeholders means more complexity, leaving everyone frustrated. I wanted to build a simple recruitment solution that made connecting with candidates as easy as making a phone call.
                 p In 2014, I partnered with experts in web and voice technology and we released the first Talkpush prototype. I founded the company and we signed our first client, a small call center. The rest, as they say, is history.
@@ -117,13 +100,7 @@ html(lang="en")
                 p Some of us work from the office, some of us work from home. We don’t keep track of time. We don’t count the amount of vacation we take. Some of us wear suits, some of us wear shorts and sandals. We don’t think the work/life balance debate makes much sense. We come to work because we want to change the world every day, a little bit at a time. Honestly, it’s the only way to Live.
             
         // Address and Career
-        #address-career
-            .address
-                h3
-                    i.fa.fa-map-marker.fa-fw(aria-hidden='true')
-                    span Talkpush's office
-                .content Cityland 3 Condominiums 105, VA Rufino Street, Makati, Philippines
-                .navigation: a(href="https://www.google.com.ph/maps/search/Cityland+3+Condominiums+105,+VA+Rufino+Street,+Makati,+Philippines/@14.5589483,121.0162538,15z/data=!3m1!4b1", target="_blank") Get Directions
+        #career-holder
             .career
                 h3
                     i.fa.fa-users.fa-fw(aria-hidden='true')
