@@ -444,6 +444,58 @@ header
                             border-style: solid
                             border-width: 0 0 1px 1px
                             position: relative
+                            &.g1
+                                .line:nth-child(2)
+                                    top: 16.6%
+                                .line:nth-child(3)
+                                    top: 33.2%
+                                .line:nth-child(4)
+                                    top: 49.8%
+                                .line:nth-child(5)
+                                    top: 66.4%
+                                .line:nth-child(6)
+                                    top: 83%
+                                .bars
+                                    .bar-holder:nth-child(1)
+                                        .bar
+                                            height: 100%
+                                    .bar-holder:nth-child(2)
+                                        .bar
+                                            height: 66.4%
+                                            background-color: rgba(114,222,47,.6)
+                            &.g2
+                                .line:nth-child(2)
+                                    top: 33.3%
+                                .line:nth-child(3)
+                                    top: 66.6%
+                                .bars
+                                    .bar-holder:nth-child(1)
+                                        .bar
+                                            height: 100%
+                                            background-color: rgba(114,222,47,.6)
+                                    .bar-holder:nth-child(2)
+                                        .bar
+                                            height: 66.6%
+                                    .bar-holder:nth-child(3)
+                                        .bar
+                                            height: 33.3%
+                            &.g3
+                                .line:nth-child(2)
+                                    top: 20%
+                                .line:nth-child(3)
+                                    top: 40%
+                                .line:nth-child(4)
+                                    top: 60%
+                                .line:nth-child(5)
+                                    top: 80%
+                                .bars
+                                    .bar-holder:nth-child(1)
+                                        .bar
+                                            height: 20%
+                                    .bar-holder:nth-child(2)
+                                        .bar
+                                            height: 99%
+                                            background-color: rgba(114,222,47,.6)
                             &::before
                                 content: ""
                                 display: block
