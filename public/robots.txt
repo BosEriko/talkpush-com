@@ -3,3 +3,6 @@ Allow: /
 Disallow: /a/
 Disallow: /images/
 Disallow: /o/
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /videos/
