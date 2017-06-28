@@ -2,6 +2,7 @@
 
 //- Global Variable Start
 - pageCode = "terms"
+- pageDescription = "Let your talent talk | Recruitment Chatbot Platform"
 include ./_variables.jade
 //- Global Variable End
 
@@ -11,7 +12,7 @@ html(lang="en")
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1")
-        meta(name="description", content="#{siteDescription}")
+        meta(name="description", content="#{pageDescription}")
         meta(name="keywords" content="#{metaKeywords}")
         title #{siteTitle} - Terms and Conditions
         link(type="text/css", rel="StyleSheet", href="./styles/base.css")
@@ -22,7 +23,7 @@ html(lang="en")
         meta(property="og:title", content="#{siteTitle}")
         if siteImage
             meta(property="og:image", content="#{siteImage}")
-        meta(property="og:description", content="#{siteDescription}")
+        meta(property="og:description", content="#{pageDescription}")
         // Open Graph End
         
         <!--[if lt IE 9]>
