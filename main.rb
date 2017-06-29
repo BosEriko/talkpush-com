@@ -43,10 +43,6 @@ end
 get '/xmaspromotion/' do
   File.read(File.join('public/xmaspromotion', 'index.html'))
 end
-
-get '/pricing.html' do
-  File.read(File.join('public', 'index.html#pricing-section'))
-end
 get '/termsandcond.html' do
   File.read(File.join('public', 'terms.html'))
 end
