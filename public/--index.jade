@@ -17,7 +17,9 @@ html(lang="en")
         meta(name="description", content="#{pageDescription}")
         meta(name="keywords" content="#{metaKeywords}")
         title #{siteTitle} - #{siteDescription}
-        link(type="text/css", rel="StyleSheet", href="./styles/base.css")
+        link(type="text/css", rel="StyleSheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(type="text/css", rel="StyleSheet", href="https://fonts.googleapis.com/css?family=Dosis")
+        link(type="text/css", rel="StyleSheet", href="./dist/_app.css")
         link(type="text/css", rel="StyleSheet", href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/css/intlTelInput.css")
         if favicon
             link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
@@ -344,8 +346,4 @@ html(lang="en")
       include ./_footer.jade
       
       // Scripts Section
-      script(src="#{jQuery}")
-      script(src="./scripts/app.js")
-      script(src="./scripts/aos.js")
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/js/intlTelInput.min.js")
-      script(src="./scripts/call-candidate.js")
+      script(src="./dist/_app.js")
