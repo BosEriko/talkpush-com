@@ -40,9 +40,15 @@ end
 get '/xmaspromotion' do
   File.read(File.join('public/xmaspromotion', 'index.html'))
 end
-
 get '/xmaspromotion/' do
   File.read(File.join('public/xmaspromotion', 'index.html'))
+end
+
+get '/pricing.html' do
+  File.read(File.join('public', 'index.html#pricing-section'))
+end
+get '/termsandcond.html' do
+  File.read(File.join('public', 'terms.html'))
 end
 
 post '/contact-form', :provides => :json do
@@ -148,6 +154,6 @@ post '/job-form' do
         body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
       end
   end
-  
+
 
 end
