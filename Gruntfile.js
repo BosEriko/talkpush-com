@@ -7,8 +7,7 @@ module.exports = function(grunt){
                 './public/scripts/app.js',
                 './public/scripts/aos.js',
                 './public/scripts/intlTelInput.min.js',
-                './public/scripts/call-candidate.js',
-                './public/scripts/about.js'],
+                './public/scripts/call-candidate.js'],
           dest: './public/dist/_app.js',
         },
         css: {
@@ -33,5 +32,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['concat', 'watch']);
-    
+
 }

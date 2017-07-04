@@ -115,6 +115,8 @@ p.gl
     &.chatbot
         background-image: url("../images/chatbot.jpeg")
         background-position: top
+    &.customers
+        background-image: url("../images/customers.jpg")
     .filter
         @include display-flex()
         @include align-items-center()
@@ -123,7 +125,7 @@ p.gl
         height: 75vh
         h1
             color: #fff
-            font-size: 3rem
+            font-size: 2.5rem
             font-weight: normal
             display: block
             margin: 0
@@ -688,7 +690,7 @@ header
                         padding: 10px
                         text-align: center
                         text-decoration: none
-                        display: none // temp
+                        display: none
                         &:hover,
                         &:focus
                             @include prefix(transform, scale(1.05))
@@ -1198,3 +1200,122 @@ ul.jobs-divider
     p
         font-size: 1.1rem
         line-height: 1.5rem
+
+// Customers Page
+.customers-quote
+    background-color: #fff
+    color: #444
+    margin: 0
+    padding: 3rem 0
+    text-align: center
+    .quote-holder
+        @include align-items-center()
+        @include display-flex()
+        h3
+            font-size: 2rem
+            font-weight: normal
+            margin: 0 20px
+            padding: 0
+            @include flex(1)
+        .quote-text
+            color: $theme
+            font-size: 2rem
+            &:nth-child(1)
+                -ms-flex-item-align: start
+                align-self: flex-start
+            &:last-child
+                -ms-flex-item-align: end
+                align-self: flex-end
+.customers-icons
+    background-color: #323a45
+    color: #fff
+    padding: 3rem 0
+    .divider
+        text-align: center
+        .shadow
+            background-color: rgba(0,0,0,.75)
+            bottom: 0
+            display: none
+            height: 100%
+            left: 0
+            position: fixed
+            right: 0
+            top: 0
+            width: 100%
+            z-index: 3
+        .block
+            display: inline-block
+            margin: 10px
+            max-width: 300px
+            width: 100%
+            .dimension-holder
+                padding-top: 65%
+                position: relative
+                .dimension
+                    bottom: 0
+                    height: 100%
+                    left: 0
+                    position: absolute
+                    right: 0
+                    top: 0
+                    width: 100%
+                    .item
+                        background-color: #fff
+                        border-radius: 3px
+                        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+                        color: #000
+                        height: 100%
+                        left: 0
+                        overflow: hidden
+                        position: absolute
+                        right: 0
+                        text-align: left
+                        top: 0
+                        width: 100%
+                        .logo-dimension
+                            padding-top: 65%
+                            position: relative
+                            .logo-holder
+                                @include display-flex()
+                                @include align-items-center()
+                                bottom: 0
+                                height: 100%
+                                left: 0
+                                padding: 20px
+                                position: absolute
+                                right: 0
+                                top: 0
+                                width: 100%
+                                .logo-center
+                                    display: block
+                                    text-align: center
+                                    width: 100%
+                                    img
+                                        max-height: 100%
+                                        max-width: 100%
+                        &.preview
+                            display: none
+                            height: auto
+                            z-index: 4
+                            h3
+                                margin: 0
+                                padding: 10px
+                            p
+                                margin: 0
+                                padding: 0 10px 10px 10px
+                            a.button
+                                @include prefix(transition, transform .25s ease-in-out)
+                                background-color: $theme
+                                border-color: rgba(0,0,0,.35)
+                                border-radius: 3px
+                                border-style: solid
+                                border-width: 1px
+                                color: rgba(0,0,0,.75)
+                                display: block
+                                margin: 0 10px 10px 10px
+                                padding: 10px
+                                text-align: center
+                                text-decoration: none
+                                &:hover,
+                                &:focus
+                                    @include prefix(transform, scale(1.025))

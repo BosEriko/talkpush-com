@@ -147,4 +147,25 @@ $(function(){
         e.preventDefault();
     });
     /* Assistant Section Play Videos End */
+
+    /* Other Page Header Text Fade Start */
+    $(window).scroll(function(){
+        var otherPageWindowScroll = $(this).scrollTop();
+        var otherPageLimit = $(window).height();
+        if(otherPageWindowScroll <= otherPageLimit){
+            $(".display-header .fade").css("opacity" , 1 - otherPageWindowScroll / otherPageLimit);
+            $(".display-header .fade").css("transform", "translateY(" + (otherPageWindowScroll/2) + "px)");
+        }
+    });
+    /* Other Page Header Text Fade End */
+
+    /* Customer Shadow Start */
+    $(".customer-dimension-box").has(".item.preview").hover(function(){
+        $("#customer-shadow").fadeIn("fast");
+        $(this).find(".item.preview").fadeIn("fast");
+    },function(){
+        $("#customer-shadow").fadeOut("fast");
+        $(this).find(".item.preview").fadeOut("fast");
+    });
+    /* Customer Shadow End */
 });
