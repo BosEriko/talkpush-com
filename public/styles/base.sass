@@ -1333,3 +1333,108 @@ ul.jobs-divider
                                 &:hover,
                                 &:focus
                                     @include prefix(transform, scale(1.025))
+// Alorica Case Study
+.quote-sayer
+    margin: 0
+    padding: 20px 0 0 0
+    font-size: 1.25rem
+.display-header.alorica
+    .filter
+        background-color: #f58025
+        background-image: none
+        height: auto
+        padding: 150px 0 50px 0
+        h1
+            text-align: left
+            text-shadow: none
+ul.alorica-list
+    margin: 0
+    padding: 0
+    list-style-type: none
+    li
+        @include display-flex()
+        @include align-items-center()
+        margin-top: 20px
+        padding: 0
+        .data
+            margin-right: 1rem
+            .circle
+                @include display-flex()
+                @include align-items-center()
+                width: 3rem
+                height: 3rem
+                background-color: #fff
+                border-radius: 10000px
+                .number
+                    color: #444
+                    font-weight: bold
+                    font-size: 1rem
+                    width: 100%
+                    text-align: center
+        .text
+            @include flex(1)
+            color: #fff
+            font-size: 1.25rem
+.alorica-white
+    background-color: #fff
+    color: #444
+    .filter
+        padding: 2rem 0
+        h2.gl
+            &::after
+                background-color: #444
+        p.gl
+            font-size: 1.25rem
+.alorica-dark
+    background-color: #323a45
+    color: #fff
+    .filter
+        padding: 2rem 0
+        p.gl
+            font-size: 1.25rem
+.alorica-header
+    @media screen and (min-width: $break-small)
+        @include display-flex()
+        @include align-items-center()
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: reverse
+        -ms-flex-direction: row-reverse
+        flex-direction: row-reverse
+    .header-text
+        @media screen and (min-width: $break-small)
+            @include flex(1)
+            margin: 0 20px 0 0
+        h1
+            margin: 0
+            padding: 0
+            img
+                width: 100%
+                max-width: 200px
+            span
+                display: none
+        h3
+            color: #fff
+            font-size: 1.25rem
+    .video
+        margin: 0 0 20px 0
+        @media screen and (min-width: $break-small)
+            max-width: 400px
+        @media screen and (min-width: $break-medium)
+            max-width: 500px
+        width: 100%
+        .video-holder
+            padding-bottom: 56.25%
+            position: relative
+            iframe
+                background-color: #fff
+                border-width: 5px
+                border-radius: 3px
+                overflow: hidden
+                border-style: solid
+                border-color: #fff
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                box-shadow: 0 0 10px 0 rgba(0,0,0,.25)
