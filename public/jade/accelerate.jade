@@ -93,12 +93,13 @@ html(lang="en")
           .container
             h1 Accelerate your hiring with the chatbot Talkpush
             .divider
-              .icon: img(src="./images/accelerate.jpg",alt="Talkpush Human")
+              .icon: img(src="./images/accelerate.gif",alt="Talkpush Human")
               .text
                 h3 Become an augmented recruiter
                 .accelerate-type-holder
+                  i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
                   .accelerate-type
-                a.button(href="#") Get a Free Demo
+                a.button(href="#")#accelerate-demo Get a Free Demo
           
       .accelerate-feat.white-theme
         .container
@@ -154,7 +155,49 @@ html(lang="en")
             .item
               .icon: i.fa.fa-arrow-circle-down.fa-fw(aria-hidden='true')
               p -65% Cost per hire
-          
+              
+      .accelerate-testimonials.white-theme
+        .container
+          h2.gl Testimonials
+          .divider
+            .box
+                .picture: img(src="./images/accelerate-page/1.jpg",alt="Marvin")
+                .message With Talkpush, we make our applicant's lives easier, while our allowing our recruiters to spend more time with the best qualified candidates.
+                .speaker
+                  .name — Marvin E. Vinluan
+                  .position Director Strategic Sourcing and Recruitment Marketing at Alorica
+                  .icon: i.fa.fa-quote-right.fa-fw
+            .box
+                .picture: img(src="./images/accelerate-page/2.jpg",alt="Keith")
+                .message We have been using Talkpush since 2014 and it has streamlined our recruitment tremendously. We are able to spend more time with the quality candidates and have increased our interview to hire ratio.
+                .speaker
+                  .name — Keith Cheung
+                  .position Head of Talent Acquisition Sheraton and St. Regis Macau at Sheraton
+                  .icon: i.fa.fa-quote-right.fa-fw
+            .box
+                .picture: img(src="./images/accelerate-page/3.jpg",alt="Anna")
+                .message Talkpush helps us automating the recruitment process, especially the initial call outs and collecting the information we need from candidates.
+                .speaker
+                  .name — Anna Pinaroc
+                  .position Recruitment Manager at Afni
+                  .icon: i.fa.fa-quote-right.fa-fw
+                  
+      // Pop Up
+      #dark-filter
+        #pop-up-aligner
+          #pop-up
+            .close-and-title
+              .title: span(style="font-weight: bold;") Get a Free Demo
+              a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
+            form.pp-price-section(style="display: block;")
+              input(type="text", name="firstName", placeholder="First Name")
+              input(type="text", name="lastName", placeholder="Last Name")
+              input(type="text", name="email", placeholder="Email")
+              input(type="text", name="company", placeholder="Company")
+              input(type="text", name="phoneNumber", placeholder="Phone Number")
+              textarea(name='message', placeholder="Message")
+              button(type="submit") Submit
+                  
       // Footer Section
       include ./_footer.jade
       

@@ -105,6 +105,10 @@ $(function() {
     $("#dark-filter .pp-price-section").css("display", "none");
     e.preventDefault();
   });
+  $("#accelerate-demo").click(function(e) {
+    $("#dark-filter").fadeToggle("fast");
+    e.preventDefault();
+  });
   $("#dark-filter .close-button").click(function(e) {
     $("#dark-filter").fadeOut("fast");
     e.preventDefault();
