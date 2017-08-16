@@ -6,6 +6,7 @@ module.exports = function(grunt){
           src: ['./public/scripts/jquery-3.1.0.min.js',
                 './public/scripts/app.js',
                 './public/scripts/aos.js',
+                './public/scripts/typed.js',
                 './public/scripts/intlTelInput.min.js',
                 './public/scripts/call-candidate.js'],
           dest: './public/dist/_app.js',

@@ -77,7 +77,7 @@ html(lang="en")
         
     body
       // Header
-      header.fixed-active
+      header
         .container
             .divider
                 .logo
@@ -90,8 +90,16 @@ html(lang="en")
       
       .display-header.accelerate
         .filter
-            h1.fade Accelerate
-            
+          .container
+            h1 Accelerate your hiring with the chatbot Talkpush
+            .divider
+              .icon: img(src="./images/accelerate.jpg",alt="Talkpush Human")
+              .text
+                h3 Become an augmented recruiter
+                .accelerate-type-holder
+                  .accelerate-type
+                a.button(href="#") Get a Free Demo
+          
       .accelerate-feat.white-theme
         .container
           .accelerate-feat-divider

@@ -1341,8 +1341,8 @@ ul.jobs-divider
 .display-header.alorica
     .filter
         background-color: #f58025
-        background-image: none
         height: auto
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
         padding: 150px 0 50px 0
         h1
             text-align: left
@@ -1440,6 +1440,55 @@ ul.alorica-list
                 box-shadow: 0 0 10px 0 rgba(0,0,0,.25)
 
 // Accelerate Page
+.display-header.accelerate
+    .filter
+        background-color: #383A3F
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+        height: auto
+        padding: 100px 0 50px 0
+        h1
+            text-align: center
+            text-shadow: none
+            font-size: 2rem
+            padding-bottom: 3rem
+        .divider
+          @media screen and (min-width: $break-small)
+            @include display-flex()
+            @include align-items-center()
+            -webkit-box-orient: horizontal
+            -webkit-box-direction: reverse
+            -ms-flex-direction: row-reverse
+            flex-direction: row-reverse
+            .text
+              @include flex(1)
+            .icon
+              width: 350px
+          .icon
+            img
+              width: 100%
+          .text
+            color: #fff
+            h3
+              margin: 0
+              padding: 0
+              font-weight: normal
+              font-size: 2rem
+            .accelerate-type-holder
+              height: 5rem
+              @include display-flex()
+              @include align-items-center()
+              .accelerate-type
+                font-size: 2rem
+                padding: 0 .5rem
+                font-family: Georgia
+            a.button
+              background-color: #fff
+              color: #000
+              text-decoration: none
+              &:hover,
+              &:focus
+                text-decoration: underline
+
 .accelerate-feat
   background-color: #fff
   padding: 3rem 0 0 0
