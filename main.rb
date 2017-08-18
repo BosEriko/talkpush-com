@@ -118,7 +118,7 @@ post '/partnership-form', :provides => :json do
   message = params["message"]
 
   Mail.deliver do
-    to      'bos.eriko@gmai.com'
+    to      ENV["PARTNERSHIP_RECIPIENT"]
     from    ENV["EMAIL_ADDRESS"]
       subject "Partnership enquiry from #{full_name} at #{company}"
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
@@ -128,13 +128,13 @@ end
 post '/test-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
-  name = params["firstName"]
+  full_name = params["fullName"]
 
   Mail.deliver do
     to      'bos.eriko@gmail.com'
     from    'mail@boseriko.com'
       subject "This is a test"
-    body    "This is a test message. #{name}"
+    body    "This is a test message"
   end
 end
 # Test End
