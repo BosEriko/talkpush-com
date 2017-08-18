@@ -190,7 +190,7 @@ html(lang="en")
             .close-and-title
               .title: span(style="font-weight: bold;") Get a Free Demo
               a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
-            form.pp-price-section(style="display: block;")
+            form.pp-price-section(style="display: block;",action="/test-form",method="post")
               input(type="text", name="firstName", placeholder="First Name")
               input(type="text", name="lastName", placeholder="Last Name")
               input(type="text", name="email", placeholder="Email")

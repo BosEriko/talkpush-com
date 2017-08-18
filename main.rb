@@ -124,7 +124,20 @@ post '/partnership-form', :provides => :json do
     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
   end
 end
+# Test Start
+post '/test-form', :provides => :json do
+  params = JSON.parse(request.body.read)
 
+  name = params["firstName"]
+
+  Mail.deliver do
+    to      'bos.eriko@gmail.com'
+    from    'mail@boseriko.com'
+      subject "This is a test"
+    body    "This is a test message. #{name}"
+  end
+end
+# Test End
 post '/job-form' do
 
   full_name = params["fullName"]
