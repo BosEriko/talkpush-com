@@ -23,11 +23,12 @@ $(function() {
       success: function(data) {
         if (data.error === "duplicated") {
           console.log(data);
-          console.log("This candidate was duplicated. Please try again after 15 mins.");
+          $(".accelerate-error").show();
         } else {
           console.log(data);
           pinNo = data.pin;
-          console.log("Thank you for your interest.");
+          $(".accelerate-data").delay(500).fadeIn(500);
+          $("form.accelerate-form").fadeOut(500);
         }
       },
       error: function(a, b, c) {

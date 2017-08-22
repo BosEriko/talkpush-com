@@ -190,15 +190,16 @@ html(lang="en")
             .close-and-title
               .title: span(style="font-weight: bold;") Get a Free Demo
               a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
-            form.accelerate-form(style="display: block;")
+            form.accelerate-form
               input(type="text", name="acc_firstName", placeholder="First Name")
               input(type="text", name="acc_lastName", placeholder="Last Name")
               input(type="text", name="acc_email", placeholder="Email")
               //- input(type="text", name="acc_company", placeholder="Company")
               input(type="text", name="acc_phoneNumber", placeholder="Phone Number")
               //- textarea(name='acc_message', placeholder="Message")
+              .accelerate-error This candidate was duplicated. Please try again after 15 mins.
               button(type="submit") Submit
-                  
+            .accelerate-data Thank you for your interest.
       // Footer Section
       include ./_footer.jade
       

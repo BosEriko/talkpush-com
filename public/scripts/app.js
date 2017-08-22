@@ -107,6 +107,8 @@ $(function() {
   });
   $("#accelerate-demo").click(function(e) {
     $("#dark-filter").fadeToggle("fast");
+    $("#dark-filter .accelerate-form").css("display", "block");
+    $(".accelerate-data").hide();
     e.preventDefault();
   });
   $("#dark-filter .close-button").click(function(e) {
