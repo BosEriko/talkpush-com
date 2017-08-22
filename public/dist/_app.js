@@ -1404,7 +1404,6 @@ $(function() {
     accelerateFormData.append("campaign_invitation[last_name]", $("form.accelerate-form input[name='acc_lastName']").val());
     accelerateFormData.append("campaign_invitation[email]", $("form.accelerate-form input[name='acc_email']").val());
     accelerateFormData.append("campaign_invitation[user_phone_number]", $("form.accelerate-form input[name='acc_phoneNumber']").val());
-    console.log(accelerateFormData)
     $.ajax({
       url: "https://" + host + "/api/talkpush_services/campaigns/" + accelerateCampaignID + "/campaign_invitations",
       type: "POST",
@@ -1422,8 +1421,8 @@ $(function() {
         } else {
           console.log(data);
           pinNo = data.pin;
-          $(".accelerate-data").delay(500).fadeIn(500);
           $("form.accelerate-form").fadeOut(500);
+          $(".accelerate-data").delay(500).fadeIn(500);
         }
       },
       error: function(a, b, c) {
