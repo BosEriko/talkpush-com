@@ -8,7 +8,8 @@ module.exports = function(grunt){
                 './public/scripts/aos.js',
                 './public/scripts/typed.js',
                 './public/scripts/intlTelInput.min.js',
-                './public/scripts/call-candidate.js'],
+                './public/scripts/call-candidate.js',
+                './public/scripts/accelerate-form.js'],
           dest: './public/dist/_app.js',
         },
         css: {
