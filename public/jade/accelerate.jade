@@ -190,12 +190,10 @@ html(lang="en")
             .close-and-title
               .title: span(style="font-weight: bold;") Get a Free Demo
               a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
-            form.pp-price-section(style="display: block;",action="/test-form",method="POST")
-              input(type="text", name="firstName", placeholder="First Name")
-              input(type="text", name="lastName", placeholder="Last Name")
+            form.pp-price-section(style="display: block;",action="/contactj-form",method="POST")
+              input(type="text", name="fullName", placeholder="First Name")
               input(type="text", name="email", placeholder="Email")
               input(type="text", name="company", placeholder="Company")
-              input(type="text", name="phoneNumber", placeholder="Phone Number")
               textarea(name='message', placeholder="Message")
               button(type="submit") Submit
                   
