@@ -4,7 +4,7 @@ $(function() {
   $('form.accelerate-form').submit(function(e) {
     accelerateFormData.append("api_key", apiKey);
     accelerateFormData.append("api_secret", apiSecret);
-    accelerateFormData.append("source", "Landing Page");
+    accelerateFormData.append("campaign_invitation[source]", "https://talkpush.com/accelerate.html");
     accelerateFormData.append("campaign_invitation[first_name]", $("form.accelerate-form input[name='acc_firstName']").val());
     accelerateFormData.append("campaign_invitation[last_name]", $("form.accelerate-form input[name='acc_lastName']").val());
     accelerateFormData.append("campaign_invitation[email]", $("form.accelerate-form input[name='acc_email']").val());
