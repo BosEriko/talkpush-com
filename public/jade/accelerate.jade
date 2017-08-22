@@ -100,8 +100,7 @@ html(lang="en")
                 .accelerate-type-holder
                   i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
                   .accelerate-type
-                //- a.button(href="#")#accelerate-demo Get a Free Demo
-                a.button(href="https://calendly.com/talkpush/20-minute-talkpush-demo/", target="_blank") Get a Free Demo
+                a.button(href="#")#accelerate-demo Get a Free Demo
           
       .accelerate-feat.white-theme
         .container
@@ -191,9 +190,13 @@ html(lang="en")
             .close-and-title
               .title: span(style="font-weight: bold;") Get a Free Demo
               a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
-            form.accelerate-form(style="display: block;",action="/contact-form",method="POST")
-              input.accelerate-phone(type="text", name="acc_phone_number", placeholder="Phone Number")
-              textarea(name='message', placeholder="Message")
+            form.accelerate-form(style="display: block;")
+              input(type="text", name="acc_firstName", placeholder="First Name")
+              input(type="text", name="acc_lastName", placeholder="Last Name")
+              input(type="text", name="acc_email", placeholder="Email")
+              //- input(type="text", name="acc_company", placeholder="Company")
+              input(type="text", name="acc_phoneNumber", placeholder="Phone Number")
+              //- textarea(name='acc_message', placeholder="Message")
               button(type="submit") Submit
                   
       // Footer Section
