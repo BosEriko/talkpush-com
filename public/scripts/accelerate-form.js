@@ -9,6 +9,8 @@ $(function() {
     accelerateFormData.append("campaign_invitation[last_name]", $("form.accelerate-form input[name='acc_lastName']").val());
     accelerateFormData.append("campaign_invitation[email]", $("form.accelerate-form input[name='acc_email']").val());
     accelerateFormData.append("campaign_invitation[user_phone_number]", $("form.accelerate-form input[name='acc_phoneNumber']").val());
+    accelerateFormData.append("campaign_invitation[others][company]", $("form.accelerate-form input[name='acc_company']").val());
+    accelerateFormData.append("campaign_invitation[others][job_title]", $("form.accelerate-form input[name='acc_jobTitle']").val());
     $.ajax({
       url: "https://" + host + "/api/talkpush_services/campaigns/" + accelerateCampaignID + "/campaign_invitations",
       type: "POST",
