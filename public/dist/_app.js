@@ -185,11 +185,11 @@ $(function() {
   /* Typing Start */
   var options = {
     strings: [
-      "I can interview 215 candidates per day",
-      "I can have 1,251 conversations at once",
-      "I can remember 1,262,726 names",
-      "I can schedule 172 interviews per day",
-      "I am an #augmentedrecruiter",
+      "I can <div class='underline'>interview 215 candidates per day</div>",
+      "I can <div class='underline'>have 1,251 conversations at once</div>",
+      "I can <div class='underline'>remember 1,262,726 names</div>",
+      "I can <div class='underline'>schedule 172 interviews per day</div>",
+      "I am an <div class='underline'>#augmentedrecruiter</div>",
     ],
     typeSpeed: 75,
     showCursor: 0
