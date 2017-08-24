@@ -734,11 +734,13 @@ header
             &::-webkit-scrollbar
               height: 5px
             &::-webkit-scrollbar-track
-              background-color: #ddd
-              border-radius: 3px
+              background-color: transparent
             &::-webkit-scrollbar-thumb
-              background-color: #bbb
+              background-color: transparent
               border-radius: 3px
+            &:hover
+              &::-webkit-scrollbar-thumb
+                background-color: #ccc
             .box-holder
               white-space: normal
               .box
