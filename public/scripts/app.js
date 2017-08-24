@@ -196,6 +196,7 @@ $(function() {
   /* Typing End */
 
   /* Testimonial Slide Start */
+  console.log("test")
   /* Testimonial Slide End */
 
 });

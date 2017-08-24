@@ -728,65 +728,68 @@ header
         @media screen and (min-width: $break-medium)
             padding: 5rem 0
         .divide
-            @media screen and (min-width: $break-medium)
-                @include display-flex()
-            .box
-                background-color: #eee
-                border-color: rgba(0,0,0,.15)
-                border-radius: 3px
-                border-style: solid
-                border-width: 1px
-                box-shadow: 0 0 10px rgba(0,0,0,.2)
-                color: #000
-                margin: 20px
-                overflow: hidden
-                @media screen and (min-width: $break-medium)
-                    @include flex(1)
-                .video
-                    border-color: $theme
-                    border-style: solid
-                    border-width: 3px 0 0 0
-                    height: 0
-                    padding-bottom: 45.5%
-                    padding-top: 30px
-                    position: relative
-                    iframe
-                        border: none
-                        height: 100%
-                        left: 0
-                        position: absolute
-                        top: 0
-                        width: 100%
-                .message
-                    background-color: #fff
-                    border-color: rgba(0,0,0,.15)
-                    border-style: solid
-                    border-width: 0 0 1px 0
-                    font-size: 1rem
-                    font-style: italic
-                    line-height: 1.25rem
-                    padding: 20px
-                    position: relative
-                    @media screen and (min-width: $break-medium)
-                        font-size: .85rem
-                        min-height: 150px
-                .speaker
-                    color: #555
-                    padding: 20px
-                    position: relative
-                    .name
-                        font-weight: bold
-                        padding-bottom: 10px
-                    .position
-                        font-size: .85rem
-                    .icon
-                        color: $theme
-                        font-size: 3rem
-                        top: 20px
-                        opacity: .5
-                        position: absolute
-                        right: 20px
-                        z-index: -1
+            // @media screen and (min-width: $break-medium)
+            //     @include display-flex()
+            .box-holder
+              display: inline-block
+              width: 30%
+              .box
+                  background-color: #eee
+                  border-color: rgba(0,0,0,.15)
+                  border-radius: 3px
+                  border-style: solid
+                  border-width: 1px
+                  box-shadow: 0 0 10px rgba(0,0,0,.2)
+                  color: #000
+                  margin: 20px
+                  overflow: hidden
+                  // @media screen and (min-width: $break-medium)
+                  //     @include flex(1)
+                  .video
+                      border-color: $theme
+                      border-style: solid
+                      border-width: 3px 0 0 0
+                      height: 0
+                      padding-bottom: 45.5%
+                      padding-top: 30px
+                      position: relative
+                      iframe
+                          border: none
+                          height: 100%
+                          left: 0
+                          position: absolute
+                          top: 0
+                          width: 100%
+                  .message
+                      background-color: #fff
+                      border-color: rgba(0,0,0,.15)
+                      border-style: solid
+                      border-width: 0 0 1px 0
+                      font-size: 1rem
+                      font-style: italic
+                      line-height: 1.25rem
+                      padding: 20px
+                      position: relative
+                      @media screen and (min-width: $break-medium)
+                          font-size: .85rem
+                          min-height: 150px
+                  .speaker
+                      color: #555
+                      padding: 20px
+                      position: relative
+                      .name
+                          font-weight: bold
+                          padding-bottom: 10px
+                      .position
+                          font-size: .85rem
+                      .icon
+                          color: $theme
+                          font-size: 3rem
+                          top: 20px
+                          opacity: .5
+                          position: absolute
+                          right: 20px
+                          z-index: -1
 
 // Try Section
 #try-section
