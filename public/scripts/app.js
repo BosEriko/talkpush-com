@@ -198,7 +198,7 @@ $(function() {
     var testimonialCount = 1
     var testimonialAnimation = setInterval(function() {
       $("#testimonial-section .divide").animate({
-        scrollLeft: testimonialBoxWidth * (testimonialCount % $("#testimonial-section .divide").children().length)
+        scrollLeft: testimonialBoxWidth * (testimonialCount % ($("#testimonial-section .divide").children().length - 2))
       }, 1000)
       testimonialCount++
     }, 5000)
