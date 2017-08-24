@@ -201,17 +201,15 @@ $(function() {
     var testimonialBoxWidth = Math.floor($("#testimonial-section .divide").width() / 3)
     $("#testimonial-section .divide .box-holder").css({"display": "inline-block", "width": testimonialBoxWidth})
     var testimonialCount = 1
-    do
-    {
-      setTimeout(function() {
-        // $("#testimonial-section .divide").animate({
-        //   scrollLeft: testimonialBoxWidth * testimonialCount
-        // }, 800);
-        console.log(testimonialCount)
-      }, testimonialCount * 1000)
+    var testimonialAnimation = setInterval(function() {
+      $("#testimonial-section .divide").animate({
+        scrollLeft: testimonialBoxWidth * (testimonialCount % $("#testimonial-section .divide").children().length)
+      }, 1000)
       testimonialCount++
-    }
-    while (testimonialCount < 2)
+    }, 5000)
+    $("#testimonial-section .divide").click(function(){
+      clearInterval(testimonialAnimation)
+    })
   }
   /* Testimonial Slide End */
 
