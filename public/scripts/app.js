@@ -178,19 +178,21 @@ $(function() {
   /* Customer Shadow End */
 
   /* Typing Start */
-  var options = {
-    strings: [
-      "I can <div class='underline'>interview 215 candidates per day</div>",
-      "I can <div class='underline'>have 1,251 conversations at once</div>",
-      "I can <div class='underline'>remember 1,262,726 names</div>",
-      "I can <div class='underline'>schedule 172 interviews per day</div>",
-      "I am an <div class='underline'>#augmentedrecruiter</div>",
-    ],
-    typeSpeed: 75,
-    showCursor: 0
-  }
+  if($(".accelerate-type").length){
+    var options = {
+      strings: [
+        "I can <div class='underline'>interview 215 candidates per day</div>",
+        "I can <div class='underline'>have 1,251 conversations at once</div>",
+        "I can <div class='underline'>remember 1,262,726 names</div>",
+        "I can <div class='underline'>schedule 172 interviews per day</div>",
+        "I am an <div class='underline'>#augmentedrecruiter</div>",
+      ],
+      typeSpeed: 75,
+      showCursor: 0
+    }
 
-  var typed = new Typed(".accelerate-type", options);
+    var typed = new Typed(".accelerate-type", options);
+  }
   /* Typing End */
 
   /* Testimonial Slide Start */
