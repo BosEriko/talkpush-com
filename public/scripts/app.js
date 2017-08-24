@@ -193,4 +193,7 @@ $(function() {
   var typed = new Typed(".accelerate-type", options);
   /* Typing End */
 
+  /* Testimonial Slide Start */
+  /* Testimonial Slide End */
+
 });
