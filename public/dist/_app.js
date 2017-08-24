@@ -1426,7 +1426,6 @@ $(function() {
     accelerateFormData.append("campaign_invitation[user_country_code]", accelCountryCode.dialCode);
     accelerateFormData.append("campaign_invitation[others][company]", $("form.accelerate-form input[name='acc_company']").val());
     accelerateFormData.append("campaign_invitation[others][job_title]", $("form.accelerate-form input[name='acc_jobTitle']").val());
-    debugger;
     $.ajax({
       url: "https://" + host + "/api/talkpush_services/campaigns/" + accelerateCampaignID + "/campaign_invitations",
       type: "POST",
