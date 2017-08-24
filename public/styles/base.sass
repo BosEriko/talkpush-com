@@ -728,8 +728,17 @@ header
         @media screen and (min-width: $break-medium)
             padding: 5rem 0
         .divide
-            overflow: hidden
+            overflow-x: scroll
+            overflow-y: hidden
             white-space: nowrap
+            &::-webkit-scrollbar
+              height: 5px
+            &::-webkit-scrollbar-track
+              background-color: #ddd
+              border-radius: 3px
+            &::-webkit-scrollbar-thumb
+              background-color: #bbb
+              border-radius: 3px
             .box-holder
               white-space: normal
               .box

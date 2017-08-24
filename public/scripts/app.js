@@ -202,6 +202,7 @@ $(function() {
       "display": "inline-block",
       "width": testimonialBoxWidth,
     })
+    $("#testminoial-section .divide").scrollLeft(200)
   }
   /* Testimonial Slide End */
 
