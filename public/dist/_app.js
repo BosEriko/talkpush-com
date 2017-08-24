@@ -201,7 +201,11 @@ $(function() {
   /* Typing End */
 
   /* Testimonial Slide Start */
-  console.log("test")
+  var testimonialBoxWidth = Math.floor($("#testimonial-section .divide").width() / 3)
+  $("#testimonial-section .divide .box-holder").css({
+    "display": "inline-block",
+    "width": testimonialBoxWidth,
+  })
   /* Testimonial Slide End */
 
 });

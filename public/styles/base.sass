@@ -728,11 +728,7 @@ header
         @media screen and (min-width: $break-medium)
             padding: 5rem 0
         .divide
-            // @media screen and (min-width: $break-medium)
-            //     @include display-flex()
             .box-holder
-              display: inline-block
-              width: 30%
               .box
                   background-color: #eee
                   border-color: rgba(0,0,0,.15)
@@ -743,8 +739,6 @@ header
                   color: #000
                   margin: 20px
                   overflow: hidden
-                  // @media screen and (min-width: $break-medium)
-                  //     @include flex(1)
                   .video
                       border-color: $theme
                       border-style: solid
@@ -789,7 +783,7 @@ header
                           opacity: .5
                           position: absolute
                           right: 20px
-                          z-index: -1
+                          z-index: 0
 
 // Try Section
 #try-section
