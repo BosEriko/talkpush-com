@@ -201,7 +201,7 @@ $(function() {
   /* Typing End */
 
   /* Testimonial Slide Start */
-  if($(window).width() >= 961){
+  if($(window).width() >= 961 && $("#testimonial-section").length){
     var testimonialBoxWidth = Math.floor($("#testimonial-section .divide").width() / 3)
     $("#testimonial-section .divide .box-holder").css({
       "display": "inline-block",
