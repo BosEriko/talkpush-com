@@ -5,7 +5,7 @@ var host = "my.talkpush.com";
 var pinNo = "";
 var campaignID = "e3907969ae2be3c16cff8b3b6cdc97b8";
 
-$('input[name="demo_phone_no"]').intlTelInput({
+$('input[name="demo_phone_no"], form.accelerate-form input.accelerate-phone').intlTelInput({
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/js/utils.js",
     nationalMode: false,
     autoPlaceholder: false,
@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
 })
 
-$('#demo_phone_no').intlTelInput({
+$('#demo_phone_no, form.accelerate-form input.accelerate-phone').intlTelInput({
     utilsScript: "js/utils.js?4",
     nationalMode: false,
     autoPlaceholder: false,

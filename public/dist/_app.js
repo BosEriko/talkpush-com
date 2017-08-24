@@ -183,14 +183,10 @@ $(function() {
   /* Customer Shadow End */
 
   /* Typing Start */
-  if($(".accelerate-type").length){
+  if ($(".accelerate-type").length) {
     var options = {
       strings: [
-        "I can <div class='underline'>interview 215 candidates per day</div>",
-        "I can <div class='underline'>have 1,251 conversations at once</div>",
-        "I can <div class='underline'>remember 1,262,726 names</div>",
-        "I can <div class='underline'>schedule 172 interviews per day</div>",
-        "I am an <div class='underline'>#augmentedrecruiter</div>",
+        "I can <div class='underline'>interview 215 candidates per day</div>", "I can <div class='underline'>have 1,251 conversations at once</div>", "I can <div class='underline'>remember 1,262,726 names</div>", "I can <div class='underline'>schedule 172 interviews per day</div>", "I am an <div class='underline'>#augmentedrecruiter</div>"
       ],
       typeSpeed: 75,
       showCursor: 0
@@ -201,12 +197,21 @@ $(function() {
   /* Typing End */
 
   /* Testimonial Slide Start */
-  if($(window).width() >= 961 && $("#testimonial-section").length){
+  if ($(window).width() >= 961 && $("#testimonial-section").length) {
     var testimonialBoxWidth = Math.floor($("#testimonial-section .divide").width() / 3)
-    $("#testimonial-section .divide .box-holder").css({
-      "display": "inline-block",
-      "width": testimonialBoxWidth,
-    })
+    $("#testimonial-section .divide .box-holder").css({"display": "inline-block", "width": testimonialBoxWidth})
+    var testimonialCount = 1
+    do
+    {
+      setTimeout(function() {
+        // $("#testimonial-section .divide").animate({
+        //   scrollLeft: testimonialBoxWidth * testimonialCount
+        // }, 800);
+        console.log(testimonialCount)
+      }, testimonialCount * 1000)
+      testimonialCount++
+    }
+    while (testimonialCount < 2)
   }
   /* Testimonial Slide End */
 
@@ -1279,7 +1284,7 @@ var host = "my.talkpush.com";
 var pinNo = "";
 var campaignID = "e3907969ae2be3c16cff8b3b6cdc97b8";
 
-$('input[name="demo_phone_no"]').intlTelInput({
+$('input[name="demo_phone_no"], form.accelerate-form input.accelerate-phone').intlTelInput({
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/js/utils.js",
     nationalMode: false,
     autoPlaceholder: false,
@@ -1310,7 +1315,7 @@ $(document).ready(function(){
     });
 })
 
-$('#demo_phone_no').intlTelInput({
+$('#demo_phone_no, form.accelerate-form input.accelerate-phone').intlTelInput({
     utilsScript: "js/utils.js?4",
     nationalMode: false,
     autoPlaceholder: false,
