@@ -2,15 +2,19 @@ $(function() {
   var accelerateCampaignID = "3327"
   var accelerateFormData = new FormData();
   $('form.accelerate-form').submit(function(e) {
+    var accelCountryCode = $("form.accelerate-form input[name='acc_phoneNumber']").intlTelInput("getSelectedCountryData");
+    var accelPhoneNumber = $("form.accelerate-form input[name='acc_phoneNumber']").val().replace("+" + accelCountryCode.dialCode, "");
     accelerateFormData.append("api_key", apiKey);
     accelerateFormData.append("api_secret", apiSecret);
     accelerateFormData.append("campaign_invitation[source]", "https://talkpush.com/accelerate.html");
     accelerateFormData.append("campaign_invitation[first_name]", $("form.accelerate-form input[name='acc_firstName']").val());
     accelerateFormData.append("campaign_invitation[last_name]", $("form.accelerate-form input[name='acc_lastName']").val());
     accelerateFormData.append("campaign_invitation[email]", $("form.accelerate-form input[name='acc_email']").val());
-    accelerateFormData.append("campaign_invitation[user_phone_number]", $("form.accelerate-form input[name='acc_phoneNumber']").val());
+    accelerateFormData.append("campaign_invitation[user_phone_number]", accelPhoneNumber);
+    accelerateFormData.append("campaign_invitation[user_country_code]", accelCountryCode.dialCode);
     accelerateFormData.append("campaign_invitation[others][company]", $("form.accelerate-form input[name='acc_company']").val());
     accelerateFormData.append("campaign_invitation[others][job_title]", $("form.accelerate-form input[name='acc_jobTitle']").val());
+    debugger;
     $.ajax({
       url: "https://" + host + "/api/talkpush_services/campaigns/" + accelerateCampaignID + "/campaign_invitations",
       type: "POST",

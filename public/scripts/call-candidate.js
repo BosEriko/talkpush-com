@@ -48,7 +48,7 @@ $('#demo_phone_no, form.accelerate-form input.accelerate-phone').intlTelInput({
 function submitDemoPhone() {
     var countryCode = $('input[name="demo_phone_no"]').intlTelInput("getSelectedCountryData");
     var phoneNo = $('input[name="demo_phone_no"]').val().replace("+" + countryCode.dialCode, "");
-
+    
     if ($('input[name="demo_phone_no"]').val() === "") {
         $('#demo_phone_no_error').text("Phone number must be not null and numeric only.");
         $('#demo_phone_no_error').show();
