@@ -99,7 +99,7 @@ html(lang="en")
                 .accelerate-type-holder
                   i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
                   .accelerate-type
-                a.button(href="#")#accelerate-demo Get a Free Demo
+                a.button(href="#",onclick="goog_report_conversion(window.location.href)")#accelerate-demo Get a Free Demo
           
       .accelerate-feat.white-theme
         .container
@@ -205,3 +205,32 @@ html(lang="en")
       
       // Scripts Section
       script(src="./dist/_app.js")
+      //- Google Code for Book a demo Conversion Page
+      //- In your html page, add the snippet and call
+      //- goog_report_conversion when someone clicks on the
+      //- chosen link or button.
+      script(type='text/javascript').
+        /* <![CDATA[ */
+        goog_snippet_vars = function() {
+        var w = window;
+        w.google_conversion_id = 973198520;
+        w.google_conversion_label = "lVOQCJTXrHQQuKmH0AM";
+        w.google_remarketing_only = false;
+        }
+        // DO NOT CHANGE THE CODE BELOW.
+        goog_report_conversion = function(url) {
+        goog_snippet_vars();
+        window.google_conversion_format = "3";
+        var opt = new Object();
+        opt.onload_callback = function() {
+        if (typeof(url) != 'undefined') {
+        window.location = url;
+        }
+        }
+        var conv_handler = window['google_trackConversion'];
+        if (typeof(conv_handler) == 'function') {
+        conv_handler(opt);
+        }
+        }
+        /* ]]> */
+      script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion_async.js')
