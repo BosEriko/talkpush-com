@@ -33,6 +33,9 @@ $(function() {
           pinNo = data.pin;
           $("form.accelerate-form").fadeOut(500);
           $(".accelerate-data").delay(500).fadeIn(500);
+          setTimeout(function(){
+            window.location = "https://calendly.com/talkpush/20-minute-talkpush-demo/";
+          },3000);
         }
       },
       error: function(a, b, c) {
