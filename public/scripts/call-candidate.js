@@ -8,8 +8,7 @@ var campaignID = "e3907969ae2be3c16cff8b3b6cdc97b8";
 $('input[name="demo_phone_no"], form.accelerate-form input.accelerate-phone').intlTelInput({
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/js/utils.js",
     nationalMode: false,
-    autoPlaceholder: false,
-    preferredCountries: ["hk", "ph", "fr"]
+    autoPlaceholder: false
 });
 
 $(document).ready(function(){
@@ -39,8 +38,7 @@ $(document).ready(function(){
 $('#demo_phone_no, form.accelerate-form input.accelerate-phone').intlTelInput({
     utilsScript: "js/utils.js?4",
     nationalMode: false,
-    autoPlaceholder: false,
-    preferredCountries: ["hk", "ph", "fr"]
+    autoPlaceholder: false
 });
 
 
@@ -48,7 +46,7 @@ $('#demo_phone_no, form.accelerate-form input.accelerate-phone').intlTelInput({
 function submitDemoPhone() {
     var countryCode = $('input[name="demo_phone_no"]').intlTelInput("getSelectedCountryData");
     var phoneNo = $('input[name="demo_phone_no"]').val().replace("+" + countryCode.dialCode, "");
-    
+
     if ($('input[name="demo_phone_no"]').val() === "") {
         $('#demo_phone_no_error').text("Phone number must be not null and numeric only.");
         $('#demo_phone_no_error').show();
