@@ -190,12 +190,12 @@ html(lang="en")
               .title: span(style="font-weight: bold;") Get a Free Demo
               a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
             form.accelerate-form
-              input(type="text", name="acc_firstName", placeholder="First Name")
-              input(type="text", name="acc_lastName", placeholder="Last Name")
-              input(type="text", name="acc_email", placeholder="Email")
-              input(type="text", name="acc_company", placeholder="Company")
-              input(type="text", name="acc_jobTitle", placeholder="Job Title")
-              input(type="text", name="acc_phoneNumber", placeholder="Phone Number").adjust.accelerate-phone
+              input(type="text", name="acc_firstName", placeholder="First Name", required)
+              input(type="text", name="acc_lastName", placeholder="Last Name", required)
+              input(type="text", name="acc_email", placeholder="Email", required)
+              input(type="text", name="acc_company", placeholder="Company", required)
+              input(type="text", name="acc_jobTitle", placeholder="Job Title", required)
+              input(type="text", name="acc_phoneNumber", placeholder="Phone Number", required).adjust.accelerate-phone
               //- textarea(name='acc_message', placeholder="Message")
               .accelerate-error This candidate was duplicated. Please try again after 15 mins.
               button(type="submit") Submit
