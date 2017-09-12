@@ -139,7 +139,7 @@ p.gl
 
 .dark-theme
   background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%232c333e' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")
-// Indentation Checkpoint
+
 // Video Parallax
 #video-parallax
   display: none
@@ -157,159 +157,160 @@ p.gl
 
 // Header
 header
-    @include prefix(transition, all 0.3s ease-in-out)
+  @include prefix(transition, all 0.3s ease-in-out)
+  background-color: #fff
+  box-shadow: 0 0 10px rgba(0,0,0,.25)
+  left: 0
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 2
+  @media screen and (min-width: $break-medium)
+    background-color: transparent
+    box-shadow: none
+  &.active,
+  &.fixed-active
     background-color: #fff
     box-shadow: 0 0 10px rgba(0,0,0,.25)
-    left: 0
-    position: fixed
-    right: 0
-    top: 0
-    z-index: 2
-    @media screen and (min-width: $break-medium)
-        background-color: transparent
-        box-shadow: none
-    &.active,
-    &.fixed-active
-        background-color: #fff
-        box-shadow: 0 0 10px rgba(0,0,0,.25)
-        .divider
-            .logo
-                a.logo
-                    background-image: url("../images/logo-black.png")
-                    height: 40px
-                    margin: 15px 0
-                    width: 101px
-            .menu
-                ul
-                    li
-                        a
-                            color: #444
-                            &:before
-                                background-color: #444
-                        &:last-child
-                            a
-                                @media screen and (min-width: $break-medium)
-                                    background-color: #555
-                                    border-color: rgba(0,0,0,.2)
-                                &:hover,
-                                &:focus
-                                    @media screen and (min-width: $break-medium)
-                                        background-color: #333
     .divider
-        @media screen and (min-width: $break-medium)
-            @include display-flex()
-            @include align-items-center()
-        .logo
-            @include display-flex()
-            @include align-items-center()
-            a.logo
-                @include prefix(transition, all 0.3s ease-in-out)
-                background-image: url("../images/logo-black.png")
-                background-repeat: none
-                background-size: cover
-                display: inline-block
-                height: 40px
-                margin: 15px 0
-                width: 101px
+      .logo
+        a.logo
+          background-image: url("../images/logo-black.png")
+          height: 40px
+          margin: 15px 0
+          width: 101px
+      .menu
+        ul
+          li
+            a
+              color: #444
+              &:before
+                background-color: #444
+            &:last-child
+              a
                 @media screen and (min-width: $break-medium)
-                    background-image: url("../images/logo-white.png")
-                    height: 60px
-                    margin: 20px 0
-                    width: 152px
-                span
-                    display: none
-            a.menu-button
-                @include flex(1)
-                font-size: 1.5rem
-                margin-right: 20px
-                text-align: right
-                @include prefix(transition, color 0.3s ease-in-out)
-                @media screen and (min-width: $break-medium)
-                    display: none
+                  background-color: #555
+                  border-color: rgba(0,0,0,.2)
                 &:hover,
                 &:focus
-                    color: $theme
-        .menu
-            border-color: rgba(0,0,0,.1)
-            border-style: solid
-            border-width: 1px 0 0 0
-            display: none
-            text-align: center
+                  @media screen and (min-width: $break-medium)
+                    background-color: #333
+  .divider
+    @media screen and (min-width: $break-medium)
+      @include display-flex()
+      @include align-items-center()
+    .logo
+      @include display-flex()
+      @include align-items-center()
+      a.logo
+        @include prefix(transition, all 0.3s ease-in-out)
+        background-image: url("../images/logo-black.png")
+        background-repeat: none
+        background-size: cover
+        display: inline-block
+        height: 40px
+        margin: 15px 0
+        width: 101px
+        @media screen and (min-width: $break-medium)
+          background-image: url("../images/logo-white.png")
+          height: 60px
+          margin: 20px 0
+          width: 152px
+        span
+          display: none
+      a.menu-button
+        @include flex(1)
+        font-size: 1.5rem
+        margin-right: 20px
+        text-align: right
+        @include prefix(transition, color 0.3s ease-in-out)
+        @media screen and (min-width: $break-medium)
+          display: none
+        &:hover,
+        &:focus
+          color: $theme
+    .menu
+      border-color: rgba(0,0,0,.1)
+      border-style: solid
+      border-width: 1px 0 0 0
+      display: none
+      text-align: center
+      @media screen and (min-width: $break-medium)
+        @include flex(1)
+        border: none
+        display: block !important
+        text-align: right
+      color: #fff
+      ul
+        list-style-type: none
+        margin: 0
+        padding: 10px
+        li
+          display: block
+          @media screen and (min-width: $break-medium)
+            display: inline-block
+            margin-right: 20px
+          a
+            color: #444
+            display: block
+            overflow: hidden
+            padding: 10px
+            position: relative
+            text-decoration: none
             @media screen and (min-width: $break-medium)
-                @include flex(1)
-                border: none
-                display: block !important
-                text-align: right
-            color: #fff
-            ul
-                list-style-type: none
-                margin: 0
-                padding: 10px
-                li
-                    display: block
-                    @media screen and (min-width: $break-medium)
-                        display: inline-block
-                        margin-right: 20px
-                    a
-                        color: #444
-                        display: block
-                        overflow: hidden
-                        padding: 10px
-                        position: relative
-                        text-decoration: none
-                        @media screen and (min-width: $break-medium)
-                            @include prefix(transition, color 0.3s ease-in-out)
-                            color: #fff
-                            display: inline-block
-                        &:before
-                            @media screen and (min-width: $break-medium)
-                                @include prefix(transform, scaleX(0))
-                                @include prefix(transition, transform 0.3s ease-in-out)
-                                background-color: #fff
-                                bottom: 0
-                                content: ""
-                                height: 2px
-                                left: 0
-                                position: absolute
-                                width: 100%
-                        &:hover,
-                        &:focus
-                            color: $theme
-                            &:before
-                                @include prefix(transform, scaleX(1))
-                    &:last-child
-                        margin: 0
-                        a
-                            @media screen and (min-width: $break-medium)
-                                @include prefix(transition, background-color 0.3s ease-in-out)
-                                background-color: rgba(255,255,255,.25)
-                                border-color: rgba(0,0,0,.25)
-                                border-style: solid
-                                border-width: 3px
-                                border-radius: 100px
-                                color: #fff
-                                padding: 10px 20px
-                                text-decoration: none
-                            &:before
-                                display: none
-                            &:hover,
-                            &:focus
-                                @media screen and (min-width: $break-medium)
-                                    background-color: rgba(136,201,48,.75)
-                                    color: #fff
-                            i
-                                display: none
-                                margin-right: 10px
-                                @media screen and (min-width: $break-medium)
-                                    display: inline
+              @include prefix(transition, color 0.3s ease-in-out)
+              color: #fff
+              display: inline-block
+            &:before
+              @media screen and (min-width: $break-medium)
+                @include prefix(transform, scaleX(0))
+                @include prefix(transition, transform 0.3s ease-in-out)
+                background-color: #fff
+                bottom: 0
+                content: ""
+                height: 2px
+                left: 0
+                position: absolute
+                width: 100%
+            &:hover,
+            &:focus
+              color: $theme
+              &:before
+                @include prefix(transform, scaleX(1))
+          &:last-child
+            margin: 0
+            a
+              @media screen and (min-width: $break-medium)
+                @include prefix(transition, background-color 0.3s ease-in-out)
+                background-color: rgba(255,255,255,.25)
+                border-color: rgba(0,0,0,.25)
+                border-style: solid
+                border-width: 3px
+                border-radius: 100px
+                color: #fff
+                padding: 10px 20px
+                text-decoration: none
+              &:before
+                display: none
+              &:hover,
+              &:focus
+                @media screen and (min-width: $break-medium)
+                  background-color: rgba(136,201,48,.75)
+                  color: #fff
+              i
+                display: none
+                margin-right: 10px
+                @media screen and (min-width: $break-medium)
+                  display: inline
 // Top Section
 @keyframes see-more-animation
-    33%
-        @include prefix(transform, translateY(0))
-    66%
-        @include prefix(transform, translateY(-20px))
-    99%
-        @include prefix(transform, translateY(0))
+  33%
+    @include prefix(transform, translateY(0))
+  66%
+    @include prefix(transform, translateY(-20px))
+  99%
+    @include prefix(transform, translateY(0))
+// Indentation Checkpoint
 #top-section
   @include display-flex()
   @include align-items-center()
