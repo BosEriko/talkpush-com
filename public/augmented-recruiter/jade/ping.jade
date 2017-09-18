@@ -1,9 +1,10 @@
-//output:../augmented-recruiter.html, pretty:false
+//output:../ping.html, pretty:false
 
 //- Global Variable Start
 - pageCode = "augmented-recruiter"
 - pageDescription = "Augmented Recruiter"
-include ../jade/_variables.jade
+include ../../jade/_variables.jade
+- favicon = "../images/favicon.ico"
 //- Global Variable End
 
 doctype
@@ -17,7 +18,7 @@ html(lang="en")
         title #{siteTitle} - Augmented Recruiter
         link(type="text/css", rel="StyleSheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
         link(type="text/css", rel="StyleSheet", href="https://fonts.googleapis.com/css?family=Dosis")
-        link(type="text/css", rel="StyleSheet", href="./dist/_app.css")
+        link(type="text/css", rel="StyleSheet", href="../dist/_app.css")
         if favicon
             link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
         
@@ -81,12 +82,12 @@ html(lang="en")
         .container
             .divider
                 .logo
-                    a(href="./").logo
+                    a(href="../").logo
                         span Talk Push Logo
                     a(href="#").menu-button
                         i(class="fa fa-bars",aria-hidden="true")
                 .menu
-                    include ../jade/_navigation.jade
+                    include ../../jade/_navigation.jade
       
       .display-header.augmented-recruiter
         .filter
@@ -120,7 +121,7 @@ html(lang="en")
           p.augmented-body Talkpush allows you to reach out even to pass every dormant candidates and even they are not available within the office hours we are able to reach them after we finish our shift.
                       
       // Footer Section
-      include ../jade/_footer.jade
+      include ../../jade/_footer.jade
       
       // Scripts Section
-      script(src="./dist/_app.js")
+      script(src="../dist/_app.js")
