@@ -1724,6 +1724,22 @@ ul.alorica-list
     border-width: 10px
     border-style: solid
     border-color: #eee
+.social-links
+  margin: 2rem 0 0 0
+  padding: 0
+  list-style-type: none
+  text-align: center
+  font-size: 1.5rem
+  li
+    display: inline-block
+    margin: 0
+    padding: 0 .5rem
+    a
+      color: #666
+      @include prefix(transition, color 0.3s ease-in-out)
+      &:hover,
+      &:focus
+        color: $theme
 h2.augmented-name
   text-align: center
   color: #444
