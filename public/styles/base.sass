@@ -389,248 +389,249 @@ header
 
 // Adapting Section
 #adapting-section
-    background-color: #fff
-    color: #444
-    .filter
-        padding: 2rem 0
-        h2.gl
-            &::after
-                background-color: #444
+  background-color: #fff
+  color: #444
+  .filter
+    padding: 2rem 0
+    h2.gl
+      &::after
+        background-color: #444
+    @media screen and (min-width: $break-medium)
+      padding: 5rem 0
+    .divide
+      @media screen and (min-width: $break-medium)
+        @include display-flex()
+      .box
         @media screen and (min-width: $break-medium)
-            padding: 5rem 0
-        .divide
-            @media screen and (min-width: $break-medium)
+          @include flex(1)
+        background-color: #444
+        border-color: rgba(0,0,0,0.5)
+        border-radius: 3px
+        border-style: solid
+        border-width: 1px
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+        margin: 20px
+        overflow: hidden
+        .stats
+          background-color: #252525
+          color: #fff
+          .st-title
+            font-weight: bold
+            padding: 10px
+            text-align: center
+          .st-graph-holder
+            @include display-flex()
+            .st-side-details
+              overflow: hidden
+              position: relative
+              width: 20px
+              span.rotate
+                @include prefix(transform, rotate(-90deg))
+                @include prefix(transform-origin, bottom left)
+                bottom: 0
+                display: inline-block
+                font-size: 12px
+                height: 20px
+                left: 20px
+                padding-top: 3px
+                position: absolute
+                text-align: center
+            .st-graph
+              @include flex(1)
+              border-color: rgba(255,255,255,.5)
+              border-style: solid
+              border-width: 0 0 1px 1px
+              position: relative
+              &.g1
+                .line:nth-child(2)
+                  top: 16.6%
+                .line:nth-child(3)
+                  top: 33.2%
+                .line:nth-child(4)
+                  top: 49.8%
+                .line:nth-child(5)
+                  top: 66.4%
+                .line:nth-child(6)
+                  top: 83%
+                .bars
+                  .bar-holder:nth-child(1)
+                    .bar
+                      height: 100%
+                  .bar-holder:nth-child(2)
+                    .bar
+                      height: 66.4%
+                      background-color: rgba(114,222,47,.6)
+              &.g2
+                .line:nth-child(2)
+                  top: 33.3%
+                .line:nth-child(3)
+                  top: 66.6%
+                .bars
+                  .bar-holder:nth-child(1)
+                    .bar
+                      height: 100%
+                      background-color: rgba(114,222,47,.6)
+                  .bar-holder:nth-child(2)
+                    .bar
+                      height: 66.6%
+                  .bar-holder:nth-child(3)
+                    .bar
+                      height: 33.3%
+              &.g3
+                .line:nth-child(2)
+                  top: 20%
+                .line:nth-child(3)
+                  top: 40%
+                .line:nth-child(4)
+                  top: 60%
+                .line:nth-child(5)
+                  top: 80%
+                .bars
+                  .bar-holder:nth-child(1)
+                    .bar
+                      height: 20%
+                  .bar-holder:nth-child(2)
+                    .bar
+                      height: 99%
+                      background-color: rgba(114,222,47,.6)
+              &::before
+                content: ""
+                display: block
+                padding-top: 50%
+              .line
+                border-color: rgba(255,255,255,.5)
+                border-style: dotted
+                border-width: 1px 0 0 0
+                left: 0
+                position: absolute
+                top: 0
+                width: 100%
+                span.number
+                  font-size: .5rem
+                  left: 5px
+                  position: absolute
+                  top: 5px
+              .bars
+                bottom: 0
+                height: 100%
+                left: 0
+                position: absolute
+                width: 100%
                 @include display-flex()
-            .box
-                @media screen and (min-width: $break-medium)
-                    @include flex(1)
-                background-color: #444
-                border-color: rgba(0,0,0,0.5)
-                border-radius: 3px
-                border-style: solid
-                border-width: 1px
-                box-shadow: 0 0 10px rgba(0,0,0,0.5)
-                margin: 20px
-                overflow: hidden
-                .stats
-                    background-color: #252525
-                    color: #fff
-                    .st-title
-                        font-weight: bold
-                        padding: 10px
-                        text-align: center
-                    .st-graph-holder
-                        @include display-flex()
-                        .st-side-details
-                            overflow: hidden
-                            position: relative
-                            width: 20px
-                            span.rotate
-                                @include prefix(transform, rotate(-90deg))
-                                @include prefix(transform-origin, bottom left)
-                                bottom: 0
-                                display: inline-block
-                                font-size: 12px
-                                height: 20px
-                                left: 20px
-                                padding-top: 3px
-                                position: absolute
-                                text-align: center
-                        .st-graph
-                            @include flex(1)
-                            border-color: rgba(255,255,255,.5)
-                            border-style: solid
-                            border-width: 0 0 1px 1px
-                            position: relative
-                            &.g1
-                                .line:nth-child(2)
-                                    top: 16.6%
-                                .line:nth-child(3)
-                                    top: 33.2%
-                                .line:nth-child(4)
-                                    top: 49.8%
-                                .line:nth-child(5)
-                                    top: 66.4%
-                                .line:nth-child(6)
-                                    top: 83%
-                                .bars
-                                    .bar-holder:nth-child(1)
-                                        .bar
-                                            height: 100%
-                                    .bar-holder:nth-child(2)
-                                        .bar
-                                            height: 66.4%
-                                            background-color: rgba(114,222,47,.6)
-                            &.g2
-                                .line:nth-child(2)
-                                    top: 33.3%
-                                .line:nth-child(3)
-                                    top: 66.6%
-                                .bars
-                                    .bar-holder:nth-child(1)
-                                        .bar
-                                            height: 100%
-                                            background-color: rgba(114,222,47,.6)
-                                    .bar-holder:nth-child(2)
-                                        .bar
-                                            height: 66.6%
-                                    .bar-holder:nth-child(3)
-                                        .bar
-                                            height: 33.3%
-                            &.g3
-                                .line:nth-child(2)
-                                    top: 20%
-                                .line:nth-child(3)
-                                    top: 40%
-                                .line:nth-child(4)
-                                    top: 60%
-                                .line:nth-child(5)
-                                    top: 80%
-                                .bars
-                                    .bar-holder:nth-child(1)
-                                        .bar
-                                            height: 20%
-                                    .bar-holder:nth-child(2)
-                                        .bar
-                                            height: 99%
-                                            background-color: rgba(114,222,47,.6)
-                            &::before
-                                content: ""
-                                display: block
-                                padding-top: 50%
-                            .line
-                                border-color: rgba(255,255,255,.5)
-                                border-style: dotted
-                                border-width: 1px 0 0 0
-                                left: 0
-                                position: absolute
-                                top: 0
-                                width: 100%
-                                span.number
-                                    font-size: .5rem
-                                    left: 5px
-                                    position: absolute
-                                    top: 5px
-                            .bars
-                                bottom: 0
-                                height: 100%
-                                left: 0
-                                position: absolute
-                                width: 100%
-                                @include display-flex()
-                                .bar-holder
-                                    height: 100%
-                                    position: relative
-                                    text-align: center
-                                    @include flex(1)
-                                    .bar
-                                        background-color: rgba(255,255,255,.5)
-                                        bottom: 0
-                                        font-size: .75rem
-                                        left: 50%
-                                        margin-left: -1rem
-                                        padding-top: 5px
-                                        position: absolute
-                                        text-align: center
-                                        width: 2rem
-                    .st-bar-description
-                        @include display-flex()
-                        margin-left: 20px
-                        font-size: .7rem
-                        .item
-                            text-align: center
-                            padding: 10px
-                            @include flex(1)
-                .data
-                    color: #fff
+                .bar-holder
+                  height: 100%
+                  position: relative
+                  text-align: center
+                  @include flex(1)
+                  .bar
+                    background-color: rgba(255,255,255,.5)
+                    bottom: 0
+                    font-size: .75rem
+                    left: 50%
+                    margin-left: -1rem
+                    padding-top: 5px
+                    position: absolute
                     text-align: center
-                    @media screen and (min-width: $break-medium)
-                        @include flex(1)
-                    .title
-                        font-weight: bold
-                        padding: 10px 10px 5px 10px
-                    .message
-                        padding: 0 10px 10px 10px
+                    width: 2rem
+          .st-bar-description
+            @include display-flex()
+            margin-left: 20px
+            font-size: .7rem
+            .item
+              text-align: center
+              padding: 10px
+              @include flex(1)
+        .data
+          color: #fff
+          text-align: center
+          @media screen and (min-width: $break-medium)
+            @include flex(1)
+          .title
+            font-weight: bold
+            padding: 10px 10px 5px 10px
+          .message
+            padding: 0 10px 10px 10px
 
 
 // Drive Numbers Section
 #drive-section
-    background-color: #323a45
-    color: #fff
-    .filter
-        padding: 2rem 0
+  background-color: #323a45
+  color: #fff
+  .filter
+    padding: 2rem 0
+    @media screen and (min-width: $break-medium)
+      padding: 5rem 0
+    .divide
+      @media screen and (min-width: $break-medium)
+        @include display-flex()
+      .box
+        margin: 20px
+        text-align: center
         @media screen and (min-width: $break-medium)
-            padding: 5rem 0
-        .divide
-            @media screen and (min-width: $break-medium)
-                @include display-flex()
-            .box
-                margin: 20px
-                text-align: center
-                @media screen and (min-width: $break-medium)
-                    @include flex(1)
-                .numbers
-                    color: $theme
-                    font-size: 3rem
-                    margin-bottom: 20px
-                .message
-                    font-size: 1.25rem
+          @include flex(1)
+        .numbers
+          color: $theme
+          font-size: 3rem
+          margin-bottom: 20px
+        .message
+          font-size: 1.25rem
 
 // Assistant Section
 #assistant-section
-    background-color: #fff
-    color: #444
-    .filter
-        padding: 2rem 0
-        h2.gl
-            &::after
-                background-color: #444
+  background-color: #fff
+  color: #444
+  .filter
+    padding: 2rem 0
+    h2.gl
+      &::after
+        background-color: #444
+    @media screen and (min-width: $break-medium)
+      padding: 5rem 0
+    .divide
+      @media screen and (min-width: $break-medium)
+        @include display-flex()
+      .box
         @media screen and (min-width: $break-medium)
-            padding: 5rem 0
-        .divide
-            @media screen and (min-width: $break-medium)
-                @include display-flex()
-            .box
-                @media screen and (min-width: $break-medium)
-                    @include flex(1)
-                .title
-                    font-size: 1.15rem
-                    font-weight: bold
-                    padding: 20px
-                    text-align: center
-                .iphone
-                    margin: 0 auto 20px auto
-                    position: relative
-                    width: 250px
-                    z-index: 1
-                    img.frame
-                        position: relative
-                        max-width: 100%
-                        z-index: 2
-                    .video-holder
-                        background-color: #444
-                        height: 375px
-                        left: 21px
-                        overflow: hidden
-                        position: absolute
-                        top: 62px
-                        width: 204px
-                        z-index: 1
-                        img.video
-                            height: 100%
-                            width: 100%
-                    .play-button
-                        margin-top: -1.5rem
-                        position: absolute
-                        text-align: center
-                        top: 50%
-                        width: 100%
-                        z-index: 3
-                        a
-                            color: #fff
-                            font-size: 3rem
-                            text-shadow: 0 0 10px rgba(0,0,0,.5)
-
+          @include flex(1)
+        .title
+          font-size: 1.15rem
+          font-weight: bold
+          padding: 20px
+          text-align: center
+        .iphone
+          margin: 0 auto 20px auto
+          position: relative
+          width: 250px
+          z-index: 1
+          img.frame
+            position: relative
+            max-width: 100%
+            z-index: 2
+          .video-holder
+            background-color: #444
+            height: 375px
+            left: 21px
+            overflow: hidden
+            position: absolute
+            top: 62px
+            width: 204px
+            z-index: 1
+            img.video
+              height: 100%
+              width: 100%
+          .play-button
+            margin-top: -1.5rem
+            position: absolute
+            text-align: center
+            top: 50%
+            width: 100%
+            z-index: 3
+            a
+              color: #fff
+              font-size: 3rem
+              text-shadow: 0 0 10px rgba(0,0,0,.5)
+              
+// Indent Fix Checkpoint
 
 // Pricing Section
 #pricing-section
