@@ -25,60 +25,61 @@ end
 get '/' do
   File.read(File.join('public', 'index.html'))
 end
-get '/free-demo' do
-  File.read(File.join('public/free-demo', 'index.html'))
-end
-get '/free-demo/' do
-  File.read(File.join('public/free-demo', 'index.html'))
-end
-get '/faqs/' do
-    File.read(File.join('public/faqs','index.html'));
-end
-get '/faqs' do
-    File.read(File.join('public/faqs','index.html'));
-end
-get '/xmaspromotion' do
-  File.read(File.join('public/xmaspromotion', 'index.html'))
-end
-get '/xmaspromotion/' do
-  File.read(File.join('public/xmaspromotion', 'index.html'))
-end
+# get '/free-demo' do
+#   File.read(File.join('public/free-demo', 'index.html'))
+# end
+# get '/free-demo/' do
+#   File.read(File.join('public/free-demo', 'index.html'))
+# end
+# get '/faqs/' do
+#     File.read(File.join('public/faqs','index.html'));
+# end
+# get '/faqs' do
+#     File.read(File.join('public/faqs','index.html'));
+# end
+# get '/xmaspromotion' do
+#   File.read(File.join('public/xmaspromotion', 'index.html'))
+# end
+# get '/xmaspromotion/' do
+#   File.read(File.join('public/xmaspromotion', 'index.html'))
+# end
 get '/termsandcond.html' do
   File.read(File.join('public', 'terms.html'))
 end
 
-post '/contact-form', :provides => :json do
-  params = JSON.parse(request.body.read)
-  full_name = params["fullName"]
-  email = params["email"]
-  company = params["company"]
-  message = params["message"]
+# post '/contact-form', :provides => :json do
+#   params = JSON.parse(request.body.read)
+#   full_name = params["fullName"]
+#   email = params["email"]
+#   company = params["company"]
+#   message = params["message"]
+#
+#   Mail.deliver do
+#     to      'bos.eriko@gmail.com'
+#     from    ENV["EMAIL_ADDRESS"]
+#     subject "A message from #{full_name} at #{company}"
+#     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
+#   end
+#   content_type :json
+#   { :sucess => 'sucess'}.to_json
+# end
 
-  Mail.deliver do
-    to      'bos.eriko@gmail.com'
-    from    ENV["EMAIL_ADDRESS"]
-    subject "A message from #{full_name} at #{company}"
-    body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
-  end
-  content_type :json
-  { :sucess => 'sucess'}.to_json
-end
+# post '/sourcing-form', :provides => :json do
+#   params = JSON.parse(request.body.read)
+#
+#   full_name = params["fullName"]
+#   email = params["email"]
+#   company = params["company"]
+#   message = params["message"]
+#
+#   Mail.deliver do
+#     to      ENV["TO_ADDRESS"]
+#     from    ENV["EMAIL_ADDRESS"]
+#       subject "Sourcing enquiry from #{full_name} at #{company}"
+#     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
+#   end
+# end
 
-post '/sourcing-form', :provides => :json do
-  params = JSON.parse(request.body.read)
-
-  full_name = params["fullName"]
-  email = params["email"]
-  company = params["company"]
-  message = params["message"]
-
-  Mail.deliver do
-    to      ENV["TO_ADDRESS"]
-    from    ENV["EMAIL_ADDRESS"]
-      subject "Sourcing enquiry from #{full_name} at #{company}"
-    body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
-  end
-end
 post '/quotation-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
@@ -96,73 +97,78 @@ post '/quotation-form', :provides => :json do
     body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\n#{message}\n\nExpected volumes: #{volumes}\nAdditional Channels:#{additionalChannels}"
   end
 end
-post '/first-time-sub-form', :provides => :json do
-  params = JSON.parse(request.body.read)
 
-  email = params["email"]
+# post '/first-time-sub-form', :provides => :json do
+#   params = JSON.parse(request.body.read)
+#
+#   email = params["email"]
+#
+#   Mail.deliver do
+#     to      ENV["TO_ADDRESS"]
+#     from    ENV["EMAIL_ADDRESS"]
+#       subject "First time sign up from #{email}"
+#     body    "A new first time sign up \n Email: #{email}"
+#   end
+# end
 
-  Mail.deliver do
-    to      ENV["TO_ADDRESS"]
-    from    ENV["EMAIL_ADDRESS"]
-      subject "First time sign up from #{email}"
-    body    "A new first time sign up \n Email: #{email}"
-  end
-end
+# post '/partnership-form', :provides => :json do
+#   params = JSON.parse(request.body.read)
+#
+#   full_name = params["fullName"]
+#   email = params["email"]
+#   company = params["company"]
+#   message = params["message"]
+#
+#   Mail.deliver do
+#     to      ENV["PARTNERSHIP_RECIPIENT"]
+#     from    ENV["EMAIL_ADDRESS"]
+#       subject "Partnership enquiry from #{full_name} at #{company}"
+#     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
+#   end
+# end
 
-post '/partnership-form', :provides => :json do
-  params = JSON.parse(request.body.read)
-
-  full_name = params["fullName"]
-  email = params["email"]
-  company = params["company"]
-  message = params["message"]
-
-  Mail.deliver do
-    to      ENV["PARTNERSHIP_RECIPIENT"]
-    from    ENV["EMAIL_ADDRESS"]
-      subject "Partnership enquiry from #{full_name} at #{company}"
-    body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
-  end
-end
 # Test Start
-post '/test-form', :provides => :json do
-  params = JSON.parse(request.body.read)
 
-  full_name = params["fullName"]
+# post '/test-form', :provides => :json do
+#   params = JSON.parse(request.body.read)
+#
+#   full_name = params["fullName"]
+#
+#   Mail.deliver do
+#     to      'bos.eriko@gmail.com'
+#     from    'mail@boseriko.com'
+#       subject "This is a test"
+#     body    "This is a test message"
+#   end
+# end
 
-  Mail.deliver do
-    to      'bos.eriko@gmail.com'
-    from    'mail@boseriko.com'
-      subject "This is a test"
-    body    "This is a test message"
-  end
-end
 # Test End
-post '/job-form' do
 
-  full_name = params["fullName"]
-  position = params["position"]
-  email = params["email"]
-  cover_letter = params["coverLetter"]
-  have_file = params["haveFile"]
-    if(have_file=="true")
-      file_name = params[:file][:filename]
-      tempfile = params[:file][:tempfile]
-      Mail.deliver do
-        to      ENV["TO_ADDRESS"]
-        from    ENV["EMAIL_ADDRESS"]
-        subject "Application for #{position}"
-        body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
-        add_file :filename => file_name, :content => File.read(tempfile)
-      end
-  else
-      Mail.deliver do
-        to      ENV["TO_ADDRESS"]
-        from    ENV["EMAIL_ADDRESS"]
-        subject "Application for #{position}"
-        body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
-      end
-  end
-
-
-end
+# post '/job-form' do
+#
+#   full_name = params["fullName"]
+#   position = params["position"]
+#   email = params["email"]
+#   cover_letter = params["coverLetter"]
+#   have_file = params["haveFile"]
+#     if(have_file=="true")
+#       file_name = params[:file][:filename]
+#       tempfile = params[:file][:tempfile]
+#       Mail.deliver do
+#         to      ENV["TO_ADDRESS"]
+#         from    ENV["EMAIL_ADDRESS"]
+#         subject "Application for #{position}"
+#         body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
+#         add_file :filename => file_name, :content => File.read(tempfile)
+#       end
+#   else
+#       Mail.deliver do
+#         to      ENV["TO_ADDRESS"]
+#         from    ENV["EMAIL_ADDRESS"]
+#         subject "Application for #{position}"
+#         body    "#{full_name} has applied for the position of #{position}\n#{email}\n\n#{cover_letter}"
+#       end
+#   end
+#
+#
+# end
