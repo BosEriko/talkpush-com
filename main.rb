@@ -36,15 +36,15 @@ post '/quotation-form', :provides => :json do
   full_name = params["name"]
   email = params["email"]
   company = params["company"]
-  message = params["message"]
   volumes = params["volumes"]
   phone = params["phone"]
-  additionalChannels = params["additionalChannels"]
+
   Mail.deliver do
-    to      ENV["TO_ADDRESS"]
+    to      "bos.eriko@gmail.com"
+    # to      ENV["TO_ADDRESS"]
     from    ENV["EMAIL_ADDRESS"]
-      subject "Quotation enquiry from #{full_name} at #{company}"
-    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\n#{message}\n\nExpected volumes: #{volumes}\nAdditional Channels:#{additionalChannels}"
+    subject "Quotation enquiry from #{full_name} at #{company}"
+    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\n#{message}\n\nExpected volumes: #{volumes}"
   end
 end
 

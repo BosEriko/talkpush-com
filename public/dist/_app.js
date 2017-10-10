@@ -89,6 +89,8 @@ $(function() {
   /* Statistics Side Details Width Start */
 
   /* Pop-up Start */
+  var volume
+
   $(".button-price").click(function(e) {
     $("#dark-filter").fadeToggle("fast");
     $("#dark-filter .pp-price-section").css("display", "block");
@@ -122,12 +124,15 @@ $(function() {
   });
   $(".button-price#starter").click(function() {
     $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Starter Pack</span>");
+    volume = "Starter Pack"
   });
   $(".button-price#business").click(function() {
     $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Business Pack</span>");
+    volume = "Business Pack"
   });
   $(".button-price#enterprise").click(function() {
     $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Enterprise Pack</span>");
+    volume = "Enterprise Pack"
   });
   $("#we-chat-button").click(function() {
     $("#dark-filter .title").html("<span style='font-weight: bold'>Via WeChat</span>");
@@ -207,11 +212,32 @@ $(function() {
       }, 1000)
       testimonialCount++
     }, 5000)
-    $("#testimonial-section .divide").click(function(){
+    $("#testimonial-section .divide").click(function() {
       clearInterval(testimonialAnimation)
     })
   }
   /* Testimonial Slide End */
+
+  /* Index Quote Start */
+  $("form.pp-price-section").submit(function(e) {
+    e.preventDefault();
+    var quoteData = JSON.stringify({email: $("form.pp-price-section input[type='email']").val(), name: $("form.pp-price-section input[name='name']").val(), company: $("form.pp-price-section input[name='company']").val(), phone: $("form.pp-price-section input[name='phone']").val(), volumes: volume})
+    $.ajax({
+      url: "./quotation-form",
+      dataType: 'json',
+      contentType: 'application/json',
+      type: 'POST',
+      data: quoteData,
+      accepts: "application/json",
+      error: function(req, err) {
+        console.log('error message: ' + err);
+      },
+      success: function(json) {
+        console.log("success message: " + json)
+      }
+    });
+  });
+  /* Index Quote End */
 
 });
 
