@@ -45,6 +45,8 @@ post '/quotation-form', :provides => :json do
     subject "Quotation enquiry from #{full_name} at #{company}"
     body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
   end
+  content_type :json
+  { :sucess => 'sucess'}.to_json
 end
 
 # get '/free-demo' do
