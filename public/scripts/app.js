@@ -227,7 +227,6 @@ $(function() {
     console.log(quoteData)
     $.ajax({
       url: "./quotation-form",
-      dataType: 'json',
       contentType: 'application/json',
       type: 'POST',
       data: quoteData,
