@@ -11,9 +11,12 @@ $stdout.sync = true
 
 options = { :address              => "smtp.gmail.com",
             :port                 => 25,
-            :domain               => ENV["DOMAIN"],
-            :user_name            => ENV["EMAIL_ADDRESS"],
-            :password             => ENV["EMAIL_PASSWORD"],
+            # :domain               => ENV["DOMAIN"],
+            # :user_name            => ENV["EMAIL_ADDRESS"],
+            # :password             => ENV["EMAIL_PASSWORD"],
+            :domain               => "talkpush.com",
+            :user_name            => "noreply@talkpush.com",
+            :password             => "8hasE!@w",
             :authentication       => 'plain',
             :enable_starttls_auto => true  }
 
@@ -32,19 +35,21 @@ end
 
 post '/quotation-form', :provides => :json do
   params = JSON.parse(request.body.read)
-  status 200
-  # full_name = params["name"]
-  # email = params["email"]
-  # company = params["company"]
-  # volumes = params["volumes"]
-  # phone = params["phone"]
-  #
-  # Mail.deliver do
-  #   to      ENV["TO_ADDRESS"]
-  #   from    ENV["EMAIL_ADDRESS"]
-  #   subject "Quotation enquiry from #{full_name} at #{company}"
-  #   body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
-  # end
+
+  full_name = params["name"]
+  email = params["email"]
+  company = params["company"]
+  volumes = params["volumes"]
+  phone = params["phone"]
+
+  Mail.deliver do
+    # to      ENV["TO_ADDRESS"]
+    # from    ENV["EMAIL_ADDRESS"]
+    to      "bos.eriko@gmail.com"
+    from    "noreply@talkpush.com"
+    subject "Quotation enquiry from #{full_name} at #{company}"
+    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
+  end
 end
 
 # get '/free-demo' do
