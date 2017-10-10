@@ -40,7 +40,7 @@ post '/quotation-form', :provides => :json do
   phone = params["phone"]
 
   Mail.deliver do
-    to      ENV["TO_ADDRESS"]
+    to      "bos.eriko@gmail.com"
     from    ENV["EMAIL_ADDRESS"]
     subject "Quotation enquiry from #{full_name} at #{company}"
     body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
