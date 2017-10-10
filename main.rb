@@ -25,6 +25,29 @@ end
 get '/' do
   File.read(File.join('public', 'index.html'))
 end
+
+get '/termsandcond.html' do
+  File.read(File.join('public', 'terms.html'))
+end
+
+post '/quotation-form', :provides => :json do
+  params = JSON.parse(request.body.read)
+
+  full_name = params["name"]
+  email = params["email"]
+  company = params["company"]
+  message = params["message"]
+  volumes = params["volumes"]
+  phone = params["phone"]
+  additionalChannels = params["additionalChannels"]
+  Mail.deliver do
+    to      ENV["TO_ADDRESS"]
+    from    ENV["EMAIL_ADDRESS"]
+      subject "Quotation enquiry from #{full_name} at #{company}"
+    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\n#{message}\n\nExpected volumes: #{volumes}\nAdditional Channels:#{additionalChannels}"
+  end
+end
+
 # get '/free-demo' do
 #   File.read(File.join('public/free-demo', 'index.html'))
 # end
@@ -43,9 +66,6 @@ end
 # get '/xmaspromotion/' do
 #   File.read(File.join('public/xmaspromotion', 'index.html'))
 # end
-get '/termsandcond.html' do
-  File.read(File.join('public', 'terms.html'))
-end
 
 # post '/contact-form', :provides => :json do
 #   params = JSON.parse(request.body.read)
@@ -79,24 +99,6 @@ end
 #     body    "#{full_name}\n#{company}\n#{email}\n\n#{message}"
 #   end
 # end
-
-post '/quotation-form', :provides => :json do
-  params = JSON.parse(request.body.read)
-
-  full_name = params["name"]
-  email = params["email"]
-  company = params["company"]
-  message = params["message"]
-  volumes = params["volumes"]
-  phone = params["phone"]
-  additionalChannels = params["additionalChannels"]
-  Mail.deliver do
-    to      ENV["TO_ADDRESS"]
-    from    ENV["EMAIL_ADDRESS"]
-      subject "Quotation enquiry from #{full_name} at #{company}"
-    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\n#{message}\n\nExpected volumes: #{volumes}\nAdditional Channels:#{additionalChannels}"
-  end
-end
 
 # post '/first-time-sub-form', :provides => :json do
 #   params = JSON.parse(request.body.read)
