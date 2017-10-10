@@ -232,10 +232,11 @@ $(function() {
     console.log(quoteData)
     $.ajax({
       url: "./quotation-form",
-      contentType: 'application/json',
+      // dataType: 'json',
+      // contentType: 'application/json',
       type: 'POST',
       data: quoteData,
-      accepts: "application/json",
+      // accepts: "application/json",
       error: function(req, err) {
         console.log('error message: ' + err);
       },
