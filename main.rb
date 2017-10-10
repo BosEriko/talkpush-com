@@ -44,7 +44,7 @@ post '/quotation-form', :provides => :json do
     # to      ENV["TO_ADDRESS"]
     from    ENV["EMAIL_ADDRESS"]
     subject "Quotation enquiry from #{full_name} at #{company}"
-    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\n#{message}\n\nExpected volumes: #{volumes}"
+    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
   end
 end
 
