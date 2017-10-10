@@ -34,7 +34,7 @@ post '/quotation-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
   full_name = params["name"]
-  mail = params["mail"]
+  email = params["email"]
   company = params["company"]
   volumes = params["volumes"]
   phone = params["phone"]
@@ -43,7 +43,7 @@ post '/quotation-form', :provides => :json do
     to      "bos.eriko@gmail.com"
     from    ENV["EMAIL_ADDRESS"]
     subject "Quotation enquiry from #{full_name} at #{company}"
-    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{mail}\nPhone: #{phone}\nExpected volumes: #{volumes}"
+    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
   end
 end
 
