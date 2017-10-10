@@ -32,19 +32,19 @@ end
 
 post '/quotation-form', :provides => :json do
   params = JSON.parse(request.body.read)
-
-  full_name = params["name"]
-  email = params["email"]
-  company = params["company"]
-  volumes = params["volumes"]
-  phone = params["phone"]
-
-  Mail.deliver do
-    to      ENV["TO_ADDRESS"]
-    from    ENV["EMAIL_ADDRESS"]
-    subject "Quotation enquiry from #{full_name} at #{company}"
-    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
-  end
+  status 200
+  # full_name = params["name"]
+  # email = params["email"]
+  # company = params["company"]
+  # volumes = params["volumes"]
+  # phone = params["phone"]
+  #
+  # Mail.deliver do
+  #   to      ENV["TO_ADDRESS"]
+  #   from    ENV["EMAIL_ADDRESS"]
+  #   subject "Quotation enquiry from #{full_name} at #{company}"
+  #   body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
+  # end
 end
 
 # get '/free-demo' do
