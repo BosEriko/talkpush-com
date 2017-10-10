@@ -218,7 +218,7 @@ $(function() {
   $("form.pp-price-section").submit(function(e) {
     e.preventDefault();
     quoteData = JSON.stringify({
-      email: $("form.pp-price-section input[type='email']").val(),
+      mail: $("form.pp-price-section input[type='mail']").val(),
       name: $("form.pp-price-section input[name='name']").val(),
       company: $("form.pp-price-section input[name='company']").val(),
       phone: $("form.pp-price-section input[name='phone']").val(),
