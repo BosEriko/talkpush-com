@@ -1197,6 +1197,47 @@ ul.jobs-divider
                         &:hover,
                         &:focus
                             background-color: #5EBA25
+#job-pop-up-choices
+    color: #fff
+    margin-top: 20px
+    .divide
+        @media screen and (min-width: $break-medium)
+            @include display-flex()
+        a.box
+            background-color: rgba(0,0,0,.25)
+            border-radius: 3px
+            color: #fff
+            display: block
+            margin: 5px
+            padding: 20px
+            text-align: center
+            text-decoration: none
+            @include prefix(transition, all .25s ease-in-out)
+            @media screen and (min-width: $break-medium)
+                @include flex(1)
+            &:hover,
+            &:focus
+                background-color: $theme
+                color: rgba(0,0,0,0.75)
+                .icon
+                    svg
+                        path
+                            fill: rgba(0,0,0,0.75)
+            .icon
+                font-size: 3rem
+                margin-bottom: 20px
+                svg
+                    height: 3rem !important
+                    margin: 0 !important
+                    padding: 0  !important
+                    path
+                        @include prefix(transition, all .25s ease-in-out)
+                        fill: #fff
+            .message
+                font-size: 1.15rem
+
+
+
 // Chatbot Page
 .chatbot-message
     margin: 0 auto

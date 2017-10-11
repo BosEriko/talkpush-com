@@ -118,6 +118,14 @@ $(function() {
     $(".accelerate-data").hide();
     e.preventDefault();
   });
+  $(".job-pop-up").click(function(e) {
+    $("#dark-filter").fadeToggle("fast");
+    $("#dark-filter .accelerate-form").css("display", "block");
+    $(".accelerate-data").hide();
+    $(".apply-selection").show();
+    $("form.demo-call-section.demo-phone").hide();
+    e.preventDefault();
+  });
   $("#dark-filter .close-button").click(function(e) {
     $("#dark-filter").fadeOut("fast");
     e.preventDefault();
@@ -133,6 +141,35 @@ $(function() {
   $(".button-price#enterprise").click(function() {
     $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Enterprise Pack</span>");
     volume = "Enterprise Pack"
+  });
+  $(".job-pop-up#machine-learning-engineer").click(function() {
+    $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Machine Learning Engineer</span>");
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2699)")
+  });
+  $(".job-pop-up#fullstack-developer").click(function() {
+    $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Fullstack Developer</span>");
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2331)")
+  });
+  $(".job-pop-up#account-manager").click(function() {
+    $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Account Manager</span>");
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(1815)")
+  });
+  $(".job-pop-up#digital-hr-marketing-analyst").click(function() {
+    $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Digital HR Marketing Analyst</span>");
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2423)")
+  });
+  $(".job-pop-up#client-services-executive").click(function() {
+    $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Client Services Executive</span>");
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2190)")
+  });
+  $(".job-pop-up#growth-hacking-intern").click(function() {
+    $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Growth Hacking Intern</span>");
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(1904)")
+  });
+  $("#job-demo-call-button").click(function(e) {
+    $(".apply-selection").fadeOut(500);
+    $("form.demo-call-section.demo-phone").delay(500).fadeIn(500);
+    e.preventDefault();
   });
   $("#we-chat-button").click(function() {
     $("#dark-filter .title").html("<span style='font-weight: bold'>Via WeChat</span>");
@@ -242,6 +279,9 @@ $(function() {
     });
   });
   /* Index Quote End */
+
+  /* Career's Pop Up Start */
+  /* Career's Pop Up End */
 
 });
 

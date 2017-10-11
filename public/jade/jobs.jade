@@ -18,6 +18,7 @@ html(lang="en")
         link(type="text/css", rel="StyleSheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
         link(type="text/css", rel="StyleSheet", href="https://fonts.googleapis.com/css?family=Dosis")
         link(type="text/css", rel="StyleSheet", href="./dist/_app.css")
+        link(type="text/css", rel="StyleSheet", href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/css/intlTelInput.css")
         if favicon
             link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
         
@@ -134,7 +135,7 @@ html(lang="en")
                             span Full Time
                             i.fa.fa-map-marker.fa-fw(aria-hidden='true')
                             span Hong Kong / Philippines (Manila)
-                        .right: a(href="https://m.me/774293282630560?ref=apply_for_position(2699)", target="_blank") Apply Now
+                        .right: a(href="#").job-pop-up#machine-learning-engineer Apply Now
                 li: .job-box
                     h3 Fullstack Developer
                     .text
@@ -179,7 +180,7 @@ html(lang="en")
                             span Full Time
                             i.fa.fa-map-marker.fa-fw(aria-hidden='true')
                             span Hong Kong / Philippines (Manila)
-                        .right: a(href="https://m.me/774293282630560?ref=apply_for_position(2331)", target="_blank") Apply Now
+                        .right: a(href="#").job-pop-up#fullstack-developer Apply Now
             ul.jobs-divider
                 li: .job-box
                     h3 Account Manager
@@ -232,7 +233,7 @@ html(lang="en")
                             span Full Time
                             i.fa.fa-map-marker.fa-fw(aria-hidden='true')
                             span Positions available Worldwide
-                        .right: a(href="https://m.me/774293282630560?ref=apply_for_position(1815)", target="_blank") Apply Now
+                        .right: a(href="#").job-pop-up#account-manager Apply Now
                 li: .job-box
                     h3 Digital HR Marketing Analyst
                     .text
@@ -287,7 +288,7 @@ html(lang="en")
                             span Full Time
                             i.fa.fa-map-marker.fa-fw(aria-hidden='true')
                             span Philippines
-                        .right: a(href="https://m.me/774293282630560?ref=apply_for_position(2423)", target="_blank") Apply Now
+                        .right: a(href="#").job-pop-up#digital-hr-marketing-analyst Apply Now
             ul.jobs-divider
                 li: .job-box
                     h3 Client Services Executive
@@ -321,7 +322,7 @@ html(lang="en")
                             span Full Time
                             i.fa.fa-map-marker.fa-fw(aria-hidden='true')
                             span Manila
-                        .right: a(href="https://m.me/774293282630560?ref=apply_for_position(2190)", target="_blank") Apply Now
+                        .right: a(href="#").job-pop-up#client-services-executive Apply Now
                 li: .job-box
                     h3 Growth Hacking Intern
                     .text
@@ -360,8 +361,43 @@ html(lang="en")
                             span Intern (Full-Time)
                             i.fa.fa-map-marker.fa-fw(aria-hidden='true')
                             span Hong Kong / Cape Town / Manila
-                        .right: a(href="https://m.me/774293282630560?ref=apply_for_position(1904)", target="_blank") Apply Now
-            
+                        .right: a(href="#").job-pop-up#growth-hacking-intern Apply Now
+            // Pop-up
+            #dark-filter
+              #pop-up-aligner
+                #pop-up
+                  .close-and-title
+                      .title ---
+                      a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
+                  .apply-selection
+                      .job-pop-up-message Thanks for your interest in this position! As a next step, we will be asking a few questions. You can answer them on Facebook Messenger or over the phone. Which one works best for you?
+                      #job-pop-up-choices
+                        .divide
+                            a(href="#").box#job-demo-call-button
+                                .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
+                                .message Via Call
+                            a(href="https://m.me/letthetalenttalk/", target="_blank").box#job-messenger-button
+                                .icon
+                                    svg(xmlns='http://www.w3.org/2000/svg', viewbox='96 93 322 324')
+                                        path(d='M257 93c-88.918 0-161 67.157-161 150 0 47.205 23.412 89.311 60 116.807V417l54.819-30.273C225.449 390.801 240.948 393 257 393c88.918 0 161-67.157 161-150S345.918 93 257 93zm16 202l-41-44-80 44 88-94 42 44 79-44-88 94z', fill='#fff')
+                                .message Via Messenger
+                  form.demo-call-section.demo-phone
+                      .step-1
+                          div
+                              input.input-field-phone-number.adjust(type='text', name='demo_phone_no', placeholder='Phone number')
+                              #demo_phone_no_error.error Error
+                          div: button.btn-solid-green.btn-demo-call Call me
+                      .step-2
+                          div
+                              input.input-field-phone-number(type='text', name='demo_name', placeholder='Please enter your name')
+                              #demo_name_error.error Error
+                          div
+                              input.input-field-phone-number(type='text', name='demo_email', placeholder='Please enter your email')
+                              #demo_email_error.error Error
+                          div: button.btn-solid-green.btn-demo-submit Submit
+                      .step-3
+                          .message Thank you for your interest.
+              
       
       // Footer Section
       include ./_footer.jade
