@@ -692,7 +692,6 @@ header
                         padding: 10px
                         text-align: center
                         text-decoration: none
-                        display: none
                         &:hover,
                         &:focus
                             @include prefix(transform, scale(1.05))
@@ -902,12 +901,15 @@ header
                 #demo_phone_no_error,
                 #demo_name_error,
                 #demo_email_error,
+                #cta-message,
                 .step-2,
                 .step-3
                     display: none
                 #demo_phone_no_error,
                 #demo_name_error,
-                #demo_email_error
+                #demo_email_error,
+                #cta-message
+                    text-align: center
                     margin-bottom: 10px
                 input, button, textarea
                     resize: none

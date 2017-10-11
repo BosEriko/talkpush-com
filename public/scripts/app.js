@@ -217,14 +217,13 @@ $(function() {
   var quoteData
   $("form.pp-price-section").submit(function(e) {
     e.preventDefault();
-    quoteData = JSON.stringify({
-      email: $("form.pp-price-section input[name='email']").val(),
-      name: $("form.pp-price-section input[name='name']").val(),
-      company: $("form.pp-price-section input[name='company']").val(),
-      phone: $("form.pp-price-section input[name='phone']").val(),
-      volumes: volume
-    })
-    console.log(quoteData)
+    quoteData = JSON.stringify({email: $("form.pp-price-section input[name='email']").val(), name: $("form.pp-price-section input[name='name']").val(), company: $("form.pp-price-section input[name='company']").val(), phone: $("form.pp-price-section input[name='phone']").val(), volumes: volume})
+    $("form.pp-price-section input[name='email']").val("")
+    $("form.pp-price-section input[name='name']").val("")
+    $("form.pp-price-section input[name='company']").val("")
+    $("form.pp-price-section input[name='phone']").val("")
+    $("#cta-message").show()
+    $("#cta-message").delay(3000).fadeOut(500);
     $.ajax({
       url: "./quotation-form",
       dataType: 'json',
@@ -233,7 +232,7 @@ $(function() {
       data: quoteData,
       accepts: "application/json",
       success: function() {
-        console.log("Message Sent!")
+        console.log("Message sent!")
       }
     });
   });
