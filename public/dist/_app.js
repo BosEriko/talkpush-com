@@ -237,11 +237,8 @@ $(function() {
       type: 'POST',
       data: quoteData,
       accepts: "application/json",
-      error: function(req, err) {
-        console.log('error message: ' + err);
-      },
-      success: function(json) {
-        console.log("success message: " + json)
+      success: function() {
+        console.log("Message Sent!")
       }
     });
   });
