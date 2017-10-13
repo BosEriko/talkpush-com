@@ -143,28 +143,40 @@ $(function() {
     volume = "Enterprise Pack"
   });
   $(".job-pop-up#machine-learning-engineer").click(function() {
+    var jobID = 2699
     $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Machine Learning Engineer</span>");
-    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2699)")
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(" + jobID + ")")
+    campaignID = jobID
   });
   $(".job-pop-up#fullstack-developer").click(function() {
+    var jobID = 2331
     $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Fullstack Developer</span>");
-    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2331)")
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(" + jobID + ")")
+    campaignID = jobID
   });
   $(".job-pop-up#account-manager").click(function() {
+    var jobID = 1815
     $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Account Manager</span>");
-    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(1815)")
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(" + jobID + ")")
+    campaignID = jobID
   });
   $(".job-pop-up#digital-hr-marketing-analyst").click(function() {
+    var jobID = 2423
     $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Digital HR Marketing Analyst</span>");
-    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2423)")
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(" + jobID + ")")
+    campaignID = jobID
   });
   $(".job-pop-up#client-services-executive").click(function() {
+    var jobID = 2190
     $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Client Services Executive</span>");
-    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(2190)")
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(" + jobID + ")")
+    campaignID = jobID
   });
   $(".job-pop-up#growth-hacking-intern").click(function() {
+    var jobID = 1904
     $("#dark-filter .title").html("Apply for <span style='font-weight: bold'>Growth Hacking Intern</span>");
-    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(1904)")
+    $("a#job-messenger-button").attr("href", "https://m.me/774293282630560?ref=apply_for_position(" + jobID + ")")
+    campaignID = jobID
   });
   $("#job-demo-call-button").click(function(e) {
     $(".apply-selection").fadeOut(500);
