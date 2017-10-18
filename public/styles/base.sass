@@ -1807,19 +1807,43 @@ h2.augmented-name
   font-size: 2rem
   padding: 0
   margin: 2rem 0 0 0
-h3.augmented-title
-  text-align: left
-  color: $theme
-  font-weight: normal
-  font-size: 1.5rem
-  padding: 0
-  margin: 2rem 0 0 0
-p.augmented-body
-  margin: 1rem 0 0 0
-  padding: 0
-  text-align: left
-  font-size: 1.5rem
 hr.augmented-line
   display: block
-  height: 20px
+  height: 3rem
   border: none
+.augmented-chat-holder
+  @include display-flex()
+  &.talkpush
+    margin-bottom: 20px
+.augmented-chat-display
+  position: relative
+  img
+    border-radius: 5px
+    border-width: 1px
+    border-style: solid
+    border-color: #eee
+    width: 3rem
+    height: 3rem
+    margin-right: 20px
+  .arrow
+    position: absolute
+    margin-top: -10px
+    top: 1.5rem
+    right: 0
+    height: 15px
+    width: 15px
+    background-color: #eee
+    @include prefix(transform, rotate(-45deg))
+    @include prefix(transform-origin, right top)
+    &.talkpush
+      background-color: #9ecc6a
+.augmented-chat-message
+  @include flex(1)
+  color: #666
+  background-color: #eee
+  border-radius: 5px
+  padding: 15px
+  font-size: 1.25rem
+  &.talkpush
+    background-color: #9ecc6a
+    color: white
