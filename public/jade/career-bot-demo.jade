@@ -1,0 +1,17 @@
+//output:../career-bot-demo.html, pretty:false
+
+//- Global Variable Start
+- pageCode = "index"
+- pageDescription = "Ready to accelerate recruitment? Talkpush is the leading productivity platform and the most high-volume chatbot for hiring talent via Facebook, WeChat and messaging."
+include ./_variables.jade
+//- Global Variable End
+
+doctype
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title #{pageCode}
+    body
+      script (function(){var w=window;var d=document;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://my.talkpush.com/website_bot?company_id=16';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}})()
