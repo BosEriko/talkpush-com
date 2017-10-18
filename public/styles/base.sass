@@ -1815,6 +1815,11 @@ hr.augmented-line
   @include display-flex()
   &.talkpush
     margin-bottom: 20px
+  &.left
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: reverse
+    -ms-flex-direction: row-reverse
+    flex-direction: row-reverse
 .augmented-chat-display
   position: relative
   img
@@ -1825,6 +1830,9 @@ hr.augmented-line
     width: 3rem
     height: 3rem
     margin-right: 20px
+    &.left
+      margin-right: 0
+      margin-left: 20px
   .arrow
     position: absolute
     margin-top: -10px
@@ -1837,6 +1845,11 @@ hr.augmented-line
     @include prefix(transform-origin, right top)
     &.talkpush
       background-color: #9ecc6a
+    &.left
+      right: auto
+      left: 0
+      @include prefix(transform, rotate(45deg))
+      @include prefix(transform-origin, left top)
 .augmented-chat-message
   @include flex(1)
   color: #666
