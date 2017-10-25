@@ -1,0 +1,30 @@
+// This is a copy of package.json
+// because it is ignored.
+// The reason it's ignored is that if there's a package.json
+// and it's pushed to dokku, then dokku will
+// think that this is a node.js application.
+// This is a ruby application.
+{
+  "name": "talkpush-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "grunt & python -m SimpleHTTPServer 9999"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dokku@talkpush.com:talkpush-com"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
