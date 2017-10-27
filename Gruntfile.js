@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 			},
 			sass: {
 				files: ['./public/styles/**/*.sass'],
-				tasks: ['sass']
+				tasks: ['sass-concat']
 			}
 		},
 		sass: {
@@ -47,6 +47,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.registerTask('default', ['concat', 'watch', 'sass']);
+	grunt.registerTask('sass-concat', ['sass', 'concat:css']);
+	grunt.registerTask('default', ['concat', 'watch', 'sass-concat']);
 
 }
