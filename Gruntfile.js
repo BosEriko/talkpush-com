@@ -41,12 +41,25 @@ module.exports = function(grunt) {
 					'./public/styles/base.css': './public/styles/base.sass'
 				}
 			}
-		}
+		},
+		// pug: {
+		// 	compile: {
+		// 		options: {
+		// 			data: {
+		// 				pretty: false
+		// 			}
+		// 		},
+		// 		files: {
+		// 			'./public/index.html': './public/jade/index.jade'
+		// 		}
+		// 	}
+		// }
 	})
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	// grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.registerTask('sass-concat', ['sass', 'concat:css']);
 	grunt.registerTask('default', ['concat', 'watch', 'sass-concat']);
 
