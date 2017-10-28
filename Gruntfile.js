@@ -33,6 +33,10 @@ module.exports = function(grunt) {
 			sass: {
 				files: ['./public/styles/**/*.sass'],
 				tasks: ['sass-concat']
+			},
+			pug: {
+				files: ['./public/**/*.pug'],
+				tasks: ['pug']
 			}
 		},
 		sass: {
@@ -42,25 +46,37 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// pug: {
-		// 	compile: {
-		// 		options: {
-		// 			data: {
-		// 				pretty: false
-		// 			}
-		// 		},
-		// 		files: {
-		// 			'./public/index.html': './public/jade/index.jade'
-		// 		}
-		// 	}
-		// }
+		pug: {
+			compile: {
+				options: {
+					data: {
+						pretty: false
+					}
+				},
+				files: {
+					'./public/pricing.html': './public/pug/_pricing.pug',
+					'./public/about.html': './public/pug/about.pug',
+					'./public/accelerate.html': './public/pug/accelerate.pug',
+					'./public/career-bot-demo.html': './public/pug/career-bot-demo.pug',
+					'./public/chatbot.html': './public/pug/chatbot.pug',
+					'./public/customers.html': './public/pug/customers.pug',
+					'./public/index.html': './public/pug/index.pug',
+					'./public/jobs.html': './public/pug/jobs.pug',
+					'./public/privacy.html': './public/pug/privacy.pug',
+					'./public/terms.html': './public/pug/terms.pug',
+					// Augmented Recruiters
+					'./public/augmented-recruiter/angeni.html': './public/augmented-recruiter/pug/angeni.pug',
+					'./public/augmented-recruiter/ping.html': './public/augmented-recruiter/pug/ping.pug',
+				}
+			}
+		}
 	})
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	// grunt.loadNpmTasks('grunt-contrib-pug');
+	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.registerTask('sass-concat', ['sass', 'concat:css']);
-	grunt.registerTask('default', ['concat', 'watch', 'sass-concat']);
+	grunt.registerTask('default', ['concat', 'watch', 'sass-concat', 'pug']);
 
 }

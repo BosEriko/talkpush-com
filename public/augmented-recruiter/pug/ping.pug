@@ -1,10 +1,8 @@
-//output:../ping.html, pretty:false
-
 //- Global Variable Start
-- pageCode = "ping-augmented-recruiter"
-- pageDescription = "Ping Catalina (Augmented Recruiter)"
-include ../../jade/_variables.jade
-- favicon = "../images/favicon.ico"
+- var pageCode = "ping-augmented-recruiter"
+- var pageDescription = "Ping Catalina (Augmented Recruiter)"
+include ../../pug/_variables.pug
+- var favicon = "../images/favicon.ico"
 //- Global Variable End
 
 doctype
@@ -13,20 +11,20 @@ html(lang="en")
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1")
-        meta(name="description", content="#{pageDescription}")
-        meta(name="keywords" content="#{metaKeywords}")
+        meta(name="description", content=pageDescription)
+        meta(name="keywords" content=metaKeywords)
         title #{siteTitle} - Ping Catalina (Augmented Recruiter)
         link(type="text/css", rel="StyleSheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
         link(type="text/css", rel="StyleSheet", href="https://fonts.googleapis.com/css?family=Dosis")
         link(type="text/css", rel="StyleSheet", href="../dist/_app.css")
         if favicon
-            link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
+            link(rel="shortcut icon", href=favicon, type="image/x-icon")
 
         // Open Graph Start
-        meta(property="og:title", content="#{siteTitle}")
+        meta(property="og:title", content=siteTitle)
         if siteImage
-            meta(property="og:image", content="#{siteImage}")
-        meta(property="og:description", content="#{pageDescription}")
+            meta(property="og:image", content=siteImage)
+        meta(property="og:description", content=pageDescription)
         // Open Graph End
 
         <!--[if lt IE 9]>
@@ -87,7 +85,7 @@ html(lang="en")
                     a(href="#").menu-button
                         i(class="fa fa-bars",aria-hidden="true")
                 .menu
-                    include ../../jade/_navigation.jade
+                    include ../../pug/_navigation.pug
 
       .display-header.augmented-recruiter
         .filter
@@ -208,7 +206,7 @@ html(lang="en")
             .augmented-chat-message Avatar
 
       // Footer Section
-      include ../../jade/_footer.jade
+      include ../../pug/_footer.pug
 
       // Scripts Section
       script(src="../dist/_app.js")

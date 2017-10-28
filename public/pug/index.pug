@@ -1,11 +1,9 @@
-//output:../index.html, pretty:false
-
 //- Global Variable Start
-- pageCode = "index"
-- animationSpeed = "800"
-- animationOnce = "true"
-- pageDescription = "Ready to accelerate recruitment? Talkpush is the leading productivity platform and the most high-volume chatbot for hiring talent via Facebook, WeChat and messaging."
-include ./_variables.jade
+- var pageCode = "index"
+- var animationSpeed = "800"
+- var animationOnce = "true"
+- var pageDescription = "Ready to accelerate recruitment? Talkpush is the leading productivity platform and the most high-volume chatbot for hiring talent via Facebook, WeChat and messaging."
+include ./_variables.pug
 //- Global Variable End
 
 doctype
@@ -14,28 +12,28 @@ html(lang="en")
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1")
-        meta(name="description", content="#{pageDescription}")
-        meta(name="keywords" content="#{metaKeywords}")
+        meta(name="description", content=pageDescription)
+        meta(name="keywords" content=metaKeywords)
         title #{siteTitle} - #{siteDescription}
         link(type="text/css", rel="StyleSheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
         link(type="text/css", rel="StyleSheet", href="https://fonts.googleapis.com/css?family=Dosis")
         link(type="text/css", rel="StyleSheet", href="./dist/_app.css")
         link(type="text/css", rel="StyleSheet", href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/css/intlTelInput.css")
         if favicon
-            link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
-        
+            link(rel="shortcut icon", href=favicon, type="image/x-icon")
+
         // Open Graph Start
-        meta(property="og:title", content="#{siteTitle}")
+        meta(property="og:title", content=siteTitle)
         if siteImage
-            meta(property="og:image", content="#{siteImage}")
-        meta(property="og:description", content="#{pageDescription}")
+            meta(property="og:image", content=siteImage)
+        meta(property="og:description", content=pageDescription)
         // Open Graph End
-        
+
         <!--[if lt IE 9]>
         script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
         script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
         <![endif]-->
-        
+
         // Smartsupp Live Chat script
         script(type='text/javascript').
           var _smartsupp = _smartsupp || {};
@@ -62,7 +60,7 @@ html(lang="en")
           })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
           ga('create', 'UA-46858485-2', 'auto');
           ga('send', 'pageview');
-          
+
         // Facebook Pixel Code
         script.
             !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -77,13 +75,13 @@ html(lang="en")
             img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=1690886631131130&ev=PageView&noscript=1')
         // DO NOT MODIFY
         // End Facebook Pixel Code
-              
+
     body.index
       // Video Parallax
       #video-parallax
         video(autoplay, loop)
           source(src="https://dr5ehd0u99lu0.cloudfront.net/microsites/talkpush/talkpush-2-chat-noaudio.mp4", type="video/mp4")
-      
+
       // Header
       header
         .container
@@ -94,8 +92,8 @@ html(lang="en")
                     a(href="#").menu-button
                         i(class="fa fa-bars",aria-hidden="true")
                 .menu
-                    include ./_navigation.jade
-      
+                    include ./_navigation.pug
+
       // Top Section
       #top-section
         .text
@@ -109,15 +107,15 @@ html(lang="en")
               span Book a Demo
         .see-more
             a(href="#adapting-section"): i(class="fa fa-chevron-down fa-fw", aria-hidden="true")
-            
+
       // Adapting Section
       #adapting-section.white-theme
         .filter
             .container
-                h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Adapting Recruitment to New Behaviors
-                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Meet your candidates where they live and create engaging digital recruitment experiences
+                h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Adapting Recruitment to New Behaviors
+                p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Meet your candidates where they live and create engaging digital recruitment experiences
                 .divide
-                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="flip-right", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .stats
                             .st-title Attention spans are getting shorter
                             .st-graph-holder
@@ -138,7 +136,7 @@ html(lang="en")
                         .data
                             .title Makes applications faster
                             .message In less than 5 minutes, candidates can apply, complete a first screening, and be told if they are shortlisted. This used to take days.
-                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .stats
                             .st-title Millennials are glued to their phone
                             .st-graph-holder
@@ -158,7 +156,7 @@ html(lang="en")
                         .data
                             .title Meet them where they live
                             .message Talkpush allows you to engage a conversation with candidates on the platform they live on: Facebook Messenger, WeChat, Line, etc.
-                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .stats
                             .st-title Most emails never get read
                             .st-graph-holder
@@ -178,32 +176,32 @@ html(lang="en")
                         .data
                             .title Keep the conversation going
                             .message Once a conversation is engaged with a candidate via Talkpush, it lives on. Using SMS and messaging, employers get a 99% read rate and 70%+ response rate.
-    
+
       // Drive Numbers Section
       #drive-section.dark-theme
         .filter
             .container
-                h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Join the Messaging Recruitment Revolution
-                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Talkpush helps you drives the recruitment numbers that matter.
+                h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Join the Messaging Recruitment Revolution
+                p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Talkpush helps you drives the recruitment numbers that matter.
                 .divide
-                    .box(data-aos="zoom-in", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="zoom-in", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .numbers 1,328,921
                         .message Automated conversations started with candidates via voice, text or social media.
-                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .numbers 42,742
                         .message Hired since 2016. Talkpush users hire hundreds of personnel every month.
-                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .numbers 67%
                         .message Reduction in cost per hire, with better conversion rates and shorter hiring cycles.
-      
+
       // Assistant Section
       #assistant-section.white-theme
         .filter
             .container
-                h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Stanley is the Recruitment Assistant Who Does it All
-                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Leave the boring, repetitive stuff to Stanley the chatbot, who delivers them in real-time, 24/7.
+                h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Stanley is the Recruitment Assistant Who Does it All
+                p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Leave the boring, repetitive stuff to Stanley the chatbot, who delivers them in real-time, 24/7.
                 .divide
-                    .box(data-aos="zoom-in", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="zoom-in", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .title Welcoming
                         .iphone
                             img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
@@ -211,7 +209,7 @@ html(lang="en")
                                 img.video#video-1(src="./images/assistant/init.gif", alt="screen-1")
                             .play-button
                                 a(href="#")#play-1: i.fa.fa-play-circle.fa-fw(aria-hidden='true')
-                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .title Interviewing
                         .iphone
                             img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
@@ -219,7 +217,7 @@ html(lang="en")
                                 img.video#video-2(src="./images/assistant/init.gif", alt="screen-2")
                             .play-button
                                 a(href="#")#play-2: i.fa.fa-play-circle.fa-fw(aria-hidden='true')
-                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         .title Scheduling
                         .iphone
                             img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
@@ -227,15 +225,15 @@ html(lang="en")
                                 img.video#video-3(src="./images/assistant/init.gif", alt="screen-3")
                             .play-button
                                 a(href="#")#play-3: i.fa.fa-play-circle.fa-fw(aria-hidden='true')
-      
+
       // Pricing Section
       #pricing-section.dark-theme
         .filter
             .container
-                h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Ramp up your Hiring Volumes with Talkpush
-                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Talkpush offers pricing that scales with your recruitment volumes. You pay as you go and upgrade or downgrade your plan based on your projected volumes.
+                h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Ramp up your Hiring Volumes with Talkpush
+                p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Talkpush offers pricing that scales with your recruitment volumes. You pay as you go and upgrade or downgrade your plan based on your projected volumes.
                 .divide
-                    .box(data-aos="flip-right", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="flip-right", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         h3 Starter
                         .price
                             .range Starts at
@@ -249,7 +247,7 @@ html(lang="en")
                             li 3 users (single country)
                             li Up to 500 interviews per month included
                             li Up to 2,000 SMS sent per month
-                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         h3 Business
                         .price
                             .range Starts at
@@ -263,7 +261,7 @@ html(lang="en")
                             li 10 users in a single country
                             li Up to 1,000 interviews per month
                             li Up to 5,000 SMS per month
-                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}")
+                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
                         h3 Enterprise
                         .price
                             .range Ask for a
@@ -274,16 +272,16 @@ html(lang="en")
                             li Global / Multi-Country Rollout
                             li Unlimited Interview Packages
                             li Integrate with your ATS
-                h4.subtitle(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") <strong>Terms and conditions apply:</strong> Additional charges apply if you conduct more interviews than included in your package. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>.
-        
+                h4.subtitle(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) <strong>Terms and conditions apply:</strong> Additional charges apply if you conduct more interviews than included in your package. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>.
+
       // Testimonial Section
       #testimonial-section.white-theme
         .filter
             .container
-                h2.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") Meet the Augmented Recruiters
-                p.gl(data-aos="fade-up", data-aos-duration="#{animationSpeed}", data-aos-once="#{animationOnce}") They build more engaging experiences and increase recruitment outputs through automation and AI
+                h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Meet the Augmented Recruiters
+                p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) They build more engaging experiences and increase recruitment outputs through automation and AI
                 .divide
-                    .box-holder  
+                    .box-holder
                       .box
                           .video
                               iframe(width='560', height='315', src='https://www.youtube.com/embed/nFRDqo_rc3o?rel=0&amp;showinfo=0')
@@ -292,7 +290,7 @@ html(lang="en")
                               .name — Keith Cheung
                               .position Head of Talent Acquisition Sheraton and St. Regis Macau at Sheraton
                               .icon: i.fa.fa-quote-right.fa-fw
-                    .box-holder          
+                    .box-holder
                       .box
                           .video
                               iframe(width='560', height='315', src='https://www.youtube.com/embed/ciSB3gMpH_g?rel=0&amp;showinfo=0')
@@ -301,7 +299,7 @@ html(lang="en")
                               .name — Marvin Vinluan
                               .position Director, Strategic Sourcing and Recruitment Marketing at Alorica
                               .icon: i.fa.fa-quote-right.fa-fw
-                    .box-holder          
+                    .box-holder
                       .box
                           .video
                               iframe(width='560', height='315', src='https://www.youtube.com/embed/abg2U9DuAiA?rel=0&amp;showinfo=0')
@@ -310,7 +308,7 @@ html(lang="en")
                               .name — Ping Sta. Catalina
                               .position Client Services Manager
                               .icon: i.fa.fa-quote-right.fa-fw
-                    .box-holder          
+                    .box-holder
                       .box
                           .video
                               iframe(width='560', height='315', src='https://www.youtube.com/embed/lvYOmb8OVPE?rel=0&amp;showinfo=0')
@@ -335,7 +333,7 @@ html(lang="en")
                 a(href="#").box#we-chat-button
                  .icon: i.fa.fa-wechat.fa-fw(aria-hidden='true')
                  .message Via WeChat
-                 
+
       // Pop-up
       #dark-filter
         #pop-up-aligner
@@ -368,9 +366,9 @@ html(lang="en")
                     .message Thank you for your interest.
             .we-chat-icon
                 img(src="./images/try-section/wechat.png", alt="WeChat Icon")
-                
+
       // Footer Section
-      include ./_footer.jade
-      
+      include ./_footer.pug
+
       // Scripts Section
       script(src="./dist/_app.js")

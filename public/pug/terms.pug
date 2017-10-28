@@ -1,9 +1,7 @@
-//output:../terms.html, pretty:false
-
 //- Global Variable Start
-- pageCode = "terms"
-- pageDescription = "Terms and Conditions"
-include ./_variables.jade
+- var pageCode = "terms"
+- var pageDescription = "Terms and Conditions"
+include ./_variables.pug
 //- Global Variable End
 
 doctype
@@ -12,27 +10,27 @@ html(lang="en")
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1")
-        meta(name="description", content="#{pageDescription}")
-        meta(name="keywords" content="#{metaKeywords}")
+        meta(name="description", content=pageDescription)
+        meta(name="keywords" content=metaKeywords)
         title #{siteTitle} - Terms and Conditions
         link(type="text/css", rel="StyleSheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
         link(type="text/css", rel="StyleSheet", href="https://fonts.googleapis.com/css?family=Dosis")
         link(type="text/css", rel="StyleSheet", href="./dist/_app.css")
         if favicon
-            link(rel="shortcut icon", href="#{favicon}" type="image/x-icon")
-        
+            link(rel="shortcut icon", href=favicon, type="image/x-icon")
+
         // Open Graph Start
-        meta(property="og:title", content="#{siteTitle}")
+        meta(property="og:title", content=siteTitle)
         if siteImage
-            meta(property="og:image", content="#{siteImage}")
-        meta(property="og:description", content="#{pageDescription}")
+            meta(property="og:image", content=siteImage)
+        meta(property="og:description", content=pageDescription)
         // Open Graph End
-        
+
         <!--[if lt IE 9]>
         script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
         script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
         <![endif]-->
-        
+
         // Smartsupp Live Chat script
         script(type='text/javascript').
           var _smartsupp = _smartsupp || {};
@@ -59,7 +57,7 @@ html(lang="en")
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             ga('create', 'UA-46858485-2', 'auto');
             ga('send', 'pageview');
-            
+
         // Facebook Pixel Code
         script.
               !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -73,7 +71,7 @@ html(lang="en")
               img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=1690886631131130&ev=PageView&noscript=1')
         // DO NOT MODIFY
         // End Facebook Pixel Code
-          
+
     body
       // Header
       header.fixed-active
@@ -85,8 +83,8 @@ html(lang="en")
                     a(href="#").menu-button
                         i(class="fa fa-bars",aria-hidden="true")
                 .menu
-                    include ./_navigation.jade
-      
+                    include ./_navigation.pug
+
       .white-holder
         .container
             h1 Terms and Conditions of Service
@@ -118,7 +116,7 @@ html(lang="en")
             p 5.5. The Customer shall pay all invoices within fourteen (14) days’ of the date of the invoice.
             p 5.6. The Fees are payable in the currency detailed in the invoice, which shall be paid by the Customer at the rate and in the manner prescribed by law.
             p 5.7. If any Fees are not paid by the due date for payment, then (without prejudice to Talkpush”s other rights and remedies) Talkpush reserves the right to:
-            p 5.7.1. Charge statutory interest on that sum on a daily compounded basis (before as well as after any judgment) at the then prevailing rate, and/or 
+            p 5.7.1. Charge statutory interest on that sum on a daily compounded basis (before as well as after any judgment) at the then prevailing rate, and/or
             p 5.7.2. At Talkpush”s sole discretion, suspend any or all of the Service and / or Support.
             h2 6. Intellectual Property
             p 6.1. Reservation of Rights. You acknowledge that Talkpush shall retain all Intellectual Property Rights in and to the Service, the Software used to provide the Service, and any Modifications and enhancements thereto, and you shall have no rights in or to the Service or the Software other than the right to use it in accordance with the terms of this Agreement. Except as expressly provided herein, nothing contained herein shall be interpreted so as to transfer any right, title or interest in any intellectual property right of Talkpush, nor to grant you any rights or licenses in any intellectual property right of Talkpush.
@@ -136,9 +134,9 @@ html(lang="en")
             p 7.11. Errors. Any error, omission or typographical error in any website page, quotation, offer, sales information, invoice, or document supplied by Talkpush shall be subject to correction from Talkpush and without liability.
             p 7.12. Modification. Talkpush may vary any provision in this Agreement, without prior consent from you, if such change is required because of regulatory, insurance, safety or statutory changes made after the date of this Agreement. Talkpush shall in such circumstances give you 30 days’ notice of such changes via the Talkpush website or portal. You shall have the right by giving notice in writing to Talkpush to terminate this Agreement, within 14 days of receiving such notice. This Agreement would then be terminated within 30 days of such notification, or on a later date specified by you.
             p 7.13. You grant Talkpush the right to refer to you as a “Client” and mention you and your brand, and company logos, in promotional material, both offline and online. You grant permission to do this during or after any Talkpush services have been rendered activated or terminated.
-      
+
       // Footer Section
-      include ./_footer.jade
-      
+      include ./_footer.pug
+
       // Scripts Section
       script(src="./dist/_app.js")
