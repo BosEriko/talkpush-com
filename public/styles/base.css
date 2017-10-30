@@ -2120,4 +2120,9 @@ hr.augmented-line {
     background-color: #9ecc6a;
     color: white; }
 
+#talkpush-bot {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee; }
+
 /*# sourceMappingURL=base.css.map */
