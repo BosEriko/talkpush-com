@@ -76,7 +76,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-pug');
-	grunt.registerTask('sass-concat', ['sass', 'concat:css']);
+	grunt.loadNpmTasks('grunt-force-task');
+	grunt.registerTask('sass-concat', ['force:sass', 'concat:css']);
 	grunt.registerTask('default', ['concat', 'watch', 'sass-concat', 'pug']);
 
 }
