@@ -879,6 +879,65 @@ header {
       #top-section .see-more a:hover, #top-section .see-more a:focus {
         color: #fff; }
 
+#crm-section {
+  background-color: #323a45;
+  color: #fff;
+  overflow: hidden; }
+  #crm-section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #crm-section .filter {
+    padding: 2rem 0 0 0; }
+    @media screen and (min-width: 961px) {
+      #crm-section .filter {
+        padding: 5rem 0 0 0; } }
+    #crm-section .filter .holder {
+      margin-top: 20px; }
+      #crm-section .filter .holder .browser-window {
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px 5px 0 0; }
+        #crm-section .filter .holder .browser-window .toolbar {
+          background-color: #e5e5e5;
+          padding: 0.5rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; }
+          #crm-section .filter .holder .browser-window .toolbar .dot {
+            margin-right: 0.25rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #f55244;
+            border-radius: 100%; }
+            #crm-section .filter .holder .browser-window .toolbar .dot:nth-child(2) {
+              background-color: #feba3b; }
+            #crm-section .filter .holder .browser-window .toolbar .dot:nth-child(3) {
+              background-color: #9ad572; }
+          #crm-section .filter .holder .browser-window .toolbar .window-title {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            text-align: left;
+            font-weight: bold;
+            color: #444;
+            margin-left: 0.5rem; }
+        #crm-section .filter .holder .browser-window .window {
+          position: relative;
+          z-index: 1; }
+          #crm-section .filter .holder .browser-window .window img {
+            vertical-align: bottom;
+            width: 100%; }
+        #crm-section .filter .holder .browser-window .shadow {
+          height: 50px;
+          margin-bottom: -50px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          position: relative;
+          z-index: 2; }
+
 #adapting-section {
   background-color: #fff;
   color: #444; }
@@ -1316,6 +1375,51 @@ header {
               position: absolute;
               right: 20px;
               z-index: 0; }
+
+#logo-results-section {
+  background-color: #212121;
+  color: #fff;
+  padding: 2rem 0; }
+  @media screen and (min-width: 961px) {
+    #logo-results-section {
+      padding: 5rem 0; } }
+  #logo-results-section .title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 2rem 2rem 2rem; }
+  #logo-results-section .divide {
+    margin-top: 2rem; }
+    @media screen and (min-width: 961px) {
+      #logo-results-section .divide {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+    #logo-results-section .divide .box {
+      padding: 2rem;
+      text-align: center; }
+      @media screen and (min-width: 961px) {
+        #logo-results-section .divide .box {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1; } }
+      #logo-results-section .divide .box:not(:last-child) {
+        margin-bottom: 2rem; }
+        @media screen and (min-width: 961px) {
+          #logo-results-section .divide .box:not(:last-child) {
+            border-width: 0 1px 0 0;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: none; } }
+      #logo-results-section .divide .box .number {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #72de2f; }
+      #logo-results-section .divide .box .details {
+        margin-bottom: 2rem;
+        font-size: 1.5rem; }
+      #logo-results-section .divide .box .logo img {
+        max-width: 75%; }
 
 #try-section {
   background-color: #212121;

@@ -108,6 +108,22 @@ html(lang="en")
         .see-more
             a(href="#adapting-section"): i(class="fa fa-chevron-down fa-fw", aria-hidden="true")
 
+      // CRM Section
+      #crm-section.dark-theme
+        .filter
+          .container
+            h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Finally a CRM that lets you talk
+            p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Recruitment is not about tracking, its about talking. Talkpush initiates thousands of conversations between recruiters and candidates via chat, social media and voice to build a pre-qualified talent pool that is engaged and responsive.
+            .holder(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
+              .browser-window
+                .toolbar
+                  .dot
+                  .dot
+                  .dot
+                  .window-title #{siteTitle}
+                .window: img(src="https://i.imgur.com/WHxHVTl.png", alt="Talkpush")
+                .shadow
+
       // Adapting Section
       #adapting-section.white-theme
         .filter
@@ -194,86 +210,6 @@ html(lang="en")
                         .numbers 67%
                         .message Reduction in cost per hire, with better conversion rates and shorter hiring cycles.
 
-      // Assistant Section
-      #assistant-section.white-theme
-        .filter
-            .container
-                h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Stanley is the Recruitment Assistant Who Does it All
-                p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Leave the boring, repetitive stuff to Stanley the chatbot, who delivers them in real-time, 24/7.
-                .divide
-                    .box(data-aos="zoom-in", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
-                        .title Welcoming
-                        .iphone
-                            img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
-                            .video-holder
-                                img.video#video-1(src="./images/assistant/init.gif", alt="screen-1")
-                            .play-button
-                                a(href="#")#play-1: i.fa.fa-play-circle.fa-fw(aria-hidden='true')
-                    .box(data-aos="zoom-in", data-aos-delay="300", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
-                        .title Interviewing
-                        .iphone
-                            img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
-                            .video-holder
-                                img.video#video-2(src="./images/assistant/init.gif", alt="screen-2")
-                            .play-button
-                                a(href="#")#play-2: i.fa.fa-play-circle.fa-fw(aria-hidden='true')
-                    .box(data-aos="zoom-in", data-aos-delay="600", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
-                        .title Scheduling
-                        .iphone
-                            img.frame(src="./images/iphone-frame.png", alt="iphone-frame")
-                            .video-holder
-                                img.video#video-3(src="./images/assistant/init.gif", alt="screen-3")
-                            .play-button
-                                a(href="#")#play-3: i.fa.fa-play-circle.fa-fw(aria-hidden='true')
-
-      // Pricing Section
-      #pricing-section.dark-theme
-        .filter
-            .container
-                h2.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Ramp up your Hiring Volumes with Talkpush
-                p.gl(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) Talkpush offers pricing that scales with your recruitment volumes. You pay as you go and upgrade or downgrade your plan based on your projected volumes.
-                .divide
-                    .box(data-aos="flip-right", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
-                        h3 Starter
-                        .price
-                            .range Starts at
-                            span.sign $
-                            span.number 980
-                            span.time / month
-                        .cta
-                            a(href="#").button-price#starter Receive an Email Quote
-                        ul
-                            li No Set up fee
-                            li 3 users (single country)
-                            li Up to 500 interviews per month included
-                            li Up to 2,000 SMS sent per month
-                    .box(data-aos="flip-right", data-aos-delay="300", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
-                        h3 Business
-                        .price
-                            .range Starts at
-                            span.sign $
-                            span.number 2,500
-                            span.time / month
-                        .cta
-                            a(href="#").button-price#business Receive an Email Quote
-                        ul
-                            li No Set up fee
-                            li 10 users in a single country
-                            li Up to 1,000 interviews per month
-                            li Up to 5,000 SMS per month
-                    .box(data-aos="flip-right", data-aos-delay="600", data-aos-duration=animationSpeed, data-aos-once=animationOnce)
-                        h3 Enterprise
-                        .price
-                            .range Ask for a
-                            span.number Custom Quote
-                        .cta
-                            a(href="#").button-price#enterprise Receive an Email Quote
-                        ul
-                            li Global / Multi-Country Rollout
-                            li Unlimited Interview Packages
-                            li Integrate with your ATS
-                h4.subtitle(data-aos="fade-up", data-aos-duration=animationSpeed, data-aos-once=animationOnce) <strong>Terms and conditions apply:</strong> Additional charges apply if you conduct more interviews than included in your package. Telecom charges apply for any dial-outs or live calls. Every subscription comes with full features: Automated Phone Interviews, Stanley the Facebook recruitment Chatbot, unlimited # of campaigns, candidates, messages, Reports and Analytics, job board, Google and Facebook Ad integration. Questions? Email us at <a href="mailto:hello@talkpush.com">hello@talkpush.com</a>.
-
       // Testimonial Section
       #testimonial-section.white-theme
         .filter
@@ -317,22 +253,28 @@ html(lang="en")
                               .name — Anna Pinaroc
                               .position Recruitment Manager at Afni
                               .icon: i.fa.fa-quote-right.fa-fw
-      // Try Section
-      #try-section
+
+      // Logo & Results
+      #logo-results-section
         .container
-            .title Try it now
-            .divide
-                a(href="#").box#demo-call-button
-                    .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
-                    .message Via Call
-                a(href="https://m.me/letthetalenttalk/", target="_blank").box
-                    .icon
-                        svg(xmlns='http://www.w3.org/2000/svg', viewbox='96 93 322 324')
-                            path(d='M257 93c-88.918 0-161 67.157-161 150 0 47.205 23.412 89.311 60 116.807V417l54.819-30.273C225.449 390.801 240.948 393 257 393c88.918 0 161-67.157 161-150S345.918 93 257 93zm16 202l-41-44-80 44 88-94 42 44 79-44-88 94z', fill='#fff')
-                    .message Via Messenger
-                a(href="#").box#we-chat-button
-                 .icon: i.fa.fa-wechat.fa-fw(aria-hidden='true')
-                 .message Via WeChat
+          .title Just a few results from a company like yours
+          .divide
+            .box
+              .number 62%
+              .details Reduction in costs per hire
+              .logo: img(src="https://talkpush.com/images/alorica-case-study.png", alt="Alorica")
+            .box
+              .number 73%
+              .details Reduction in time to hire
+              .logo: img(src="https://talkpush.com/images/alorica-case-study.png", alt="Starwood Group")
+            .box
+              .number +60%
+              .details Increases in fill rates
+              .logo: img(src="https://talkpush.com/images/alorica-case-study.png", alt="Alexander Mann Solutions")
+            .box
+              .number $75k
+              .details Annual savings in job boards
+              .logo: img(src="https://talkpush.com/images/alorica-case-study.png", alt="Prudential")
 
       // Pop-up
       #dark-filter
