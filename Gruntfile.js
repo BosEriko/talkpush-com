@@ -67,6 +67,7 @@ module.exports = function(grunt) {
 					// Augmented Recruiters
 					'./public/augmented-recruiter/angeni.html': './public/augmented-recruiter/pug/angeni.pug',
 					'./public/augmented-recruiter/ping.html': './public/augmented-recruiter/pug/ping.pug',
+					'./public/augmented-recruiter/ram.html': './public/augmented-recruiter/pug/ram.pug',
 				}
 			}
 		}
