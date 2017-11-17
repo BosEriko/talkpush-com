@@ -927,7 +927,8 @@ header {
             margin-left: 0.5rem; }
         #crm-section .filter .holder .browser-window .window {
           position: relative;
-          z-index: 1; }
+          z-index: 1;
+          background-color: #fff; }
           #crm-section .filter .holder .browser-window .window img {
             vertical-align: bottom;
             width: 100%; }
@@ -1411,15 +1412,15 @@ header {
             border-color: rgba(255, 255, 255, 0.1);
             margin-bottom: none; } }
       #logo-results-section .divide .box .number {
-        font-weight: bold;
-        font-size: 2rem;
+        font-size: 3rem;
         margin-bottom: 2rem;
         color: #72de2f; }
       #logo-results-section .divide .box .details {
         margin-bottom: 2rem;
         font-size: 1.5rem; }
       #logo-results-section .divide .box .logo img {
-        max-width: 75%; }
+        width: 75%;
+        max-width: 200px; }
 
 #try-section {
   background-color: #212121;
