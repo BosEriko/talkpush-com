@@ -311,7 +311,7 @@ header
 #top-section
   @include display-flex()
   @include align-items-center()
-  background-color: rgba(0,0,0,.75)
+  background-color: rgba(0,0,0,.8)
   background-image: url("../images/filter.png")
   box-shadow: inset 0 -10px 10px rgba(0,0,0,.25)
   height: 100vh
@@ -370,6 +370,7 @@ header
             background-color: $theme
             color: rgba(0,0,0,.75)
             border-width: 1px
+            border-color: rgba(0,0,0,.5)
           &:focus,
           &:hover
             @include prefix(transform, translateY(-2.5px))
