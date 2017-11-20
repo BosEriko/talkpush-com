@@ -308,11 +308,10 @@ header
     @include prefix(transform, translateY(-20px))
   99%
     @include prefix(transform, translateY(0))
-// Indentation Checkpoint
 #top-section
   @include display-flex()
   @include align-items-center()
-  background-color: rgba(0,0,0,.5)
+  background-color: rgba(0,0,0,.75)
   background-image: url("../images/filter.png")
   box-shadow: inset 0 -10px 10px rgba(0,0,0,.25)
   height: 100vh
@@ -323,48 +322,59 @@ header
   .text
     @include flex(1)
     color: #fff
-    text-align: center
     h1
       font-size: 2rem
       font-weight: normal
       line-height: 3rem
+      margin: 0 0 1rem 0
+      padding: 0
+      text-transform: uppercase
+    hr.line
+      background-color: rgba(255,255,255,.5)
+      border: none
+      display: block
+      width: 2rem
+      height: .25rem
+      padding: 0
+      margin: 0 0 1rem .25rem
+    p
+      padding: 0
+      font-size: 1.25rem
+      margin: 0 0 2rem 0
+    ul
+      list-style-type: none
       margin: 0
       padding: 0
-      text-shadow: 5px 5px 0 rgba(0,0,0,.25)
-    ul
-      @media screen and (min-width: $break-medium)
-        @include display-flex()
-      list-style-type: none
-      margin: 20px 0 0 0
-      padding: 0
       li
-        @media screen and (min-width: $break-medium)
-          @include flex(1)
-          text-align: left
-        &:nth-child(1)
-          @media screen and (min-width: $break-medium)
-            text-align: right
-        a.main
-          background-color: rgba(136,201,48,.75)
+        display: inline-block
+        &:not(:last-child)
+          margin: 0 1rem 0 0
         a
           @include prefix(transition, transform 0.3s ease-in-out)
           background-color: rgba(255,255,255,.25)
-          border-color: rgba(0,0,0,.25)
+          border-color: rgba(255,255,255,.25)
           border-style: solid
-          border-width: 2px
+          border-width: 1px
+          border-radius: 3px
           color: #fff
           display: inline-block
-          margin: 10px
+          margin: 0
           max-width: 250px
-          padding: 10px
+          padding: 10px 20px
           text-align: center
           text-decoration: none
           width: 100%
+          box-shadow: 0 1px 2px 0 rgba(0,0,0,.2)
+          font-weight: bold
+          &.main
+            background-color: $theme
+            color: rgba(0,0,0,.75)
+            border-width: 1px
           &:focus,
           &:hover
-            @include prefix(transform, scale(1.1))
-          i
-            margin-right: 5px
+            @include prefix(transform, translateY(-2.5px))
+          span
+            margin-left: 10px
   .see-more
       animation-duration: 3s
       animation-iteration-count: infinite
