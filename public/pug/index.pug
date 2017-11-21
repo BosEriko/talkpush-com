@@ -101,7 +101,7 @@ html(lang="en")
           hr.line
           p Yes, recruiting really is that simple. Talkpush is the first conversation-driven recruitment CRM. We make it easy to talk to more candidates, which drives the hiring metrics that matter to the busines.
           ul
-            li: a(href="#try-section").main
+            li: a(href="#try-section").main#chatbot-open
               i(class="fa fa-comments-o fa-fw", aria-hidden="true")
               span Talk to Stanley
             li: a(href="https://calendly.com/talkpush/20-minute-talkpush-demo/", target="_blank")
@@ -285,6 +285,8 @@ html(lang="en")
             .close-and-title
                 .title ---
                 a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
+            .chatboot
+              iframe(src="./iframe-chatbot.html", scrolling="no", frameborder="0")#chatbot-iframe
             form.pp-price-section
                 input(type="text", name="name", placeholder="Full Name")
                 input(type="text", name="company", placeholder="Company")
@@ -316,5 +318,3 @@ html(lang="en")
 
       // Scripts Section
       script(src="./dist/_app.js")
-      script
-        //-| (function(){var w=window;var d=document;function l(){var s=d.createElement("script");s.type="text/javascript";s.async=true;s.src="https://my.talkpush.com/website_bot?company_id=16";var x=d.getElementsByTagName("script")[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent("onload",l);}else{w.addEventListener("load",l,false);}})()

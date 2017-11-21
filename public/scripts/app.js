@@ -86,6 +86,11 @@ $(function() {
   /* Pop-up Start */
   var volume
 
+  $("#chatbot-open").click(function(e) {
+    $("#dark-filter").fadeToggle("fast");
+    $("#dark-filter .chatbot").css("display", "block");
+    e.preventDefault();
+  });
   $(".button-price").click(function(e) {
     $("#dark-filter").fadeToggle("fast");
     $("#dark-filter .pp-price-section").css("display", "block");
@@ -132,6 +137,9 @@ $(function() {
   $(".button-price#business").click(function() {
     $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Business Pack</span>");
     volume = "Business Pack"
+  });
+  $("#chatbot-open").click(function() {
+    $("#dark-filter .title").html("<strong>Talk to Stanley</strong>");
   });
   $(".button-price#enterprise").click(function() {
     $("#dark-filter .title").html("Email Quote for <span style='font-weight: bold'>Enterprise Pack</span>");
@@ -287,7 +295,10 @@ $(function() {
   });
   /* Index Quote End */
 
-  /* Career's Pop Up Start */
-  /* Career's Pop Up End */
+	/* iFrame Homepage Chatbot Start */
+	$("#chatbot-iframe").load(function(){
+		alert("hahahahahaha")
+	});
+	/* iFrame Homepage Chatbot End */
 
 });
