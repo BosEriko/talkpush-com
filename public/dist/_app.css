@@ -1732,14 +1732,14 @@ footer {
           footer .copyright ul li a:hover, footer .copyright ul li a:focus {
             color: #72de2f; }
 
-#mc_embed_signup h4 {
+#af-form-565122839.af-form h4 {
   font-weight: normal;
   margin: 0;
   padding: 0 0 10px 0;
   text-transform: uppercase; }
-#mc_embed_signup .mc-label-title {
+#af-form-565122839.af-form label.previewLabel {
   color: #aaa; }
-#mc_embed_signup input#mce-EMAIL.required.email {
+#af-form-565122839.af-form #af-body-565122839.af-body.af-standards input#awf_field-94336136.text {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
@@ -1750,7 +1750,7 @@ footer {
   margin: 10px 0;
   padding: 10px;
   width: 100%; }
-#mc_embed_signup input#mc-embedded-subscribe.button {
+#af-form-565122839.af-form #af-body-565122839.af-body.af-standards input#af-submit-image-565122839.button {
   -webkit-transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
   -ms-transition: opacity 0.25s ease-in-out;
@@ -1765,7 +1765,7 @@ footer {
   display: block;
   padding: 5px;
   width: 100%; }
-  #mc_embed_signup input#mc-embedded-subscribe.button:hover, #mc_embed_signup input#mc-embedded-subscribe.buttonfocus {
+  #af-form-565122839.af-form #af-body-565122839.af-body.af-standards input#af-submit-image-565122839.button:hover, #af-form-565122839.af-form #af-body-565122839.af-body.af-standards input#af-submit-image-565122839.buttonfocus {
     opacity: 0.85; }
 
 .about-message {
