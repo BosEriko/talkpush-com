@@ -408,54 +408,33 @@ iframe#chatbot-iframe
   background-color: #323a45
   color: #fff
   overflow: hidden
-  &:after
-    content: ""
-    display: table
-    clear: both
   .filter
-    padding: 2rem 0 0 0
+    padding: 2rem 0
     @media screen and (min-width: $break-medium)
-      padding: 5rem 0 0 0
-    .holder
-      margin-top: 20px
-      .browser-window
-        overflow: hidden
-        box-shadow: 0 0 10px rgba(0,0,0,0.5)
-        border-radius: 5px 5px 0 0
-        .toolbar
-          background-color: #e5e5e5
-          padding: .5rem
-          @include display-flex()
-          @include align-items-center()
-          .dot
-            margin-right: .25rem
-            width: .5rem
-            height: .5rem
-            background-color: #f55244
-            border-radius: 100%
-            &:nth-child(2)
-              background-color: #feba3b
-            &:nth-child(3)
-              background-color: #9ad572
-          .window-title
-            @include flex(1)
-            text-align: left
-            font-weight: bold
-            color: #444
-            margin-left: .5rem
-        .window
-          position: relative
-          z-index: 1
-          background-color: #fff
-          img
-            vertical-align: bottom
-            width: 100%
-        .shadow
-          height: 50px
-          margin-bottom: -50px
-          box-shadow: 0 0 10px rgba(0,0,0,0.5)
-          position: relative
-          z-index: 2
+      padding: 5rem 0
+    .crm-divider
+      @media screen and (min-width: $break-medium)
+        @include display-flex()
+        @include align-items-center()
+      .text
+        @media screen and (min-width: $break-medium)
+          margin-right: 2rem
+          @include flex(1)
+        h2
+          font-size: 2rem
+          font-weight: normal
+          margin: 0
+          padding: 0 0 1rem 0
+        p
+          margin: 0
+          padding: 0 0 20px 0
+          @media screen and (min-width: $break-medium)
+            padding: 0
+      .laptop
+        text-align: center
+        img
+          width: 100%
+          max-width: 500px
 
 // Adapting Section
 #adapting-section

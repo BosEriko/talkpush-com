@@ -444,61 +444,41 @@ iframe#chatbot-iframe {
   background-color: #323a45;
   color: #fff;
   overflow: hidden; }
-  #crm-section:after {
-    content: "";
-    display: table;
-    clear: both; }
   #crm-section .filter {
-    padding: 2rem 0 0 0; }
+    padding: 2rem 0; }
     @media screen and (min-width: 961px) {
       #crm-section .filter {
-        padding: 5rem 0 0 0; } }
-    #crm-section .filter .holder {
-      margin-top: 20px; }
-      #crm-section .filter .holder .browser-window {
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        border-radius: 5px 5px 0 0; }
-        #crm-section .filter .holder .browser-window .toolbar {
-          background-color: #e5e5e5;
-          padding: 0.5rem;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center; }
-          #crm-section .filter .holder .browser-window .toolbar .dot {
-            margin-right: 0.25rem;
-            width: 0.5rem;
-            height: 0.5rem;
-            background-color: #f55244;
-            border-radius: 100%; }
-            #crm-section .filter .holder .browser-window .toolbar .dot:nth-child(2) {
-              background-color: #feba3b; }
-            #crm-section .filter .holder .browser-window .toolbar .dot:nth-child(3) {
-              background-color: #9ad572; }
-          #crm-section .filter .holder .browser-window .toolbar .window-title {
-            -webkit-box-flex: 1;
-            -ms-flex: 1;
-            flex: 1;
-            text-align: left;
-            font-weight: bold;
-            color: #444;
-            margin-left: 0.5rem; }
-        #crm-section .filter .holder .browser-window .window {
-          position: relative;
-          z-index: 1;
-          background-color: #fff; }
-          #crm-section .filter .holder .browser-window .window img {
-            vertical-align: bottom;
-            width: 100%; }
-        #crm-section .filter .holder .browser-window .shadow {
-          height: 50px;
-          margin-bottom: -50px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          position: relative;
-          z-index: 2; }
+        padding: 5rem 0; } }
+    @media screen and (min-width: 961px) {
+      #crm-section .filter .crm-divider {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; } }
+    @media screen and (min-width: 961px) {
+      #crm-section .filter .crm-divider .text {
+        margin-right: 2rem;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; } }
+    #crm-section .filter .crm-divider .text h2 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin: 0;
+      padding: 0 0 1rem 0; }
+    #crm-section .filter .crm-divider .text p {
+      margin: 0;
+      padding: 0 0 20px 0; }
+      @media screen and (min-width: 961px) {
+        #crm-section .filter .crm-divider .text p {
+          padding: 0; } }
+    #crm-section .filter .crm-divider .laptop {
+      text-align: center; }
+      #crm-section .filter .crm-divider .laptop img {
+        width: 100%;
+        max-width: 500px; }
 
 #adapting-section {
   background-color: #fff;
