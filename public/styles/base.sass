@@ -321,34 +321,36 @@ header
   z-index: 1
   .text
     @include flex(1)
+    @media screen and (min-width: $break-medium)
+      @include display-flex()
+      @include align-items-center()
     color: #fff
-    h1
-      font-size: 2rem
-      font-weight: normal
-      line-height: 3rem
-      margin: 0 0 1rem 0
-      padding: 0
-      text-transform: uppercase
-    hr.line
-      background-color: rgba(255,255,255,.5)
-      border: none
-      display: block
-      width: 2rem
-      height: .25rem
-      padding: 0
-      margin: 0 0 1rem .25rem
-    p
-      padding: 0
-      font-size: 1.25rem
-      margin: 0 0 2rem 0
+    .left
+      @media screen and (min-width: $break-medium)
+        @include flex(1)
+      h1
+        font-size: 2rem
+        font-weight: normal
+        line-height: 3rem
+        margin: 0 0 1rem 0
+        padding: 0
+        text-transform: uppercase
+      p
+        padding: 0
+        font-size: 1.25rem
+        margin: 0 0 2rem 0
     ul
       list-style-type: none
       margin: 0
+      @media screen and (min-width: $break-medium)
+        margin: 0 5rem
       padding: 0
       li
-        display: inline-block
+        display: block
+        @media screen and (min-width: $break-medium)
+          width: 250px
         &:not(:last-child)
-          margin: 0 1rem 0 0
+          margin: 0 0 1rem 0
         a
           @include prefix(transition, transform 0.3s ease-in-out)
           background-color: rgba(255,255,255,.25)
@@ -359,13 +361,14 @@ header
           color: #fff
           display: inline-block
           margin: 0
-          max-width: 250px
           padding: 10px 20px
           text-align: center
           text-decoration: none
-          width: 100%
           box-shadow: 0 1px 2px 0 rgba(0,0,0,.2)
           font-weight: bold
+          width: 200px
+          @media screen and (min-width: $break-medium)
+            width: 100%
           &.main
             background-color: $theme
             color: rgba(0,0,0,.75)
@@ -373,7 +376,7 @@ header
             border-color: rgba(0,0,0,.5)
           &:focus,
           &:hover
-            @include prefix(transform, translateY(-2.5px))
+            @include prefix(transform, scale(1.05))
           span
             margin-left: 10px
   .see-more
