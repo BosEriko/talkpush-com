@@ -823,8 +823,7 @@ header {
       font-weight: normal;
       line-height: 3rem;
       margin: 0 0 1rem 0;
-      padding: 0;
-      text-transform: uppercase; }
+      padding: 0; }
     #top-section .text .left p {
       padding: 0;
       font-size: 1.25rem;
@@ -1382,7 +1381,7 @@ iframe#chatbot-iframe {
               z-index: 0; }
 
 #logo-results-section {
-  background-color: #212121;
+  background-color: #323a45;
   color: #fff;
   padding: 2rem 0; }
   @media screen and (min-width: 961px) {
@@ -1417,11 +1416,11 @@ iframe#chatbot-iframe {
             margin-bottom: none; } }
       #logo-results-section .divide .box .number {
         font-size: 3rem;
-        margin-bottom: 2rem;
         color: #72de2f; }
       #logo-results-section .divide .box .details {
         margin-bottom: 2rem;
-        font-size: 1.5rem; }
+        font-size: 1.5rem;
+        color: #72de2f; }
       #logo-results-section .divide .box .logo img {
         width: 75%;
         max-width: 200px; }
