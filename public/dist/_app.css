@@ -900,7 +900,7 @@ header {
 
 iframe#chatbot-iframe {
   width: 100%;
-  height: 400px; }
+  height: 420px; }
 
 #crm-section {
   background-color: #323a45;
@@ -2690,10 +2690,5 @@ hr.augmented-line {
   .augmented-chat-message.talkpush {
     background-color: #9ecc6a;
     color: white; }
-
-#talkpush-bot {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #eee; }
 
 /*# sourceMappingURL=base.css.map */
