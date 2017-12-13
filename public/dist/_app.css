@@ -918,7 +918,11 @@ iframe#chatbot-iframe {
         display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center; } }
+        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse; } }
     @media screen and (min-width: 961px) {
       #crm-section .filter .crm-divider .text {
         margin-right: 2rem;
@@ -932,7 +936,8 @@ iframe#chatbot-iframe {
       padding: 0 0 1rem 0; }
     #crm-section .filter .crm-divider .text p {
       margin: 0;
-      padding: 0 0 20px 0; }
+      padding: 0 0 20px 0;
+      font-size: 1.25rem; }
       @media screen and (min-width: 961px) {
         #crm-section .filter .crm-divider .text p {
           padding: 0; } }
@@ -940,7 +945,11 @@ iframe#chatbot-iframe {
       text-align: center; }
       #crm-section .filter .crm-divider .laptop img {
         width: 100%;
-        max-width: 500px; }
+        max-width: 500px;
+        margin: 3rem; }
+        @media screen and (min-width: 961px) {
+          #crm-section .filter .crm-divider .laptop img {
+            margin: 0; } }
 
 #adapting-section {
   background-color: #fff;

@@ -415,6 +415,10 @@ iframe#chatbot-iframe
       @media screen and (min-width: $break-medium)
         @include display-flex()
         @include align-items-center()
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: reverse
+        -ms-flex-direction: row-reverse
+        flex-direction: row-reverse
       .text
         @media screen and (min-width: $break-medium)
           margin-right: 2rem
@@ -427,6 +431,7 @@ iframe#chatbot-iframe
         p
           margin: 0
           padding: 0 0 20px 0
+          font-size: 1.25rem
           @media screen and (min-width: $break-medium)
             padding: 0
       .laptop
@@ -434,6 +439,9 @@ iframe#chatbot-iframe
         img
           width: 100%
           max-width: 500px
+          margin: 3rem
+          @media screen and (min-width: $break-medium)
+            margin: 0
 
 // Adapting Section
 #adapting-section
