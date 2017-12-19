@@ -295,10 +295,4 @@ $(function() {
   });
   /* Index Quote End */
 
-	/* iFrame Homepage Chatbot Start */
-	$("#chatbot-iframe").load(function(){
-		alert("hahahahahaha")
-	});
-	/* iFrame Homepage Chatbot End */
-
 });
