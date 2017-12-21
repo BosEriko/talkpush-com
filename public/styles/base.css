@@ -2237,4 +2237,53 @@ hr.augmented-line {
     background-color: #9ecc6a;
     color: white; }
 
+.crb-open-message {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  z-index: 1; }
+  .crb-open-message::before {
+    display: inline-block;
+    background-color: #fff;
+    content: "Conversation starts here";
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+    font-size: 0.75rem;
+    color: #555; }
+  .crb-open-message::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    display: block;
+    content: "";
+    height: 1px;
+    background-color: #c7c7c7;
+    z-index: 1; }
+
+.crb#talkpush-bot .tp_title {
+  display: none; }
+.crb#talkpush-bot ul.tp_dataText {
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: none;
+  padding-top: 0; }
+.crb#talkpush-bot .tp_body {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-width: 1px 0 0 0 !important;
+  border-radius: 0 !important; }
+.crb#talkpush-bot .tp_typingFeedbackContent {
+  position: fixed;
+  width: 100%;
+  padding: 10px; }
+
 /*# sourceMappingURL=base.css.map */
