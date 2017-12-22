@@ -38,7 +38,7 @@ $(function(){
 			document.getElementById('tp_typingFeedback').classList.add('active')
 		},1000)
 		setTimeout(function(){
-			tp_dataText.insertAdjacentHTML('beforeend', tp_Chat("left", "https://my.talkpush.com/img/chatbot-bot-image.png", "Hi there! My name is Stanley. How can I help?", ""))
+			tp_dataText.insertAdjacentHTML('beforeend', tp_Chat("left", "https://i.imgur.com/tmeDzz4.png", "Hi there! My name is Stanley. How can I help?", ""))
 			document.getElementById('tp_typingFeedback').classList.remove('active')
 		},3000)
 	})
