@@ -1,6 +1,6 @@
 //- Global Variable Start
-- var pageCode = "jobs"
-- var pageDescription = "Join a global team of disruptors, creators and futurists. Help define how machines and humans will interact tomorrow on the matter of recruitment."
+- var pageCode = "career-bot-demo"
+- var pageDescription = "Ready to accelerate recruitment? Talkpush is the leading productivity platform and the most high-volume chatbot for hiring talent via Facebook, WeChat and messaging."
 include ./_variables.pug
 //- Global Variable End
 
@@ -16,7 +16,6 @@ html(lang="en")
         link(type="text/css", rel="StyleSheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
         link(type="text/css", rel="StyleSheet", href="https://fonts.googleapis.com/css?family=Dosis")
         link(type="text/css", rel="StyleSheet", href="./dist/_app.css")
-        link(type="text/css", rel="StyleSheet", href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.6/css/intlTelInput.css")
         if favicon
             link(rel="shortcut icon", href=favicon, type="image/x-icon")
 
@@ -32,44 +31,33 @@ html(lang="en")
         script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
         <![endif]-->
 
-        // Smartsupp Live Chat script
-        script(type='text/javascript').
-          var _smartsupp = _smartsupp || {};
-          _smartsupp.key = '24cb0f70c39995773a14b044623581688d760d60';
-          window.smartsupp||(function(d) {
-          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-          c.type='text/javascript';c.charset='utf-8';c.async=true;
-          c.src='//www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-          })(document);
-
         // Google Analytics
         script.
-          (function(i, s, o, g, r, a, m) {
-          i['GoogleAnalyticsObject'] = r;
-          i[r] = i[r] || function() {
-          (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date();
-          a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-          a.async = 1;
-          a.src = g;
-          m.parentNode.insertBefore(a, m)
-          })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-          ga('create', 'UA-46858485-2', 'auto');
-          ga('send', 'pageview');
+            (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-46858485-2', 'auto');
+            ga('send', 'pageview');
 
         // Facebook Pixel Code
         script.
-            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-            document,'script','https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1690886631131130'); // Insert your pixel ID here.
-            fbq('track', 'PageView');
+              !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+              n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+              document,'script','https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1690886631131130'); // Insert your pixel ID here.
+              fbq('track', 'PageView');
         noscript
-            img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=1690886631131130&ev=PageView&noscript=1')
+              img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=1690886631131130&ev=PageView&noscript=1')
         // DO NOT MODIFY
         // End Facebook Pixel Code
 
@@ -87,318 +75,33 @@ html(lang="en")
                     include ./_navigation.pug
 
       .display-header.jobs
-        .filter
-            h1.fade We're hiring
-      .white-holder.equal.white-theme
-        .container
-            ul.jobs-divider
-                li: .job-box
-                    h3 Machine Learning Engineer
-                    .text
-                        strong The Machine Learning Engineer will hold the following responsibilities
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Apply machine learning, data mining, and/or natural language processing techniques to model the overall candidate pool as well as the candidate pool of specific employers
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Work with large unstructured and structured data sets (multi-gigabytes)
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Design novel approaches for handling high-volume real-time data streams (including voice data with live interviews conducted over the phone)
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Code design using primarily Java and Ruby
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Interpret and understand algorithm performance
-                        strong Qualifications
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Applied data scientist or machine-learning engineer
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You build meaning where there is none. You are the enemy of entropy.
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span MS or PhD in computer science, data mining, machine learning, information retrieval, recommendation systems, natural language processing, statistics, math, engineering, operations research, or other quantitative discipline; or equivalent work experience
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Fluent in one or more object oriented languages like Java
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Passionate about working with large unstructured and structured data sets
-                    .bottom
-                        .left
-                            i.fa.fa-clock-o.fa-fw(aria-hidden='true')
-                            span Full Time
-                            i.fa.fa-map-marker.fa-fw(aria-hidden='true')
-                            span Hong Kong / Philippines (Manila)
-                        .right: a(href="#").job-pop-up#machine-learning-engineer Apply Now
-                li: .job-box
-                    h3 Fullstack Developer
-                    .text
-                        strong The Software Engineer will hold the following responsibilities
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Develop state-of-the-art web applications for business users
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Collaborate with the senior team (System Architect and Senior Programmer) on application architecture design and decision-making
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Develop and test for cross-browser and device compatibility
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Troubleshoot production support issues post release deployment and come up with solutions
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Develop pioneering approaches to deliver cloud-based software services
-                        strong Qualifications
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Bachelor degree in computer science or equivalent experience
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Experience in software programming
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Experience using JavaScript resources such as jQuery
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Good level of written and spoken English
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Experience using Ruby on Rails (backend) to develop web applications is welcome but not required
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Experience in Javascript framework (frontend) such as ReactJS is welcome but not required.
-                    .bottom
-                        .left
-                            i.fa.fa-clock-o.fa-fw(aria-hidden='true')
-                            span Full Time
-                            i.fa.fa-map-marker.fa-fw(aria-hidden='true')
-                            span Hong Kong / Philippines (Manila)
-                        .right: a(href="#").job-pop-up#fullstack-developer Apply Now
-            ul.jobs-divider
-                li: .job-box
-                    h3 Account Manager
-                    .text
-                        p
-                            span As part of the Client Services team, the Account Manager plays a central role in building the business with existing clients, as well as reaching out to new ones.
-                            span As a member of both the business development and the operations team, the Account Manager will work in a challenging, fast-paced environment, where he/she will be asked to talk to prospective customers, train new customers, and configure their system to improve the customer experience.
-                        strong The Account Manager will hold the following responsibilities
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Identify potential customers, particularly in the Philippines
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Meet with HR departments of some of the largest organizations to help them automate some of their recruitment process using Talkpush
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Discuss requirements with prospective customer and set up their trial accounts to help convert them into paying customers
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Generate regular reports to measure user adoption and propose system improvements to increase utilization
-                        strong Required
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Experienced, disciplined, and organized sales and account management professional selling to large size businesses.
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Minimum 5 years of prior work experience preferably selling professional services to companies
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Bachelor degree for a top university
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Excellent communication and interpersonal skills, fully fluent in English
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Able to work autonomously in a fast-paced startup environment
-                        strong Preferred but not mandatory
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Prior experience in recruitment and/or human resources
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Prior experience in consulting and IT
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Prior experience working abroad
-                    .bottom
-                        .left
-                            i.fa.fa-clock-o.fa-fw(aria-hidden='true')
-                            span Full Time
-                            i.fa.fa-map-marker.fa-fw(aria-hidden='true')
-                            span Positions available Worldwide
-                        .right: a(href="#").job-pop-up#account-manager Apply Now
-                li: .job-box
-                    h3 Digital HR Marketing Analyst
-                    .text
-                        p
-                            span As part of the Client Services team, the Digital HR Marketing Analyst will help to promote exciting career opportunities across multiple career sites, social media sites, and other relevant media properties.
-                            span Working alongside the Account Executives to accelerate the employer's ability to connect with the right talent, the Marketing Analyst will need creativity to build differentiated campaigns, good communications skills to work with client teams, and good analytical skills to be able to report on the performance metrics of each campaign.
-                        strong The Marketing Analyst will hold the following responsibilities
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Work with the web design team to create great career sites
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Research innovations in online employer branding and share best practices
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Responsible for employer advertising campaigns across various online channels
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Quantitative and qualitative research on the topics of employer branding and online talent communication
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Analysis of the gathered data and creation of trends and insights
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Generate regular reports to measure user adoption and propose system improvements to increase utilization
-                        strong Required
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Excellent written and oral communications, experience writing copy in a professional environment
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Bachelor degree for a top university
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Comfortable working with designers, developers and with the latest technologies
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Knowledgeable on social media marketing best practices
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Able to work autonomously in a fast-paced startup environment
-                        strong Preferred but not mandatory
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Prior experience in advertising or publishing
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Prior experience in web design
-                    .bottom
-                        .left
-                            i.fa.fa-clock-o.fa-fw(aria-hidden='true')
-                            span Full Time
-                            i.fa.fa-map-marker.fa-fw(aria-hidden='true')
-                            span Philippines
-                        .right: a(href="#").job-pop-up#digital-hr-marketing-analyst Apply Now
-            ul.jobs-divider
-                li: .job-box
-                    h3 Client Services Executive
-                    .text
-                        strong The Client Services Executive will hold the following responsibilities
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Meet with HR departments of some of the largest organizations to help them automate some of their recruitment process using Talkpush
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Discuss requirements with prospective customer and set up their trial accounts to help convert them into paying customers
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Generate regular reports to measure user adoption and propose system improvements to increase utilization
-                        strong To be effective in this role the CSE needs to be
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Ambitious: because we measure our success by the size of the talent pool we generate for our clients
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Intelligent: because every customer has different hiring objectives and procedures and we need to adapt our approach accordingly
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Professional: because we work with Fortune 500 companies that have no patience for amateurs
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span Analytical: because we deal with LARGE volumes and need to make the numbers to tell a story
-                    .bottom
-                        .left
-                            i.fa.fa-clock-o.fa-fw(aria-hidden='true')
-                            span Full Time
-                            i.fa.fa-map-marker.fa-fw(aria-hidden='true')
-                            span Manila
-                        .right: a(href="#").job-pop-up#client-services-executive Apply Now
-                li: .job-box
-                    h3 Growth Hacking Intern
-                    .text
-                        strong Who we are looking for?
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You are less than 2 years away from graduating from your Bachelor or Masters degree
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You are looking for an internship of at least 3 months (preferably 6)
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You want to be challenged intellectually and solve problems for our clients
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You like data and enjoy making beautiful presentations
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You are able to work independently as well as part of a team
-                        strong What you would be doing?
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You will own different business development and account growth projects
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You will help us increase our traffic to our website through Ad campaigns, e-mail marketing
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You will organize webinars and build online content to promote digital recruitment
-                        .items
-                            i.fa.fa-chevron-right.fa-fw(aria-hidden='true')
-                            span You will support the client services team by proposing new digital recruitment initiatives for our current clients
-                    .bottom
-                        .left
-                            i.fa.fa-clock-o.fa-fw(aria-hidden='true')
-                            span Intern (Full-Time)
-                            i.fa.fa-map-marker.fa-fw(aria-hidden='true')
-                            span Hong Kong / Cape Town / Manila
-                        .right: a(href="#").job-pop-up#growth-hacking-intern Apply Now
-            // Pop-up
-            #dark-filter
-              #pop-up-aligner
-                #pop-up
-                  .close-and-title
-                      .title ---
-                      a(href="#").close-button: i.fa.fa-times.fa-fw(aria-hidden='true')
-                  .apply-selection
-                      .job-pop-up-message Thanks for your interest in this position! As a next step, we will be asking a few questions. You can answer them on Facebook Messenger or over the phone. Which one works best for you?
-                      #job-pop-up-choices
-                        .divide
-                            a(href="#").box#job-demo-call-button
-                                .icon: i.fa.fa-phone.fa-fw(aria-hidden='true')
-                                .message Via Call
-                            a(href="https://m.me/letthetalenttalk/", target="_blank").box#job-messenger-button
-                                .icon
-                                    svg(xmlns='http://www.w3.org/2000/svg', viewbox='96 93 322 324')
-                                        path(d='M257 93c-88.918 0-161 67.157-161 150 0 47.205 23.412 89.311 60 116.807V417l54.819-30.273C225.449 390.801 240.948 393 257 393c88.918 0 161-67.157 161-150S345.918 93 257 93zm16 202l-41-44-80 44 88-94 42 44 79-44-88 94z', fill='#fff')
-                                .message Via Messenger
-                  form.demo-call-section.demo-phone
-                      .step-1
-                          div
-                              input.input-field-phone-number.adjust(type='text', name='demo_phone_no', placeholder='Phone number')
-                              #demo_phone_no_error.error Error
-                          div: button.btn-solid-green.btn-demo-call Call me
-                      .step-2
-                          div
-                              input.input-field-phone-number(type='text', name='demo_name', placeholder='Please enter your name')
-                              #demo_name_error.error Error
-                          div
-                              input.input-field-phone-number(type='text', name='demo_email', placeholder='Please enter your email')
-                              #demo_email_error.error Error
-                          div: button.btn-solid-green.btn-demo-submit Submit
-                      .step-3
-                          .message Thank you for your interest.
+        .filter(style="height: auto;")
+          .fade(style="width: 100%; text-align: center;padding: 6rem;max-width: 800px;margin: 0 auto;")
+            h1(style="font-size: 2rem") We're hiring
+            h2(style="color: #fff;font-weight: normal;font-size: 1.25rem;")
+              span Thinking about working at Talkpush? We want to learn more about you so we can decide if there is a potential career for you at Talkpush. Talk to our recruitment agent Stanley&nbsp;
+              svg#Layer_1.bot-icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewbox='0 0 512.017 512.017', style='enable-background:new 0 0 512.017 512.017', xml:space='preserve')
+                g
+                  g
+                    g
+                      path(d='M435.217,290.142c-4.719,0-8.533,3.823-8.533,8.533v68.267c0,14.114-11.486,25.6-25.6,25.6H110.95     c-14.114,0-25.6-11.486-25.6-25.6v-68.267c0-4.71-3.814-8.533-8.533-8.533s-8.533,3.823-8.533,8.533v68.267     c0,23.526,19.14,42.667,42.667,42.667h290.133c23.526,0,42.667-19.14,42.667-42.667v-68.267     C443.75,293.965,439.936,290.142,435.217,290.142z', fill='#FFFFFF')
+                      path(d='M85.35,264.542v-85.333c0-14.114,11.486-25.6,25.6-25.6h68.267c4.719,0,8.533-3.823,8.533-8.533     c0-33.638,36.702-59.733,68.267-59.733c22.204,0,45.713,12.262,58.522,30.515c2.705,3.849,8.021,4.796,11.887,2.091     c3.857-2.714,4.796-8.03,2.082-11.887c-14.455-20.617-38.886-34.577-63.957-37.231V49.638     c9.907-3.541,17.067-12.919,17.067-24.03c0-14.114-11.486-25.6-25.6-25.6s-25.6,11.486-25.6,25.6     c0,11.11,7.159,20.489,17.067,24.021v19.174c-35.166,3.891-71.279,31.104-76.228,67.738H110.95     c-23.526,0-42.667,19.14-42.667,42.667l-0.017,76.8H49.63c-3.541-9.916-12.919-17.067-24.03-17.067     c-14.114,0-25.6,11.486-25.6,25.6c0,14.114,11.486,25.6,25.6,25.6c11.11,0,20.489-7.151,24.03-17.067h27.187     C81.536,273.075,85.35,269.252,85.35,264.542z M256.017,17.075c4.71,0,8.533,3.831,8.533,8.533c0,4.702-3.823,8.533-8.533,8.533     s-8.533-3.831-8.533-8.533C247.484,20.907,251.307,17.075,256.017,17.075z M25.6,273.075c-4.71,0-8.533-3.831-8.533-8.533     c0-4.702,3.823-8.533,8.533-8.533c4.71,0,8.533,3.831,8.533,8.533C34.133,269.244,30.31,273.075,25.6,273.075z', fill='#FFFFFF')
+                      path(d='M486.417,238.942c-11.11,0-20.488,7.151-24.021,17.067H443.75v-76.8c0-23.526-19.14-42.667-42.667-42.667H213.35     c-4.719,0-8.533,3.823-8.533,8.533c0,4.71,3.814,8.533,8.533,8.533h187.733c14.114,0,25.6,11.486,25.6,25.6v85.333     c0,4.71,3.814,8.533,8.533,8.533h27.179c3.533,9.916,12.911,17.067,24.021,17.067c14.114,0,25.6-11.486,25.6-25.6     C512.017,250.428,500.531,238.942,486.417,238.942z M486.417,273.075c-4.71,0-8.533-3.831-8.533-8.533     c0-4.702,3.823-8.533,8.533-8.533c4.71,0,8.533,3.831,8.533,8.533C494.95,269.244,491.128,273.075,486.417,273.075z', fill='#FFFFFF')
+                      path(d='M332.817,426.675h-153.6c-4.719,0-8.533,3.823-8.533,8.533s3.814,8.533,8.533,8.533h153.6     c4.719,0,8.533-3.823,8.533-8.533S337.536,426.675,332.817,426.675z', fill='#FFFFFF')
+                      path(d='M375.484,230.409c0-14.114-11.486-25.6-25.6-25.6s-25.6,11.486-25.6,25.6s11.486,25.6,25.6,25.6     S375.484,244.523,375.484,230.409z M341.35,230.409c0-4.702,3.823-8.533,8.533-8.533c4.71,0,8.533,3.831,8.533,8.533     c0,4.702-3.823,8.533-8.533,8.533C345.173,238.942,341.35,235.11,341.35,230.409z', fill='#FFFFFF')
+                      path(d='M187.75,230.409c0-14.114-11.486-25.6-25.6-25.6s-25.6,11.486-25.6,25.6s11.486,25.6,25.6,25.6     S187.75,244.523,187.75,230.409z M162.15,238.942c-4.71,0-8.533-3.831-8.533-8.533c0-4.702,3.823-8.533,8.533-8.533     c4.71,0,8.533,3.831,8.533,8.533C170.684,235.11,166.861,238.942,162.15,238.942z', fill='#FFFFFF')
+                      path(d='M315.75,494.942H196.284c-4.719,0-8.533,3.823-8.533,8.533s3.814,8.533,8.533,8.533H315.75     c4.719,0,8.533-3.823,8.533-8.533S320.469,494.942,315.75,494.942z', fill='#FFFFFF')
+                      path(d='M170.684,315.742v34.133c0,4.71,3.814,8.533,8.533,8.533h153.6c4.719,0,8.533-3.823,8.533-8.533v-34.133     c0-4.71-3.814-8.533-8.533-8.533h-153.6C174.498,307.209,170.684,311.031,170.684,315.742z M290.15,324.275h34.133v17.067H290.15     V324.275z M238.95,324.275h34.133v17.067H238.95V324.275z M187.75,324.275h34.133v17.067H187.75V324.275z', fill='#FFFFFF')
+                      path(d='M315.75,460.809H196.284c-4.719,0-8.533,3.823-8.533,8.533s3.814,8.533,8.533,8.533H315.75     c4.719,0,8.533-3.823,8.533-8.533S320.469,460.809,315.75,460.809z', fill='#FFFFFF')
+              span &nbsp;below and start that conversation NOW.
 
 
-      // Footer Section
-      include ./_footer.pug
+      .crb-open-message
+
+      #talkpush-bot.crb
 
       // Scripts Section
       script(src="./dist/_app.js")
+      script
+        | (function(){var w=window;var d=document;function l(){var s=d.createElement("script");s.type="text/javascript";s.async=true;s.src="https://my.talkpush.com/website_bot?company_id=16";var x=d.getElementsByTagName("script")[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent("onload",l);}else{w.addEventListener("load",l,false);}})()
+      script(src="./dist/career-bot-demo.js")

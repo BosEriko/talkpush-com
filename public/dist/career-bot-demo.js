@@ -8,8 +8,7 @@ $(function(){
 	/* Data Text Margin Start */
 	var botBodyMargin = function(){
 		$("body").css({
-			"margin-bottom" : $(".crb#talkpush-bot #tp_body").outerHeight(),
-			"margin-top"		: $("header").outerHeight()
+			"margin-bottom" : $(".crb#talkpush-bot #tp_body").outerHeight()
 		})
 	}
 	/* Data Text Margin End */

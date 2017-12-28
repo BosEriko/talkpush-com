@@ -2710,7 +2710,7 @@ hr.augmented-line {
   .crb-open-message::before {
     display: inline-block;
     background-color: #fff;
-    content: "Conversation starts here";
+    content: "Talk to our recruitment team below";
     padding: 1rem;
     position: relative;
     z-index: 2;
@@ -2748,5 +2748,9 @@ hr.augmented-line {
   position: fixed;
   width: 100%;
   padding: 10px; }
+
+svg#Layer_1.bot-icon {
+  width: 1rem;
+  height: 1rem; }
 
 /*# sourceMappingURL=base.css.map */
