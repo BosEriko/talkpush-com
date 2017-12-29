@@ -37,7 +37,7 @@ $(function(){
 			document.getElementById('tp_typingFeedback').classList.add('active')
 		},1000)
 		setTimeout(function(){
-			tp_dataText.insertAdjacentHTML('beforeend', tp_Chat("left", "https://i.imgur.com/tmeDzz4.png", "Hi there! My name is Stanley. How can I help?", ""))
+			tp_dataText.insertAdjacentHTML('beforeend', tp_Chat("left", "https://i.imgur.com/tmeDzz4.png", "Hi there! My name is Stanley and I'm here to find out if we have a suitable position for you. To start this conversation, please say hello!", ""))
 			document.getElementById('tp_typingFeedback').classList.remove('active')
 		},3000)
 	})
