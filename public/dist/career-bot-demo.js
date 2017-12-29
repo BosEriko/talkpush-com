@@ -35,11 +35,22 @@ $(function(){
 			botTextInputMargin()
 			botFeedbackMargin()
 			document.getElementById('tp_typingFeedback').classList.add('active')
-		},1000)
+		},2000)
 		setTimeout(function(){
-			tp_dataText.insertAdjacentHTML('beforeend', tp_Chat("left", "https://i.imgur.com/tmeDzz4.png", "Hi there! My name is Stanley and I'm here to find out if we have a suitable position for you. To start this conversation, please say hello!", ""))
+			tp_dataText.insertAdjacentHTML('beforeend', tp_Chat("left", "https://i.imgur.com/iIQ7VMC.png", "Hi there! My name is Stanley and I'm here to find out if we have a suitable position for you. To start this conversation, please say hello!", ""))
 			document.getElementById('tp_typingFeedback').classList.remove('active')
-		},3000)
+		},5000)
 	})
 	/* Wait for page to load End */
+
+	/* Slider Start */
+	$(".jobs-slider").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		adaptiveHeight: true
+	})
+	/* Slider End */
 })
