@@ -76,6 +76,8 @@ p.gl {
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
+  .display-header.crm {
+    background-image: url("../images/crm.jpeg"); }
   .display-header.about {
     background-image: url("../images/about.jpg"); }
   .display-header.jobs {
@@ -478,6 +480,31 @@ iframe#chatbot-iframe {
       @media screen and (min-width: 961px) {
         #crm-section .filter .crm-divider .text p {
           padding: 0; } }
+    #crm-section .filter .crm-divider .text a.cta {
+      -webkit-transition: transform 0.3s ease-in-out;
+      -moz-transition: transform 0.3s ease-in-out;
+      -ms-transition: transform 0.3s ease-in-out;
+      -o-transition: transform 0.3s ease-in-out;
+      background-color: #72de2f;
+      border-style: solid;
+      border-radius: 3px;
+      border-width: 1px;
+      border-color: rgba(0, 0, 0, 0.5);
+      color: rgba(0, 0, 0, 0.75);
+      display: inline-block;
+      margin: 2rem 0 0;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+      font-weight: bold; }
+      #crm-section .filter .crm-divider .text a.cta:focus, #crm-section .filter .crm-divider .text a.cta:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05); }
+      #crm-section .filter .crm-divider .text a.cta span {
+        margin-left: 10px; }
     #crm-section .filter .crm-divider .laptop {
       text-align: center; }
       #crm-section .filter .crm-divider .laptop img {
@@ -2363,5 +2390,260 @@ svg#Layer_1.bot-icon {
               -webkit-box-flex: 1;
               -ms-flex: 1;
               flex: 1; } }
+
+#crm-conversations,
+#crm-talent-talk,
+#crm-multichannel,
+#crm-speed,
+#crm-building,
+#crm-ai,
+#crm-api,
+#crm-record {
+  background-color: #fff;
+  color: #444; }
+  #crm-conversations.dark-theme,
+  #crm-talent-talk.dark-theme,
+  #crm-multichannel.dark-theme,
+  #crm-speed.dark-theme,
+  #crm-building.dark-theme,
+  #crm-ai.dark-theme,
+  #crm-api.dark-theme,
+  #crm-record.dark-theme {
+    background-color: #323a45;
+    color: #fff; }
+  #crm-conversations .filter,
+  #crm-talent-talk .filter,
+  #crm-multichannel .filter,
+  #crm-speed .filter,
+  #crm-building .filter,
+  #crm-ai .filter,
+  #crm-api .filter,
+  #crm-record .filter {
+    padding: 2rem 0; }
+    @media screen and (min-width: 961px) {
+      #crm-conversations .filter,
+      #crm-talent-talk .filter,
+      #crm-multichannel .filter,
+      #crm-speed .filter,
+      #crm-building .filter,
+      #crm-ai .filter,
+      #crm-api .filter,
+      #crm-record .filter {
+        padding: 5rem 0; } }
+    #crm-conversations .filter .divide,
+    #crm-talent-talk .filter .divide,
+    #crm-multichannel .filter .divide,
+    #crm-speed .filter .divide,
+    #crm-building .filter .divide,
+    #crm-ai .filter .divide,
+    #crm-api .filter .divide,
+    #crm-record .filter .divide {
+      text-align: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      @media screen and (min-width: 961px) {
+        #crm-conversations .filter .divide,
+        #crm-talent-talk .filter .divide,
+        #crm-multichannel .filter .divide,
+        #crm-speed .filter .divide,
+        #crm-building .filter .divide,
+        #crm-ai .filter .divide,
+        #crm-api .filter .divide,
+        #crm-record .filter .divide {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          text-align: left; } }
+      #crm-conversations .filter .divide.reverse,
+      #crm-talent-talk .filter .divide.reverse,
+      #crm-multichannel .filter .divide.reverse,
+      #crm-speed .filter .divide.reverse,
+      #crm-building .filter .divide.reverse,
+      #crm-ai .filter .divide.reverse,
+      #crm-api .filter .divide.reverse,
+      #crm-record .filter .divide.reverse {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse; }
+      #crm-conversations .filter .divide .content,
+      #crm-talent-talk .filter .divide .content,
+      #crm-multichannel .filter .divide .content,
+      #crm-speed .filter .divide .content,
+      #crm-building .filter .divide .content,
+      #crm-ai .filter .divide .content,
+      #crm-api .filter .divide .content,
+      #crm-record .filter .divide .content {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+        #crm-conversations .filter .divide .content h2,
+        #crm-talent-talk .filter .divide .content h2,
+        #crm-multichannel .filter .divide .content h2,
+        #crm-speed .filter .divide .content h2,
+        #crm-building .filter .divide .content h2,
+        #crm-ai .filter .divide .content h2,
+        #crm-api .filter .divide .content h2,
+        #crm-record .filter .divide .content h2 {
+          font-size: 2rem;
+          font-weight: normal;
+          margin: 0;
+          padding: 20px 0 0; }
+          #crm-conversations .filter .divide .content h2::after,
+          #crm-talent-talk .filter .divide .content h2::after,
+          #crm-multichannel .filter .divide .content h2::after,
+          #crm-speed .filter .divide .content h2::after,
+          #crm-building .filter .divide .content h2::after,
+          #crm-ai .filter .divide .content h2::after,
+          #crm-api .filter .divide .content h2::after,
+          #crm-record .filter .divide .content h2::after {
+            background-color: #fff;
+            content: "";
+            display: block;
+            height: 5px;
+            width: 40px;
+            margin: 20px auto 0; }
+            @media screen and (min-width: 961px) {
+              #crm-conversations .filter .divide .content h2::after,
+              #crm-talent-talk .filter .divide .content h2::after,
+              #crm-multichannel .filter .divide .content h2::after,
+              #crm-speed .filter .divide .content h2::after,
+              #crm-building .filter .divide .content h2::after,
+              #crm-ai .filter .divide .content h2::after,
+              #crm-api .filter .divide .content h2::after,
+              #crm-record .filter .divide .content h2::after {
+                margin: 20px 0 0; } }
+          #crm-conversations .filter .divide .content h2.dark::after,
+          #crm-talent-talk .filter .divide .content h2.dark::after,
+          #crm-multichannel .filter .divide .content h2.dark::after,
+          #crm-speed .filter .divide .content h2.dark::after,
+          #crm-building .filter .divide .content h2.dark::after,
+          #crm-ai .filter .divide .content h2.dark::after,
+          #crm-api .filter .divide .content h2.dark::after,
+          #crm-record .filter .divide .content h2.dark::after {
+            background-color: #444; }
+      #crm-conversations .filter .divide .image,
+      #crm-talent-talk .filter .divide .image,
+      #crm-multichannel .filter .divide .image,
+      #crm-speed .filter .divide .image,
+      #crm-building .filter .divide .image,
+      #crm-ai .filter .divide .image,
+      #crm-api .filter .divide .image,
+      #crm-record .filter .divide .image {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        -webkit-transition: transform 0.3s ease-in-out;
+        -moz-transition: transform 0.3s ease-in-out;
+        -ms-transition: transform 0.3s ease-in-out;
+        -o-transition: transform 0.3s ease-in-out;
+        text-align: center;
+        z-index: 1; }
+        #crm-conversations .filter .divide .image:hover,
+        #crm-talent-talk .filter .divide .image:hover,
+        #crm-multichannel .filter .divide .image:hover,
+        #crm-speed .filter .divide .image:hover,
+        #crm-building .filter .divide .image:hover,
+        #crm-ai .filter .divide .image:hover,
+        #crm-api .filter .divide .image:hover,
+        #crm-record .filter .divide .image:hover {
+          -webkit-transform: scale(1.25, 1.25);
+          -moz-transform: scale(1.25, 1.25);
+          -ms-transform: scale(1.25, 1.25);
+          -o-transform: scale(1.25, 1.25); }
+        #crm-conversations .filter .divide .image .holder,
+        #crm-talent-talk .filter .divide .image .holder,
+        #crm-multichannel .filter .divide .image .holder,
+        #crm-speed .filter .divide .image .holder,
+        #crm-building .filter .divide .image .holder,
+        #crm-ai .filter .divide .image .holder,
+        #crm-api .filter .divide .image .holder,
+        #crm-record .filter .divide .image .holder {
+          padding: 0.5rem;
+          background-color: #fff;
+          border-width: 1px;
+          border-style: solid;
+          border-color: #ccc;
+          margin: 2rem;
+          border-radius: 2px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+          #crm-conversations .filter .divide .image .holder img,
+          #crm-talent-talk .filter .divide .image .holder img,
+          #crm-multichannel .filter .divide .image .holder img,
+          #crm-speed .filter .divide .image .holder img,
+          #crm-building .filter .divide .image .holder img,
+          #crm-ai .filter .divide .image .holder img,
+          #crm-api .filter .divide .image .holder img,
+          #crm-record .filter .divide .image .holder img {
+            max-width: 100%; }
+          #crm-conversations .filter .divide .image .holder .responsive-video,
+          #crm-talent-talk .filter .divide .image .holder .responsive-video,
+          #crm-multichannel .filter .divide .image .holder .responsive-video,
+          #crm-speed .filter .divide .image .holder .responsive-video,
+          #crm-building .filter .divide .image .holder .responsive-video,
+          #crm-ai .filter .divide .image .holder .responsive-video,
+          #crm-api .filter .divide .image .holder .responsive-video,
+          #crm-record .filter .divide .image .holder .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden; }
+            #crm-conversations .filter .divide .image .holder .responsive-video iframe,
+            #crm-talent-talk .filter .divide .image .holder .responsive-video iframe,
+            #crm-multichannel .filter .divide .image .holder .responsive-video iframe,
+            #crm-speed .filter .divide .image .holder .responsive-video iframe,
+            #crm-building .filter .divide .image .holder .responsive-video iframe,
+            #crm-ai .filter .divide .image .holder .responsive-video iframe,
+            #crm-api .filter .divide .image .holder .responsive-video iframe,
+            #crm-record .filter .divide .image .holder .responsive-video iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%; }
+
+#crm-call-to-action {
+  background-color: #333;
+  background-size: cover;
+  background-image: url("../images/crm-page/cta.jpeg");
+  text-align: center; }
+  #crm-call-to-action .filter {
+    padding: 5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background-color: rgba(0, 0, 0, 0.6); }
+    #crm-call-to-action .filter h4 {
+      font-weight: normal;
+      font-size: 2.5rem;
+      color: #fff;
+      padding: 0 0 2rem 0;
+      margin: 0;
+      text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25); }
+
+a.crm-call-to-action-button {
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  background-color: #72de2f;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  display: inline-block; }
+  a.crm-call-to-action-button:focus, a.crm-call-to-action-button:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05); }
+  a.crm-call-to-action-button span {
+    margin-left: 10px; }
 
 /*# sourceMappingURL=base.css.map */
