@@ -66,6 +66,7 @@ module.exports = function(grunt) {
 					'./public/terms.html': './public/pug/terms.pug',
 					'./public/iframe-chatbot.html': './public/pug/iframe-chatbot.pug',
 					'./public/crm.html': './public/pug/crm.pug',
+					'./public/genpact-demo.html': './public/pug/genpact-demo.pug',
 					// Augmented Recruiters
 					'./public/augmented-recruiter/angeni.html': './public/augmented-recruiter/pug/angeni.pug',
 					'./public/augmented-recruiter/ping.html': './public/augmented-recruiter/pug/ping.pug',
