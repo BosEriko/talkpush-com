@@ -34,9 +34,6 @@ $(function() {
     }
   }
   $.preloadImages("./images/logo-black.png");
-  $.preloadImages("https://dr5ehd0u99lu0.cloudfront.net/microsites/talkpush/1.gif");
-  $.preloadImages("https://dr5ehd0u99lu0.cloudfront.net/microsites/talkpush/2.gif");
-  $.preloadImages("https://dr5ehd0u99lu0.cloudfront.net/microsites/talkpush/3.gif");
   /* Preload Images End*/
 
   /* Top Section & Header Start */
