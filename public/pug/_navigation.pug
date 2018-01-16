@@ -13,6 +13,9 @@ ul
         //-li: a(href="#") Marketing
     li: a(href="https://blog.talkpush.com/", target="_blank") Blog
     //- li: a(href="#") Contact Us
-    li: a(href="https://calendly.com/talkpush/20-minute-talkpush-demo/", target="_blank")
+    li: a(href="#", onclick="Calendly.showPopupWidget('https://calendly.com/boseriko/website-development');return false;")
         i(class="fa fa-envelope-open-o fa-fw", aria-hidden="true")
         | Book a Demo
+
+link(href='https://assets.calendly.com/assets/external/widget.css', rel='stylesheet')
+script(src='https://assets.calendly.com/assets/external/widget.js', type='text/javascript')
