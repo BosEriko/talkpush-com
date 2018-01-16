@@ -75,7 +75,8 @@ p.gl {
 .display-header {
   background-attachment: fixed;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   .display-header.crm {
     background-image: url("../images/crm.jpeg"); }
   .display-header.about {
@@ -153,16 +154,20 @@ header {
       height: 40px;
       margin: 15px 0;
       width: 101px; }
-    header.active .divider .menu ul li a, header.fixed-active .divider .menu ul li a {
+    header.active .divider .menu > ul > li > a,
+    header.active .divider .menu > ul > li > span, header.fixed-active .divider .menu > ul > li > a,
+    header.fixed-active .divider .menu > ul > li > span {
       color: #444; }
-      header.active .divider .menu ul li a:before, header.fixed-active .divider .menu ul li a:before {
+      header.active .divider .menu > ul > li > a:before,
+      header.active .divider .menu > ul > li > span:before, header.fixed-active .divider .menu > ul > li > a:before,
+      header.fixed-active .divider .menu > ul > li > span:before {
         background-color: #444; }
     @media screen and (min-width: 961px) {
-      header.active .divider .menu ul li:last-child a, header.fixed-active .divider .menu ul li:last-child a {
+      header.active .divider .menu > ul > li:last-child a, header.fixed-active .divider .menu > ul > li:last-child a {
         background-color: #555;
         border-color: rgba(0, 0, 0, 0.2); } }
     @media screen and (min-width: 961px) {
-      header.active .divider .menu ul li:last-child a:hover, header.active .divider .menu ul li:last-child a:focus, header.fixed-active .divider .menu ul li:last-child a:hover, header.fixed-active .divider .menu ul li:last-child a:focus {
+      header.active .divider .menu > ul > li:last-child a:hover, header.active .divider .menu > ul > li:last-child a:focus, header.fixed-active .divider .menu > ul > li:last-child a:hover, header.fixed-active .divider .menu > ul > li:last-child a:focus {
         background-color: #333; } }
   @media screen and (min-width: 961px) {
     header .divider {
@@ -230,25 +235,67 @@ header {
         border: none;
         display: block !important;
         text-align: right; } }
-    header .divider .menu ul {
+    header .divider .menu > ul {
       list-style-type: none;
       margin: 0;
       padding: 10px; }
-      header .divider .menu ul li {
-        display: block; }
+      header .divider .menu > ul > li {
+        display: block;
+        position: relative; }
         @media screen and (min-width: 961px) {
-          header .divider .menu ul li {
+          header .divider .menu > ul > li {
             display: inline-block;
             margin-right: 20px; } }
-        header .divider .menu ul li a {
+        header .divider .menu > ul > li > ul {
+          display: none;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          overflow: hidden; }
+          @media screen and (min-width: 961px) {
+            header .divider .menu > ul > li > ul {
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+              text-align: left;
+              position: absolute;
+              border-radius: 5px;
+              background-color: #fff;
+              top: 60px;
+              left: 0; } }
+          header .divider .menu > ul > li > ul > li {
+            margin: 0;
+            padding: 0; }
+            header .divider .menu > ul > li > ul > li > a {
+              text-decoration: none;
+              display: block;
+              padding: 10px;
+              overflow: hidden;
+              -webkit-transition: all 0.1s ease-in-out;
+              -moz-transition: all 0.1s ease-in-out;
+              -ms-transition: all 0.1s ease-in-out;
+              -o-transition: all 0.1s ease-in-out; }
+              @media screen and (min-width: 961px) {
+                header .divider .menu > ul > li > ul > li > a {
+                  padding: 1rem; } }
+              header .divider .menu > ul > li > ul > li > a:hover, header .divider .menu > ul > li > ul > li > a:focus {
+                color: #72de2f; }
+                @media screen and (min-width: 961px) {
+                  header .divider .menu > ul > li > ul > li > a:hover, header .divider .menu > ul > li > ul > li > a:focus {
+                    color: #444;
+                    background-color: rgba(0, 0, 0, 0.15); } }
+        header .divider .menu > ul > li i {
+          margin-left: 0.5rem; }
+        header .divider .menu > ul > li > a,
+        header .divider .menu > ul > li > span {
           color: #444;
           display: block;
           overflow: hidden;
           padding: 10px;
           position: relative;
-          text-decoration: none; }
+          text-decoration: none;
+          cursor: pointer; }
           @media screen and (min-width: 961px) {
-            header .divider .menu ul li a {
+            header .divider .menu > ul > li > a,
+            header .divider .menu > ul > li > span {
               -webkit-transition: color 0.3s ease-in-out;
               -moz-transition: color 0.3s ease-in-out;
               -ms-transition: color 0.3s ease-in-out;
@@ -256,7 +303,8 @@ header {
               color: #fff;
               display: inline-block; } }
           @media screen and (min-width: 961px) {
-            header .divider .menu ul li a:before {
+            header .divider .menu > ul > li > a:before,
+            header .divider .menu > ul > li > span:before {
               -webkit-transform: scaleX(0);
               -moz-transform: scaleX(0);
               -ms-transform: scaleX(0);
@@ -272,17 +320,21 @@ header {
               left: 0;
               position: absolute;
               width: 100%; } }
-          header .divider .menu ul li a:hover, header .divider .menu ul li a:focus {
+          header .divider .menu > ul > li > a:hover, header .divider .menu > ul > li > a:focus,
+          header .divider .menu > ul > li > span:hover,
+          header .divider .menu > ul > li > span:focus {
             color: #72de2f; }
-            header .divider .menu ul li a:hover:before, header .divider .menu ul li a:focus:before {
+            header .divider .menu > ul > li > a:hover:before, header .divider .menu > ul > li > a:focus:before,
+            header .divider .menu > ul > li > span:hover:before,
+            header .divider .menu > ul > li > span:focus:before {
               -webkit-transform: scaleX(1);
               -moz-transform: scaleX(1);
               -ms-transform: scaleX(1);
               -o-transform: scaleX(1); }
-        header .divider .menu ul li:last-child {
+        header .divider .menu > ul > li:last-child {
           margin: 0; }
           @media screen and (min-width: 961px) {
-            header .divider .menu ul li:last-child a {
+            header .divider .menu > ul > li:last-child a {
               -webkit-transition: background-color 0.3s ease-in-out;
               -moz-transition: background-color 0.3s ease-in-out;
               -ms-transition: background-color 0.3s ease-in-out;
@@ -295,17 +347,17 @@ header {
               color: #fff;
               padding: 10px 20px;
               text-decoration: none; } }
-          header .divider .menu ul li:last-child a:before {
+          header .divider .menu > ul > li:last-child a:before {
             display: none; }
           @media screen and (min-width: 961px) {
-            header .divider .menu ul li:last-child a:hover, header .divider .menu ul li:last-child a:focus {
+            header .divider .menu > ul > li:last-child a:hover, header .divider .menu > ul > li:last-child a:focus {
               background-color: rgba(136, 201, 48, 0.75);
               color: #fff; } }
-          header .divider .menu ul li:last-child a i {
+          header .divider .menu > ul > li:last-child a i {
             display: none;
             margin-right: 10px; }
             @media screen and (min-width: 961px) {
-              header .divider .menu ul li:last-child a i {
+              header .divider .menu > ul > li:last-child a i {
                 display: inline; } }
 
 @keyframes see-more-animation {

@@ -292,4 +292,16 @@ $(function() {
   });
   /* Index Quote End */
 
+  /* Menu Dropdown Start */
+  $("header .menu > ul > li > span").click(function(){
+    $(this).siblings("ul").slideToggle("fast");
+  });
+  $("body").click(function(){
+    $("header .menu > ul > li > ul").slideUp("fast");
+  });
+  $("header .menu > ul > li > span, header .menu > ul > li > ul").click(function(e){
+    e.stopPropagation();
+  });
+  /* Menu Dropdown End */
+
 });
