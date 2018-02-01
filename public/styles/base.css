@@ -82,7 +82,21 @@ p.gl {
   .display-header.about {
     background-image: url("../images/about.jpg"); }
   .display-header.jobs {
-    background-image: url("../images/jobs.jpg"); }
+    background-image: url("../images/jobs.jpg");
+    background-position: center calc(50% - 50px); }
+    .display-header.jobs .filter {
+      height: auto; }
+    .display-header.jobs .fade {
+      width: 100%;
+      text-align: center;
+      margin: 7.5rem 0; }
+    .display-header.jobs h3 {
+      padding: 0;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #fff;
+      max-width: 800px; }
   .display-header.chatbot {
     background-image: url("../images/chatbot.jpeg");
     background-position: top; }

@@ -45,33 +45,11 @@ html(lang="en")
                 .menu
                     include ./_navigation.pug
 
-      .jobs-slider
-        .slide(style="background-image: url('./images/job-slider/jobs.jpg')")
-          .filter
+      .display-header.jobs
+        .filter
+          .fade
             h1 We're hiring
             h3 Thinking about working at Talkpush? We want to learn more about you so we can decide if there is a potential career for you at Talkpush. Talk to our recruitment agent Stanley  below and start that conversation NOW.
-        .slide(style="background-image: url('./images/job-slider/hiring.jpg')")
-          .filter
-            h1 Our hiring process
-            ul.hiring-process
-              li
-                h4: i.fa.fa-comments-o.fa-fw(aria-hidden='true')
-                h3 1. Have a chat with Stanley below to tell us a little about yourself
-              li
-                h4: i.fa.fa-envelope-o.fa-fw(aria-hidden='true')
-                h3 2. We will review your answers and message you in the next 7 days if you are a potential fit
-              li
-                h4: i.fa.fa-video-camera.fa-fw(aria-hidden='true')
-                h3 3. We may ask you to do an audio/video screening as part of your evaluation
-
-        .slide(style="background-image: url('./images/job-slider/culture.jpg')")
-          .filter
-            h1 Our culture
-            h3 Some of us work from the office, some of us work from home. We don’t keep track of time. We don’t count the amount of vacation we take. Some of us wear suits, some of us wear shorts and sandals. We don’t think the work/life balance debate makes much sense. We come to work because we want to change the world every day, a little bit at a time. Honestly, it’s the only way to Live.
-        .slide(style="background-image: url('./images/job-slider/travel.jpg')")
-          .filter
-            h1 Where are we?
-            h3 Talkpush has offices in 4 continents, with most of the team split between 4 offices: San Francisco, Manila (Philippines), Gurgaon (India) and San Jose (Costa Rica). We also have people in Berlin and Kuala Lumpur. And the rest of the world? We can’t wait to conquer it! The bottom line: if you’re a good fit, no matter where you are, we want to talk to you. We are 100% open to remote work.
 
       .crb-open-message
 
@@ -100,7 +78,6 @@ html(lang="en")
         ga('create', 'UA-46858485-2', 'auto');
         ga('send', 'pageview');
         });
-        console.log("Google Code")
       // Facebook Pixel Code
       script.
         $(window).bind("load", function() {
@@ -111,7 +88,6 @@ html(lang="en")
         document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1690886631131130'); // Insert your pixel ID here.
         fbq('track', 'PageView');
-        console.log("Facebook Code")
         });
       noscript
         img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=1690886631131130&ev=PageView&noscript=1')
