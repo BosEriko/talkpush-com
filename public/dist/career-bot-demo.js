@@ -35,6 +35,7 @@ $(function(){
 			botTextInputMargin()
 			botFeedbackMargin()
 			document.getElementById('tp_typingFeedback').classList.add('active')
+			$(".display-header.jobs").css("background-image", "url('https://i.imgur.com/FVZ0l0O.jpg')")
 		},2000)
 		setTimeout(function(){
 			tp_dataText.insertAdjacentHTML('beforeend', tp_Chat("left", "https://i.imgur.com/iIQ7VMC.png", "Hi there! My name is Stanley and I'm here to find out if we have a suitable position for you. To start this conversation, please say hello!", ""))
