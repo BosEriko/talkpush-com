@@ -545,7 +545,7 @@ p.gl {
   .display-header.about {
     background-image: url("../images/about.jpg"); }
   .display-header.jobs {
-    background-image: url("../images/jobs.jpg");
+    background-image: url("https://i.imgur.com/FVZ0l0O.jpg");
     background-position: center calc(50% - 50px); }
     .display-header.jobs .filter {
       height: auto; }
