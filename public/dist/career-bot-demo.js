@@ -42,15 +42,4 @@ $(function(){
 		},5000)
 	})
 	/* Wait for page to load End */
-
-	/* Slider Start */
-	$(".jobs-slider").slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		autoplay: false,
-		autoplaySpeed: 5000,
-		adaptiveHeight: true
-	})
-	/* Slider End */
 })
