@@ -2176,8 +2176,16 @@ svg#Layer_1.bot-icon
         -webkit-box-direction: reverse
         -ms-flex-direction: row-reverse
         flex-direction: row-reverse
+        .content
+          @media screen and (min-width: $break-medium)
+            margin-right: 2rem
+            margin-left: 0
       .content
+        font-size: 1.25rem
         @include flex(1)
+        @media screen and (min-width: $break-medium)
+          margin-left: 2rem
+          margin-right: 0
         h2
           font-size: 2rem
           font-weight: normal
