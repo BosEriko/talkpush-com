@@ -82,7 +82,20 @@ p.gl {
   .display-header.about {
     background-image: url("../images/about.jpg"); }
   .display-header.jobs {
-    background-image: url("../images/jobs.jpg"); }
+    background-position: center calc(50% - 50px); }
+    .display-header.jobs .filter {
+      height: auto; }
+    .display-header.jobs .fade {
+      width: 100%;
+      text-align: center;
+      margin: 7.5rem 0; }
+    .display-header.jobs h3 {
+      padding: 0;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #fff;
+      max-width: 800px; }
   .display-header.chatbot {
     background-image: url("../images/chatbot.jpeg");
     background-position: top; }
@@ -2519,6 +2532,17 @@ svg#Layer_1.bot-icon {
         -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
+        @media screen and (min-width: 961px) {
+          #crm-conversations .filter .divide.reverse .content,
+          #crm-talent-talk .filter .divide.reverse .content,
+          #crm-multichannel .filter .divide.reverse .content,
+          #crm-speed .filter .divide.reverse .content,
+          #crm-building .filter .divide.reverse .content,
+          #crm-ai .filter .divide.reverse .content,
+          #crm-api .filter .divide.reverse .content,
+          #crm-record .filter .divide.reverse .content {
+            margin-right: 2rem;
+            margin-left: 0; } }
       #crm-conversations .filter .divide .content,
       #crm-talent-talk .filter .divide .content,
       #crm-multichannel .filter .divide .content,
@@ -2527,9 +2551,21 @@ svg#Layer_1.bot-icon {
       #crm-ai .filter .divide .content,
       #crm-api .filter .divide .content,
       #crm-record .filter .divide .content {
+        font-size: 1.25rem;
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1; }
+        @media screen and (min-width: 961px) {
+          #crm-conversations .filter .divide .content,
+          #crm-talent-talk .filter .divide .content,
+          #crm-multichannel .filter .divide .content,
+          #crm-speed .filter .divide .content,
+          #crm-building .filter .divide .content,
+          #crm-ai .filter .divide .content,
+          #crm-api .filter .divide .content,
+          #crm-record .filter .divide .content {
+            margin-left: 2rem;
+            margin-right: 0; } }
         #crm-conversations .filter .divide .content h2,
         #crm-talent-talk .filter .divide .content h2,
         #crm-multichannel .filter .divide .content h2,
