@@ -52,14 +52,6 @@ html(lang="en")
              js.src = "https://connect.facebook.net/en_US/sdk.js";
              fjs.parentNode.insertBefore(js, fjs);
            }(document, 'script', 'facebook-jssdk'));
-        script(type='text/javascript').
-          <div class="fb-customerchat"
-           page_id="774293282630560"
-           ref=""
-           theme_color="#4ef442"
-           logged_in_greeting=""
-           logged_out_greeting="">
-          </div>
 
         // Google Analytics
         script.
@@ -338,6 +330,7 @@ html(lang="en")
                 img(src="./images/try-section/wechat.png", alt="WeChat Icon")
 
       // Footer Section
+      div(class="fb-customerchat", page_id="774293282630560", ref="", theme_color="#4ef442", logged_in_greeting="", logged_out_greeting="")
       include ./_footer.pug
 
       // Scripts Section
