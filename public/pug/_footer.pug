@@ -44,7 +44,7 @@ footer
                   input#redirect_e7ec99d1cc0795da9338f4cb35e59b1b(type='hidden', name='redirect', value='https://www.aweber.com/thankyou-coi.htm?m=text')
                   input(type='hidden', name='meta_adtracking', value='Website_Form')
                   input(type='hidden', name='meta_message', value='1')
-                  input(type='hidden', name='meta_required', value='email')
+                  input(type='hidden', name='meta_required', value='email,name')
                   input(type='hidden', name='meta_tooltip', value='')
                 #af-form-565122839.af-form
                   h4 Subscribe
@@ -53,7 +53,8 @@ footer
                       label.previewLabel(for='awf_field-94336136')
                         | Read our newsletter as soon as it gets out. You can unsubscribe anytime you want after subscribing.
                       .af-textWrap
-                        input#awf_field-94336136.text(type='text', name='email', value='', tabindex='500', placeholder='example@gmail.com', onfocus=" if (this.value == '') { this.value = '';  }", onblur="if (this.value == '') { this.value=''; } ")
+                        input#awf_field-95695296.text(placeholder='Full Name', type='text', name='name', value='', onfocus=" if (this.value == '') { this.value = '';  }", onblur="if (this.value == '') { this.value=''; } ", tabindex='500')
+                        input#awf_field-95695295.text(placeholder='E-mail Address', type='text', name='email', value='', tabindex='501', onfocus=" if (this.value == '') { this.value = '';  }", onblur="if (this.value == '') { this.value=''; } ")
                       .af-clear
                     .af-element.buttonContainer
                       input#af-submit-image-565122839.button(value='Subscribe', name='submit', type='submit', alt='Submit Form', tabindex='501')
