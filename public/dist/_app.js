@@ -88,6 +88,23 @@ $(function() {
   /* Pop-up Start */
   var volume
 
+  $("ul#crb-buttons li a").click(function(e) {
+    $("#dark-filter").fadeToggle("fast");
+    e.preventDefault();
+  });
+
+	$("ul#crb-buttons li a.hiring").click(function(){
+		$("#crb-pop-up-content").load("./jobs/hiring.html");
+	});
+
+	$("ul#crb-buttons li a.culture").click(function(){
+		$("#crb-pop-up-content").load("./jobs/culture.html");
+	});
+
+	$("ul#crb-buttons li a.where").click(function(){
+		$("#crb-pop-up-content").load("./jobs/where.html");
+	});
+
   $("#chatbot-open").click(function(e) {
     $("#dark-filter").fadeToggle("fast");
     $("#dark-filter .chatbot").css("display", "block");
