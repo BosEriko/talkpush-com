@@ -2999,7 +2999,8 @@ ul#crb-buttons {
 #crm-building,
 #crm-ai,
 #crm-api,
-#crm-record {
+#crm-record,
+#crm-chrome-plugin {
   background-color: #fff;
   color: #444; }
   #crm-conversations.dark-theme,
@@ -3009,7 +3010,8 @@ ul#crb-buttons {
   #crm-building.dark-theme,
   #crm-ai.dark-theme,
   #crm-api.dark-theme,
-  #crm-record.dark-theme {
+  #crm-record.dark-theme,
+  #crm-chrome-plugin.dark-theme {
     background-color: #323a45;
     color: #fff; }
   #crm-conversations .filter,
@@ -3019,7 +3021,8 @@ ul#crb-buttons {
   #crm-building .filter,
   #crm-ai .filter,
   #crm-api .filter,
-  #crm-record .filter {
+  #crm-record .filter,
+  #crm-chrome-plugin .filter {
     padding: 2rem 0; }
     @media screen and (min-width: 961px) {
       #crm-conversations .filter,
@@ -3029,7 +3032,8 @@ ul#crb-buttons {
       #crm-building .filter,
       #crm-ai .filter,
       #crm-api .filter,
-      #crm-record .filter {
+      #crm-record .filter,
+      #crm-chrome-plugin .filter {
         padding: 5rem 0; } }
     #crm-conversations .filter .divide,
     #crm-talent-talk .filter .divide,
@@ -3038,7 +3042,8 @@ ul#crb-buttons {
     #crm-building .filter .divide,
     #crm-ai .filter .divide,
     #crm-api .filter .divide,
-    #crm-record .filter .divide {
+    #crm-record .filter .divide,
+    #crm-chrome-plugin .filter .divide {
       text-align: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3051,7 +3056,8 @@ ul#crb-buttons {
         #crm-building .filter .divide,
         #crm-ai .filter .divide,
         #crm-api .filter .divide,
-        #crm-record .filter .divide {
+        #crm-record .filter .divide,
+        #crm-chrome-plugin .filter .divide {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -3063,7 +3069,8 @@ ul#crb-buttons {
       #crm-building .filter .divide.reverse,
       #crm-ai .filter .divide.reverse,
       #crm-api .filter .divide.reverse,
-      #crm-record .filter .divide.reverse {
+      #crm-record .filter .divide.reverse,
+      #crm-chrome-plugin .filter .divide.reverse {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -3076,7 +3083,8 @@ ul#crb-buttons {
           #crm-building .filter .divide.reverse .content,
           #crm-ai .filter .divide.reverse .content,
           #crm-api .filter .divide.reverse .content,
-          #crm-record .filter .divide.reverse .content {
+          #crm-record .filter .divide.reverse .content,
+          #crm-chrome-plugin .filter .divide.reverse .content {
             margin-right: 2rem;
             margin-left: 0; } }
       #crm-conversations .filter .divide .content,
@@ -3086,7 +3094,8 @@ ul#crb-buttons {
       #crm-building .filter .divide .content,
       #crm-ai .filter .divide .content,
       #crm-api .filter .divide .content,
-      #crm-record .filter .divide .content {
+      #crm-record .filter .divide .content,
+      #crm-chrome-plugin .filter .divide .content {
         font-size: 1.25rem;
         -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -3099,7 +3108,8 @@ ul#crb-buttons {
           #crm-building .filter .divide .content,
           #crm-ai .filter .divide .content,
           #crm-api .filter .divide .content,
-          #crm-record .filter .divide .content {
+          #crm-record .filter .divide .content,
+          #crm-chrome-plugin .filter .divide .content {
             margin-left: 2rem;
             margin-right: 0; } }
         #crm-conversations .filter .divide .content h2,
@@ -3109,7 +3119,8 @@ ul#crb-buttons {
         #crm-building .filter .divide .content h2,
         #crm-ai .filter .divide .content h2,
         #crm-api .filter .divide .content h2,
-        #crm-record .filter .divide .content h2 {
+        #crm-record .filter .divide .content h2,
+        #crm-chrome-plugin .filter .divide .content h2 {
           font-size: 2rem;
           font-weight: normal;
           margin: 0;
@@ -3121,7 +3132,8 @@ ul#crb-buttons {
           #crm-building .filter .divide .content h2::after,
           #crm-ai .filter .divide .content h2::after,
           #crm-api .filter .divide .content h2::after,
-          #crm-record .filter .divide .content h2::after {
+          #crm-record .filter .divide .content h2::after,
+          #crm-chrome-plugin .filter .divide .content h2::after {
             background-color: #fff;
             content: "";
             display: block;
@@ -3136,7 +3148,8 @@ ul#crb-buttons {
               #crm-building .filter .divide .content h2::after,
               #crm-ai .filter .divide .content h2::after,
               #crm-api .filter .divide .content h2::after,
-              #crm-record .filter .divide .content h2::after {
+              #crm-record .filter .divide .content h2::after,
+              #crm-chrome-plugin .filter .divide .content h2::after {
                 margin: 20px 0 0; } }
           #crm-conversations .filter .divide .content h2.dark::after,
           #crm-talent-talk .filter .divide .content h2.dark::after,
@@ -3145,7 +3158,8 @@ ul#crb-buttons {
           #crm-building .filter .divide .content h2.dark::after,
           #crm-ai .filter .divide .content h2.dark::after,
           #crm-api .filter .divide .content h2.dark::after,
-          #crm-record .filter .divide .content h2.dark::after {
+          #crm-record .filter .divide .content h2.dark::after,
+          #crm-chrome-plugin .filter .divide .content h2.dark::after {
             background-color: #444; }
       #crm-conversations .filter .divide .image,
       #crm-talent-talk .filter .divide .image,
@@ -3154,7 +3168,8 @@ ul#crb-buttons {
       #crm-building .filter .divide .image,
       #crm-ai .filter .divide .image,
       #crm-api .filter .divide .image,
-      #crm-record .filter .divide .image {
+      #crm-record .filter .divide .image,
+      #crm-chrome-plugin .filter .divide .image {
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
@@ -3171,7 +3186,8 @@ ul#crb-buttons {
         #crm-building .filter .divide .image:hover,
         #crm-ai .filter .divide .image:hover,
         #crm-api .filter .divide .image:hover,
-        #crm-record .filter .divide .image:hover {
+        #crm-record .filter .divide .image:hover,
+        #crm-chrome-plugin .filter .divide .image:hover {
           -webkit-transform: scale(1.25, 1.25);
           -moz-transform: scale(1.25, 1.25);
           -ms-transform: scale(1.25, 1.25);
@@ -3183,7 +3199,8 @@ ul#crb-buttons {
         #crm-building .filter .divide .image .holder,
         #crm-ai .filter .divide .image .holder,
         #crm-api .filter .divide .image .holder,
-        #crm-record .filter .divide .image .holder {
+        #crm-record .filter .divide .image .holder,
+        #crm-chrome-plugin .filter .divide .image .holder {
           padding: 0.5rem;
           background-color: #fff;
           border-width: 1px;
@@ -3199,7 +3216,8 @@ ul#crb-buttons {
           #crm-building .filter .divide .image .holder img,
           #crm-ai .filter .divide .image .holder img,
           #crm-api .filter .divide .image .holder img,
-          #crm-record .filter .divide .image .holder img {
+          #crm-record .filter .divide .image .holder img,
+          #crm-chrome-plugin .filter .divide .image .holder img {
             max-width: 100%; }
           #crm-conversations .filter .divide .image .holder .responsive-video,
           #crm-talent-talk .filter .divide .image .holder .responsive-video,
@@ -3208,7 +3226,8 @@ ul#crb-buttons {
           #crm-building .filter .divide .image .holder .responsive-video,
           #crm-ai .filter .divide .image .holder .responsive-video,
           #crm-api .filter .divide .image .holder .responsive-video,
-          #crm-record .filter .divide .image .holder .responsive-video {
+          #crm-record .filter .divide .image .holder .responsive-video,
+          #crm-chrome-plugin .filter .divide .image .holder .responsive-video {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
@@ -3220,7 +3239,8 @@ ul#crb-buttons {
             #crm-building .filter .divide .image .holder .responsive-video iframe,
             #crm-ai .filter .divide .image .holder .responsive-video iframe,
             #crm-api .filter .divide .image .holder .responsive-video iframe,
-            #crm-record .filter .divide .image .holder .responsive-video iframe {
+            #crm-record .filter .divide .image .holder .responsive-video iframe,
+            #crm-chrome-plugin .filter .divide .image .holder .responsive-video iframe {
               position: absolute;
               top: 0;
               left: 0;
