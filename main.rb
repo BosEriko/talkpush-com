@@ -22,12 +22,12 @@ Mail.defaults do
 end
 
 before do
-  response.headers.delete('X-Frame-Options')
+  response.headers['X-Frame-Options']=''
 end
 
 get '/' do
+  response.headers['X-Frame-Options']=''
   File.read(File.join('public', 'index.html'))
-  response.headers.delete('X-Frame-Options')
 end
 
 get '/termsandcond.html' do
