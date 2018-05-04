@@ -21,6 +21,9 @@ Mail.defaults do
   delivery_method :smtp, options
 end
 
+before do
+	response.headers.delete('X-Frame-Options')
+end
 
 get '/' do
   File.read(File.join('public', 'index.html'))
