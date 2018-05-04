@@ -21,7 +21,7 @@ Mail.defaults do
   delivery_method :smtp, options
 end
 
-before do
+after do
   response.headers['X-Frame-Options']=''
 end
 
