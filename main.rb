@@ -27,6 +27,7 @@ end
 
 get '/' do
   File.read(File.join('public', 'index.html'))
+  response.headers.delete('X-Frame-Options')
 end
 
 get '/termsandcond.html' do
