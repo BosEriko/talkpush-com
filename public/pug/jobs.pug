@@ -49,10 +49,28 @@ html(lang="en")
           .fade
             h1 We're hiring
             h3 Thinking about working at Talkpush? We want to learn more about you so we can decide if there is a potential career for you at Talkpush. Talk to our recruitment agent Stanley  below and start that conversation NOW.
+            ul#crb-buttons
+              li: a(href="#").hiring
+                i.fa.fa-info-circle.fa-fw
+                span Hiring Process
+              li: a(href="#").culture
+                i.fa.fa-coffee.fa-fw
+                span Our Culture
+              li: a(href="#").where
+                i.fa.fa-globe.fa-fw
+                span Where Are We?
 
       .crb-open-message
 
       #talkpush-bot.crb
+
+      // Pop-up
+      #dark-filter
+        #pop-up-aligner
+          #pop-up(style="padding:0;overflow:hidden;max-width:500px;")
+            .close-and-title(style="margin:0;")
+                a(href="#", style="color:#fff;z-index:9999;").close-button.crb: i.fa.fa-times.fa-fw(aria-hidden='true')
+            #crb-pop-up-content
 
       // Scripts Section
       script(src="./dist/_app.js")

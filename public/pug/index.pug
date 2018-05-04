@@ -52,14 +52,6 @@ html(lang="en")
              js.src = "https://connect.facebook.net/en_US/sdk.js";
              fjs.parentNode.insertBefore(js, fjs);
            }(document, 'script', 'facebook-jssdk'));
-        script(type='text/javascript').
-          <div class="fb-customerchat"
-           page_id="774293282630560"
-           ref=""
-           theme_color="#4ef442"
-           logged_in_greeting=""
-           logged_out_greeting="">
-          </div>
 
         // Google Analytics
         script.
@@ -117,12 +109,15 @@ html(lang="en")
             h1 Talk to your Candidates
             p Recruiting is pretty simple: get your recruiters and your candidates to talk to each other and watch good things happen. Talkpush is the first conversation-driven Candidate Relationship Management (CRM) system. On Talkpush, recruiters spend more time talking to qualified candidates, which translates into a better candidate experience and huge reductions in cost-per-hire and time-to-fill.
           ul.right
-            li: a(href="#", onclick="Calendly.showPopupWidget('https://calendly.com/talkpush/20-minute-talkpush-demo/');return false;")
+            li: a(href="#", onclick="Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');return false;").main
               i(class="fa fa-envelope-open-o fa-fw", aria-hidden="true")
               span Request a Demo
-            li: a(href="./jobs.html").main
+            li: a(href="https://m.me/774293282630560?ref=apply_for_position(2667)", target="_blank")
               i(class="fa fa-comments-o fa-fw", aria-hidden="true")
-              span Try it Here
+              span Check out our FB bot here
+            li: a(href="./crm.html")
+              i(class="fa fa-book fa-fw", aria-hidden="true")
+              span Discover our CRM features
         .see-more
             a(href="#crm-section"): i(class="fa fa-chevron-down fa-fw", aria-hidden="true")
 
@@ -338,6 +333,7 @@ html(lang="en")
                 img(src="./images/try-section/wechat.png", alt="WeChat Icon")
 
       // Footer Section
+      div(class="fb-customerchat", page_id="774293282630560", ref="", theme_color="#4ef442", logged_in_greeting="Hi! Apply for a position at Talkpush here.", logged_out_greeting="")
       include ./_footer.pug
 
       // Scripts Section
