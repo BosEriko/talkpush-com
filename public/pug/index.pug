@@ -23,9 +23,11 @@ html(lang="en")
             link(rel="shortcut icon", href=favicon, type="image/x-icon")
 
         // Open Graph Start
+        meta(property="og:site_name", content=siteTitle)
         meta(property="og:title", content=siteTitle)
+        meta(property="og:type", content="website")
         if siteImage
-            meta(property="og:image", content=siteImage)
+            meta(property="og:image", itemprop="image", content=siteImage)
         meta(property="og:description", content=pageDescription)
         // Open Graph End
 
