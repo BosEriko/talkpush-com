@@ -34,21 +34,40 @@ get '/termsandcond.html' do
   File.read(File.join('public', 'terms.html'))
 end
 
-post '/quotation-form', :provides => :json do
-  params = JSON.parse(request.body.read)
+# post '/quotation-form', :provides => :json do
+#   params = JSON.parse(request.body.read)
 
-  full_name = params["name"]
-  email = params["email"]
-  company = params["company"]
-  volumes = params["volumes"]
-  phone = params["phone"]
+#   full_name = params["name"]
+#   email = params["email"]
+#   company = params["company"]
+#   volumes = params["volumes"]
+#   phone = params["phone"]
 
-  Mail.deliver do
-    to      ENV["TO_ADDRESS"]
-    from    ENV["EMAIL_ADDRESS"]
-    subject "Quotation enquiry from #{full_name} at #{company}"
-    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
-  end
+#   Mail.deliver do
+#     to      ENV["TO_ADDRESS"]
+#     from    ENV["EMAIL_ADDRESS"]
+#     subject "Quotation enquiry from #{full_name} at #{company}"
+#     body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
+#   end
+#   content_type :json
+#   { :sucess => 'sucess'}.to_json
+# end
+
+post '/whatsapp-form', :provides => :json do
+  # params = JSON.parse(request.body.read)
+
+  # full_name = params["name"]
+  # email     = params["email"]
+  # company   = params["company"]
+  # volumes   = params["volumes"]
+  # phone     = params["phone"]
+
+  # Mail.deliver do
+  #   to      ENV["TO_ADDRESS"]
+  #   from    ENV["EMAIL_ADDRESS"]
+  #   subject "Whatsapp enquiry from #{full_name} at #{company}"
+  #   body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
+  # end
   content_type :json
   { :sucess => 'sucess'}.to_json
 end
