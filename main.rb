@@ -56,12 +56,12 @@ end
 post '/whatsapp-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
-  full_name = params["name"]
-  email     = params["email"]
-  company   = params["company"]
-  volume    = params["volume"]
-  phone     = params["phone"]
-  inTouch   = params["inTouch"]
+  # full_name = params["name"]
+  # email     = params["email"]
+  # company   = params["company"]
+  # volume    = params["volume"]
+  # phone     = params["phone"]
+  # inTouch   = params["inTouch"]
 
   # Mail.deliver do
   #   to      ENV["TO_ADDRESS"]
