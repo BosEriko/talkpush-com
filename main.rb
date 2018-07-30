@@ -69,7 +69,8 @@ post '/whatsapp-form', :provides => :json do
   #   body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
   # end
   content_type :json
-  { :sucess => 'sucess'}.to_json
+  # { :sucess => 'sucess'}.to_json
+  { :sucess => ENV["TO_ADDRESS"]}.to_json
 end
 
 # get '/free-demo' do
