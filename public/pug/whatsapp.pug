@@ -93,25 +93,27 @@ html(lang="en")
 
       .container
         form.whatsapp-form
+          // Full Name
           input(type="text", name="name", placeholder="Full Name")
-          br
+          // E-mail
           input(type="text", name="email", placeholder="E-mail")
-          br
+          // Phone Number
           input(type="text", name="phone", placeholder="Phone Number")
-          br
+          // Company Name
           input(type="text", name="company", placeholder="Company Name")
-          br
+          // Recruitment Volume
           input(list="whatsapp-form-volume", name="volume", placeholder="Annual Recruitment Volume")
           datalist#whatsapp-form-volume
             option(value="1-100")
             option(value="100-1000")
             option(value="1000-10000")
             option(value="More than 10k")
-          br
+          // In Touch Button
           input#whatsapp-form-in-touch(type="checkbox", name="in-touch", value="I want to get in touch!")
           label(for="whatsapp-form-in-touch") I would like to stay in touch with Talkpush through digital communication
-          br
+          // Submit Button
           input(type="submit", value="Submit")
+        p You may opt-out at anytime by sending as an unsubscribe request.
 
 
       // Footer Section
