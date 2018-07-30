@@ -59,14 +59,15 @@ post '/whatsapp-form', :provides => :json do
   full_name = params["name"]
   email     = params["email"]
   company   = params["company"]
-  volumes   = params["volumes"]
+  volume    = params["volume"]
   phone     = params["phone"]
+  inTouch   = params["inTouch"]
 
   Mail.deliver do
     to      ENV["TO_ADDRESS"]
     from    ENV["EMAIL_ADDRESS"]
     subject "Whatsapp inquiry from #{full_name} at #{company}"
-    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
+    body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volume}\nIn Touch: #{inTouch}"
   end
   content_type :json
   { :success => true }.to_json
