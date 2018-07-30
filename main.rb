@@ -54,13 +54,13 @@ end
 # end
 
 post '/whatsapp-form', :provides => :json do
-  # params = JSON.parse(request.body.read)
+  params = JSON.parse(request.body.read)
 
-  # full_name = params["name"]
-  # email     = params["email"]
-  # company   = params["company"]
-  # volumes   = params["volumes"]
-  # phone     = params["phone"]
+  full_name = params["name"]
+  email     = params["email"]
+  company   = params["company"]
+  volumes   = params["volumes"]
+  phone     = params["phone"]
 
   # Mail.deliver do
   #   to      ENV["TO_ADDRESS"]
@@ -70,7 +70,7 @@ post '/whatsapp-form', :provides => :json do
   # end
   content_type :json
   # { :sucess => 'sucess'}.to_json
-  { :sucess => ENV["TO_ADDRESS"]}.to_json
+  { :sucess => "worked! " + params}.to_json
 end
 
 # get '/free-demo' do

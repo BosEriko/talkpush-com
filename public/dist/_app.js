@@ -293,7 +293,13 @@ $(function() {
   var quoteData
   $("form.pp-price-section").submit(function(e) {
     e.preventDefault();
-    quoteData = JSON.stringify({email: $("form.pp-price-section input[name='email']").val(), name: $("form.pp-price-section input[name='name']").val(), company: $("form.pp-price-section input[name='company']").val(), phone: $("form.pp-price-section input[name='phone']").val(), volumes: volume})
+    quoteData = JSON.stringify({
+      email: $("form.pp-price-section input[name='email']").val(), 
+      name: $("form.pp-price-section input[name='name']").val(), 
+      company: $("form.pp-price-section input[name='company']").val(), 
+      phone: $("form.pp-price-section input[name='phone']").val(), 
+      volumes: volume
+    })
     $("form.pp-price-section input[name='email']").val("")
     $("form.pp-price-section input[name='name']").val("")
     $("form.pp-price-section input[name='company']").val("")
@@ -325,6 +331,40 @@ $(function() {
     e.stopPropagation();
   });
   /* Menu Dropdown End */
+
+  /* Index Quote Start */
+  var whatsappData
+  $("form.whatsapp-form").submit(function(e) {
+    e.preventDefault();
+    whatsappData = JSON.stringify({
+      name:     $("form.whatsapp-form input[name='name']").val(), 
+      email:    $("form.whatsapp-form input[name='email']").val(), 
+      phone:    $("form.whatsapp-form input[name='phone']").val(), 
+      company:  $("form.whatsapp-form input[name='company']").val(), 
+      volume:   $("form.whatsapp-form input[name='volume']").val(), 
+      inTouch:  $("form.whatsapp-form input[name='in-touch']").val(), 
+    })
+    console.log(whatsappData)
+    $("form.whatsapp-form input[name='name']").val("")
+    $("form.whatsapp-form input[name='email']").val("")
+    $("form.whatsapp-form input[name='phone']").val("")
+    $("form.whatsapp-form input[name='company']").val("")
+    $("form.whatsapp-form input[name='volume']").val("")
+    $("form.whatsapp-form input[name='in-touch']").val("")
+    $.ajax({
+      url: "./whatsapp-form",
+      dataType: 'json',
+      contentType: 'application/json',
+      type: 'POST',
+      data: whatsappData,
+      accepts: "application/json",
+      success: function(success) {
+        console.log(success)
+      }
+    });
+  });
+  /* Index Quote End */
+  
 
 });
 
