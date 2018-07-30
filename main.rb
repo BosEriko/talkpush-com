@@ -65,7 +65,7 @@ post '/whatsapp-form', :provides => :json do
   Mail.deliver do
     to      ENV["TO_ADDRESS"]
     from    ENV["EMAIL_ADDRESS"]
-    subject "Whatsapp enquiry from #{full_name} at #{company}"
+    subject "Whatsapp inquiry from #{full_name} at #{company}"
     body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volumes}"
   end
   content_type :json
