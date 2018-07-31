@@ -3303,6 +3303,19 @@ a.crm-call-to-action-button {
     top: 0;
     left: 0; }
 
+.whatsapp h2::after {
+  display: none !important; }
+.whatsapp p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: justify; }
+  .whatsapp p a {
+    color: #fff; }
+.whatsapp ul {
+  font-size: 1rem; }
+  .whatsapp ul li {
+    margin-bottom: 0.5rem; }
+
 .whatsapp-form-holder {
   background-color: #1ebea5;
   padding: 2rem 0; }
