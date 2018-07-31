@@ -3316,9 +3316,6 @@ a.crm-call-to-action-button {
   .whatsapp ul li {
     margin-bottom: 0.5rem; }
 
-h2.gl.whatsapp::after {
-  background-color: #444; }
-
 .whatsapp-form-holder {
   background-color: #1ebea5;
   padding: 2rem 0; }
@@ -3388,5 +3385,9 @@ h2.gl.whatsapp::after {
     font-style: italic;
     opacity: 0.75;
     color: #fff; }
+
+.whatsapp .filter {
+  background-color: #25bbf5 !important;
+  background-image: none !important; }
 
 /*# sourceMappingURL=base.css.map */
