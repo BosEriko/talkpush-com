@@ -345,7 +345,7 @@ $(function() {
     $("form.whatsapp-form input[name='phone']").val("")
     $("form.whatsapp-form input[name='company']").val("")
     $("form.whatsapp-form input[name='volume']").val("")
-    $("form.whatsapp-form input[name='in-touch']").val("")
+    $("form.whatsapp-form input[name='in-touch']").prop('checked', false)
     $.ajax({
       url: "./whatsapp-form",
       dataType: 'json',
