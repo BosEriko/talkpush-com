@@ -2980,7 +2980,8 @@ h2.gl.whatsapp::after {
       flex: 1; }
       .whatsapp .filter .divider .right h1 {
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        text-shadow: none; }
       .whatsapp .filter .divider .right p {
         margin: 0;
         padding: 1rem 0 0 0;
