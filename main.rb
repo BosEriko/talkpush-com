@@ -56,12 +56,13 @@ end
 post '/whatsapp-form', :provides => :json do
   params = JSON.parse(request.body.read)
 
-  # full_name = params["name"]
-  # email     = params["email"]
-  # company   = params["company"]
-  # volume    = params["volume"]
-  # phone     = params["phone"]
-  # inTouch   = params["inTouch"]
+  full_name     = params["name"]
+  email         = params["email"]
+  company       = params["company"]
+  volume        = params["volume"]
+  phone         = params["phone"]
+  inTouch       = params["inTouch"]
+  full_message  = "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volume}\nIn Touch: #{inTouch}"
 
   # Mail.deliver do
   #   to      ENV["TO_ADDRESS"]
@@ -70,7 +71,7 @@ post '/whatsapp-form', :provides => :json do
   #   body    "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volume}\nIn Touch: #{inTouch}"
   # end
   content_type :json
-  { :success => params }.to_json
+  { :success => full_message }.to_json
 end
 
 # get '/free-demo' do
