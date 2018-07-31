@@ -65,7 +65,8 @@ post '/whatsapp-form', :provides => :json do
   full_message  = "Name: #{full_name}\nCompany: #{company}\nEmail: #{email}\nPhone: #{phone}\nExpected volumes: #{volume}\nIn Touch: #{inTouch}"
 
   Mail.deliver do
-    to      ENV["TO_ADDRESS"]
+    to      ENV["TO_ADDRESS"],
+    bcc     "eriko.bos@talkpush.com",
     from    "hello@talkpush.com"
     subject "Whatsapp inquiry from #{full_name} at #{company}"
     body    full_message
