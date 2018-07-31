@@ -120,7 +120,9 @@ html(lang="en")
             p.gl Being candidate-centric begings with being available
             .divide.reverse
               .image
-                .holder(style="background-color: transparent; border-width: 0;box-shadow: none;"): img(src="./images/whatsapp-phone.png", alt="WhatsApp Phone", style="max-width: 20rem;")
+                .holder.whatsapp-video
+                    video(controls="false", autoplay="true")
+                        source(src="./videos/whatsapp.mp4",type="video/mp4")
               .content.whatsapp
                 h2 Meet your talent where it lives
                 p Of course, making it easier for candidates to reach you is a no brainer. When you remove barriers between you and your talent pool, you can expect your numbers to grow and that comes with a few challenges:
@@ -163,6 +165,18 @@ html(lang="en")
                             #whatsapp-form-in-touch-holder: input#whatsapp-form-in-touch(type="checkbox", name="in-touch", value="In Touch")
                             label(for="whatsapp-form-in-touch") I would like to stay in touch with Talkpush through digital communication. You may opt-out at anytime by sending us an unsubscribe request.
 
+      #crm-talent-talk.dark-theme
+        .container
+          .filter
+            h2.gl 5 reasons why you should integrate WhatsApp Business with Talkpush CRM:
+            .divide.reverse
+              .content.whatsapp
+                ol
+                    li Have a 24/7 open door policy : we design and activate a conversational agent (aka “chatbot”) that is ALWAYS ready to answer incoming inquiries from candidates.
+                    li Help incoming candidates: Candidates have many questions. Which position is right for me? What openings do you have in my vicinity? The Talkpush bot will guide them in real-time to the right job.
+                    li Screen and schedule : Candidates are asked questions, their answers  are analyzed and the shortlisted ones are then automatically scheduled for a face-to-face.
+                    li Handover from bot to human: On WhatsApp CRM, recruiters take over from bots to talk with the candidate directly . Bye bye emails (and their lower read and response rates).
+                    li Beyond the job application: Adding a connection on WhatsApp allows you to keep the conversation going beyond the initial job application.
 
       // Footer Section
       include ./_footer.pug
