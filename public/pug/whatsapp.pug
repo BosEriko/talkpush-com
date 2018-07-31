@@ -93,9 +93,9 @@ html(lang="en")
                 .divider
                     .left
                         .holder: img(src="./images/whatsapp.png", alt="WhatsApp")
-                        a(href="https://web.whatsapp.com/send?phone=+16502812190&text=hi", target="_blank")
-                            i(class="fa fa-whatsapp",aria-hidden="true")
-                            span Try it now
+                        //- a(href="https://web.whatsapp.com/send?phone=+16502812190&text=hi", target="_blank")
+                        //-     i(class="fa fa-whatsapp",aria-hidden="true")
+                        //-     span Try it now
                     .right
                         h1 WhatsApp
                         p You’ve been asking for it for years… Finally WhatsApp is opening its API for business accounts! Talkpush is working with Nexmo to integrate its CRM with WhatsApp. This means your business can finally access 1.5 billion WhatsApp users!
@@ -134,29 +134,35 @@ html(lang="en")
         .container
             h2.gl Request a WhatsApp Business account for recruitment
             form.whatsapp-form
-                // Full Name
-                input(type="text", name="name", placeholder="Full Name")
-                // E-mail
-                input(type="text", name="email", placeholder="E-mail")
-                // Phone Number
-                input(type="text", name="phone", placeholder="Phone Number")
-                // Company Name
-                input(type="text", name="company", placeholder="Company Name")
-                // Recruitment Volume
-                input(list="whatsapp-form-volume", name="volume", placeholder="Annual Recruitment Volume")
-                datalist#whatsapp-form-volume
-                    option(value="1-100")
-                    option(value="100-1000")
-                    option(value="1000-10000")
-                    option(value="More than 10k")
-                .whatsapp-form-ending
-                    // In Touch Button
-                    input#whatsapp-form-in-touch(type="checkbox", name="in-touch", value="In Touch")
-                    label(for="whatsapp-form-in-touch") I would like to stay in touch with Talkpush through digital communication.<br />You may opt-out at anytime by sending us an unsubscribe request.
-                    // Submit Button
-                    button(type="submit")
-                        i(class="fa fa-send-o",aria-hidden="true")
-                        span Submit
+                .divider
+                    .left
+                        // Full Name
+                        input(type="text", name="name", placeholder="Full Name")
+                        // E-mail
+                        input(type="text", name="email", placeholder="E-mail")
+                        // Phone Number
+                        input(type="text", name="phone", placeholder="Phone Number")
+                        // Company Name
+                        input(type="text", name="company", placeholder="Company Name")
+                        // Recruitment Volume
+                        input(list="whatsapp-form-volume", name="volume", placeholder="Annual Recruitment Volume")
+                        datalist#whatsapp-form-volume
+                            option(value="1-100")
+                            option(value="100-1000")
+                            option(value="1000-10000")
+                            option(value="More than 10k")
+                    .right
+                        // Extra Message
+                        p Yes! Sign me up to apply for a WhatsApp Business account (which you will be able to integrate with Talkpush CRM!)
+                        // Submit Button
+                        button(type="submit")
+                            i(class="fa fa-send-o",aria-hidden="true")
+                            span Submit
+                        .whatsapp-form-ending
+                            // In Touch Button
+                            #whatsapp-form-in-touch-holder: input#whatsapp-form-in-touch(type="checkbox", name="in-touch", value="In Touch")
+                            label(for="whatsapp-form-in-touch") I would like to stay in touch with Talkpush through digital communication. You may opt-out at anytime by sending us an unsubscribe request.
+
 
       // Footer Section
       include ./_footer.pug
