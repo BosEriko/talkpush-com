@@ -361,6 +361,7 @@ $(function() {
       accepts: "application/json",
       success: function(success) {
         console.log(success)
+        $("p.whatsapp-thank-you").fadeIn("fast")
       }
     });
   });
