@@ -87,33 +87,66 @@ html(lang="en")
                 .menu
                     include ./_navigation.pug
 
-      .display-header.crm
+      .display-header.alorica
         .filter
-            h1.fade Candidate Relationship Management<br />for the messaging age
+            .container
+                .alorica-header
+                    .video
+                        .video-holder
+                            iframe(width='560', height='315', src='https://www.youtube.com/embed/ciSB3gMpH_g', frameborder='0', allowfullscreen='')
 
-      .container
-        form.whatsapp-form
-          // Full Name
-          input(type="text", name="name", placeholder="Full Name")
-          // E-mail
-          input(type="text", name="email", placeholder="E-mail")
-          // Phone Number
-          input(type="text", name="phone", placeholder="Phone Number")
-          // Company Name
-          input(type="text", name="company", placeholder="Company Name")
-          // Recruitment Volume
-          input(list="whatsapp-form-volume", name="volume", placeholder="Annual Recruitment Volume")
-          datalist#whatsapp-form-volume
-            option(value="1-100")
-            option(value="100-1000")
-            option(value="1000-10000")
-            option(value="More than 10k")
-          // In Touch Button
-          input#whatsapp-form-in-touch(type="checkbox", name="in-touch", value="In Touch")
-          label(for="whatsapp-form-in-touch") I would like to stay in touch with Talkpush through digital communication
-          // Submit Button
-          input(type="submit", value="Submit")
-        p You may opt-out at anytime by sending as an unsubscribe request.
+                    .header-text
+                        h1 
+                            img(src="./images/alorica-case-study.png", alt="Alorica")
+                            span Alorica Case Study
+                        h3 Talkpush accelerates recruitment for Alorica
+                        ul.alorica-list
+                            li
+                                .data
+                                    .circle
+                                        .number 3X
+                                .text Talent Pool Size
+                            li
+                                .data
+                                    .circle
+                                        .number -35%
+                                .text Marketing Cost per Hire
+                            li
+                                .data
+                                    .circle
+                                        .number -60%
+                                .text Time to Hire
+ 
+
+      .whatsapp-form-holder
+        .container
+            h2.gl Start engaging your business through WhatsApp business
+            form.whatsapp-form
+                // Full Name
+                input(type="text", name="name", placeholder="Full Name")
+                // E-mail
+                input(type="text", name="email", placeholder="E-mail")
+                // Phone Number
+                input(type="text", name="phone", placeholder="Phone Number")
+                // Company Name
+                input(type="text", name="company", placeholder="Company Name")
+                // Recruitment Volume
+                input(list="whatsapp-form-volume", name="volume", placeholder="Annual Recruitment Volume")
+                datalist#whatsapp-form-volume
+                    option(value="1-100")
+                    option(value="100-1000")
+                    option(value="1000-10000")
+                    option(value="More than 10k")
+                .whatsapp-form-ending
+                    // In Touch Button
+                    input#whatsapp-form-in-touch(type="checkbox", name="in-touch", value="In Touch")
+                    label(for="whatsapp-form-in-touch") I would like to stay in touch with Talkpush through digital communication
+                    // Submit Button
+                    button(type="submit")
+                        i(class="fa fa-send-o",aria-hidden="true")
+                        span Submit
+
+            p You may opt-out at anytime by sending us an unsubscribe request.
 
 
       // Footer Section
