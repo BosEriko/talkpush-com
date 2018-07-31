@@ -87,34 +87,18 @@ html(lang="en")
                 .menu
                     include ./_navigation.pug
 
-      .display-header.alorica.whatsapp
+      .display-header.whatsapp
         .filter
             .container
-                .alorica-header
-                    .video
-                        .video-holder
-                            iframe(width='560', height='315', src='https://www.youtube.com/embed/ciSB3gMpH_g', frameborder='0', allowfullscreen='')
-                    .header-text
-                        h1 
-                            img(src="./images/alorica-case-study.png", alt="Alorica")
-                            span Alorica Case Study
-                        h3 Talkpush accelerates recruitment for Alorica
-                        ul.alorica-list
-                            li
-                                .data
-                                    .circle
-                                        .number 3X
-                                .text Talent Pool Size
-                            li
-                                .data
-                                    .circle
-                                        .number -35%
-                                .text Marketing Cost per Hire
-                            li
-                                .data
-                                    .circle
-                                        .number -60%
-                                .text Time to Hire
+                .divider
+                    .left
+                        .holder: img(src="./images/whatsapp.png", alt="WhatsApp")
+                        a(href="#", target="_blank")
+                            i(class="fa fa-whatsapp",aria-hidden="true")
+                            span Try it now
+                    .right
+                        h1 WhatsApp
+                        p You’ve been asking for it for years… Finally WhatsApp is opening its API for business accounts! Talkpush is working with Nexmo to integrate its CRM with WhatsApp. This means your business can finally access 1.5 billion WhatsApp users!
 
 
       #crm-building.white-theme
@@ -124,13 +108,11 @@ html(lang="en")
             p.gl + Talkpush CRM to talk to a 1.5 billion talent pool
             .divide
               .image
-                .holder: img(src="./images/crm-page/building.png", alt="Building")
+                .holder: img(src="./images/whatsapp-user.png", alt="Building")
               .content.whatsapp
                 p Talkpush CRM was designed for messaging. It was initially built to support SMS/Text messaging, and later added the integration with Facebook Messenger as soon as the API became available (summer 2016). 
                 p We believe that employers have a responsibility to treat candidates with the same love and care as they treat customers. This starts with designing a recruitment process which makes the life of their candidates simple.  Offering candidates a digital assistant which can direct their applications via their favorite messaging app is a big step in the right direction.
 
-
-    
       #crm-ai.dark-theme
         .container
           .filter
@@ -138,7 +120,7 @@ html(lang="en")
             p.gl Find out how you can integrate WhatsApp with your recruitment strategy today
             .divide.reverse
               .image
-                .holder(style="background-color: transparent; border-width: 0;box-shadow: none;"): img(src="./images/whatsapp-phone.png", alt="WhatsApp Phone", style="max-width: 50rem;")
+                .holder(style="background-color: transparent; border-width: 0;box-shadow: none;"): img(src="./images/whatsapp-phone.png", alt="WhatsApp Phone", style="max-width: 20rem;")
               .content.whatsapp
                 h2 Meet your talent where it lives
                 p Of course, making it easier for candidates to reach you is a no brainer. When you remove barriers between you and your talent pool, you can expect your numbers to grow and that comes with a few challenges:

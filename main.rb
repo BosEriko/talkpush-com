@@ -34,6 +34,10 @@ get '/termsandcond.html' do
   File.read(File.join('public', 'terms.html'))
 end
 
+get '/whatsapp' do
+  File.read(File.join('public', 'whatsapp.html'))
+end
+
 # post '/quotation-form', :provides => :json do
 #   params = JSON.parse(request.body.read)
 
