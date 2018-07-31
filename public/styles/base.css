@@ -2853,6 +2853,9 @@ a.crm-call-to-action-button {
   .whatsapp ul li {
     margin-bottom: 0.5rem; }
 
+h2.gl.whatsapp::after {
+  background-color: #444; }
+
 .whatsapp-form-holder {
   background-color: #1ebea5;
   padding: 2rem 0; }
