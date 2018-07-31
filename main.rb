@@ -9,8 +9,8 @@ Dotenv.load
 
 $stdout.sync = true
 
-options = { :address              => "smtp.gmail.com",
-            :port                 => 25,
+options = { :address              => "smtp.sendgrid.net",
+            :port                 => 587,
             :domain               => ENV["DOMAIN"],
             :user_name            => ENV["EMAIL_ADDRESS"],
             :password             => ENV["EMAIL_PASSWORD"],
