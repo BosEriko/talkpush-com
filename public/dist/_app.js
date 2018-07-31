@@ -334,6 +334,7 @@ $(function() {
 
   /* Index Quote Start */
   var whatsappData
+  $("form.whatsapp-form input[name='in-touch']").prop('checked', true)
   $("form.whatsapp-form").submit(function(e) {
     e.preventDefault();
     whatsappData = JSON.stringify({
