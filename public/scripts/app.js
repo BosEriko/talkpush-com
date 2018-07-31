@@ -337,7 +337,7 @@ $(function() {
       phone:    $("form.whatsapp-form input[name='phone']").val(), 
       company:  $("form.whatsapp-form input[name='company']").val(), 
       volume:   $("form.whatsapp-form input[name='volume']").val(), 
-      inTouch:  $("form.whatsapp-form input[name='in-touch']").val(), 
+      inTouch:  $("form.whatsapp-form input[name='in-touch']").is(":checked") ? true : false, 
     })
     console.log(whatsappData)
     $("form.whatsapp-form input[name='name']").val("")
