@@ -71,7 +71,7 @@ post '/whatsapp-form', :provides => :json do
   #   body    full_message
   # end
   content_type :json
-  { :success => full_message }.to_json
+  { :success => true }.to_json
 end
 
 # get '/free-demo' do
