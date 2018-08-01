@@ -2896,7 +2896,7 @@ h2.gl.whatsapp::after {
     padding-left: 2rem; }
     .whatsapp-form-holder form.whatsapp-form .divider .right p {
       margin: 0;
-      padding: 0 0 0 1.5rem;
+      padding: 0;
       color: #fff;
       line-height: 1.25rem; }
     .whatsapp-form-holder form.whatsapp-form .divider .right button[type="submit"] {
@@ -2999,7 +2999,7 @@ h2.gl.whatsapp::after {
     -ms-flex: 1;
     flex: 1; }
     .whatsapp .filter .divider .right h1 {
-      margin: 0;
+      margin: 0 0 0.5rem 0;
       padding: 0;
       text-shadow: none; }
     .whatsapp .filter .divider .right p {
