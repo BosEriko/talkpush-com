@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 63.104">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Person_with_heart_Icon" data-name="Person_with heart_Icon" transform="translate(0.5 0.5)">
+    <path id="Path_631" data-name="Path 631" class="cls-1" d="M48.01,59.8s11.71-6.528,11.71-16.995c0-7.876-9.119-7.876-11.71,0-2.591-7.876-11.71-7.876-11.71.622C36.3,53.273,48.01,59.8,48.01,59.8Z" transform="translate(1.28 1.302)"/>
+    <path id="Path_632" data-name="Path 632" class="cls-1" d="M36.233,34.368c-2.073-.622-3.938-1.451-6.218-2.28V25.87s3.627-1.865,3.627-8.083c2.073,0,2.073-5.389,0-5.389,0-.622,2.176-4.249,1.347-7.668-1.244-4.974-15.751-4.974-16.995,0C11.777,3.487,15.4,11.777,15.4,12.606c-2.073,0-2.073,5.181,0,5.181a11.272,11.272,0,0,0,4.249,9.119v5.181c-7.254,2.8-16.269,4.663-17.306,7.876C1.1,43.694,1,50.741,1,50.741H27.943" transform="translate(0)"/>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+@import '../../../mixins/mixins';
+.block {
+    background-color: #000;
+    color: #fff;
+    &Divider {
+        padding: 3rem 0;
+        @media screen and (min-width: $break-medium) {
+            @include display-flex;
+            @include align-items-center;
+            padding: 5rem 0;
+        }
+        &Left,
+        &Right {
+            @media screen and (min-width: $break-medium) {
+                @include flex(1);
+            }
+            h2 {
+                font-size: 3rem;
+                line-height: 4rem;
+                font-weight: 100;
+            }
+            p {
+                margin: 0;
+                padding: 1.5rem 0;
+                color: #fff;
+            }
+        }
+        &Left {
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+            height: 20rem;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                position: absolute;
+                @media screen and (min-width: $break-medium) {
+                    max-height: 100%;
+                }
+            }
+            &Laptop {
+                transform: translateX(-50%);
+                left: 40%;
+                @media screen and (min-width: $break-medium) {
+                    transform: none;
+                    width: 90%;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            &Mobile {
+                right: 50%;
+                transform: translateX(70%);
+                @media screen and (min-width: $break-medium) {
+                    transform: none;
+                    height: 18rem;
+                    right: 0;
+                    top: 2rem;
+                }
+            }
+        }
+        &Right {
+            padding: 2rem;
+            @media screen and (min-width: $break-medium) {
+                padding: 0;
+            }
+            &CrmButton {
+                display: inline-block;
+                a {
+                    background-color: rgba(255, 255, 255, .25);
+                    &:hover,
+                    &:focus {
+                        background-color: rgba(255, 255, 255, .5);
+                    }
+                }
+                img {
+                    vertical-align: bottom;
+                    height: 1rem;
+                    line-height: 1rem;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}

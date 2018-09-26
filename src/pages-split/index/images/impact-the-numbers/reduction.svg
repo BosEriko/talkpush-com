@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 59.931">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Coin_Icon" transform="translate(1 1)">
+    <rect id="Rectangle_42" data-name="Rectangle 42" class="cls-1" width="24.828" height="8.276" transform="translate(2.069 49.655)"/>
+    <line id="Line_66" data-name="Line 66" class="cls-1" y2="8.276" transform="translate(20.69 49.655)"/>
+    <line id="Line_67" data-name="Line 67" class="cls-1" y2="8.276" transform="translate(8.276 49.655)"/>
+    <rect id="Rectangle_43" data-name="Rectangle 43" class="cls-1" width="24.828" height="8.276" transform="translate(2.069 33.103)"/>
+    <line id="Line_68" data-name="Line 68" class="cls-1" y2="8.276" transform="translate(20.69 33.103)"/>
+    <line id="Line_69" data-name="Line 69" class="cls-1" y2="8.276" transform="translate(8.276 33.103)"/>
+    <rect id="Rectangle_44" data-name="Rectangle 44" class="cls-1" width="24.828" height="8.276" transform="translate(4.138 16.552)"/>
+    <line id="Line_70" data-name="Line 70" class="cls-1" y2="8.276" transform="translate(22.759 16.552)"/>
+    <line id="Line_71" data-name="Line 71" class="cls-1" y2="8.276" transform="translate(10.345 16.552)"/>
+    <rect id="Rectangle_45" data-name="Rectangle 45" class="cls-1" width="24.828" height="8.276" transform="translate(8.276 8.276)"/>
+    <line id="Line_72" data-name="Line 72" class="cls-1" y2="8.276" transform="translate(26.897 8.276)"/>
+    <line id="Line_73" data-name="Line 73" class="cls-1" y2="8.276" transform="translate(14.483 8.276)"/>
+    <rect id="Rectangle_46" data-name="Rectangle 46" class="cls-1" width="24.828" height="8.276" transform="translate(0 41.379)"/>
+    <line id="Line_74" data-name="Line 74" class="cls-1" y2="8.276" transform="translate(18.621 41.379)"/>
+    <line id="Line_75" data-name="Line 75" class="cls-1" y2="8.276" transform="translate(6.207 41.379)"/>
+    <rect id="Rectangle_47" data-name="Rectangle 47" class="cls-1" width="24.828" height="8.276" transform="translate(0 24.828)"/>
+    <line id="Line_76" data-name="Line 76" class="cls-1" y2="8.276" transform="translate(18.621 24.828)"/>
+    <line id="Line_77" data-name="Line 77" class="cls-1" y2="8.276" transform="translate(6.207 24.828)"/>
+    <rect id="Rectangle_48" data-name="Rectangle 48" class="cls-1" width="24.828" height="8.276" transform="translate(2.069)"/>
+    <line id="Line_78" data-name="Line 78" class="cls-1" y2="8.276" transform="translate(20.69)"/>
+    <line id="Line_79" data-name="Line 79" class="cls-1" y2="8.276" transform="translate(8.276)"/>
+    <rect id="Rectangle_49" data-name="Rectangle 49" class="cls-1" width="24.828" height="8.276" transform="translate(31.034 49.655)"/>
+    <line id="Line_80" data-name="Line 80" class="cls-1" y2="8.276" transform="translate(37.241 49.655)"/>
+    <line id="Line_81" data-name="Line 81" class="cls-1" y2="8.276" transform="translate(49.655 49.655)"/>
+    <rect id="Rectangle_50" data-name="Rectangle 50" class="cls-1" width="24.828" height="8.276" transform="translate(35.172 41.379)"/>
+    <line id="Line_82" data-name="Line 82" class="cls-1" y2="8.276" transform="translate(41.379 41.379)"/>
+    <line id="Line_83" data-name="Line 83" class="cls-1" y2="8.276" transform="translate(53.793 41.379)"/>
+    <rect id="Rectangle_51" data-name="Rectangle 51" class="cls-1" width="24.828" height="8.276" transform="translate(31.034 33.103)"/>
+    <line id="Line_84" data-name="Line 84" class="cls-1" y2="8.276" transform="translate(37.241 33.103)"/>
+    <line id="Line_85" data-name="Line 85" class="cls-1" y2="8.276" transform="translate(49.655 33.103)"/>
+  </g>
+</svg>

@@ -1,0 +1,202 @@
+@import '../mixins/mixins';
+.block {
+    &Header {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 0;
+        background-image: url(../pages-images/gallery/header.png);
+        padding-top: 40%;
+        background-color: #000;
+    }
+    &Content {
+        background-image: url(../images/grid-bg.png);
+        background-position: center;
+        background-color: #000;
+        padding: 3rem 0;
+        h3 {
+            font-size: 3rem;
+            font-weight: 100;
+        }
+        &MenuSearch {
+            @include display-flex;
+            @include align-items-center;
+            margin: 1.5rem 0;
+            ul {
+                list-style-type: none;
+                @include flex(1);
+                li {
+                    display: inline-block;
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        text-transform: uppercase;
+                        &:hover,
+                        &:focus {
+                            color: $theme;
+                            text-shadow: 0 0 10px $theme;
+                        }
+                    }
+                }
+            }
+            input {
+                border-radius: 5px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: rgba(255,255,255,.6);
+                background-color: rgba(255,255,255,.2);
+                padding: 1rem 1.5rem;
+                width: 100%;
+                max-width: 250px;
+                color: #fff;
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+        }
+        &Gallery {
+            &Row {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                @media screen and (min-width: $break-medium) {
+                    @include display-flex;
+                }
+                &Spacing {
+                    width: 2rem;
+                }
+                &Item {
+                    margin: 0;
+                    padding: 0;
+                    color: #fff;
+                    @media screen and (min-width: $break-medium) {
+                        @include flex(1);
+                    }
+                    &Image {
+                        a {
+                            display: inline-block;
+                            position: relative;
+                            padding-bottom: 56.25%;
+                            height: 0;
+                            overflow: hidden;
+                            border-width: 2px;
+                            border-style: solid;
+                            border-color: $theme;
+                            box-shadow: 0 0 10px $theme;
+                            background-color: #000;
+                            width: 100%;
+                            text-decoration: none;
+                            div {
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                        }
+                    }
+                    &Name {
+                        @include align-items-center;
+                        @include display-flex;
+                        margin: 1rem 0;
+                        a {
+                            text-decoration: none;
+                            display: inline-block;
+                            margin-right: auto;
+                            h3 {
+                                color: #fff;
+                                font-weight: 100;
+                                font-size: 1.25rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                        &Heart {
+                            img {
+                                height: 2rem;
+                            }
+                        }
+                    }
+                    &Description {
+                        margin: 0 0 3rem 0;
+                        padding: 0;
+                        opacity: .75;
+                        font-size: .9rem;
+                    }
+                }
+                
+            }
+        }
+        &Join {
+            border-color: $theme;
+            border-style: solid;
+            border-width: 3px;
+            background-color: $semi-theme-25;
+            color: #fff;
+            padding: 2rem;
+            @media screen and (min-width: $break-medium) {
+                @include display-flex;
+                @include align-items-center;
+            }
+            &Icon {
+                text-align: center;
+                margin-bottom: 1rem;
+                @media screen and (min-width: $break-medium) {
+                    margin-bottom: 0;
+                }
+                img {
+                    width: 7.5rem;
+                }
+            }
+            &Details {
+                margin-left: 0;
+                @media screen and (min-width: $break-medium) {
+                    margin-left: 3rem;
+                }
+                @include flex(1);
+                h3 {
+                    font-size: 3rem;
+                    margin: 0;
+                    padding: 0 0 1.5rem 0;
+                    display: block;
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: #fff;
+                        display: block;
+                        margin-top: 1.5rem;
+                    }
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+                a {
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: #fff;
+                    color: #fff;
+                    padding: .5rem;
+                    width: 100%;
+                    max-width: 200px;
+                    text-align: center;
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 1.25rem;
+                    margin-top: 1.5rem;
+                    @include prefix(transition, all 0.3s ease-in-out);
+                    &:hover,
+                    &:focus {
+                        color: $theme;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        stroke: #87c930;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="heart_icon" transform="translate(-932 -711)">
+    <g id="Ellipse_22" data-name="Ellipse 22" class="cls-1" transform="translate(932 711)">
+      <circle class="cls-3" cx="25" cy="25" r="25"/>
+      <circle class="cls-4" cx="25" cy="25" r="24.5"/>
+    </g>
+    <g id="Group_158" data-name="Group 158" transform="translate(945 724.022)">
+      <path id="Path_339" data-name="Path 339" class="cls-2" d="M11.664,23.2S22.328,14.951,22.328,7.144s-9.457-8.41-10.664-.6C10.457-1.266,1-.663,1,7.747S11.664,23.2,11.664,23.2Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

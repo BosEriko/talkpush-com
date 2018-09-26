@@ -1,0 +1,16 @@
+<svg id="Conversations_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 65.965">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="Path_659" data-name="Path 659" class="cls-1" d="M26.345,37.207H22.724L10.655,49.276V37.207H1V1H58.931V20.793" transform="translate(0 0)"/>
+  <path id="Path_660" data-name="Path 660" class="cls-1" d="M27,47.138H46.31L58.379,60.414V47.138h7.241V23H27Z" transform="translate(5.379 4.552)"/>
+</svg>

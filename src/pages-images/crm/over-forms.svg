@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 46.667">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        filter: url(#Line_179);
+      }
+
+      .cls-3 {
+        filter: url(#Line_178);
+      }
+
+      .cls-4 {
+        filter: url(#Line_177);
+      }
+
+      .cls-5 {
+        filter: url(#Path_516);
+      }
+    </style>
+    <filter id="Path_516" x="0" y="0" width="50" height="46.667" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line_177" x="7.778" y="10" width="34.444" height="20" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line_178" x="7.778" y="13.333" width="34.444" height="20" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line_179" x="12.222" y="6.667" width="25.556" height="20" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="crm_page_conversation_over_forms_icon" data-name="crm_page_conversation over forms icon" transform="translate(53 13)">
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, -53, -13)">
+      <path id="Path_516-2" data-name="Path 516" class="cls-1" d="M31,3.222V21a2.229,2.229,0,0,1-2.222,2.222H19.889L16,27.667l-3.889-4.444H3.222A2.229,2.229,0,0,1,1,21V3.222A2.229,2.229,0,0,1,3.222,1H28.778A2.229,2.229,0,0,1,31,3.222Z" transform="translate(9 9)"/>
+    </g>
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, -53, -13)">
+      <line id="Line_177-2" data-name="Line 177" class="cls-1" x2="14.444" transform="translate(17.78 20)"/>
+    </g>
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, -53, -13)">
+      <line id="Line_178-2" data-name="Line 178" class="cls-1" x2="14.444" transform="translate(17.78 23.33)"/>
+    </g>
+    <g class="cls-2" transform="matrix(1, 0, 0, 1, -53, -13)">
+      <line id="Line_179-2" data-name="Line 179" class="cls-1" x2="5.556" transform="translate(22.22 16.67)"/>
+    </g>
+  </g>
+</svg>

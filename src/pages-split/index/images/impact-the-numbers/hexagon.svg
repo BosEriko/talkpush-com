@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.186 237.772">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <g id="home_page_block_4_Hexagon_box" data-name="home_page_block 4_Hexagon box" transform="translate(0 -0.028)">
+    <path id="Path_250" data-name="Path 250" class="cls-1" d="M85.593,8.093l78.57,45.388v90.709l-78.57,45.388L7.023,144.191V53.481L85.593,8.093m0-2.293L5,52.335V145.4L85.593,191.94,166.186,145.4V52.335L85.593,5.8Z"/>
+    <path id="Path_251" data-name="Path 251" class="cls-2" d="M206.9,213.558l25.021-14.433V170.8" transform="translate(-65.735 -53.721)"/>
+    <path id="Path_252" data-name="Path 252" class="cls-2" d="M88.8,261.067l24.077,13.893L137.088,261" transform="translate(-27.284 -83.088)"/>
+    <path id="Path_253" data-name="Path 253" class="cls-2" d="M5,168.7v29.742l25.223,14.567" transform="translate(0 -53.037)"/>
+    <path id="Path_254" data-name="Path 254" class="cls-2" d="M30.493,52.9,5,67.67V97.479" transform="translate(0 -15.335)"/>
+    <path id="Path_255" data-name="Path 255" class="cls-2" d="M137.742,20.367,112.519,5.8,87.7,20.1" transform="translate(-26.926)"/>
+    <path id="Path_256" data-name="Path 256" class="cls-2" d="M232.019,97.54V67.865L207.2,53.5" transform="translate(-65.833 -15.53)"/>
+    <path id="Path_257" data-name="Path 257" class="cls-1" d="M113.419,339.219,91.5,317.3h43.837Z" transform="translate(-28.163 -101.419)"/>
+  </g>
+</svg>

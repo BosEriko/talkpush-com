@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21.741">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 0 4;
+      }
+    </style>
+  </defs>
+  <g id="our_style_icon" data-name="our style_icon" transform="translate(-0.5 -0.5)">
+    <path id="Path_643" data-name="Path 643" class="cls-1" d="M1.741,3.963H14.333a.743.743,0,0,0,.741-.741V1.741A.743.743,0,0,0,14.333,1H1.741A.743.743,0,0,0,1,1.741V3.222A.743.743,0,0,0,1.741,3.963Z"/>
+    <path id="Path_644" data-name="Path 644" class="cls-1" d="M17.741,19.963H30.333a.743.743,0,0,0,.741-.741V17.741A.743.743,0,0,0,30.333,17H17.741a.743.743,0,0,0-.741.741v1.481A.743.743,0,0,0,17.741,19.963Z" transform="translate(-10.074 -10.074)"/>
+    <path id="Path_645" data-name="Path 645" class="cls-1" d="M17.741,35.963H30.333a.743.743,0,0,0,.741-.741V33.741A.743.743,0,0,0,30.333,33H17.741a.743.743,0,0,0-.741.741v1.481A.743.743,0,0,0,17.741,35.963Z" transform="translate(-10.074 -20.148)"/>
+    <path id="Path_646" data-name="Path 646" class="cls-1" d="M17.741,51.963H30.333a.743.743,0,0,0,.741-.741V49.741A.743.743,0,0,0,30.333,49H17.741a.743.743,0,0,0-.741.741v1.481A.743.743,0,0,0,17.741,51.963Z" transform="translate(-10.074 -30.222)"/>
+    <line id="Line_265" data-name="Line 265" class="cls-2" x1="1.481" transform="translate(3.963 14.333)"/>
+    <line id="Line_266" data-name="Line 266" class="cls-2" x1="1.481" transform="translate(3.963 8.407)"/>
+    <path id="Path_647" data-name="Path 647" class="cls-2" d="M7.963,27.815H5V13" transform="translate(-2.519 -7.556)"/>
+  </g>
+</svg>

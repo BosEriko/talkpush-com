@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 14.793">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #72de2f;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="home_page_button_icon_services_chat_bot" data-name="home_page_button icon_services_chat bot" transform="translate(-0.5 -0.5)">
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-1" width="3.448" height="2.069" transform="translate(6.517 12.724)"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-1" width="2.069" height="2.069" transform="translate(4.448 1)"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-1" width="3.448" height="2.069" transform="translate(12.034 12.724)"/>
+    <path id="Path_7" data-name="Path 7" class="cls-1" d="M18.931,11.828V9.759H17.552V8.379H15.483V7H13.414V8.379H8.586V7H6.517V8.379H4.448V9.759H3.069v2.069H1v4.828H3.069V13.9H5.138v2.759H6.517V15.276h8.966v1.379h1.379V13.9h2.069v2.759H21V11.828Zm-10.345,0H6.517V9.759H8.586Zm6.9,0H13.414V9.759h2.069Z" transform="translate(0 -3.931)"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-1" width="2.069" height="2.069" transform="translate(15.483 1)"/>
+  </g>
+</svg>

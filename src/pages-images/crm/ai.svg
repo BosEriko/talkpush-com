@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 40.689">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        filter: url(#Rectangle_92);
+      }
+
+      .cls-3 {
+        filter: url(#Path_538);
+      }
+
+      .cls-4 {
+        filter: url(#Rectangle_91);
+      }
+
+      .cls-5 {
+        filter: url(#Rectangle_90);
+      }
+
+      .cls-6 {
+        filter: url(#Rectangle_89);
+      }
+    </style>
+    <filter id="Rectangle_89" x="8.276" y="17.586" width="25.172" height="23.104" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_90" x="5.172" y="0" width="23.103" height="23.104" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_91" x="16.552" y="17.586" width="25.172" height="23.104" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_538" x="0" y="3.104" width="50" height="34.482" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_92" x="21.724" y="0" width="23.103" height="23.104" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="customer_page_artificial_intelligence" data-name="customer_page_artificial intelligence" transform="translate(9.5 9.5)">
+    <g class="cls-6" transform="matrix(1, 0, 0, 1, -9.5, -9.5)">
+      <rect id="Rectangle_89-2" data-name="Rectangle 89" class="cls-1" width="5.172" height="3.103" transform="translate(18.28 27.59)"/>
+    </g>
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, -9.5, -9.5)">
+      <rect id="Rectangle_90-2" data-name="Rectangle 90" class="cls-1" width="3.103" height="3.103" transform="translate(15.17 10)"/>
+    </g>
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, -9.5, -9.5)">
+      <rect id="Rectangle_91-2" data-name="Rectangle 91" class="cls-1" width="5.172" height="3.103" transform="translate(26.55 27.59)"/>
+    </g>
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, -9.5, -9.5)">
+      <path id="Path_538-2" data-name="Path 538" class="cls-1" d="M27.4,10.741v-3.1H25.328V5.569h-3.1V3.5h-3.1V5.569H11.879V3.5h-3.1V5.569h-3.1V7.638H3.6v3.1H.5v7.241H3.6V13.845h3.1v4.138H8.776V15.914H22.224v2.069h2.069V13.845h3.1v4.138h3.1V10.741Zm-15.517,0h-3.1v-3.1h3.1Zm10.345,0h-3.1v-3.1h3.1Z" transform="translate(9.5 9.6)"/>
+    </g>
+    <g class="cls-2" transform="matrix(1, 0, 0, 1, -9.5, -9.5)">
+      <rect id="Rectangle_92-2" data-name="Rectangle 92" class="cls-1" width="3.103" height="3.103" transform="translate(31.72 10)"/>
+    </g>
+  </g>
+</svg>

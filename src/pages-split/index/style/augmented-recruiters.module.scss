@@ -1,0 +1,132 @@
+@import '../../../mixins/mixins';
+.block {
+    background-color: #000;
+    background-position: center;
+    background-image: url(../../../images/grid-bg.png);
+    color: #fff;
+    padding: 10rem 0 8rem 0;
+    h2 {
+        font-size: 3rem;
+        line-height: 4rem;
+        font-weight: 100;
+        text-align: center;
+        display: block;
+    }
+    h4 {
+        font-size: 1.25rem;
+        display: block;
+        max-width: 40rem;
+        text-align: center;
+        margin: 1rem auto;
+    }
+    &Divide {
+        margin: 2rem 0 0 0;
+        padding: 0;
+        list-style-type: none;
+        @media screen and (min-width: $break-medium) {
+            white-space: nowrap;
+            overflow-x: scroll;
+        }
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+            // height: 7.5px;
+            // width: 75%;
+        }
+
+        // &::-webkit-scrollbar-track {
+        //     background-color: rgba(255,255,255,.25);
+        //     border-radius: 10px;
+        // }
+
+        // &::-webkit-scrollbar-thumb {
+        //     background-color: $theme;
+        //     border-radius: 10px;
+        // }
+        li {
+            padding: 0 1rem;
+            @media screen and (min-width: $break-medium) {
+                width: auto;
+                display: inline-block;
+            }
+        }
+        &Item {
+            &Video {
+                margin-top: 1rem;
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                border-width: 2px;
+                border-style: solid;
+                border-color: $theme;
+                box-shadow: 0 0 10px $theme;
+                background-color: #000;
+                iframe,
+                object,
+                embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &Details {
+                border-width: 2px;
+                border-style: solid;
+                border-color: #fff;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                padding: .5rem;
+                background-color: rgba(255,255,255,.25);
+                white-space: normal;
+                overflow: hidden;
+                &Message {
+                    background-color: white;
+                    color: #444;
+                    font-style: italic;
+                    font-size: .85rem;
+                    padding: 1.5rem .85rem;
+                    box-shadow: 0 3px 3px #000;
+                    margin-bottom: 1rem;
+                    overflow: hidden;
+                    @media screen and (min-width: $break-medium) {
+                        height: 140px;
+                    }
+                }
+                &User {
+                    @include display-flex;
+                    @include align-items-center;
+                    margin-bottom: .5rem;
+                    &Picture {
+                        width: 3rem;
+                        height: 3rem;
+                        overflow: hidden;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: $theme;
+                        border-radius: 1000px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &Details {
+                        @include flex(1);
+                        margin-left: .5rem;
+                        &Name {
+                            font-size: 1rem;
+                        }
+                        &Position,
+                        &Company {
+                            color: #aaa;
+                            font-size: .6rem;
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

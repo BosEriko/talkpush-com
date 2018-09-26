@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+@import '../../mixins/mixins';
+
+// Global Style
+:root {
+  font-size: 12px;
+  transition: font-size 0.3s 0s ease-in-out;
+  -webkit-transition: font-size 0.3s 0s ease-in-out;
+
+  @media screen and (min-width: $break-smaller) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: $break-medium) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $break-larger) {
+    font-size: 15px;
+  }
+}
+
+body {
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  &.noScroll {
+    overflow-y: hidden;
+  }
+}
+
+a,
+a:hover {
+  color: #444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.global {
+  // Hero Text
+  &-hero {
+    font-weight: normal;
+
+    &-glow {
+      &-white {
+        color: #fff;
+        text-shadow: 0 0 10px $purple;
+      }
+
+      &-green {
+        color: $theme;
+        text-shadow: 0 0 10px $semi-theme-50;
+      }
+    }
+  }
+  
+  // Button
+  &-button {
+    color: #fff;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $theme;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    @include prefix(transition, all 0.3s ease-in-out);
+
+    &-block {
+      min-width: 200px;
+    }
+
+    &:focus,
+    &:hover {
+      color: #fff;
+      text-shadow: 0 0 10px $purple;
+      background-color: $semi-theme-10;
+      box-shadow: 0 0 10px $semi-theme-50, inset 0 0 10px $semi-theme-50;
+    }
+
+    &:active,
+    &.active {
+      text-shadow: none;
+      background-color: $theme;
+      box-shadow: 0 0 10px $semi-theme-75;
+    }
+  }
+}
+
+// Utilities
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}

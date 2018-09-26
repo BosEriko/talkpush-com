@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 49.896">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+        stroke: #87c930;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #87c930;
+      }
+
+      .cls-3 {
+        stroke-linejoin: round;
+      }
+
+      .cls-4 {
+        filter: url(#Path_521);
+      }
+
+      .cls-5 {
+        filter: url(#Path_517);
+      }
+    </style>
+    <filter id="Path_517" x="13.093" y="0" width="36.907" height="41.002" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_521" x="0" y="9.098" width="39.691" height="40.799" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#87c930"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="customer_page_let_the_talent_talk_icon" data-name="customer_page_let the talent talk icon" transform="translate(9.6 9.5)">
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, -9.6, -9.5)">
+      <path id="Path_517-2" data-name="Path 517" class="cls-1" d="M13.1,8.335C13.1,4.005,16.914.5,21.554.5s8.454,3.505,8.454,7.835a8.009,8.009,0,0,1-5.155,7.216c-.619.619-4.433,3.814-5.155,4.536V16.067a10.874,10.874,0,0,1-1.959-.515" transform="translate(9.99 9.5)"/>
+    </g>
+    <path id="Path_518" data-name="Path 518" class="cls-2" d="M26,8H24V9.031h2Z" transform="translate(-0.27 0.232)"/>
+    <path id="Path_519" data-name="Path 519" class="cls-2" d="M23,8H21V9.031h2Z" transform="translate(-0.363 0.232)"/>
+    <path id="Path_520" data-name="Path 520" class="cls-2" d="M20,8H18V9.031h2Z" transform="translate(-0.456 0.232)"/>
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, -9.6, -9.5)">
+      <path id="Path_521-2" data-name="Path 521" class="cls-3" d="M10.194,30.124h9.9V27.031c0-.619-4.021-2.887-7.216-4.124V20.33s1.237-.412,1.237-3.2c.928,0,1.34-2.577,0-2.577,0-.309,1.031-1.649.619-3.3-.619-2.577-7.113-2.577-7.835,0-2.784-.515-.619,2.887-.619,3.3-1.34,0-.928,2.577,0,2.577,0,2.784,1.34,3.2,1.34,3.2v2.577C4.318,24.248.4,26.413.4,27.031v3.093Z" transform="translate(9.6 9.77)"/>
+    </g>
+  </g>
+</svg>

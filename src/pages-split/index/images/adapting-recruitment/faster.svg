@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 104.132">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Gauge_icon" transform="translate(0.5 0.5)">
+    <g id="Group_363" data-name="Group 363" transform="translate(1 1)">
+      <path id="Path_661" data-name="Path 661" class="cls-1" d="M31.41,3.97V99.161c0,1.7-.849,2.97-1.98,2.97H2.98c-1.132,0-1.98-1.273-1.98-2.97V3.97C1,2.273,1.849,1,2.98,1H29.289C30.42,1,31.41,2.273,31.41,3.97Z" transform="translate(-1 -1)"/>
+      <rect id="Rectangle_139" data-name="Rectangle 139" class="cls-1" width="18.246" height="5.941" transform="translate(6.082 89.25)"/>
+      <rect id="Rectangle_140" data-name="Rectangle 140" class="cls-1" width="18.246" height="5.941" transform="translate(6.082 77.369)"/>
+      <rect id="Rectangle_141" data-name="Rectangle 141" class="cls-1" width="18.246" height="5.941" transform="translate(6.082 65.488)"/>
+      <rect id="Rectangle_142" data-name="Rectangle 142" class="cls-1" width="18.246" height="5.941" transform="translate(6.082 53.748)"/>
+      <rect id="Rectangle_143" data-name="Rectangle 143" class="cls-1" width="18.246" height="5.941" transform="translate(6.082 41.867)"/>
+      <rect id="Rectangle_144" data-name="Rectangle 144" class="cls-1" width="18.246" height="5.941" transform="translate(6.082 29.562)"/>
+    </g>
+    <g id="Group_364" data-name="Group 364" transform="translate(31.41 1)">
+      <circle id="Ellipse_45" data-name="Ellipse 45" class="cls-1" cx="6.931" cy="6.931" r="6.931" transform="translate(12.164 43.564)"/>
+      <line id="Line_270" data-name="Line 270" class="cls-1" x2="21.216" y2="21.216" transform="translate(24.045 55.446)"/>
+      <line id="Line_271" data-name="Line 271" class="cls-1" y2="8.769" transform="translate(16.973 8.769)"/>
+      <line id="Line_272" data-name="Line 272" class="cls-1" y1="8.769" transform="translate(16.973 83.451)"/>
+      <line id="Line_273" data-name="Line 273" class="cls-1" x1="3.395" y1="8.062" transform="translate(31.683 81.047)"/>
+      <line id="Line_274" data-name="Line 274" class="cls-1" x1="8.204" y1="3.395" transform="translate(49.505 63.083)"/>
+      <line id="Line_275" data-name="Line 275" class="cls-1" x1="8.769" transform="translate(52.051 50.495)"/>
+      <line id="Line_276" data-name="Line 276" class="cls-1" x1="8.204" y2="3.395" transform="translate(49.505 34.512)"/>
+      <line id="Line_277" data-name="Line 277" class="cls-1" x1="6.223" y2="6.223" transform="translate(42.433 21.075)"/>
+      <line id="Line_278" data-name="Line 278" class="cls-1" x1="3.395" y2="8.062" transform="translate(31.683 12.023)"/>
+      <path id="Path_662" data-name="Path 662" class="cls-1" d="M92.09,51.5A50.525,50.525,0,0,0,41.595,1H22.5V102.132H41.595A50.555,50.555,0,0,0,92.09,51.5Z" transform="translate(-22.5 -1)"/>
+    </g>
+  </g>
+</svg>

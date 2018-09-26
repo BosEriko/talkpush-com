@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 103.975">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Chat_Icon" transform="translate(0.5 0.5)">
+    <g id="Group_366" data-name="Group 366" transform="translate(1 1)">
+      <path id="Path_663" data-name="Path 663" class="cls-1" d="M72.727,17.3H25.373L11.446,31.223V17.3H1V1H72.727Z" transform="translate(-1 -1)"/>
+    </g>
+    <g id="Group_367" data-name="Group 367" transform="translate(31.919 32.198)">
+      <path id="Path_664" data-name="Path 664" class="cls-1" d="M23.2,39.7H67.908L81.835,53.623V39.7H92.281V23.4H23.2Z" transform="translate(-23.2 -23.4)"/>
+    </g>
+    <g id="Group_368" data-name="Group 368" transform="translate(1 63.674)">
+      <path id="Path_665" data-name="Path 665" class="cls-1" d="M72.727,70.373H25.373L11.446,84.3V70.373H1V46H72.727Z" transform="translate(-1 -46)"/>
+    </g>
+    <circle id="Ellipse_46" data-name="Ellipse 46" class="cls-1" cx="2.507" cy="2.507" r="2.507" transform="translate(14.231 73.563)"/>
+    <circle id="Ellipse_47" data-name="Ellipse 47" class="cls-1" cx="2.507" cy="2.507" r="2.507" transform="translate(34.008 73.563)"/>
+    <circle id="Ellipse_48" data-name="Ellipse 48" class="cls-1" cx="2.507" cy="2.507" r="2.507" transform="translate(53.925 73.563)"/>
+  </g>
+</svg>

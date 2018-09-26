@@ -1,0 +1,31 @@
+<svg id="Connection_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 100.514">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #87c930;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-1 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_49" data-name="Ellipse 49" class="cls-1" cx="21.622" cy="21.622" r="21.622" transform="translate(34.784 27.351)"/>
+  <circle id="Ellipse_50" data-name="Ellipse 50" class="cls-1" cx="9.459" cy="9.459" r="9.459" transform="translate(82.081 1)"/>
+  <circle id="Ellipse_51" data-name="Ellipse 51" class="cls-1" cx="9.459" cy="9.459" r="9.459" transform="translate(82.081 80.595)"/>
+  <circle id="Ellipse_52" data-name="Ellipse 52" class="cls-1" cx="9.459" cy="9.459" r="9.459" transform="translate(1 38.973)"/>
+  <circle id="Ellipse_53" data-name="Ellipse 53" class="cls-1" cx="4.73" cy="4.73" r="4.73" transform="translate(86 44.243)"/>
+  <circle id="Ellipse_54" data-name="Ellipse 54" class="cls-1" cx="4.73" cy="4.73" r="4.73" transform="translate(19.784 12.622)"/>
+  <circle id="Ellipse_55" data-name="Ellipse 55" class="cls-1" cx="4.73" cy="4.73" r="4.73" transform="translate(19.784 81.27)"/>
+  <path id="Path_666" data-name="Path 666" class="cls-2" d="M44.23,50.157H54.905V46.914c0-.676-4.189-2.973-7.568-4.324v-2.7s1.216-.405,1.216-3.378c.946,0,1.351-2.7,0-2.7,0-.27,1.081-1.757.676-3.378-.676-2.7-7.432-2.7-8.108,0-2.838-.541-.541,2.973-.541,3.378-1.351,0-1.351,2.7,0,2.7,0,2.973,1.486,3.378,1.486,3.378v2.7c-3.378,1.351-7.568,3.649-7.568,4.324v3.243Z" transform="translate(11.77 9.627)"/>
+  <line id="Line_279" data-name="Line 279" class="cls-1" x1="14.189" y2="15.811" transform="translate(71 17.351)"/>
+  <line id="Line_280" data-name="Line 280" class="cls-1" x2="15" transform="translate(19.784 48.432)"/>
+  <line id="Line_281" data-name="Line 281" class="cls-1" x2="6.892" transform="translate(77.892 48.432)"/>
+  <line id="Line_282" data-name="Line 282" class="cls-1" x2="15.946" y2="15.676" transform="translate(70.189 65.595)"/>
+  <line id="Line_283" data-name="Line 283" class="cls-1" y1="17.027" x2="14.73" transform="translate(27.892 65.595)"/>
+  <line id="Line_284" data-name="Line 284" class="cls-1" x2="13.784" y2="12.568" transform="translate(27.892 20.595)"/>
+</svg>

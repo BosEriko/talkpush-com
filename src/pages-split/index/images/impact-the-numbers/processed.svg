@@ -1,0 +1,18 @@
+<svg id="Candidates_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #87c930;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="Path_637" data-name="Path 637" class="cls-1" d="M51.034,33.069A6.034,6.034,0,1,0,45,27.034,5.976,5.976,0,0,0,51.034,33.069Z" transform="translate(9.103 4.138)"/>
+  <path id="Path_638" data-name="Path 638" class="cls-1" d="M52.041,35H62.662c0,8.086-.724,15.328-7.241,16.655v12.31H48.179V51.655C42.145,50.328,41.3,43.086,41.3,35Z" transform="translate(8.338 7.034)"/>
+  <path id="Path_639" data-name="Path 639" class="cls-1" d="M31.034,13.069a5.976,5.976,0,0,0,6.034-6.034A6.034,6.034,0,1,0,25,7.034,5.976,5.976,0,0,0,31.034,13.069Z" transform="translate(4.966 0)"/>
+  <path id="Path_640" data-name="Path 640" class="cls-1" d="M32.041,15H42.662c0,8.086-.724,15.569-7.241,16.9V43.966H28.179V31.9C22.145,30.569,21.3,23.086,21.3,15Z" transform="translate(4.2 2.897)"/>
+  <path id="Path_641" data-name="Path 641" class="cls-1" d="M11.034,33.069a6.034,6.034,0,0,0,0-12.069,6.034,6.034,0,0,0,0,12.069Z" transform="translate(0.828 4.138)"/>
+  <path id="Path_642" data-name="Path 642" class="cls-1" d="M11.621,35H22.241c0,8.086-.362,15.569-6.879,16.9V63.966H8.241V51.9C2.207,50.569,1,43.086,1,35Z" transform="translate(0 7.034)"/>
+</svg>

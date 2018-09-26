@@ -1,0 +1,270 @@
+@import '../mixins/mixins';
+.block {
+    &Header {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../pages-images/crm/header.jpg);
+        background-color: #000;
+        @media screen and (min-width: $break-medium) {
+            background-position: center 0;
+            position: relative;
+            padding-top: 45%;
+        }
+        &Content {
+            width: 100%;
+            padding: 10rem 1rem;
+            background-color: $semi-black-50;
+            @media screen and (min-width: $break-medium) {
+                right: 0;bottom: 0;left: 0;
+                position: absolute;
+                background-color: transparent;
+                padding: 0;
+            }
+            h1 {
+                font-weight: 100;
+                font-size: 3rem;
+                text-align: center;
+                @media screen and (min-width: $break-medium) {
+                    text-align: left;
+                }
+                span {
+                    display: block;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    &Content {
+        background-image: url(../images/grid-bg.png);
+        background-position: center;
+        background-color: #000;
+        padding: 5rem;
+        &Item {
+            padding-bottom: 5rem;
+            @media screen and (min-width: $break-medium) {
+                @include display-flex;
+                @include align-items-center;
+            }
+            &Image {
+                text-align: center;
+                width: 100%;
+                max-width: 20rem;
+                @media screen and (min-width: $break-medium) {
+                    margin: 0 3rem 0 0;
+                }
+                img {
+                    border-width: 2px;
+                    border-style: solid;
+                    border-color: $theme;
+                    -webkit-box-shadow: 0 0 10px $theme;
+                            box-shadow: 0 0 10px $theme;
+                    margin-bottom: 1rem;
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+                > div {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    height: 0; overflow: hidden;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-color: $theme;
+                    -webkit-box-shadow: 0 0 10px $theme;
+                            box-shadow: 0 0 10px $theme;
+                    margin-bottom: 1rem;
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &Reverse {
+                    text-align: center;
+                    width: 100%;
+                    max-width: 20rem;
+                    @media screen and (min-width: $break-medium) {
+                        margin: 0 0 0 3rem;
+                    }
+                    img {
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: $theme;
+                        -webkit-box-shadow: 0 0 10px $theme;
+                                box-shadow: 0 0 10px $theme;
+                        margin-bottom: 1rem;
+                        width: 100%;
+                        vertical-align: bottom;
+                    }
+                    > div {
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        height: 0; overflow: hidden;
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: $theme;
+                        -webkit-box-shadow: 0 0 10px $theme;
+                                box-shadow: 0 0 10px $theme;
+                        margin-bottom: 1rem;
+                        iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            &Description {
+                @media screen and (min-width: $break-medium) {
+                    @include flex(1);
+                }
+                &Hero {
+                    @include display-flex;
+                    @include align-items-center;
+                    h3 {
+                        color: $theme;
+                        font-size: 2.5rem;
+                        font-weight: 100;
+                        margin-bottom: 1rem;
+                    }
+                    &Image {
+                        margin-left: 1rem;
+                        img {
+                            height: 4rem;
+                        }
+                    }
+                }
+                p {
+                    color: #fff;
+                    line-height: 1.5;
+                }
+                &Link {
+                    margin-top: 1.5rem;
+                    @media screen and (min-width: $break-medium) {
+                        text-align: right;
+                    }
+                    a {
+                        background-color: rgba(255, 255, 255, .25);
+                        padding: .75rem 2rem;
+                        color: rgba(255,255,255,.5);
+                        &:hover,
+                        &:focus {
+                            background-color: rgba(255, 255, 255, .5);
+                        }
+                    }
+                    &Reverse {
+                        text-align: left;
+                        margin-top: 1.5rem;
+                        a {
+                            background-color: rgba(255, 255, 255, .25);
+                            padding: .75rem 2rem;
+                            color: rgba(255,255,255,.5);
+                            &:hover,
+                            &:focus {
+                                background-color: rgba(255, 255, 255, .5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &Join {
+            border-color: $theme;
+            border-style: solid;
+            border-width: 3px;
+            background-color: $semi-theme-25;
+            color: #fff;
+            padding: 2rem;
+            @media screen and (min-width: $break-medium) {
+                @include display-flex;
+                @include align-items-center;
+            }
+            &Icon {
+                text-align: center;
+                margin-bottom: 1rem;
+                @media screen and (min-width: $break-medium) {
+                    margin-bottom: 0;
+                }
+                img {
+                    width: 7.5rem;
+                }
+            }
+            &Details {
+                margin-left: 0;
+                @media screen and (min-width: $break-medium) {
+                    margin-left: 3rem;
+                }
+                @include flex(1);
+                h3 {
+                    font-size: 3rem;
+                    margin: 0;
+                    padding: 0 0 1.5rem 0;
+                    display: block;
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: #fff;
+                        display: block;
+                        margin-top: 1.5rem;
+                    }
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+                a {
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: #fff;
+                    color: #fff;
+                    padding: .5rem;
+                    width: 100%;
+                    max-width: 200px;
+                    text-align: center;
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 1.25rem;
+                    margin-top: 1.5rem;
+                    @include prefix(transition, all 0.3s ease-in-out);
+                    &:hover,
+                    &:focus {
+                        color: $theme;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &CTA {
+        background-image: url(../pages-images/crm/cta.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding: 20rem 3rem 3rem 3rem;
+        h3 {
+            font-weight: 100;
+            font-size: 3rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px $theme;
+            margin-bottom: 1.5rem;
+        }
+        a {
+            background-color: $semi-theme-25;
+            &:hover,
+            &:focus {
+                background-color: $semi-theme-50;
+            }
+            span {
+                margin-left: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+}

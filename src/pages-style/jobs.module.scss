@@ -1,0 +1,99 @@
+@import '../mixins/mixins';
+.block {
+  &Header {
+    background-image: url('../pages-images/jobs/header.jpg');
+    background-size: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: #000;
+    position: relative;
+    @media screen and (min-width: $break-medium) {
+      padding-top: 45%;
+    }
+    &MessageIcon {
+      position: absolute;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      img {
+        width: 4rem;
+      }
+    }
+    &Content {
+      width: 100%;
+      height: 100%;
+      background-color: $semi-black-75;
+      text-align: center;
+      color: #fff;
+      padding: 10rem 0;
+      border-width: 0 0 2px 0;
+      border-color: $theme;
+      border-style: solid;
+      box-shadow: 0 0 10px $theme;
+      @media screen and (min-width: $break-medium) {
+        @include display-flex;
+        top: 0;right: 0;bottom: 0;left: 0;
+        position: absolute;
+        padding: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+      &Fill {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+      }
+      h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 3rem;
+      }
+      p {
+        width: 100%;
+        max-width: 600px;
+        margin: 2rem auto;
+        line-height: 1.75rem;
+        opacity: .75;
+      }
+      &Link {
+        margin-top: 1rem;
+        display: block;
+        a {
+          margin: 0 1rem;
+          padding-left: 3rem;
+          padding-right: 3rem;
+          background-color: $semi-theme-25;
+          display: block;
+          &:not(:last-child){
+            margin-bottom: 1rem;
+          }
+          @media screen and (min-width: $break-medium) {
+            margin-bottom: 0;
+            display: inline-block;
+          }
+          &:hover,
+          &:focus {
+            background-color: $semi-theme-50;
+          }
+          span {
+            margin-left: .5rem;
+          }
+        }
+      }
+    }
+  }
+  &Chat {
+    background-color: black;
+    background-position: center;
+    background-image: url(./../images/grid-bg.png);
+    &Notice {
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+}

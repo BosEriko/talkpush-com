@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.379 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="home_page_button_icon_services_crm" data-name="home_page_button icon_services_crm" transform="translate(-0.5 -0.5)">
+    <path id="Path_5" data-name="Path 5" class="cls-1" d="M7,7h8.276V8.552" transform="translate(-4.448 -4.448)"/>
+    <path id="Path_6" data-name="Path 6" class="cls-1" d="M11.862,4.1V1H2.552a1.552,1.552,0,0,0,0,3.1h9.828V16H2.293A1.222,1.222,0,0,1,1,14.707V2.552"/>
+    <line id="Line_1" data-name="Line 1" class="cls-1" x2="7.5" transform="translate(3.328 8.241)"/>
+    <line id="Line_2" data-name="Line 2" class="cls-1" x2="7.5" transform="translate(3.328 10.052)"/>
+  </g>
+</svg>

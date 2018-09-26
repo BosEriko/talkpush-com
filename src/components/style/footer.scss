@@ -1,0 +1,150 @@
+@import '../../mixins/mixins';
+footer {
+  background-color: #292929;
+  background-position: center;
+  background-image: url(../../images/grid-bg.png);
+  border-width: 1px 0 0 0;
+  border-color: #444;
+  border-style: solid;
+  color: #fff;
+
+  .divider {
+    padding: 10px;
+
+    @media screen and (min-width: $break-medium) {
+      @include display-flex;
+    }
+
+    .section {
+      padding: 30px 10px;
+
+      @media screen and (min-width: $break-medium) {
+        @include flex(1);
+
+        &.bigger {
+          @include flex(2);
+        }
+      }
+
+      .country-code {
+        color: $theme;
+      }
+
+      .footer-logo {
+        img{
+          max-width: 200px;
+          width: 100%;
+        }
+      }
+
+      h4 {
+        font-weight: normal;
+        margin: 0;
+        padding: 0 0 10px 0;
+        text-transform: uppercase;
+
+        &.margin-top {
+          margin-top: 20px;
+        }
+      }
+
+      p {
+        color: #aaa;
+        margin: 0;
+        padding: 0 0 10px 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          color: #aaa;
+          padding: 5px 0;
+
+          a {
+            color: $theme;
+            text-decoration: none;
+            &:focus,
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      ul.social-icons {
+        list-style-type: none;
+        margin: 0 0 20px 0;
+        padding: 10px;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+
+          a {
+            @include prefix(transition, color 0.25s ease-in-out);
+
+            color: #444;
+            display: inline-block;
+            text-decoration: none;
+            margin: 5px;
+
+            span:last-child {
+              display: none;
+            }
+
+            &:hover,
+            &:focus {
+              color: $theme;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: $theme;
+    padding: 20px;
+    text-align: center;
+
+    ul {
+      font-size: 0.8rem;
+      list-style-type: none;
+      margin: 0;
+      padding: 10px 0 0 0;
+
+      li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        &:not(:last-child):after {
+          content: "|";
+        }
+
+        a {
+          margin: 0 5px;
+          display: inline-block;
+          color: #fff;
+          text-decoration: none;
+
+          @include prefix(transition, color 0.25s ease-in-out);
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

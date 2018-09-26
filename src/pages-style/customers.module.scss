@@ -1,0 +1,67 @@
+@import '../mixins/mixins';
+.block {
+    &Header {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(../pages-images/customers/header.png);
+        background-color: #000;
+        border-width: 0 0 2px 0;
+        border-style: solid;
+        border-color: $theme;
+        overflow: hidden;
+        -webkit-box-shadow: 0 0 10px $theme;
+                box-shadow: 0 0 10px $theme;
+        @media screen and (min-width: $break-medium) {
+            background-position: center bottom;
+            padding-top: 45%;
+            position: relative;
+        }
+        &Content {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-color: $semi-black-50;
+            @media screen and (min-width: $break-medium) {
+                right: 0;bottom: 0;left: 0;
+                position: absolute;
+                background-color: transparent;
+                padding: 0;
+            }
+            h1 {
+                color: #fff;
+                font-weight: 100;
+                font-size: 3rem;
+                text-transform: uppercase;
+                padding: 10rem 1rem 0 1rem;
+                margin: 0;
+                @media screen and (min-width: $break-medium) {
+                    padding: 0;
+                    display: block;
+                    margin: 0 auto;
+                    width: 100%;
+                    max-width: 35rem;
+                }
+            }
+            p {
+                color: #fff;
+                opacity: .75;
+                padding: 1rem 1rem 10rem 1rem;
+                margin: 0;
+                @media screen and (min-width: $break-medium) {
+                    padding: 0;
+                    margin: 2rem auto 5rem auto;
+                    width: 100%;
+                    max-width: 35rem;
+                    display: block;
+                }
+            }
+        }
+    }
+    &Content {
+        background-image: url(../images/grid-bg.png);
+        background-position: center;
+        background-color: #000;
+        padding: 5rem;
+    }
+}

@@ -1,0 +1,395 @@
+@import '../../mixins/mixins';
+$logo-glow: $theme;
+
+@keyframes logoAnimation {
+  0%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  5%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  10%   {filter: drop-shadow( 0 0 2.5px $logo-glow);}
+  11%   {filter: drop-shadow( 0 0 7.5px $logo-glow);}
+  12%   {filter: drop-shadow( 0 0 2.5px $logo-glow);}
+  13%   {filter: drop-shadow( 0 0 7.5px $logo-glow);}
+  20%   {filter: drop-shadow( 0 0 2.5px $logo-glow);}
+  75%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  90%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  91%   {filter: drop-shadow( 0 0 8px $logo-glow);}
+  92%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  93%   {filter: drop-shadow( 0 0 8px $logo-glow);}
+  94%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  95%   {filter: drop-shadow( 0 0 8px $logo-glow);}
+  96%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  97%   {filter: drop-shadow( 0 0 8px $logo-glow);}
+  98%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+  99%   {filter: drop-shadow( 0 0 8px $logo-glow);}
+  100%   {filter: drop-shadow( 0 0 10px $logo-glow);}
+}
+
+header {
+  @include prefix(transition, all 0.3s ease-in-out);
+
+  background-color: $semi-black-75;
+  box-shadow: 0 0 10px $semi-theme-50;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $theme;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+
+  @media screen and (min-width: $break-medium) {
+    background-color: transparent;
+    box-shadow: none;
+    border-width: 0;
+  }
+
+  &.active,
+  &.fixed-active {
+    background-color: $semi-black-75;
+    box-shadow: 0 0 10px $semi-theme-50;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: $theme;
+
+    .divider {
+      .logo {
+        a.logo {
+          height: 50px;
+          margin: 10px 0;
+          width: 50px;
+        }
+      }
+
+      .menu {
+        > ul {
+          > li {
+            > a,
+            > span {
+              color: #fff;
+
+              &:before {
+                background-color: $theme;
+                box-shadow: 0 3px 10px $semi-theme-50;
+              }
+            }
+
+            &:last-child {
+              a {
+                @media screen and (min-width: $break-medium) {
+                  background-color: $semi-theme-25;
+                  border-color: $theme;
+                }
+
+                &:hover,
+                &:focus {
+                  @media screen and (min-width: $break-medium) {
+                    background-color: $semi-theme-50;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    @media screen and (min-width: $break-medium) {
+      @include display-flex;
+      @include align-items-center;
+    }
+
+    .logo {
+      @include display-flex;
+      @include align-items-center;
+
+      a.logo {
+        @include prefix(transition, all 0.3s ease-in-out);
+
+        display: inline-block;
+        height: 50px;
+        margin: 10px 0;
+        width: 50px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          vertical-align: bottom;
+          animation-name: logoAnimation;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+        }
+
+        &:focus,
+        &:hover {
+          filter: drop-shadow( 0 0 10px $logo-glow);
+        }
+
+        @media screen and (min-width: $break-medium) {
+          height: 70px;
+          margin: 10px 0;
+          width: 70px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      a.menu-button {
+        @include flex(1);
+
+        font-size: 1.5rem;
+        margin-right: 20px;
+        text-align: right;
+        color: #fff;
+
+        @include prefix(transition, all 0.3s ease-in-out);
+
+        @media screen and (min-width: $break-medium) {
+          display: none;
+        }
+
+        &:hover,
+        &:focus {
+          color: $theme;
+        }
+      }
+    }
+
+    .menu {
+      border-color: #fff;
+      border-style: solid;
+      border-width: 1px 0 0 0;
+      display: none;
+      text-align: center;
+
+      @media screen and (min-width: $break-medium) {
+        @include flex(1);
+
+        border: none;
+        display: block !important;
+        text-align: right;
+      }
+
+      color: #fff;
+
+      > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+
+        > li {
+          display: block;
+          position: relative;
+
+          @media screen and (min-width: $break-medium) {
+            display: inline-block;
+            margin-right: 20px;
+          }
+
+          > ul {
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            &:before{
+              @media screen and (min-width: $break-medium) {
+                content: "";
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: -20px;
+                left: 20px;
+                background-color: #000;
+                border-width: 1px;
+                border-style: solid;
+                border-color: $theme;
+                transform: rotate(45deg);
+                transform-origin: bottom left;
+                z-index: 1;
+                box-shadow: 0 0 10px $semi-theme-50;
+              }
+            }
+
+            @media screen and (min-width: $break-medium) {
+              opacity: .75;
+              box-shadow: 0 0 10px $semi-theme-50;
+              text-align: center;
+              position: absolute;
+              border-radius: 5px;
+              top: 60px;
+              left: 0;
+              border-width: 1px;
+              border-style: solid;
+              border-color: $theme;
+              width: 200px;
+            }
+
+            > li {
+              margin: 0;
+              padding: 0;
+              position: relative;
+              z-index: 2;
+
+              @media screen and (min-width: $break-medium) {
+                background-color: black;
+                &:first-child {
+                  border-top-right-radius: 5px;
+                  border-top-left-radius: 5px;
+                }
+                &:last-child {
+                  border-bottom-left-radius: 5px;
+                  border-bottom-right-radius: 5px;
+                }
+              }
+
+              &:not(:last-child):before {
+                @media screen and (min-width: $break-medium) {
+                  content: "";
+                  background-color: white;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  height: 1px;
+                  margin: 0 10px;
+                }
+              }
+
+              > a {
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                overflow: hidden;
+                color: #fff;
+
+                @include prefix(transition, all 0.1s ease-in-out);
+
+                @media screen and (min-width: $break-medium) {
+                  color: $theme;
+                  padding: 1rem;
+                }
+
+                img {
+                  vertical-align: bottom;
+                  height: 1rem;
+                  line-height: 1rem;
+                  padding-right: 10px;
+                }
+
+                &:hover,
+                &:focus {
+                  color: #fff;
+                  text-shadow: 0 0 10px $purple;
+
+                  @media screen and (min-width: $break-medium) {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+
+          i {
+            margin-left: 0.5rem;
+          }
+
+          > a,
+          > span {
+            color: #fff;
+            display: block;
+            padding: 10px;
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+
+            @media screen and (min-width: $break-medium) {
+              @include prefix(transition, all 0.3s ease-in-out);
+
+              color: #fff;
+              display: inline-block;
+
+            }
+
+            &:before {
+              @media screen and (min-width: $break-medium) {
+                @include prefix(transform, scaleX(0));
+                @include prefix(transition, transform 0.3s ease-in-out);
+
+                box-shadow: 0 3px 10px $semi-theme-50;
+                background-color: $theme;
+                bottom: 0;
+                content: "";
+                height: 2px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+              }
+            }
+
+            &:hover,
+            &:focus {
+              color: #fff;
+              text-shadow: 0 0 10px $purple;
+
+              &:before {
+                @include prefix(transform, scaleX(1));
+              }
+            }
+
+            &.activePage {
+              color: $theme;
+              text-shadow: 0 0 10px $semi-theme-50;
+              &:before {
+                @include prefix(transform, scaleX(1));
+              }
+            }
+          }
+
+          &:last-child {
+            margin: 0;
+
+            a {
+              @media screen and (min-width: $break-medium) {
+                @include prefix(transition, background-color 0.3s ease-in-out);
+
+                background-color: $semi-theme-25;
+                border-color: $theme;
+                border-style: solid;
+                border-width: 2px;
+                color: #fff;
+                padding: 10px 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+              }
+
+              &:before {
+                display: none;
+              }
+
+              &:hover,
+              &:focus {
+                @media screen and (min-width: $break-medium) {
+                  background-color: $semi-theme-50;
+                  color: #fff;
+                }
+              }
+
+              i {
+                display: none;
+                margin-right: 10px;
+
+                @media screen and (min-width: $break-medium) {
+                  display: inline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
