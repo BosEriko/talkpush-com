@@ -16,9 +16,9 @@ class CrmIndexPageSplit extends React.Component {
               <img className={styles.blockDividerLeftMobile} src={mobile}  alt="Mobile" title="Mobile"/>
             </div>
             <div className={styles.blockDividerRight}>
-              <h2 className="global-hero-glow-white m-0 p-0">Finally a CRM that<br />Lets You Talk</h2>
+              <h2 className="global-hero-glow-white m-0 p-0">Finally, a CRM that<br />Lets You Talk</h2>
               <p>Recruitment is not about tracking, it's about talking. Talkpush initiates thousands of conversations between recruiters and candidates via chat, social media and voice to build a pre-qualified talent pool that is engaged and responsive.</p>
-              <div className={styles.blockDividerRightCrmButton}><Link to="/crm" className="global-button text-lowercase"><img src={crmIcon} alt="CRM" />Discover our CRM Features</Link></div>
+              <div className={styles.blockDividerRightCrmButton}><Link to="/crm" className="global-button"><img src={crmIcon} alt="CRM" />Discover our CRM Features</Link></div>
             </div>
           </div>
         </div>
