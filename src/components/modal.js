@@ -3,7 +3,7 @@ import styles from './style/modal.module.scss'
 
 class Modal extends React.Component {
   render() {
-    const { closeModal, maxWidth, middleIcon, title, content, image, imageSet, changeImage, profilePicture, name, position } = this.props;
+    const { closeModal, maxWidth, middleIcon, title, content, image, imageSet, changeImage, profilePicture, name, position, video } = this.props;
     return (
       <div className={styles.block}>
         <div className={styles.blockFilter} onClick={closeModal}></div>
@@ -19,6 +19,7 @@ class Modal extends React.Component {
             {position && <h4 className={"global-hero-glow-white " + styles.blockHolderBoxProfilePosition}>{position}</h4>}
             {content && <div className={styles.blockHolderBoxContent}>{content}</div>}
             {image && <div className={styles.blockHolderBoxImage}><img src={image} alt={title ? title : "No Title"} /></div>}
+            {video && <div className={styles.blockHolderBoxVideo}><iframe width="560" height="315" src={"https://www.youtube.com/embed/" + video} frameBorder="0" allowFullScreen></iframe></div>}
             {imageSet && <div className={styles.blockHolderBoxImageSet}>
               {imageSet ? imageSet.map((pic, index) => <a href="#" onClick={() => changeImage(imageSet[index])} className={styles.blockHolderBoxImageSetItem} key={index}><img src={pic} alt={"image-" + index} /></a>) : null}
             </div>}
