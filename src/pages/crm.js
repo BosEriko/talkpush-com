@@ -1,8 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styles from '../pages-style/crm.module.scss'
-import Link from 'gatsby-link'
-import joinIcon from '../pages-images/crm/join-icon.svg'
+import requestIcon from '../pages-images/crm/request-icon.svg'
 import conversationsImage from '../pages-images/crm/conversations.png'
 import overFormsIcon from '../pages-images/crm/over-forms.svg'
 import talentTalkImage from '../pages-images/crm/talent-talk.png'
@@ -83,12 +82,12 @@ const CrmPage = ({ siteTitle }) => (
         {crmItem(false, apiImage, "Integrated with your ATS", "If your team spends time searching applicants online, whether it be on LinkedIn, Facebook groups, or job boards like Indeed or Monster, they will love the Talkpush Chrome Plugin, from which they can add candidates to campaign in a fraction of the time.", false, "#", false, false)}
         <div className={styles.blockContentJoin}>
           <div className={styles.blockContentJoinIcon}>
-            <img src={joinIcon} alt="Join Us" />
+            <img src={requestIcon} alt="Request a Demo" />
           </div>
           <div className={styles.blockContentJoinDetails}>
-            <h3>Join our growing team</h3>
-            <p className="m-0 p-0">Join Talkpush and let's make recruitment fun together</p>
-            <Link to="/jobs">Careers</Link>
+            <h3>Request a Demo</h3>
+            <p className="m-0 p-0">Are you ready to try Talkpush now?</p>
+            <a href="#" onClick={calendlyPopUp}>Request a Demo</a>
           </div>
         </div>
       </div>
