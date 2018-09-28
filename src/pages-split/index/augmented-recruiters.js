@@ -5,7 +5,7 @@ import userIcon from './images/augmented-recruiters/user.svg'
 import keithCheung from './images/augmented-recruiters/keith_cheung.jpeg'
 import lynBautista from './images/augmented-recruiters/lyn_bautista.png'
 import matthewJohnson from './images/augmented-recruiters/matthew_johnson.jpeg'
-import pingStaCatalina from './images/augmented-recruiters/ping_sta_catalina.jpeg'
+import jackieBarrios from './images/augmented-recruiters/jackie_barrios.png'
 import marvinVinluan from './images/augmented-recruiters/marvin_vinluan.png'
 
 class AugmentedRecruitersIndexPageSplit extends React.Component {
@@ -85,7 +85,7 @@ class AugmentedRecruitersIndexPageSplit extends React.Component {
           <ul className={styles.blockDivide} id="testimonial-section-divide" onMouseOver={() => this.setState({ animationWorking: false })} onMouseOut={() => this.setState({ animationWorking: true })}>
 
             {this.quoteBlock("ciSB3gMpH_g", "With Talkpush, our hire rate has gone up considerably and we are able to handle much more volume with our existing team.", "Marvin Vinluan", "Director / Strategic Sourcing / Recruitment Marketing", "Alorica", marvinVinluan)}
-            {this.quoteBlock("abg2U9DuAiA", "I love Talkpush because it allows access to multiple sourcing channels in one platform.", "Ping Sta. Catalina", "Client Services Manager", "Alexander Mann Solutions", pingStaCatalina)}
+            {this.quoteBlock("aXTAjF8T-Kg", "Talkpush has been a great partner for Genpact, particularly when it comes to build a great and strong following on Facebook.  Since using Talkpush, we have greatly increased our show rate and hire rate.", "Jackie Barrios", "VP HR", "Genpact", jackieBarrios)}
             {this.quoteBlock("2cj1nKFZQDA", "We partnered with Talkpush to get ahead on social media, use Facebook as a sourcing channel and drive a faster candidate response time, lowering our cost per hire by 60%.", "Matthew Johnson", "Global Director", "Valor Global Services", matthewJohnson)}
             {this.quoteBlock("Vpu8HkBHShw", "We partnered with Talkpush for a fast and easy recruitment experience, allowing us to engage with twice as many people.", "Lyn Bautista", "Sourcing and Branding Manager", "[24]7.ai", lynBautista)}
             {this.quoteBlock("nFRDqo_rc3o", "We have been using Talkpush since 2014 and it has streamlined our recruitment tremendously. We are able to spend more time with the quality candidates and have increased our interview to hire ratio.", "Keith Cheung", "Head of Talent Acquisition", "Sheraton and St. Regis Macau", keithCheung)}
