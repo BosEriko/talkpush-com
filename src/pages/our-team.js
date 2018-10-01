@@ -15,8 +15,8 @@ import noelPicture from '../pages-images/our-team/people/noel.jpeg'
 import qenPicture from '../pages-images/our-team/people/qen.jpeg'
 import arisPicture from '../pages-images/our-team/people/aris.jpeg'
 import lukasPicture from '../pages-images/our-team/people/lukas.jpeg'
-import rajPicture from '../pages-images/our-team/default.png'
-import maxPicture from '../pages-images/our-team/default.png'
+import rajPicture from '../pages-images/our-team/people/raj.png'
+import maxPicture from '../pages-images/our-team/people/max.jpeg'
 
 const pageVariables = {
   pageCode: 'our-team',
@@ -71,6 +71,18 @@ class OurTeamPage extends React.Component {
           description: "Christina is an experienced technical writer with exposure in account and product management. She has previously worked for Value Exchange Intl. a CRM platform in China and Hong Kong and Gensler an integrated architecture, design, planning and consulting firm.",
         },
         {
+          name: "Lukas Bierfreund",
+          title: "Product Manager",
+          image: lukasPicture,
+          description: "Lukas speaks fluently 4 languages and has lived just about everywhere on the planet. He joined the Customer success team in early 2017 and helped to automate some of the tam’s activity with smart script. He was promoted to Product Manager later that year, where his roles is to define the product roadmap and vision and create better experiences for recruiters and candidates alike.",
+        },
+        {
+          name: "Raj Baruah",
+          title: "VP for Growth",
+          image: rajPicture,
+          description: "Raj has been in the Sales industry for over 15 years, He has previously worked for Adobe, Iyogi and most recently Wingfy, He is highly experienced in B2B Sales for SaaS. Raj’s dream is to transform Talkpush into a billion dollar company that is admired globally. He believes that if a team that is treated well, treats our customers even better.",
+        },
+        {
           name: "Romain Verbeke",
           title: "Head of Engineering",
           image: romainPicture,
@@ -83,28 +95,16 @@ class OurTeamPage extends React.Component {
           description: "Qen joined in August 2017 with a bag full of ideas and tricks on how to make Talkpush more high  performance than ever. He has over 12 years of experience in software development, building algorithms, analytics dashboards, and other enterprise-level application. In his previous gig, working for one of the major telecom operators in the Philippines, he helped to lead the foray into the world of chatbots.",
         },
         {
-          name: "Bos Eriko Reyes",
-          title: "Designer",
-          image: bosPicture,
-          description: "Bos (aka Eriko) is our lead on UI and design. He is a self-taught programmer and designer who dropped out of college to pursue his passion in design and started his own freelance business at the tender age of 19. We are lucky to have this precocious genius leading our design efforts.",
-        },
-        {
           name: "Noel Bacnis",
           title: "Software Engineer",
           image: noelPicture,
           description: "Noel is a graduate from the Far Eastern University where he specialized in mobile and web applications and developed a broad skillset in programming and design. Noel designs the web interface and user experiences to make the candidate journey more effortless.",
         },
         {
-          name: "Lukas Bierfreund",
-          title: "Product Manager",
-          image: lukasPicture,
-          description: "Lukas speaks fluently 4 languages and has lived just about everywhere on the planet. He joined the Customer success team in early 2017 and helped to automate some of the tam’s activity with smart script. He was promoted to Product Manager later that year, where his roles is to define the product roadmap and vision and create better experiences for recruiters and candidates alike.",
-        },
-        {
-          name: "Raj Baruah",
-          title: "VP for Growth",
-          image: rajPicture,
-          description: "Raj has been in the Sales industry for over 15 years, He has previously worked for Adobe, Iyogi and most recently Wingfy, He is highly experienced in B2B Sales for SaaS. Raj’s dream is to transform Talkpush into a billion dollar company that is admired globally. He believes that if a team that is treated well, treats our customers even better.",
+          name: "Bos Eriko Reyes",
+          title: "Designer",
+          image: bosPicture,
+          description: "Bos (aka Eriko) is our lead on UI and design. He is a self-taught programmer and designer who dropped out of college to pursue his passion in design and started his own freelance business at the tender age of 19. We are lucky to have this precocious genius leading our design efforts.",
         },
       ]
     }
