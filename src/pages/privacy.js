@@ -25,7 +25,7 @@ class PrivacyPage extends React.Component {
           <meta property='og:description' content={pageVariables.pageDescription} />
         </Helmet>
         <div className="container">
-          <h1 className="global-hero-glow-white text-uppercase">Privacy Policy</h1>
+          <h1 className="global-hero-glow-white text-uppercase">{pageVariables.pageTitle}</h1>
           <p>The automated interview process between the employers (“Employer”, “User”, “you”, “your”) and the applicants (“Applicant”) is facilitated by Talkpush (“we”, “us”, “our”). Personal data provided by the Applicant in the application process will be used by the Employer to process the job application or inquiry. Protecting the privacy of personal data, which has been submitted to our applicant screening platform, (the "Product", “Platform") is something we take seriously. Our privacy policy outlines the types of data we collect and how we process and disclose that data.</p>
           <h3 className="global-hero-glow-green text-uppercase">Types of Data Collected</h3>
           <p>During the account creation process we require users to provide their full names along with an email address. However, while using the Product, Users and Applicants may provide further personally identifiable data, such as their physical address, phone number, work experience, skills and more. Data can come in a range of formats, such as audio recordings, video recordings, and plain text.</p>
