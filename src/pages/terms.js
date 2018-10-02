@@ -5,6 +5,7 @@ import styles from '../pages-style/terms.module.scss'
 const pageVariables = {
   pageCode: 'terms',
   pageDescription: 'Terms and Conditions',
+  pageTitle: 'Terms and Conditions',
 }
 
 class TermsPage extends React.Component {
@@ -19,11 +20,13 @@ class TermsPage extends React.Component {
     return (
       <div className={styles.block}>
         <Helmet>
-          <title>{pageVariables.pageCode}</title>
+          <title>{pageVariables.pageTitle} - {this.props.siteTitle}</title>
           <meta name='description' content={pageVariables.pageDescription} />
           <meta property='og:description' content={pageVariables.pageDescription} />
         </Helmet>
-        <p style={{ height: "1000px" }}>{pageVariables.pageDescription}</p>
+        <div className="container">
+          Terms
+        </div>
       </div>
     );
   }

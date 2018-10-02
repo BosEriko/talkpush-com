@@ -5,6 +5,7 @@ import styles from '../pages-style/privacy.module.scss'
 const pageVariables = {
   pageCode: 'privacy',
   pageDescription: 'In accordance with international data privacy laws, our privacy laws protect all candidate data from being shared, accessed or sold outside of their consent.',
+  pageTitle: 'Privacy Policy',
 }
 
 class PrivacyPage extends React.Component {
@@ -19,11 +20,13 @@ class PrivacyPage extends React.Component {
     return (
       <div className={styles.block}>
         <Helmet>
-          <title>{pageVariables.pageCode}</title>
+          <title>{pageVariables.pageTitle} - {this.props.siteTitle}</title>
           <meta name='description' content={pageVariables.pageDescription} />
           <meta property='og:description' content={pageVariables.pageDescription} />
         </Helmet>
-        <p style={{ height: "1000px" }}>{pageVariables.pageDescription}</p>
+        <div className="container">
+          Privacy
+        </div>
       </div>
     );
   }
