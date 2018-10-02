@@ -7,19 +7,23 @@ import MainLogo from '../images/logo.svg'
 class Header extends React.Component {
   componentDidMount() {
     window.onscroll = () => {
-      if (document.scrollingElement.scrollTop >= 50) {
+      if (window.headerAlwaysActive) {
         document.getElementById("header").classList.add("active")
-      }
-      else {
-        document.getElementById("header").classList.remove("active")
+      } else {
+        if (document.scrollingElement.scrollTop >= 50) {
+          document.getElementById("header").classList.add("active")
+        }
+        else {
+          document.getElementById("header").classList.remove("active")
+        }
       }
     }
     let menuButtonStatus = false;
-    document.getElementById("headerMenuButton").addEventListener("click", function(){
-      if(!menuButtonStatus){
+    document.getElementById("headerMenuButton").addEventListener("click", function () {
+      if (!menuButtonStatus) {
         document.getElementById("headerMenu").style.display = 'block'
         menuButtonStatus = true
-      }else{
+      } else {
         document.getElementById("headerMenu").style.display = 'none'
         menuButtonStatus = false
       }
