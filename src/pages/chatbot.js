@@ -5,12 +5,17 @@ import logoIcon from '../pages-images/chatbot/logo.svg'
 import conversation from '../pages-images/chatbot/conversation.svg'
 import context from '../pages-images/chatbot/context.svg'
 import moreThanWords from '../pages-images/chatbot/more-than-words.svg'
+import requestIcon from '../pages-images/chatbot/request-icon.svg'
 
 class ChatbotPage extends React.Component {
   pageVariables = {
     pageCode: 'chatbot',
     pageDescription: 'Our chatbots creates Augmented Recruiters by automating every recruitment step from scheduling interviews, to collecting referrals, to onboarding new hires.',
     pageTitle: 'Chatbot',
+  }
+
+  calendlyPopUp = () => {
+    Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
   }
 
   pageItem = (reverse, photo, title, paragraph) => {
@@ -72,6 +77,18 @@ class ChatbotPage extends React.Component {
             {this.pageItem(true, conversation, "Start a conversation anywhere, anytime", "We make candidates’ lives easier by meeting them where they are. Our chatbots can engage and keep conversation going on the communication channels your candidates are already using, including career sites, job landing pages, SMS, Facebook Messenger, WhatsApp, WeChat, Line Messenger, and Slack.")}
             {this.pageItem(false, context, "Context-aware for seamless experiences", "Context is the secret behind any great conversation. When it comes to the many conversation paths in a candidate’s journey, there are a lot of intermediary steps than apply and hire. Talkpush has mastered the art of maintaining the context in conversations as a way to optimize every step of the candidate journey, from click to hire, all the way until their first day on the job.")}
             {this.pageItem(true, moreThanWords, "More than words", "Don’t limit yourself to text conversations. Our chatbots usual rich communications to engage with audiences and can collect audio responses, pictures, videos, documents, and any other type of content that helps candidates get to the next stage in the recruitment process. Using voice transcription technology, our chatbots can continue a conversation with the audio input, while capturing rich data about the candidate’s communication skills.")}
+          </div>
+          <div className="container">
+            <div className={styles.blockContentJoin}>
+              <div className={styles.blockContentJoinIcon}>
+                <img src={requestIcon} alt="Request a Demo" />
+              </div>
+              <div className={styles.blockContentJoinDetails}>
+                <h3>Request a Demo</h3>
+                <p className="m-0 p-0">Are you ready to try Talkpush now?</p>
+                <a href="#" onClick={this.calendlyPopUp}>Request a Demo</a>
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.blockBot}>

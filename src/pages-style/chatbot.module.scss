@@ -159,6 +159,73 @@
                 }
             }
         }
+        &Join {
+            border-color: $theme;
+            border-style: solid;
+            border-width: 3px;
+            background-color: $semi-theme-25;
+            color: #fff;
+            padding: 2rem;
+            @media screen and (min-width: $break-medium) {
+                @include display-flex;
+                @include align-items-center;
+            }
+            &Icon {
+                text-align: center;
+                margin-bottom: 1rem;
+                @media screen and (min-width: $break-medium) {
+                    margin-bottom: 0;
+                }
+                img {
+                    width: 7.5rem;
+                }
+            }
+            &Details {
+                margin-left: 0;
+                @media screen and (min-width: $break-medium) {
+                    margin-left: 3rem;
+                }
+                @include flex(1);
+                h3 {
+                    font-size: 3rem;
+                    margin: 0;
+                    padding: 0 0 1.5rem 0;
+                    display: block;
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: #fff;
+                        display: block;
+                        margin-top: 1.5rem;
+                    }
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+                a {
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: #fff;
+                    color: #fff;
+                    padding: .5rem;
+                    width: 100%;
+                    max-width: 200px;
+                    text-align: center;
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 1.25rem;
+                    margin-top: 1.5rem;
+                    @include prefix(transition, all 0.3s ease-in-out);
+                    &:hover,
+                    &:focus {
+                        color: $theme;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
     }
     &Bot {
         background-image: url(../pages-images/chatbot/bot.jpg);
