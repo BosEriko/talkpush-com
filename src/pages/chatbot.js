@@ -35,7 +35,7 @@ class ChatbotPage extends React.Component {
   }
 
   componentDidMount() {
-    let botScrollFunction = () => window.scrollTo(0, document.body.scrollHeight)
+    let botScrollFunction = () => window.scrollTo(0, (document.body.scrollHeight - document.getElementById("chatbot-cta").offsetHeight) - window.innerHeight)
     let talkpushFrame = document.getElementById("talkpush-bot-iframe")
     let talkpushFrameContent = talkpushFrame.contentWindow
     let setTalkpushFrameHeight = () => talkpushFrame.style.height = talkpushFrameContent.document.body.scrollHeight + "px"
@@ -78,18 +78,6 @@ class ChatbotPage extends React.Component {
             {this.pageItem(false, context, "Context-aware for seamless experiences", "Context is the secret behind any great conversation. When it comes to the many conversation paths in a candidate’s journey, there are a lot of intermediary steps than apply and hire. Talkpush has mastered the art of maintaining the context in conversations as a way to optimize every step of the candidate journey, from click to hire, all the way until their first day on the job.")}
             {this.pageItem(true, moreThanWords, "More than words", "Don’t limit yourself to text conversations. Our chatbots usual rich communications to engage with audiences and can collect audio responses, pictures, videos, documents, and any other type of content that helps candidates get to the next stage in the recruitment process. Using voice transcription technology, our chatbots can continue a conversation with the audio input, while capturing rich data about the candidate’s communication skills.")}
           </div>
-          <div className="container">
-            <div className={styles.blockContentJoin}>
-              <div className={styles.blockContentJoinIcon}>
-                <img src={requestIcon} alt="Request a Demo" />
-              </div>
-              <div className={styles.blockContentJoinDetails}>
-                <h3>Request a Demo</h3>
-                <p className="m-0 p-0">Are you ready to try Talkpush now?</p>
-                <a href="#" onClick={this.calendlyPopUp}>Request a Demo</a>
-              </div>
-            </div>
-          </div>
         </div>
         <div className={styles.blockBot}>
 
@@ -105,8 +93,22 @@ class ChatbotPage extends React.Component {
             <iframe src="/talkpush-bot/index.html" style={{ width: '100%', minHeight: '300px' }} scrolling="no" frameBorder="0" id="talkpush-bot-iframe"></iframe>
           </div>
         </div>
-      </div>
 
+        <div className={styles.blockContent} style={{ padding: "2rem 0" }} id="chatbot-cta">
+          <div className="container">
+            <div className={styles.blockContentJoin}>
+              <div className={styles.blockContentJoinIcon}>
+                <img src={requestIcon} alt="Request a Demo" />
+              </div>
+              <div className={styles.blockContentJoinDetails}>
+                <h3>Request a Demo</h3>
+                <p className="m-0 p-0">Are you ready to try Talkpush now?</p>
+                <a href="#" onClick={this.calendlyPopUp}>Request a Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     )
   }
 }
