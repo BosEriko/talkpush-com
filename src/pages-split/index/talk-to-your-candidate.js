@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './style/talk-to-your-candidate.module.scss'
-import chatbotIcon from '../../icons/chatbot-white.svg'
-import crmIcon from '../../icons/crm-white.svg'
-import Link from 'gatsby-link'
+import videoWallpaper from './videos/background.mp4'
 
 const calendlyPopUp = () => {
   Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
@@ -10,6 +8,11 @@ const calendlyPopUp = () => {
 
 const TalkToYourCandidateIndexPageSplit = () => (
   <div className={styles.block}>
+    <div className={styles.video}>
+      <video autoPlay loop muted>
+        <source src={videoWallpaper} type="video/mp4" />
+      </video>
+    </div>
     <div className={styles.fillLeft}></div>
     <div className={styles.content}>
       <div className={styles.contentLeft}>

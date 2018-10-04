@@ -1,29 +1,54 @@
 @import '../../../mixins/mixins';
 .block {
     background-color: #000;
-    color: #fff;
+    background-image: url(../images/talk-to-your-candidate/background.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-image: url(../images/talk-to-your-candidate/background.jpg);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
     @media screen and (min-width: $break-medium) {
         @include display-flex;
         height: 100vh;
     }
 }
-
+.video {
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    @media screen and (min-width: $break-medium) {
+        display: block;
+    }
+    video {
+        width: 100%;
+    }
+}
 .fill {
     @media screen and (min-width: $break-medium) {
         &Left {
             @include flex(1);
             background-color: $semi-black-75;
+            position: relative;
+            z-index: 2;
         }
         &Right {
             @include flex(1);
+            position: relative;
+            z-index: 2;
         }
     }
 }
 .content {
+    position: relative;
+    z-index: 2;
     @media screen and (min-width: $break-medium) {
         max-width: 980px;
         width: 100%;
