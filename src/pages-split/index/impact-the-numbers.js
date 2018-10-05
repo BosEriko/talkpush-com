@@ -38,7 +38,7 @@ class ImpactTheNumbersIndexPageSplit extends React.Component {
     return (
       <div className={styles.block}>
         {this.state.modalStatus ? <Modal closeModal={this.closeModal} maxWidth="600" title={this.state.modalVideoTitle} video={this.state.modalVideoID} /> : null}
-        <div className={styles.blockFilter} style={{ paddingTop: 0 }}>
+        <div className={styles.blockFilter} style={{ paddingTop: "3rem" }}>
           <div className="container">
             <h2 className="global-hero-glow-white m-0 p-0">Impact the numbers that matter</h2>
             <h4 className="p-0">Meet your candidates where they live and create engaging digital recruitment experiences</h4>
