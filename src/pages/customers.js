@@ -126,7 +126,7 @@ class CustomersPage extends React.Component {
               {this.blockItem("exl", exlNeon, exlBlack, "EXL", "Philippines", false, false)}
               {this.blockItem("247", _247Neon, _247Black, "[24]7.ai", "Philippines", "Vpu8HkBHShw", false)}
               {this.blockItem("valorglobal", valorglobalNeon, valorglobalBlack, "Valor Global", "Costa Rica", "_swxOnvC0go", false)}
-              {this.blockItem("teleperformance", teleperformanceNeon, teleperformanceBlack, "Teleperformance", "Global", false, false)}
+              {this.blockItem("teleperformance", teleperformanceNeon, teleperformanceBlack, "Teleperformance", "Global", "nz34thb5qPs", false)}
               {this.blockItem("walmart", walmartNeon, walmartBlack, "Walmart", "Global", false, false)}
               {this.blockItem("amazon", amazonNeon, amazonBlack, "Amazon", "Global", false, false)}
             </div>
