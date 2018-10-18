@@ -6,7 +6,6 @@ const calendlyPopUp = () => {
   Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
 }
 
-
 const TalkToYourCandidateIndexPageSplit = () => (
   <div className={styles.block}>
     <div className={styles.video}>
