@@ -5,7 +5,6 @@ import videoWallpaper from './videos/background.mp4'
 const calendlyPopUp = () => {
   Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
 }
-test
 
 const TalkToYourCandidateIndexPageSplit = () => (
   <div className={styles.block}>
