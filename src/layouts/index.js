@@ -42,6 +42,7 @@ const Layout = (props) => (
       <meta property='og:title' content={props.data.site.siteMetadata.title} />
       <meta property='og:type' content='website' />
       <meta property='og:image' content={props.data.site.siteMetadata.image} itemprop='image' />
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4993999.js"></script>
       <script>{facebookLiveChatScript()}</script>
       <script>{httpsRedirect()}</script>
     </Helmet>
