@@ -76,7 +76,7 @@ const Footer = ({ title }) => (
         <div className="copyright">
             <div>All rights reserved &copy; {title} {(new Date().getFullYear())}</div>
             <ul>
-                <li><a href="https://wiki.talkpush.com/" target="_blank">Documentation</a></li>
+                <li><a href="https://help.talkpush.com/" target="_blank">Documentation</a></li>
                 <li><Link to="/terms">Terms & Conditions</Link></li>
                 <li><Link to="/privacy">Privacy Policy</Link></li>
             </ul>
