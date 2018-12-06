@@ -27,12 +27,6 @@ const facebookLiveChatScript = () => {
   }
 }
 
-const httpsRedirect = () => {
-  if ((typeof window !== 'undefined') && (location.protocol != 'https:') && !(location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
-    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-  }
-}
-
 const Layout = (props) => (
   <div>
     <Helmet>
@@ -44,7 +38,6 @@ const Layout = (props) => (
       <meta property='og:image' content={props.data.site.siteMetadata.image} itemprop='image' />
       <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4993999.js"></script>
       <script>{facebookLiveChatScript()}</script>
-      {/* <script>{httpsRedirect()}</script> */}
     </Helmet>
     <Header title={props.data.site.siteMetadata.title} />
     <div>{props.children({ ...props, ...{ siteTitle: props.data.site.siteMetadata.title } })}</div>
