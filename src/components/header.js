@@ -4,6 +4,7 @@ import Navigation from './navigation'
 import './style/header.scss'
 import MainLogo from '../images/logo.svg'
 
+
 class Header extends React.Component {
   componentDidMount() {
     window.onscroll = () => {
