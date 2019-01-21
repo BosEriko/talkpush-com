@@ -72,7 +72,7 @@ class JobsPage extends React.Component {
     let botScrollFunction = () => window.scrollTo(0, document.body.scrollHeight)
     let talkpushFrame = document.getElementById("talkpush-bot-iframe")
     let talkpushFrameContent = talkpushFrame.contentWindow
-    let setTalkpushFrameHeight = () => talkpushFrame.style.height = talkpushFrameContent.document.body.scrollHeight + "px"
+    let setTalkpushFrameHeight = () => talkpushFrame.style.height = (talkpushFrameContent.document.body.scrollHeight + 100) + "px"
 
     talkpushFrameContent.botOnReceive = () => {
       setTalkpushFrameHeight()
