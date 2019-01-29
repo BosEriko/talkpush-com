@@ -12,9 +12,9 @@ import joinOurTeamIcon from '../icons/about/join-our-team.svg'
 import galleryIcon from '../icons/about/gallery.svg'
 
 class Navigation extends React.Component {
-  calendlyPopUp = () => {
-    Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
-  }
+  // calendlyPopUp = () => {
+  //   Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
+  // }
   componentDidMount() {
     let dropdownStatus = {}
     const dropdown = function(id) {
@@ -49,8 +49,8 @@ class Navigation extends React.Component {
     return (
       <div className="menu" id="headerMenu">
         <Helmet>
-          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+          {/* <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script> */}
         </Helmet>
         <ul>
           <li><Link activeClassName="activePage" exact={true} to="/">Home</Link></li>
@@ -74,7 +74,7 @@ class Navigation extends React.Component {
             </ul>
           </li>
           <li><a href="https://blog.talkpush.com/" target="_blank">Blog</a></li>
-          <li><a href="#" onClick={this.calendlyPopUp}><i className="fa fa-send-o fa-fw" aria-hidden="true"></i>Request Demo</a></li>
+          <li><a href="https://calendly.com/talkpush-demo" target="_blank"><i className="fa fa-send-o fa-fw" aria-hidden="true"></i>Request Demo</a></li>
         </ul>
       </div>
     )

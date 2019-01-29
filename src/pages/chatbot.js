@@ -14,9 +14,9 @@ class ChatbotPage extends React.Component {
     pageTitle: 'Chatbot',
   }
 
-  calendlyPopUp = () => {
-    Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
-  }
+  // calendlyPopUp = () => {
+  //   Calendly.showPopupWidget('https://calendly.com/talkpush-demo/talkpush-intro-demo/');
+  // }
 
   pageItem = (reverse, photo, title, paragraph) => {
     return (
@@ -103,7 +103,7 @@ class ChatbotPage extends React.Component {
               <div className={styles.blockContentJoinDetails}>
                 <h3>Request a Demo</h3>
                 <p className="m-0 p-0">Are you ready to try Talkpush now?</p>
-                <a href="#" onClick={this.calendlyPopUp}>Request a Demo</a>
+                <a href="https://calendly.com/talkpush-demo" target="_blank">Request a Demo</a>
               </div>
             </div>
           </div>
