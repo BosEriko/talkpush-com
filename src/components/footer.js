@@ -22,7 +22,7 @@ const Footer = ({ title }) => (
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(852) 9188 7562 &mdash;<strong>&nbsp;<span className="country-code">HK</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(63) 2 639 6788 &mdash;<strong>&nbsp;<span className="country-code">PH</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(33) 7 82 96 83 16 &mdash;<strong>&nbsp;<span className="country-code">FR</span></strong></li>
-                        <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(52) 1 55 4352 7910 &mdash;<strong>&nbsp;<span className="country-code">MX</span></strong></li>
+                        <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(52) 55 1168 9643 &mdash;<strong>&nbsp;<span className="country-code">MX</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(1) 415 818 5083 &mdash;<strong>&nbsp;<span className="country-code">US</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(91) 96503 49306 &mdash;<strong>&nbsp;<span className="country-code">IN</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(61) 2 8417 1097 &mdash;<strong>&nbsp;<span className="country-code">AU</span></strong></li>
