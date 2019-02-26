@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import WhatsApp from '../components/whatsapp'
 import './style/global.scss'
 
 const facebookLiveChatScript = () => {
@@ -42,6 +43,7 @@ const Layout = (props) => (
     <Header title={props.data.site.siteMetadata.title} />
     <div>{props.children({ ...props, ...{ siteTitle: props.data.site.siteMetadata.title } })}</div>
     <Footer title={props.data.site.siteMetadata.title} />
+    <WhatsApp />
   </div>
 )
 
