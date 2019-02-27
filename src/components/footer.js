@@ -20,7 +20,7 @@ const Footer = ({ title }) => (
                     <ul>
                         <li><i className="fa fa-send fa-fw" aria-hidden="true"></i><a href="mailto:hello@talkpush.com">hello@talkpush.com</a></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(852) 9188 7562 &mdash;<strong>&nbsp;<span className="country-code">HK</span></strong></li>
-                        <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(63) 2 639 6788 &mdash;<strong>&nbsp;<span className="country-code">PH</span></strong></li>
+                        <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(63) 998 989 3508 &mdash;<strong>&nbsp;<span className="country-code">PH</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(33) 7 82 96 83 16 &mdash;<strong>&nbsp;<span className="country-code">FR</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(52) 55 1168 9643 &mdash;<strong>&nbsp;<span className="country-code">MX</span></strong></li>
                         <li><i className="fa fa-hashtag fa-fw" aria-hidden="true"></i>+(1) 415 818 5083 &mdash;<strong>&nbsp;<span className="country-code">US</span></strong></li>
