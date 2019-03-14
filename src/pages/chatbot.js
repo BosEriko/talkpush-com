@@ -38,7 +38,7 @@ class ChatbotPage extends React.Component {
     let botScrollFunction = () => window.scrollTo(0, (document.body.scrollHeight - document.getElementById("chatbot-cta").offsetHeight) - window.innerHeight)
     let talkpushFrame = document.getElementById("talkpush-bot-iframe")
     let talkpushFrameContent = talkpushFrame.contentWindow
-    let setTalkpushFrameHeight = () => talkpushFrame.style.height = talkpushFrameContent.document.body.scrollHeight + "px"
+    let setTalkpushFrameHeight = () => talkpushFrame.style.height = (talkpushFrameContent.document.body.scrollHeight + 200) + "px"
 
     talkpushFrameContent.botOnReceive = () => {
       setTalkpushFrameHeight()
