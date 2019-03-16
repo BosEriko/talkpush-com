@@ -47,12 +47,6 @@ class OurTeamPage extends React.Component {
           description: "Aris has led large recruitment team before joining Talkpush. He helped Talkpush iterate through multiple versions of its services by implementing the technology in a wide area of industries and geographies, and was the key member in our transition into social media sourcing experts. He is also a natural talent at analyzing data, and presenting results.",
         },
         {
-          name: "Yuan Yim",
-          title: "Head of Talent and Community",
-          image: yuanPicture,
-          description: "Yuan is an experienced Marketing, Training and Business Development professional, her role is to help shape the culture and structure of the company and find the perfect rockstars to join the team the constantly growing team. Prior to joining Talkpush she has previously worked for  BPO leaders such as  Cognizant, Thomson Reuters and Omniglobe International.",
-        },
-        {
           name: "Sudeepta Parasar",
           title: "Head of Customer Success",
           image: sudPicture,
@@ -156,7 +150,7 @@ class OurTeamPage extends React.Component {
         </Helmet>
         {this.state.modalStatus && <Modal closeModal={this.closeModal} maxWidth="500" name={this.state.modalUserName} position={this.state.modalUserTitle} content={this.state.modalUserDescription} profilePicture={this.state.modalUserImage} />}
         <div className={styles.blockHeader}></div>
-        <div className={styles.blockExperiences}>
+        {/* <div className={styles.blockExperiences}>
           <div className="container">
             <h2 className="global-hero-glow-white m-0 p-0" style={{ textShadow: "0 0 20px #e800ff" }}>Meet Yuan</h2>
             <div className={styles.blockExperiencesDivider}>
@@ -166,10 +160,10 @@ class OurTeamPage extends React.Component {
                 </div>
               </div>
               <div className={styles.blockExperiencesDividerRight}>
-                {/* <div className={styles.blockExperiencesDividerRightNamePosition}>
+                <div className={styles.blockExperiencesDividerRightNamePosition}>
                   <h3 className="global-hero-glow-green m-0 p-0">Yuan Yim</h3>
                   <span>Head of Resource and Community</span>
-                </div> */}
+                </div>
                 <p className="m-0">I have always wanted to show people what it’s like to work for a company like ours and to share my experience of the start-up adventure, so I’ve put together this vlog, which I hope you’ll get some inspiration from and maybe even get you excited about exploring career opportunities at Talkpush.</p>
                 <div className={styles.blockExperiencesDividerRightReadMore}>
                   <Link to="/our-team/yuan" className="global-button text-lowercase">Read More</Link>
@@ -177,7 +171,7 @@ class OurTeamPage extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className={styles.blockTeam}>
           <div className="container">
             <h2 className="global-hero-glow-green m-0 p-0" style={{ textShadow: 'none' }}>Meet the team</h2>
